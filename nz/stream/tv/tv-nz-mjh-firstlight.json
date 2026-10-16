@@ -1,0 +1,21 @@
+{
+  "streams": [
+    {
+      "url": "https://i.mjh.nz/.r/firstlight.m3u8",
+      "name": "Live",
+      "title": "Firstlight"
+    },
+    {
+      "url": "https://i.mjh.nz/.r/firstlight.m3u8",
+      "name": "Live (browser)",
+      "title": "Firstlight\nFor Stremio Web",
+      "behaviorHints": {
+        "proxyHeaders": {
+          "response": {
+            "content-type": "application/vnd.apple.mpegurl"
+          }
+        }
+      }
+    }
+  ]
+}

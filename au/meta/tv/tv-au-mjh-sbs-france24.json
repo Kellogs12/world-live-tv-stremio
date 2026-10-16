@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "id": "tv-au-mjh-sbs-france24",
+    "type": "tv",
+    "name": "France 24",
+    "poster": "https://image.pr.sbsod.com/940bda61-531e-5e30-bb1e-69db1cdbb077",
+    "posterShape": "square",
+    "logo": "https://image.pr.sbsod.com/940bda61-531e-5e30-bb1e-69db1cdbb077",
+    "description": "France 24 \u00b7 Free Live Stream",
+    "genres": [
+      "au-fta"
+    ]
+  }
+}

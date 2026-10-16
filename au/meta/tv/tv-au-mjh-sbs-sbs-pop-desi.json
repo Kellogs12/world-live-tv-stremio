@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "id": "tv-au-mjh-sbs-sbs-pop-desi",
+    "type": "tv",
+    "name": "SBS South Asian",
+    "poster": "https://image.pr.sbsod.com/4d5e3445-4705-5d55-81cf-3fc64a3ec2ff",
+    "posterShape": "square",
+    "logo": "https://image.pr.sbsod.com/4d5e3445-4705-5d55-81cf-3fc64a3ec2ff",
+    "description": "SBS South Asian \u00b7 Free Live Stream",
+    "genres": [
+      "au-fta"
+    ]
+  }
+}

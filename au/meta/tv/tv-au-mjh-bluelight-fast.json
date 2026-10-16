@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "id": "tv-au-mjh-bluelight-fast",
+    "type": "tv",
+    "name": "Blue Light",
+    "poster": "https://i.mjh.nz/.images/auto-bluelight-fast-dc5718.png",
+    "posterShape": "square",
+    "logo": "https://i.mjh.nz/.images/auto-bluelight-fast-dc5718.png",
+    "description": "Blue Light \u00b7 Free Live Stream",
+    "genres": [
+      "au-fta"
+    ]
+  }
+}

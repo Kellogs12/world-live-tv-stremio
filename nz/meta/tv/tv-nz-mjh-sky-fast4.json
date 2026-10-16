@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "id": "tv-nz-mjh-sky-fast4",
+    "type": "tv",
+    "name": "Warner Bros TV True Crime",
+    "poster": "https://contentful-images.digital.skyone.co.nz/v3/hf0kmuqe0d45/1gHJMQllMFrDalQ3o1yiBd/b223fc44c242254ebcda81101698527a/Logo_-_default.png",
+    "posterShape": "square",
+    "logo": "https://contentful-images.digital.skyone.co.nz/v3/hf0kmuqe0d45/1gHJMQllMFrDalQ3o1yiBd/b223fc44c242254ebcda81101698527a/Logo_-_default.png",
+    "description": "Warner Bros TV True Crime \u00b7 Free Live Stream",
+    "genres": [
+      "nz-fta"
+    ]
+  }
+}

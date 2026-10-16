@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "id": "tv-au-mjh-sbs-sbs-chill",
+    "type": "tv",
+    "name": "SBS Chill",
+    "poster": "https://image.pr.sbsod.com/e7673a4d-8596-5b98-8ed8-04ff7038b458",
+    "posterShape": "square",
+    "logo": "https://image.pr.sbsod.com/e7673a4d-8596-5b98-8ed8-04ff7038b458",
+    "description": "SBS Chill \u00b7 Free Live Stream",
+    "genres": [
+      "au-fta"
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "id": "tv-au-mjh-sbs-sbs-radio-2",
+    "type": "tv",
+    "name": "SBS Radio 2",
+    "poster": "https://image.pr.sbsod.com/7d5749f1-254e-57ca-923d-2b2b1b33821f",
+    "posterShape": "square",
+    "logo": "https://image.pr.sbsod.com/7d5749f1-254e-57ca-923d-2b2b1b33821f",
+    "description": "SBS Radio 2 \u00b7 Free Live Stream",
+    "genres": [
+      "au-fta"
+    ]
+  }
+}

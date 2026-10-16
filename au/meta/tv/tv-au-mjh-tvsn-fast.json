@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "id": "tv-au-mjh-tvsn-fast",
+    "type": "tv",
+    "name": "TVSN",
+    "poster": "https://i.mjh.nz/.images/auto-tvsn-fast-eda516.png",
+    "posterShape": "square",
+    "logo": "https://i.mjh.nz/.images/auto-tvsn-fast-eda516.png",
+    "description": "TVSN \u00b7 Free Live Stream",
+    "genres": [
+      "au-fta"
+    ]
+  }
+}

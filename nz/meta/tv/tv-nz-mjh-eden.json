@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "id": "tv-nz-mjh-eden",
+    "type": "tv",
+    "name": "eden",
+    "poster": "https://i.mjh.nz/.images/eden.png",
+    "posterShape": "square",
+    "logo": "https://i.mjh.nz/.images/eden.png",
+    "description": "eden \u00b7 Free Live Stream",
+    "genres": [
+      "nz-fta"
+    ]
+  }
+}

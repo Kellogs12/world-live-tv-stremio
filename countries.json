@@ -6,7 +6,7 @@
       "flag": "\ud83c\udde6\ud83c\uddfa",
       "region": "Oceania",
       "description": "Australian Free-to-Air (ABC, SBS, 7, 9, 10, C31), commercial FAST, Plex and Samsung TV Plus AU.",
-      "channel_count": 16,
+      "channel_count": 186,
       "vpn_required": true
     },
     {
@@ -33,7 +33,7 @@
       "flag": "\ud83c\uddf3\ud83c\uddff",
       "region": "Oceania",
       "description": "New Zealand Freeview: TVNZ 1, TVNZ 2, TVNZ Duke, Three, Bravo, Rush, Eden, Whakaata M\u0101ori.",
-      "channel_count": 7,
+      "channel_count": 45,
       "vpn_required": true
     },
     {

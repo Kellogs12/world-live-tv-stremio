@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "id": "tv-au-mjh-sky-racing-thoroughbred",
+    "type": "tv",
+    "name": "Sky Racing - Thoroughbred Central",
+    "poster": "https://i.mjh.nz/.images/sky-racing-thoroughbred.png",
+    "posterShape": "square",
+    "logo": "https://i.mjh.nz/.images/sky-racing-thoroughbred.png",
+    "description": "Sky Racing - Thoroughbred Central \u00b7 Free Live Stream",
+    "genres": [
+      "au-fta"
+    ]
+  }
+}

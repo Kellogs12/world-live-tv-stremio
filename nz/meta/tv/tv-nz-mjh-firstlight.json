@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "id": "tv-nz-mjh-firstlight",
+    "type": "tv",
+    "name": "Firstlight",
+    "poster": "https://i.mjh.nz/.images/firstlight.png",
+    "posterShape": "square",
+    "logo": "https://i.mjh.nz/.images/firstlight.png",
+    "description": "Firstlight \u00b7 Free Live Stream",
+    "genres": [
+      "nz-fta"
+    ]
+  }
+}

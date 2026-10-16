@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "id": "tv-au-mjh-abc-vic",
+    "type": "tv",
+    "name": "ABC TV",
+    "poster": "https://i.mjh.nz/.images/abc-nsw.png",
+    "posterShape": "square",
+    "logo": "https://i.mjh.nz/.images/abc-nsw.png",
+    "description": "ABC TV \u00b7 Free Live Stream",
+    "genres": [
+      "au-fta"
+    ]
+  }
+}

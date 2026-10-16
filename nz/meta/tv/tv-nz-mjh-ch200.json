@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "id": "tv-nz-mjh-ch200",
+    "type": "tv",
+    "name": "CH200",
+    "poster": "https://i.mjh.nz/.images/ch200.png",
+    "posterShape": "square",
+    "logo": "https://i.mjh.nz/.images/ch200.png",
+    "description": "CH200 \u00b7 Free Live Stream",
+    "genres": [
+      "nz-fta"
+    ]
+  }
+}

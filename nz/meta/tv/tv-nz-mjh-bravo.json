@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "id": "tv-nz-mjh-bravo",
+    "type": "tv",
+    "name": "Bravo",
+    "poster": "https://i.mjh.nz/.images/bravo.png",
+    "posterShape": "square",
+    "logo": "https://i.mjh.nz/.images/bravo.png",
+    "description": "Bravo \u00b7 Free Live Stream",
+    "genres": [
+      "nz-fta"
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "id": "tv-au-mjh-abc-90-seconds-weather",
+    "type": "tv",
+    "name": "ABC Weather in 90 Seconds",
+    "poster": "https://live-production.wcms.abc-cdn.net.au/d376e49724862f104d044ff6467f85d8?impolicy=wcms_crop_resize&cropH=630&cropW=1119&xPos=10&yPos=0&width=862&height=485",
+    "posterShape": "square",
+    "logo": "https://live-production.wcms.abc-cdn.net.au/d376e49724862f104d044ff6467f85d8?impolicy=wcms_crop_resize&cropH=630&cropW=1119&xPos=10&yPos=0&width=862&height=485",
+    "description": "ABC Weather in 90 Seconds \u00b7 Free Live Stream",
+    "genres": [
+      "au-fta"
+    ]
+  }
+}

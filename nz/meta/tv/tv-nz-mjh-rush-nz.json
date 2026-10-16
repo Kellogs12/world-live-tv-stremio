@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "id": "tv-nz-mjh-rush-nz",
+    "type": "tv",
+    "name": "RUSH",
+    "poster": "https://i.mjh.nz/.images/rush-nz.png",
+    "posterShape": "square",
+    "logo": "https://i.mjh.nz/.images/rush-nz.png",
+    "description": "RUSH \u00b7 Free Live Stream",
+    "genres": [
+      "nz-fta"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "streams": [
+    {
+      "url": "https://i.mjh.nz/.r/sky-fast1.m3u8",
+      "name": "Live",
+      "title": "Warner Bros TV Motorheads"
+    },
+    {
+      "url": "https://i.mjh.nz/.r/sky-fast1.m3u8",
+      "name": "Live (browser)",
+      "title": "Warner Bros TV Motorheads\nFor Stremio Web",
+      "behaviorHints": {
+        "proxyHeaders": {
+          "response": {
+            "content-type": "application/vnd.apple.mpegurl"
+          }
+        }
+      }
+    }
+  ]
+}

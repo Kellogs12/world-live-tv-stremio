@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "id": "tv-au-mjh-mythbusters-fast",
+    "type": "tv",
+    "name": "Mythbusters",
+    "poster": "https://i.mjh.nz/.images/auto-mythbusters-fast-3a72b1.png",
+    "posterShape": "square",
+    "logo": "https://i.mjh.nz/.images/auto-mythbusters-fast-3a72b1.png",
+    "description": "Mythbusters \u00b7 Free Live Stream",
+    "genres": [
+      "au-fta"
+    ]
+  }
+}

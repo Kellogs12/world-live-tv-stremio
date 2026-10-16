@@ -1,0 +1,21 @@
+{
+  "streams": [
+    {
+      "url": "https://i.mjh.nz/.r/sbs-sbs-pop-desi.m3u8",
+      "name": "Live",
+      "title": "SBS South Asian"
+    },
+    {
+      "url": "https://i.mjh.nz/.r/sbs-sbs-pop-desi.m3u8",
+      "name": "Live (browser)",
+      "title": "SBS South Asian\nFor Stremio Web",
+      "behaviorHints": {
+        "proxyHeaders": {
+          "response": {
+            "content-type": "application/vnd.apple.mpegurl"
+          }
+        }
+      }
+    }
+  ]
+}

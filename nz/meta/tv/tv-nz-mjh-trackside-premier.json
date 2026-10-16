@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "id": "tv-nz-mjh-trackside-premier",
+    "type": "tv",
+    "name": "Trackside Premier",
+    "poster": "https://i.mjh.nz/.images/trackside-premier.png",
+    "posterShape": "square",
+    "logo": "https://i.mjh.nz/.images/trackside-premier.png",
+    "description": "Trackside Premier \u00b7 Free Live Stream",
+    "genres": [
+      "nz-fta"
+    ]
+  }
+}

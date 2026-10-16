@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "id": "tv-au-mjh-redbull-tv",
+    "type": "tv",
+    "name": "Redbull TV",
+    "poster": "https://i.mjh.nz/.images/redbull-tv.png",
+    "posterShape": "square",
+    "logo": "https://i.mjh.nz/.images/redbull-tv.png",
+    "description": "Redbull TV \u00b7 Free Live Stream",
+    "genres": [
+      "au-fta"
+    ]
+  }
+}

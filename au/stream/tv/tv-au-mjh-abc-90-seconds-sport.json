@@ -1,0 +1,21 @@
+{
+  "streams": [
+    {
+      "url": "https://c.mjh.nz/sport_in_90_seconds",
+      "name": "Live",
+      "title": "ABC Sport in 90 Seconds"
+    },
+    {
+      "url": "https://c.mjh.nz/sport_in_90_seconds",
+      "name": "Live (browser)",
+      "title": "ABC Sport in 90 Seconds\nFor Stremio Web",
+      "behaviorHints": {
+        "proxyHeaders": {
+          "response": {
+            "content-type": "application/vnd.apple.mpegurl"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "id": "tv-au-mjh-7flix-mel",
+    "type": "tv",
+    "name": "7flix",
+    "poster": "https://i.mjh.nz/.images/auto-7flix-mel-c6badc.png",
+    "posterShape": "square",
+    "logo": "https://i.mjh.nz/.images/auto-7flix-mel-c6badc.png",
+    "description": "7flix \u00b7 Free Live Stream",
+    "genres": [
+      "au-fta"
+    ]
+  }
+}

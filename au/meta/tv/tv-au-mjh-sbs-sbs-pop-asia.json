@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "id": "tv-au-mjh-sbs-sbs-pop-asia",
+    "type": "tv",
+    "name": "SBS PopAsia",
+    "poster": "https://image.pr.sbsod.com/bc85a376-7433-5d0b-9ba8-2b97a744d61b",
+    "posterShape": "square",
+    "logo": "https://image.pr.sbsod.com/bc85a376-7433-5d0b-9ba8-2b97a744d61b",
+    "description": "SBS PopAsia \u00b7 Free Live Stream",
+    "genres": [
+      "au-fta"
+    ]
+  }
+}

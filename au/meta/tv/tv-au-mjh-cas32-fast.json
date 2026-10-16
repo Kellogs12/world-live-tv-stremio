@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "id": "tv-au-mjh-cas32-fast",
+    "type": "tv",
+    "name": "7NEWS Spotlight",
+    "poster": "https://i.mjh.nz/.images/auto-cas32-fast-2bc14f.png",
+    "posterShape": "square",
+    "logo": "https://i.mjh.nz/.images/auto-cas32-fast-2bc14f.png",
+    "description": "7NEWS Spotlight \u00b7 Free Live Stream",
+    "genres": [
+      "au-fta"
+    ]
+  }
+}

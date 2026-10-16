@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "id": "tv-au-mjh-travelaustralia-fast",
+    "type": "tv",
+    "name": "Travel Australia",
+    "poster": "https://i.mjh.nz/.images/auto-travelaustralia-fast-cfd556.png",
+    "posterShape": "square",
+    "logo": "https://i.mjh.nz/.images/auto-travelaustralia-fast-cfd556.png",
+    "description": "Travel Australia \u00b7 Free Live Stream",
+    "genres": [
+      "au-fta"
+    ]
+  }
+}

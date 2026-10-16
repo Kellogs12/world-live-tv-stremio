@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "id": "tv-au-mjh-bbc-news",
+    "type": "tv",
+    "name": "BBC News",
+    "poster": "https://i.mjh.nz/.images/bbc-news.png",
+    "posterShape": "square",
+    "logo": "https://i.mjh.nz/.images/bbc-news.png",
+    "description": "BBC News \u00b7 Free Live Stream",
+    "genres": [
+      "au-fta"
+    ]
+  }
+}

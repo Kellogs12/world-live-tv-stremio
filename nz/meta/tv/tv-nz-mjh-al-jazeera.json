@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "id": "tv-nz-mjh-al-jazeera",
+    "type": "tv",
+    "name": "Al Jazeera",
+    "poster": "https://i.mjh.nz/.images/al-jazeera.png",
+    "posterShape": "square",
+    "logo": "https://i.mjh.nz/.images/al-jazeera.png",
+    "description": "Al Jazeera \u00b7 Free Live Stream",
+    "genres": [
+      "nz-fta"
+    ]
+  }
+}

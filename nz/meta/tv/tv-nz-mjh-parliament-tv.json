@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "id": "tv-nz-mjh-parliament-tv",
+    "type": "tv",
+    "name": "Parliament TV",
+    "poster": "https://i.mjh.nz/.images/parliament-tv.png",
+    "posterShape": "square",
+    "logo": "https://i.mjh.nz/.images/parliament-tv.png",
+    "description": "Parliament TV \u00b7 Free Live Stream",
+    "genres": [
+      "nz-fta"
+    ]
+  }
+}

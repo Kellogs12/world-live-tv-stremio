@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "id": "tv-au-mjh-7mate-mel",
+    "type": "tv",
+    "name": "7mate",
+    "poster": "https://i.mjh.nz/.images/auto-7mate-mel-360d60.png",
+    "posterShape": "square",
+    "logo": "https://i.mjh.nz/.images/auto-7mate-mel-360d60.png",
+    "description": "7mate \u00b7 Free Live Stream",
+    "genres": [
+      "au-fta"
+    ]
+  }
+}

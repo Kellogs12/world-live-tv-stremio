@@ -1,0 +1,21 @@
+{
+  "streams": [
+    {
+      "url": "https://i.mjh.nz/.r/bravo-plus1.m3u8",
+      "name": "Live",
+      "title": "Bravo PLUS 1"
+    },
+    {
+      "url": "https://i.mjh.nz/.r/bravo-plus1.m3u8",
+      "name": "Live (browser)",
+      "title": "Bravo PLUS 1\nFor Stremio Web",
+      "behaviorHints": {
+        "proxyHeaders": {
+          "response": {
+            "content-type": "application/vnd.apple.mpegurl"
+          }
+        }
+      }
+    }
+  ]
+}

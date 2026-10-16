@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "id": "tv-au-mjh-all-starcinema-fast",
+    "type": "tv",
+    "name": "All-Star Cinema",
+    "poster": "https://i.mjh.nz/.images/auto-all-starcinema-fast-9f2397.png",
+    "posterShape": "square",
+    "logo": "https://i.mjh.nz/.images/auto-all-starcinema-fast-9f2397.png",
+    "description": "All-Star Cinema \u00b7 Free Live Stream",
+    "genres": [
+      "au-fta"
+    ]
+  }
+}

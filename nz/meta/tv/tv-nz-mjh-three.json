@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "id": "tv-nz-mjh-three",
+    "type": "tv",
+    "name": "Three",
+    "poster": "https://i.mjh.nz/.images/three.png",
+    "posterShape": "square",
+    "logo": "https://i.mjh.nz/.images/three.png",
+    "description": "Three \u00b7 Free Live Stream",
+    "genres": [
+      "nz-fta"
+    ]
+  }
+}

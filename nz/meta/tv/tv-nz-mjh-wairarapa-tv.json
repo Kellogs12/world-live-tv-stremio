@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "id": "tv-nz-mjh-wairarapa-tv",
+    "type": "tv",
+    "name": "Wairarapa TV",
+    "poster": "https://i.mjh.nz/.images/wairarapa-tv.png",
+    "posterShape": "square",
+    "logo": "https://i.mjh.nz/.images/wairarapa-tv.png",
+    "description": "Wairarapa TV \u00b7 Free Live Stream",
+    "genres": [
+      "nz-fta"
+    ]
+  }
+}

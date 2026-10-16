@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "id": "tv-nz-mjh-prime",
+    "type": "tv",
+    "name": "Sky Open",
+    "poster": "https://i.mjh.nz/.images/sky-open.png",
+    "posterShape": "square",
+    "logo": "https://i.mjh.nz/.images/sky-open.png",
+    "description": "Sky Open \u00b7 Free Live Stream",
+    "genres": [
+      "nz-fta"
+    ]
+  }
+}
