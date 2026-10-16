@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "id": "tv-us-al-jazeera-en",
+    "type": "tv",
+    "name": "Al Jazeera English",
+    "poster": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/qatar/al-jazeera-english-qa.png",
+    "posterShape": "square",
+    "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/qatar/al-jazeera-english-qa.png",
+    "description": "Al Jazeera English \u00b7 Free Live Stream",
+    "genres": [
+      "us-news"
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "id": "tv-us-nasa-tv",
+    "type": "tv",
+    "name": "NASA TV Public",
+    "poster": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nasa-tv-us.png",
+    "posterShape": "square",
+    "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nasa-tv-us.png",
+    "description": "NASA TV Public \u00b7 Free Live Stream",
+    "genres": [
+      "us-special"
+    ]
+  }
+}

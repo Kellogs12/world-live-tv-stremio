@@ -40,11 +40,6 @@
       "type": "tv",
       "id": "uk-news",
       "name": "UK News"
-    },
-    {
-      "type": "tv",
-      "id": "uk-fast",
-      "name": "Pluto & Samsung UK"
     }
   ],
   "behaviorHints": {

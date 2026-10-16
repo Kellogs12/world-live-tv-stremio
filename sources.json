@@ -67,26 +67,20 @@
       "name": "United States",
       "flag": "🇺🇸",
       "region": "Americas",
-      "description": "US Free Live News (CBS, ABC, NBC, Scripps), PBS, Pluto TV US, and Samsung TV Plus US.",
+      "description": "US Free Live News, Weather, NASA, Bloomberg, FOX LiveNOW, and Public TV.",
       "vpn_required": false,
-      "m3u_urls": [
-        "https://i.mjh.nz/PBS/all.m3u8",
-        "https://i.mjh.nz/PlutoTV/us.m3u8",
-        "https://i.mjh.nz/SamsungTVPlus/us.m3u8"
-      ],
+      "m3u_urls": [],
       "catalogs": [
         {"id": "us-news", "name": "US Live News & Weather"},
-        {"id": "us-pbs", "name": "PBS Stations"},
-        {"id": "us-fast", "name": "FAST Channels"}
+        {"id": "us-special", "name": "Documentary, Tech & Sports"}
       ],
       "fallback_channels": [
-        {"id": "cbs-news", "name": "CBS News 24/7", "catalog": "us-news", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/cbs-news-us.png", "url": "https://cbsn-us.cbsnstream.cbsnews.com/out/v1/55a8648e8f13459e97378f804e1329a6/master.m3u8"},
-        {"id": "abc-news-live", "name": "ABC News Live", "catalog": "us-news", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/abc-news-live-us.png", "url": "https://abclivepush-lh.akamaihd.net/i/bk_abcnews_1@446215/master.m3u8"},
-        {"id": "nbc-news-now", "name": "NBC News NOW", "catalog": "us-news", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nbc-news-now-us.png", "url": "https://nbcnews-now.akamaized.net/hls/live/2026852/nbcnews/master.m3u8"},
-        {"id": "scripps-news", "name": "Scripps News", "catalog": "us-news", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/scripps-news-us.png", "url": "https://scrippsnews-samsung.amagi.tv/playlist.m3u8"},
         {"id": "livenow-fox", "name": "LiveNOW from FOX", "catalog": "us-news", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/livenow-from-fox-us.png", "url": "https://fox-foxnewsnow-samsungus.amagi.tv/playlist.m3u8"},
-        {"id": "weathernation", "name": "WeatherNation", "catalog": "us-news", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/weathernation-us.png", "url": "https://weathernation-samsung.amagi.tv/playlist.m3u8"},
-        {"id": "bloomberg-us", "name": "Bloomberg TV+", "catalog": "us-news", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/bloomberg-tv-us.png", "url": "https://bloomberg.com/media-manifest/streams/us.m3u8"}
+        {"id": "bloomberg-us", "name": "Bloomberg TV+", "catalog": "us-news", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/bloomberg-tv-us.png", "url": "https://www.bloomberg.com/media-manifest/streams/us.m3u8"},
+        {"id": "nasa-tv", "name": "NASA TV Public", "catalog": "us-special", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nasa-tv-us.png", "url": "https://ntv1.akamaized.net/hls/live/2014075/NASA-NTV1-HLS/master.m3u8"},
+        {"id": "redbull-tv", "name": "Red Bull TV", "catalog": "us-special", "logo": "https://i.mjh.nz/.images/redbull-tv.png", "url": "https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master.m3u8"},
+        {"id": "dw-english", "name": "DW English (US/Global)", "catalog": "us-news", "logo": "https://www.dw.com/images/icons/favicon-540x540.png", "url": "https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/index.m3u8"},
+        {"id": "al-jazeera-en", "name": "Al Jazeera English", "catalog": "us-news", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/qatar/al-jazeera-english-qa.png", "url": "https://live-hls-web-aje.getaj.net/AJE/01.m3u8"}
       ]
     },
     {

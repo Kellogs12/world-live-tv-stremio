@@ -239,6 +239,7 @@ def generate_addon_for_country(country, base_dir):
         "catalogs": [
             {"type": "tv", "id": cat["id"], "name": cat["name"]}
             for cat in country.get("catalogs", [])
+            if len(catalog_items.get(cat["id"], [])) > 0
         ],
         "behaviorHints": {
             "configurable": False,

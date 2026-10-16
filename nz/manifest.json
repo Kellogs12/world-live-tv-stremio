@@ -35,11 +35,6 @@
       "type": "tv",
       "id": "nz-fta",
       "name": "New Zealand Freeview"
-    },
-    {
-      "type": "tv",
-      "id": "nz-fast",
-      "name": "FAST Channels"
     }
   ],
   "behaviorHints": {

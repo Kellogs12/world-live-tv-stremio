@@ -2,7 +2,7 @@
   "id": "worldlive.us",
   "version": "1.0.0",
   "name": "\ud83c\uddfa\ud83c\uddf8 United States Live TV",
-  "description": "US Free Live News (CBS, ABC, NBC, Scripps), PBS, Pluto TV US, and Samsung TV Plus US.",
+  "description": "US Free Live News, Weather, NASA, Bloomberg, FOX LiveNOW, and Public TV.",
   "resources": [
     "catalog",
     {
@@ -38,13 +38,8 @@
     },
     {
       "type": "tv",
-      "id": "us-pbs",
-      "name": "PBS Stations"
-    },
-    {
-      "type": "tv",
-      "id": "us-fast",
-      "name": "FAST Channels"
+      "id": "us-special",
+      "name": "Documentary, Tech & Sports"
     }
   ],
   "behaviorHints": {

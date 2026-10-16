@@ -23,8 +23,8 @@
       "name": "United States",
       "flag": "\ud83c\uddfa\ud83c\uddf8",
       "region": "Americas",
-      "description": "US Free Live News (CBS, ABC, NBC, Scripps), PBS, Pluto TV US, and Samsung TV Plus US.",
-      "channel_count": 7,
+      "description": "US Free Live News, Weather, NASA, Bloomberg, FOX LiveNOW, and Public TV.",
+      "channel_count": 6,
       "vpn_required": false
     },
     {

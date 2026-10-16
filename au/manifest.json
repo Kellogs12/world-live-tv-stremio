@@ -35,16 +35,6 @@
       "type": "tv",
       "id": "au-fta",
       "name": "Free-to-Air"
-    },
-    {
-      "type": "tv",
-      "id": "au-fast",
-      "name": "Free Commercial Channels"
-    },
-    {
-      "type": "tv",
-      "id": "au-samsung",
-      "name": "Samsung TV Plus AU"
     }
   ],
   "behaviorHints": {

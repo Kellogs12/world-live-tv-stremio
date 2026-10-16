@@ -40,11 +40,6 @@
       "type": "tv",
       "id": "ca-news",
       "name": "Canadian News"
-    },
-    {
-      "type": "tv",
-      "id": "ca-fast",
-      "name": "Pluto & Samsung CA"
     }
   ],
   "behaviorHints": {

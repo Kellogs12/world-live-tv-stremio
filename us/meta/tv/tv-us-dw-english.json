@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "id": "tv-us-dw-english",
+    "type": "tv",
+    "name": "DW English (US/Global)",
+    "poster": "https://www.dw.com/images/icons/favicon-540x540.png",
+    "posterShape": "square",
+    "logo": "https://www.dw.com/images/icons/favicon-540x540.png",
+    "description": "DW English (US/Global) \u00b7 Free Live Stream",
+    "genres": [
+      "us-news"
+    ]
+  }
+}
