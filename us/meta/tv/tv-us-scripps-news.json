@@ -1,14 +1,1 @@
-{
-  "meta": {
-    "id": "tv-us-scripps-news",
-    "type": "tv",
-    "name": "Scripps News",
-    "poster": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/scripps-news-us.png",
-    "posterShape": "square",
-    "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/scripps-news-us.png",
-    "description": "Scripps News \u00b7 Free Live Stream",
-    "genres": [
-      "us-news"
-    ]
-  }
-}
+{"meta":{"id":"tv-us-scripps-news","type":"tv","name":"Scripps News","poster":"https://image.xumo.com/v1/channels/channel/99991148/300x300.webp?type=color_onBlack","posterShape":"square","logo":"https://image.xumo.com/v1/channels/channel/99991148/300x300.webp?type=color_onBlack","description":"Scripps News \u00b7 Live TV","genres":["US Live News & Weather"]}}

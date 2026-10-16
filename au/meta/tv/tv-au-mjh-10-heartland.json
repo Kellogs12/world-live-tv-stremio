@@ -1,14 +1,1 @@
-{
-  "meta": {
-    "id": "tv-au-mjh-10-heartland",
-    "type": "tv",
-    "name": "Heartland",
-    "poster": "https://10.com.au/ip/s3/2026/02/01/8b5e285428d559ef6e3afdeebfe53a5d-1408387.png?image-profile=logo",
-    "posterShape": "square",
-    "logo": "https://10.com.au/ip/s3/2026/02/01/8b5e285428d559ef6e3afdeebfe53a5d-1408387.png?image-profile=logo",
-    "description": "Heartland \u00b7 Free Live Stream",
-    "genres": [
-      "au-fta"
-    ]
-  }
-}
+{"meta":{"id":"tv-au-mjh-10-heartland","type":"tv","name":"Heartland","poster":"https://10.com.au/ip/s3/2026/02/01/8b5e285428d559ef6e3afdeebfe53a5d-1408387.png?image-profile=logo","posterShape":"square","logo":"https://10.com.au/ip/s3/2026/02/01/8b5e285428d559ef6e3afdeebfe53a5d-1408387.png?image-profile=logo","description":"Free live network channel","genres":["Free Network Channels"]}}

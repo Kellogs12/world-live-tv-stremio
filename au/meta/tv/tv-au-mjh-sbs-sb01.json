@@ -1,14 +1,1 @@
-{
-  "meta": {
-    "id": "tv-au-mjh-sbs-sb01",
-    "type": "tv",
-    "name": "The Cook Up",
-    "poster": "https://image.pr.sbsod.com/82c5d9dc-bda6-5a6b-affa-67f1ba01ff38",
-    "posterShape": "square",
-    "logo": "https://image.pr.sbsod.com/82c5d9dc-bda6-5a6b-affa-67f1ba01ff38",
-    "description": "The Cook Up \u00b7 Free Live Stream",
-    "genres": [
-      "au-fta"
-    ]
-  }
-}
+{"meta":{"id":"tv-au-mjh-sbs-sb01","type":"tv","name":"The Cook Up","poster":"https://image.pr.sbsod.com/82c5d9dc-bda6-5a6b-affa-67f1ba01ff38","posterShape":"square","logo":"https://image.pr.sbsod.com/82c5d9dc-bda6-5a6b-affa-67f1ba01ff38","description":"Free live network channel","genres":["Free Network Channels"]}}

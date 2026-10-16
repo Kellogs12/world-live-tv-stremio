@@ -1,14 +1,1 @@
-{
-  "meta": {
-    "id": "tv-global-redbull-tv",
-    "type": "tv",
-    "name": "Red Bull TV",
-    "poster": "https://i.mjh.nz/.images/redbull-tv.png",
-    "posterShape": "square",
-    "logo": "https://i.mjh.nz/.images/redbull-tv.png",
-    "description": "Red Bull TV \u00b7 Free Live Stream",
-    "genres": [
-      "global-sports-science"
-    ]
-  }
-}
+{"meta":{"id":"tv-global-redbull-tv","type":"tv","name":"Red Bull TV","poster":"https://i.mjh.nz/.images/redbull-tv.png","posterShape":"square","logo":"https://i.mjh.nz/.images/redbull-tv.png","description":"Red Bull TV \u00b7 Live TV","genres":["Sports, Business & Weather"]}}

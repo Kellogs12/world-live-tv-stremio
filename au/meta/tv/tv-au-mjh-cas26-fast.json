@@ -1,14 +1,1 @@
-{
-  "meta": {
-    "id": "tv-au-mjh-cas26-fast",
-    "type": "tv",
-    "name": "Home and Away Classics",
-    "poster": "https://i.mjh.nz/.images/auto-cas26-fast-ea7944.png",
-    "posterShape": "square",
-    "logo": "https://i.mjh.nz/.images/auto-cas26-fast-ea7944.png",
-    "description": "Home and Away Classics \u00b7 Free Live Stream",
-    "genres": [
-      "au-fta"
-    ]
-  }
-}
+{"meta":{"id":"tv-au-mjh-cas26-fast","type":"tv","name":"Home and Away Classics","poster":"https://i.mjh.nz/.images/auto-cas26-fast-ea7944.png","posterShape":"square","logo":"https://i.mjh.nz/.images/auto-cas26-fast-ea7944.png","description":"Free live network channel","genres":["Free Network Channels"]}}

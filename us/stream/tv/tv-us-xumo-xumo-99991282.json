@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://ottcms.weathergroup.com/api/v1/scte35stream/XumoV3","name":"Live","title":"Local Now"},{"url":"https://ottcms.weathergroup.com/api/v1/scte35stream/XumoV3","name":"Live (browser)","title":"Local Now\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

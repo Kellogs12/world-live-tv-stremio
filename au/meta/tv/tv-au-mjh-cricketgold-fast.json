@@ -1,14 +1,1 @@
-{
-  "meta": {
-    "id": "tv-au-mjh-cricketgold-fast",
-    "type": "tv",
-    "name": "Cricket Gold",
-    "poster": "https://i.mjh.nz/.images/auto-cricketgold-fast-906f03.png",
-    "posterShape": "square",
-    "logo": "https://i.mjh.nz/.images/auto-cricketgold-fast-906f03.png",
-    "description": "Cricket Gold \u00b7 Free Live Stream",
-    "genres": [
-      "au-fta"
-    ]
-  }
-}
+{"meta":{"id":"tv-au-mjh-cricketgold-fast","type":"tv","name":"Cricket Gold","poster":"https://i.mjh.nz/.images/auto-cricketgold-fast-906f03.png","posterShape":"square","logo":"https://i.mjh.nz/.images/auto-cricketgold-fast-906f03.png","description":"Free live network channel","genres":["Free Network Channels"]}}

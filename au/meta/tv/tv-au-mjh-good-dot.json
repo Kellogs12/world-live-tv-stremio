@@ -1,14 +1,1 @@
-{
-  "meta": {
-    "id": "tv-au-mjh-good-dot",
-    "type": "tv",
-    "name": "GOOD.",
-    "poster": "https://i.mjh.nz/.images/good-dot.png",
-    "posterShape": "square",
-    "logo": "https://i.mjh.nz/.images/good-dot.png",
-    "description": "GOOD. \u00b7 Free Live Stream",
-    "genres": [
-      "au-fta"
-    ]
-  }
-}
+{"meta":{"id":"tv-au-mjh-good-dot","type":"tv","name":"GOOD.","poster":"https://i.mjh.nz/.images/good-dot.png","posterShape":"square","logo":"https://i.mjh.nz/.images/good-dot.png","description":"Free live network channel","genres":["Free Network Channels"]}}

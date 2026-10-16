@@ -1,14 +1,1 @@
-{
-  "meta": {
-    "id": "tv-au-mjh-cas21-fast",
-    "type": "tv",
-    "name": "Ghost Hunters",
-    "poster": "https://i.mjh.nz/.images/auto-cas21-fast-f940a9.png",
-    "posterShape": "square",
-    "logo": "https://i.mjh.nz/.images/auto-cas21-fast-f940a9.png",
-    "description": "Ghost Hunters \u00b7 Free Live Stream",
-    "genres": [
-      "au-fta"
-    ]
-  }
-}
+{"meta":{"id":"tv-au-mjh-cas21-fast","type":"tv","name":"Ghost Hunters","poster":"https://i.mjh.nz/.images/auto-cas21-fast-f940a9.png","posterShape":"square","logo":"https://i.mjh.nz/.images/auto-cas21-fast-f940a9.png","description":"Free live network channel","genres":["Free Network Channels"]}}

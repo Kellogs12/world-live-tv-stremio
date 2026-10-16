@@ -1,14 +1,1 @@
-{
-  "meta": {
-    "id": "tv-nz-mjh-tvsn-shopping",
-    "type": "tv",
-    "name": "TVSN Shopping",
-    "poster": "https://i.mjh.nz/.images/tvsn-shopping.png",
-    "posterShape": "square",
-    "logo": "https://i.mjh.nz/.images/tvsn-shopping.png",
-    "description": "TVSN Shopping \u00b7 Free Live Stream",
-    "genres": [
-      "nz-fta"
-    ]
-  }
-}
+{"meta":{"id":"tv-nz-mjh-tvsn-shopping","type":"tv","name":"TVSN Shopping","poster":"https://i.mjh.nz/.images/tvsn-shopping.png","posterShape":"square","logo":"https://i.mjh.nz/.images/tvsn-shopping.png","description":"NZ Freeview live channel","genres":["New Zealand Freeview"]}}

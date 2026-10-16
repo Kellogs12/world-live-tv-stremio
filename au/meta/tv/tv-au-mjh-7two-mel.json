@@ -1,14 +1,1 @@
-{
-  "meta": {
-    "id": "tv-au-mjh-7two-mel",
-    "type": "tv",
-    "name": "7two",
-    "poster": "https://i.mjh.nz/.images/auto-7two-mel-701123.png",
-    "posterShape": "square",
-    "logo": "https://i.mjh.nz/.images/auto-7two-mel-701123.png",
-    "description": "7two \u00b7 Free Live Stream",
-    "genres": [
-      "au-fta"
-    ]
-  }
-}
+{"meta":{"id":"tv-au-mjh-7two-mel","type":"tv","name":"7two","poster":"https://i.mjh.nz/.images/auto-7two-mel-701123.png","posterShape":"square","logo":"https://i.mjh.nz/.images/auto-7two-mel-701123.png","description":"Channel 72 \u00b7 live free-to-air","genres":["Melbourne Free-to-Air"]}}

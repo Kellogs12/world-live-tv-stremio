@@ -1,14 +1,1 @@
-{
-  "meta": {
-    "id": "tv-us-cbs-news",
-    "type": "tv",
-    "name": "CBS News 24/7",
-    "poster": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/cbs-news-us.png",
-    "posterShape": "square",
-    "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/cbs-news-us.png",
-    "description": "CBS News 24/7 \u00b7 Free Live Stream",
-    "genres": [
-      "us-news"
-    ]
-  }
-}
+{"meta":{"id":"tv-us-cbs-news","type":"tv","name":"CBS News 24/7","poster":"https://image.xumo.com/v1/channels/channel/99991158/300x300.webp?type=color_onBlack","posterShape":"square","logo":"https://image.xumo.com/v1/channels/channel/99991158/300x300.webp?type=color_onBlack","description":"CBS News 24/7 \u00b7 Live TV","genres":["US Live News & Weather"]}}

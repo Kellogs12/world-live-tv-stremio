@@ -1,14 +1,1 @@
-{
-  "meta": {
-    "id": "tv-global-france24-en",
-    "type": "tv",
-    "name": "France 24 English",
-    "poster": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/france-24-fr.png",
-    "posterShape": "square",
-    "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/france-24-fr.png",
-    "description": "France 24 English \u00b7 Free Live Stream",
-    "genres": [
-      "global-news"
-    ]
-  }
-}
+{"meta":{"id":"tv-global-france24-en","type":"tv","name":"France 24 English","poster":"https://image.pr.sbsod.com/940bda61-531e-5e30-bb1e-69db1cdbb077","posterShape":"square","logo":"https://image.pr.sbsod.com/940bda61-531e-5e30-bb1e-69db1cdbb077","description":"France 24 English \u00b7 Live TV","genres":["World News (English)"]}}

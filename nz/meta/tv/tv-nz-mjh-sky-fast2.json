@@ -1,14 +1,1 @@
-{
-  "meta": {
-    "id": "tv-nz-mjh-sky-fast2",
-    "type": "tv",
-    "name": "Warner Bros TV Deadliest Catch",
-    "poster": "https://contentful-images.digital.skyone.co.nz/v3/hf0kmuqe0d45/4sdV9uGhLQRMYrBdMtGTNs/15a364e6a26ee48cff2979fa9f90bf51/Logo_-_default.png",
-    "posterShape": "square",
-    "logo": "https://contentful-images.digital.skyone.co.nz/v3/hf0kmuqe0d45/4sdV9uGhLQRMYrBdMtGTNs/15a364e6a26ee48cff2979fa9f90bf51/Logo_-_default.png",
-    "description": "Warner Bros TV Deadliest Catch \u00b7 Free Live Stream",
-    "genres": [
-      "nz-fta"
-    ]
-  }
-}
+{"meta":{"id":"tv-nz-mjh-sky-fast2","type":"tv","name":"Warner Bros TV Deadliest Catch","poster":"https://contentful-images.digital.skyone.co.nz/v3/hf0kmuqe0d45/4sdV9uGhLQRMYrBdMtGTNs/15a364e6a26ee48cff2979fa9f90bf51/Logo_-_default.png","posterShape":"square","logo":"https://contentful-images.digital.skyone.co.nz/v3/hf0kmuqe0d45/4sdV9uGhLQRMYrBdMtGTNs/15a364e6a26ee48cff2979fa9f90bf51/Logo_-_default.png","description":"NZ Freeview live channel","genres":["New Zealand Freeview"]}}

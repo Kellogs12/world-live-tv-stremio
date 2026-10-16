@@ -1,14 +1,1 @@
-{
-  "meta": {
-    "id": "tv-au-mjh-ausbiz-fast",
-    "type": "tv",
-    "name": "ausbiz",
-    "poster": "https://i.mjh.nz/.images/auto-ausbiz-fast-b12203.png",
-    "posterShape": "square",
-    "logo": "https://i.mjh.nz/.images/auto-ausbiz-fast-b12203.png",
-    "description": "ausbiz \u00b7 Free Live Stream",
-    "genres": [
-      "au-fta"
-    ]
-  }
-}
+{"meta":{"id":"tv-au-mjh-ausbiz-fast","type":"tv","name":"ausbiz","poster":"https://i.mjh.nz/.images/auto-ausbiz-fast-b12203.png","posterShape":"square","logo":"https://i.mjh.nz/.images/auto-ausbiz-fast-b12203.png","description":"Free live network channel","genres":["Free Network Channels"]}}

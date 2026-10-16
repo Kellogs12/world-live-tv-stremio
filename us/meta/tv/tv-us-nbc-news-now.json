@@ -1,14 +1,1 @@
-{
-  "meta": {
-    "id": "tv-us-nbc-news-now",
-    "type": "tv",
-    "name": "NBC News NOW",
-    "poster": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nbc-news-now-us.png",
-    "posterShape": "square",
-    "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nbc-news-now-us.png",
-    "description": "NBC News NOW \u00b7 Free Live Stream",
-    "genres": [
-      "us-news"
-    ]
-  }
-}
+{"meta":{"id":"tv-us-nbc-news-now","type":"tv","name":"NBC News NOW","poster":"https://image.xumo.com/v1/channels/channel/99991247/300x300.webp?type=color_onBlack","posterShape":"square","logo":"https://image.xumo.com/v1/channels/channel/99991247/300x300.webp?type=color_onBlack","description":"NBC News NOW \u00b7 Live TV","genres":["US Live News & Weather"]}}

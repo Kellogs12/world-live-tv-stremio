@@ -1,14 +1,1 @@
-{
-  "meta": {
-    "id": "tv-nz-mjh-hope-channel",
-    "type": "tv",
-    "name": "Hope Channel",
-    "poster": "https://i.mjh.nz/.images/hope-channel.png",
-    "posterShape": "square",
-    "logo": "https://i.mjh.nz/.images/hope-channel.png",
-    "description": "Hope Channel \u00b7 Free Live Stream",
-    "genres": [
-      "nz-fta"
-    ]
-  }
-}
+{"meta":{"id":"tv-nz-mjh-hope-channel","type":"tv","name":"Hope Channel","poster":"https://i.mjh.nz/.images/hope-channel.png","posterShape":"square","logo":"https://i.mjh.nz/.images/hope-channel.png","description":"Channel 27 \u00b7 NZ Freeview","genres":["New Zealand Freeview"]}}

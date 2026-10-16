@@ -1,14 +1,1 @@
-{
-  "meta": {
-    "id": "tv-au-mjh-onthecase-fast",
-    "type": "tv",
-    "name": "On The Case",
-    "poster": "https://i.mjh.nz/.images/auto-onthecase-fast-6ec172.png",
-    "posterShape": "square",
-    "logo": "https://i.mjh.nz/.images/auto-onthecase-fast-6ec172.png",
-    "description": "On The Case \u00b7 Free Live Stream",
-    "genres": [
-      "au-fta"
-    ]
-  }
-}
+{"meta":{"id":"tv-au-mjh-onthecase-fast","type":"tv","name":"On The Case","poster":"https://i.mjh.nz/.images/auto-onthecase-fast-6ec172.png","posterShape":"square","logo":"https://i.mjh.nz/.images/auto-onthecase-fast-6ec172.png","description":"Free live network channel","genres":["Free Network Channels"]}}

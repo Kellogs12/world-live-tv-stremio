@@ -1,14 +1,1 @@
-{
-  "meta": {
-    "id": "tv-au-mjh-sky-news-now",
-    "type": "tv",
-    "name": "Sky News Now",
-    "poster": "https://i.mjh.nz/.images/sky-news-now.png",
-    "posterShape": "square",
-    "logo": "https://i.mjh.nz/.images/sky-news-now.png",
-    "description": "Sky News Now \u00b7 Free Live Stream",
-    "genres": [
-      "au-fta"
-    ]
-  }
-}
+{"meta":{"id":"tv-au-mjh-sky-news-now","type":"tv","name":"Sky News Now","poster":"https://i.mjh.nz/.images/sky-news-now.png","posterShape":"square","logo":"https://i.mjh.nz/.images/sky-news-now.png","description":"Free live network channel","genres":["Free Network Channels"]}}

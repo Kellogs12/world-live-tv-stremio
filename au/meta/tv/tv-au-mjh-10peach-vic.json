@@ -1,14 +1,1 @@
-{
-  "meta": {
-    "id": "tv-au-mjh-10peach-vic",
-    "type": "tv",
-    "name": "10 Comedy",
-    "poster": "https://10play.com.au/ip/s3/2025/06/25/443fa2a5bca1191f12efa002a2a8ef85-1384586.png",
-    "posterShape": "square",
-    "logo": "https://10play.com.au/ip/s3/2025/06/25/443fa2a5bca1191f12efa002a2a8ef85-1384586.png",
-    "description": "10 Comedy \u00b7 Free Live Stream",
-    "genres": [
-      "au-fta"
-    ]
-  }
-}
+{"meta":{"id":"tv-au-mjh-10peach-vic","type":"tv","name":"10 Comedy","poster":"https://10play.com.au/ip/s3/2025/06/25/443fa2a5bca1191f12efa002a2a8ef85-1384586.png","posterShape":"square","logo":"https://10play.com.au/ip/s3/2025/06/25/443fa2a5bca1191f12efa002a2a8ef85-1384586.png","description":"Channel 11 \u00b7 live free-to-air","genres":["Melbourne Free-to-Air"]}}

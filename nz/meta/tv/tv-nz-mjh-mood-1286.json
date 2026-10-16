@@ -1,14 +1,1 @@
-{
-  "meta": {
-    "id": "tv-nz-mjh-mood-1286",
-    "type": "tv",
-    "name": "Big Rig",
-    "poster": "https://gizmeon-vod.lg.mncdn.com/thumbnails/fastchannel/1744244778333.png",
-    "posterShape": "square",
-    "logo": "https://gizmeon-vod.lg.mncdn.com/thumbnails/fastchannel/1744244778333.png",
-    "description": "Big Rig \u00b7 Free Live Stream",
-    "genres": [
-      "nz-fta"
-    ]
-  }
-}
+{"meta":{"id":"tv-nz-mjh-mood-1286","type":"tv","name":"Big Rig","poster":"https://gizmeon-vod.lg.mncdn.com/thumbnails/fastchannel/1744244778333.png","posterShape":"square","logo":"https://gizmeon-vod.lg.mncdn.com/thumbnails/fastchannel/1744244778333.png","description":"NZ Freeview live channel","genres":["New Zealand Freeview"]}}

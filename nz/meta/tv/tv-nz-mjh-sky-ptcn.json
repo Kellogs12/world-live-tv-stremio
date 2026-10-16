@@ -1,14 +1,1 @@
-{
-  "meta": {
-    "id": "tv-nz-mjh-sky-ptcn",
-    "type": "tv",
-    "name": "CNN Headlines International",
-    "poster": "https://contentful-images.digital.skyone.co.nz/v3/hf0kmuqe0d45/5xPXSNCtJNBngNLKZBGLXU/d3fa23fd249dd7c195fe69df9a49961a/Logo_Images_-_default.png",
-    "posterShape": "square",
-    "logo": "https://contentful-images.digital.skyone.co.nz/v3/hf0kmuqe0d45/5xPXSNCtJNBngNLKZBGLXU/d3fa23fd249dd7c195fe69df9a49961a/Logo_Images_-_default.png",
-    "description": "CNN Headlines International \u00b7 Free Live Stream",
-    "genres": [
-      "nz-fta"
-    ]
-  }
-}
+{"meta":{"id":"tv-nz-mjh-sky-ptcn","type":"tv","name":"CNN Headlines International","poster":"https://contentful-images.digital.skyone.co.nz/v3/hf0kmuqe0d45/5xPXSNCtJNBngNLKZBGLXU/d3fa23fd249dd7c195fe69df9a49961a/Logo_Images_-_default.png","posterShape":"square","logo":"https://contentful-images.digital.skyone.co.nz/v3/hf0kmuqe0d45/5xPXSNCtJNBngNLKZBGLXU/d3fa23fd249dd7c195fe69df9a49961a/Logo_Images_-_default.png","description":"NZ Freeview live channel","genres":["New Zealand Freeview"]}}

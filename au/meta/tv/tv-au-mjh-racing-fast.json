@@ -1,14 +1,1 @@
-{
-  "meta": {
-    "id": "tv-au-mjh-racing-fast",
-    "type": "tv",
-    "name": "Racing.com",
-    "poster": "https://i.mjh.nz/.images/auto-racing-fast-de6aee.png",
-    "posterShape": "square",
-    "logo": "https://i.mjh.nz/.images/auto-racing-fast-de6aee.png",
-    "description": "Racing.com \u00b7 Free Live Stream",
-    "genres": [
-      "au-fta"
-    ]
-  }
-}
+{"meta":{"id":"tv-au-mjh-racing-fast","type":"tv","name":"Racing.com","poster":"https://i.mjh.nz/.images/auto-racing-fast-de6aee.png","posterShape":"square","logo":"https://i.mjh.nz/.images/auto-racing-fast-de6aee.png","description":"Channel 78 \u00b7 live free-to-air","genres":["Melbourne Free-to-Air"]}}

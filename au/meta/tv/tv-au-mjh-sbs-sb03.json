@@ -1,14 +1,1 @@
-{
-  "meta": {
-    "id": "tv-au-mjh-sbs-sb03",
-    "type": "tv",
-    "name": "Dateline",
-    "poster": "https://image.pr.sbsod.com/8664060f-f5f6-598d-8d6a-8f7f59bc91c1",
-    "posterShape": "square",
-    "logo": "https://image.pr.sbsod.com/8664060f-f5f6-598d-8d6a-8f7f59bc91c1",
-    "description": "Dateline \u00b7 Free Live Stream",
-    "genres": [
-      "au-fta"
-    ]
-  }
-}
+{"meta":{"id":"tv-au-mjh-sbs-sb03","type":"tv","name":"Dateline","poster":"https://image.pr.sbsod.com/8664060f-f5f6-598d-8d6a-8f7f59bc91c1","posterShape":"square","logo":"https://image.pr.sbsod.com/8664060f-f5f6-598d-8d6a-8f7f59bc91c1","description":"Free live network channel","genres":["Free Network Channels"]}}

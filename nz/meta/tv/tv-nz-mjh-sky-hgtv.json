@@ -1,14 +1,1 @@
-{
-  "meta": {
-    "id": "tv-nz-mjh-sky-hgtv",
-    "type": "tv",
-    "name": "HGTV",
-    "poster": "https://contentful-images.digital.skyone.co.nz/v3/hf0kmuqe0d45/7ln9bxKLUYx7i79iVBSREP/3728559763d31ce1a9484fb68db96ddc/Logo_Images_-_default.png",
-    "posterShape": "square",
-    "logo": "https://contentful-images.digital.skyone.co.nz/v3/hf0kmuqe0d45/7ln9bxKLUYx7i79iVBSREP/3728559763d31ce1a9484fb68db96ddc/Logo_Images_-_default.png",
-    "description": "HGTV \u00b7 Free Live Stream",
-    "genres": [
-      "nz-fta"
-    ]
-  }
-}
+{"meta":{"id":"tv-nz-mjh-sky-hgtv","type":"tv","name":"HGTV","poster":"https://contentful-images.digital.skyone.co.nz/v3/hf0kmuqe0d45/7ln9bxKLUYx7i79iVBSREP/3728559763d31ce1a9484fb68db96ddc/Logo_Images_-_default.png","posterShape":"square","logo":"https://contentful-images.digital.skyone.co.nz/v3/hf0kmuqe0d45/7ln9bxKLUYx7i79iVBSREP/3728559763d31ce1a9484fb68db96ddc/Logo_Images_-_default.png","description":"Channel 19 \u00b7 NZ Freeview","genres":["New Zealand Freeview"]}}

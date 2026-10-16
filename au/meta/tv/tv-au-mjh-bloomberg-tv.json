@@ -1,14 +1,1 @@
-{
-  "meta": {
-    "id": "tv-au-mjh-bloomberg-tv",
-    "type": "tv",
-    "name": "Bloomberg TV",
-    "poster": "https://i.mjh.nz/.images/bloomberg-tv.png",
-    "posterShape": "square",
-    "logo": "https://i.mjh.nz/.images/bloomberg-tv.png",
-    "description": "Bloomberg TV \u00b7 Free Live Stream",
-    "genres": [
-      "au-fta"
-    ]
-  }
-}
+{"meta":{"id":"tv-au-mjh-bloomberg-tv","type":"tv","name":"Bloomberg TV","poster":"https://i.mjh.nz/.images/bloomberg-tv.png","posterShape":"square","logo":"https://i.mjh.nz/.images/bloomberg-tv.png","description":"Free live network channel","genres":["Free Network Channels"]}}

@@ -1,14 +1,1 @@
-{
-  "meta": {
-    "id": "tv-nz-mjh-sky-fast6",
-    "type": "tv",
-    "name": "Warner Bros TV House Hunters",
-    "poster": "https://contentful-images.digital.skyone.co.nz/v3/hf0kmuqe0d45/7lHULtKhOa2XUCfUvXAvL5/23ce1169fbdbda0a219f6af3211b73eb/Logo_Images_-_default.png",
-    "posterShape": "square",
-    "logo": "https://contentful-images.digital.skyone.co.nz/v3/hf0kmuqe0d45/7lHULtKhOa2XUCfUvXAvL5/23ce1169fbdbda0a219f6af3211b73eb/Logo_Images_-_default.png",
-    "description": "Warner Bros TV House Hunters \u00b7 Free Live Stream",
-    "genres": [
-      "nz-fta"
-    ]
-  }
-}
+{"meta":{"id":"tv-nz-mjh-sky-fast6","type":"tv","name":"Warner Bros TV House Hunters","poster":"https://contentful-images.digital.skyone.co.nz/v3/hf0kmuqe0d45/7lHULtKhOa2XUCfUvXAvL5/23ce1169fbdbda0a219f6af3211b73eb/Logo_Images_-_default.png","posterShape":"square","logo":"https://contentful-images.digital.skyone.co.nz/v3/hf0kmuqe0d45/7lHULtKhOa2XUCfUvXAvL5/23ce1169fbdbda0a219f6af3211b73eb/Logo_Images_-_default.png","description":"NZ Freeview live channel","genres":["New Zealand Freeview"]}}

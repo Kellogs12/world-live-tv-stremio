@@ -1,14 +1,1 @@
-{
-  "meta": {
-    "id": "tv-global-dw-english",
-    "type": "tv",
-    "name": "DW English",
-    "poster": "https://www.dw.com/images/icons/favicon-540x540.png",
-    "posterShape": "square",
-    "logo": "https://www.dw.com/images/icons/favicon-540x540.png",
-    "description": "DW English \u00b7 Free Live Stream",
-    "genres": [
-      "global-news"
-    ]
-  }
-}
+{"meta":{"id":"tv-global-dw-english","type":"tv","name":"DW English","poster":"https://www.dw.com/images/icons/favicon-540x540.png","posterShape":"square","logo":"https://www.dw.com/images/icons/favicon-540x540.png","description":"DW English \u00b7 Live TV","genres":["World News (English)"]}}

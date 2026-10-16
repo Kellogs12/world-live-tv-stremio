@@ -1,14 +1,1 @@
-{
-  "meta": {
-    "id": "tv-nz-mjh-sky-fast1",
-    "type": "tv",
-    "name": "Warner Bros TV Motorheads",
-    "poster": "https://contentful-images.digital.skyone.co.nz/v3/hf0kmuqe0d45/laHWrOWVIUsYpUq2F7y0r/900f30b379ffadcdd49ea43ff83dc3d9/Logo_Images_-_default.png",
-    "posterShape": "square",
-    "logo": "https://contentful-images.digital.skyone.co.nz/v3/hf0kmuqe0d45/laHWrOWVIUsYpUq2F7y0r/900f30b379ffadcdd49ea43ff83dc3d9/Logo_Images_-_default.png",
-    "description": "Warner Bros TV Motorheads \u00b7 Free Live Stream",
-    "genres": [
-      "nz-fta"
-    ]
-  }
-}
+{"meta":{"id":"tv-nz-mjh-sky-fast1","type":"tv","name":"Warner Bros TV Motorheads","poster":"https://contentful-images.digital.skyone.co.nz/v3/hf0kmuqe0d45/laHWrOWVIUsYpUq2F7y0r/900f30b379ffadcdd49ea43ff83dc3d9/Logo_Images_-_default.png","posterShape":"square","logo":"https://contentful-images.digital.skyone.co.nz/v3/hf0kmuqe0d45/laHWrOWVIUsYpUq2F7y0r/900f30b379ffadcdd49ea43ff83dc3d9/Logo_Images_-_default.png","description":"NZ Freeview live channel","genres":["New Zealand Freeview"]}}

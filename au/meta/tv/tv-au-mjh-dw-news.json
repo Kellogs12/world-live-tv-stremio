@@ -1,14 +1,1 @@
-{
-  "meta": {
-    "id": "tv-au-mjh-dw-news",
-    "type": "tv",
-    "name": "DW English",
-    "poster": "https://www.dw.com/images/icons/favicon-540x540.png",
-    "posterShape": "square",
-    "logo": "https://www.dw.com/images/icons/favicon-540x540.png",
-    "description": "DW English \u00b7 Free Live Stream",
-    "genres": [
-      "au-fta"
-    ]
-  }
-}
+{"meta":{"id":"tv-au-mjh-dw-news","type":"tv","name":"DW English","poster":"https://www.dw.com/images/icons/favicon-540x540.png","posterShape":"square","logo":"https://www.dw.com/images/icons/favicon-540x540.png","description":"Free live network channel","genres":["Free Network Channels"]}}

@@ -1,14 +1,1 @@
-{
-  "meta": {
-    "id": "tv-au-mjh-ncis-fast",
-    "type": "tv",
-    "name": "NCIS",
-    "poster": "https://i.mjh.nz/.images/auto-ncis-fast-6f82bd.png",
-    "posterShape": "square",
-    "logo": "https://i.mjh.nz/.images/auto-ncis-fast-6f82bd.png",
-    "description": "NCIS \u00b7 Free Live Stream",
-    "genres": [
-      "au-fta"
-    ]
-  }
-}
+{"meta":{"id":"tv-au-mjh-ncis-fast","type":"tv","name":"NCIS","poster":"https://i.mjh.nz/.images/auto-ncis-fast-6f82bd.png","posterShape":"square","logo":"https://i.mjh.nz/.images/auto-ncis-fast-6f82bd.png","description":"Free live network channel","genres":["Free Network Channels"]}}

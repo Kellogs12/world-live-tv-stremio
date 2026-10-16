@@ -1,14 +1,1 @@
-{
-  "meta": {
-    "id": "tv-au-mjh-10-spongebobsquarepants",
-    "type": "tv",
-    "name": "SpongeBob SquarePants",
-    "poster": "https://10.com.au/ip/s3/2024/05/27/ee4d9694aa3f7a2fe97b6f18aa773b88-1316803.png?image-profile=logo",
-    "posterShape": "square",
-    "logo": "https://10.com.au/ip/s3/2024/05/27/ee4d9694aa3f7a2fe97b6f18aa773b88-1316803.png?image-profile=logo",
-    "description": "SpongeBob SquarePants \u00b7 Free Live Stream",
-    "genres": [
-      "au-fta"
-    ]
-  }
-}
+{"meta":{"id":"tv-au-mjh-10-spongebobsquarepants","type":"tv","name":"SpongeBob SquarePants","poster":"https://10.com.au/ip/s3/2024/05/27/ee4d9694aa3f7a2fe97b6f18aa773b88-1316803.png?image-profile=logo","posterShape":"square","logo":"https://10.com.au/ip/s3/2024/05/27/ee4d9694aa3f7a2fe97b6f18aa773b88-1316803.png?image-profile=logo","description":"Free live network channel","genres":["Free Network Channels"]}}

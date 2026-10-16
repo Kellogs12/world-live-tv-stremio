@@ -1,14 +1,1 @@
-{
-  "meta": {
-    "id": "tv-us-abc-news-live",
-    "type": "tv",
-    "name": "ABC News Live",
-    "poster": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/abc-news-live-us.png",
-    "posterShape": "square",
-    "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/abc-news-live-us.png",
-    "description": "ABC News Live \u00b7 Free Live Stream",
-    "genres": [
-      "us-news"
-    ]
-  }
-}
+{"meta":{"id":"tv-us-abc-news-live","type":"tv","name":"ABC News Live","poster":"https://image.xumo.com/v1/channels/channel/99951517/300x300.webp?type=color_onBlack","posterShape":"square","logo":"https://image.xumo.com/v1/channels/channel/99951517/300x300.webp?type=color_onBlack","description":"ABC News Live \u00b7 Live TV","genres":["US Live News & Weather"]}}

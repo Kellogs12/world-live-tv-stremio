@@ -1,12 +1,21 @@
 {
   "countries": [
     {
+      "code": "us",
+      "name": "United States",
+      "flag": "\ud83c\uddfa\ud83c\uddf8",
+      "region": "Americas",
+      "description": "US Live News & Weather (CBS, NBC, ABC, Fox Weather, Scripps, Bloomberg, Reuters), Xumo TV US, and Plex Live TV US.",
+      "channel_count": 1101,
+      "vpn_required": false
+    },
+    {
       "code": "au",
       "name": "Australia",
       "flag": "\ud83c\udde6\ud83c\uddfa",
       "region": "Oceania",
-      "description": "Australian Free-to-Air (ABC, SBS, 7, 9, 10, C31), commercial FAST, Plex and Samsung TV Plus AU.",
-      "channel_count": 186,
+      "description": "Australian Free-to-Air (ABC, SBS, Seven, Nine, 10, C31), network free channels, Plex AU, and Samsung TV Plus AU.",
+      "channel_count": 571,
       "vpn_required": true
     },
     {
@@ -14,17 +23,17 @@
       "name": "United Kingdom",
       "flag": "\ud83c\uddec\ud83c\udde7",
       "region": "Europe",
-      "description": "UK Freeview, BBC, ITV, Channel 4, Channel 5, Sky News, and Pluto TV UK.",
-      "channel_count": 8,
-      "vpn_required": true
+      "description": "UK Live News (BBC News, Sky News, GB News), Freeview, Rakuten TV UK, and Plex Live TV UK.",
+      "channel_count": 564,
+      "vpn_required": false
     },
     {
-      "code": "us",
-      "name": "United States",
-      "flag": "\ud83c\uddfa\ud83c\uddf8",
+      "code": "ca",
+      "name": "Canada",
+      "flag": "\ud83c\udde8\ud83c\udde6",
       "region": "Americas",
-      "description": "US Free Live News, Weather, NASA, Bloomberg, FOX LiveNOW, and Public TV.",
-      "channel_count": 6,
+      "description": "Canadian Live TV, News, and 450+ free channels from Plex Live TV Canada.",
+      "channel_count": 466,
       "vpn_required": false
     },
     {
@@ -32,26 +41,8 @@
       "name": "New Zealand",
       "flag": "\ud83c\uddf3\ud83c\uddff",
       "region": "Oceania",
-      "description": "New Zealand Freeview: TVNZ 1, TVNZ 2, TVNZ Duke, Three, Bravo, Rush, Eden, Whakaata M\u0101ori.",
-      "channel_count": 45,
-      "vpn_required": true
-    },
-    {
-      "code": "ca",
-      "name": "Canada",
-      "flag": "\ud83c\udde8\ud83c\udde6",
-      "region": "Americas",
-      "description": "Canadian Free TV: CBC News, CBC Vancouver/Toronto, Global News, Citytv, and Pluto CA.",
-      "channel_count": 4,
-      "vpn_required": true
-    },
-    {
-      "code": "ie",
-      "name": "Ireland",
-      "flag": "\ud83c\uddee\ud83c\uddea",
-      "region": "Europe",
-      "description": "Irish Free-to-Air: RT\u00c9 News, RT\u00c9 One, Virgin Media, TG4.",
-      "channel_count": 2,
+      "description": "New Zealand Freeview (TVNZ 1, TVNZ 2, Three, Bravo, Rush, Eden, Whakaata M\u0101ori) and Plex Live TV NZ.",
+      "channel_count": 308,
       "vpn_required": true
     },
     {
@@ -59,8 +50,8 @@
       "name": "Global News & Sports",
       "flag": "\ud83c\udf10",
       "region": "Global",
-      "description": "24/7 World News and Sports: Sky News, BBC News, Al Jazeera, DW, France 24, Bloomberg, Red Bull TV, NASA TV.",
-      "channel_count": 8,
+      "description": "24/7 World News, Weather, and Sports: CBS News, NBC News, ABC News, BBC News, Sky News, Al Jazeera, DW, France 24, Euronews, Bloomberg, Red Bull TV.",
+      "channel_count": 15,
       "vpn_required": false
     }
   ]

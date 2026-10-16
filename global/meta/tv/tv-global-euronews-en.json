@@ -1,14 +1,1 @@
-{
-  "meta": {
-    "id": "tv-global-euronews-en",
-    "type": "tv",
-    "name": "Euronews English",
-    "poster": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/euronews-fr.png",
-    "posterShape": "square",
-    "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/euronews-fr.png",
-    "description": "Euronews English \u00b7 Free Live Stream",
-    "genres": [
-      "global-news"
-    ]
-  }
-}
+{"meta":{"id":"tv-global-euronews-en","type":"tv","name":"Euronews English","poster":"https://image.pr.sbsod.com/60e599d9-82ed-5eac-b51c-7c23a9bb0c55","posterShape":"square","logo":"https://image.pr.sbsod.com/60e599d9-82ed-5eac-b51c-7c23a9bb0c55","description":"Euronews English \u00b7 Live TV","genres":["World News (English)"]}}

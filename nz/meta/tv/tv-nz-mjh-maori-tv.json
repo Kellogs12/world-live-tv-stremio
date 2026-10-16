@@ -1,14 +1,1 @@
-{
-  "meta": {
-    "id": "tv-nz-mjh-maori-tv",
-    "type": "tv",
-    "name": "Whakaata M\u0101ori",
-    "poster": "https://i.mjh.nz/.images/maori-tv.png",
-    "posterShape": "square",
-    "logo": "https://i.mjh.nz/.images/maori-tv.png",
-    "description": "Whakaata M\u0101ori \u00b7 Free Live Stream",
-    "genres": [
-      "nz-fta"
-    ]
-  }
-}
+{"meta":{"id":"tv-nz-mjh-maori-tv","type":"tv","name":"Whakaata M\u0101ori","poster":"https://i.mjh.nz/.images/maori-tv.png","posterShape":"square","logo":"https://i.mjh.nz/.images/maori-tv.png","description":"Channel 5 \u00b7 NZ Freeview","genres":["New Zealand Freeview"]}}

@@ -1,14 +1,1 @@
-{
-  "meta": {
-    "id": "tv-uk-sky-news-uk",
-    "type": "tv",
-    "name": "Sky News UK",
-    "poster": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-news-uk.png",
-    "posterShape": "square",
-    "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-news-uk.png",
-    "description": "Sky News UK \u00b7 Free Live Stream",
-    "genres": [
-      "uk-news"
-    ]
-  }
-}
+{"meta":{"id":"tv-uk-sky-news-uk","type":"tv","name":"Sky News UK","poster":"https://image.xumo.com/v1/channels/channel/99951223/300x300.webp?type=color_onBlack","posterShape":"square","logo":"https://image.xumo.com/v1/channels/channel/99951223/300x300.webp?type=color_onBlack","description":"Sky News UK \u00b7 Live TV","genres":["UK Live News & Public TV"]}}

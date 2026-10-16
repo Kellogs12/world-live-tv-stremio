@@ -234,9 +234,12 @@
       <b>FAST &amp; News channels</b> (Pluto TV, Samsung TV Plus, CBS News, Sky News, Al Jazeera, DW, Red Bull TV) generally work openly worldwide.
     </p>
 
-    <h2>Stremio Web vs Native Apps</h2>
+    <h2>Stremio Web (Brave / Browser) vs Native Apps</h2>
     <p class="note">
-      Each channel provides two streams: <b>Live</b> for native Stremio desktop, Android, and TV apps, and <b>Live (browser)</b> which routes through proxy headers so you can watch directly in <b>Stremio Web</b> without requiring the local streaming engine.
+      Each channel provides two streams:
+      <br>&bull; <b>Live (browser)</b>: Use this in <b>Stremio Web</b> (e.g. <code>web.stremio.com</code> in Brave) when the Stremio Desktop app or Stremio Service is <b>not</b> running on your computer. (If Stremio Desktop is running in the background, Stremio Web hands the stream to the local desktop server where live HLS redirects fail—so either quit Stremio Desktop when using the browser, or watch inside the Stremio Desktop app directly.)
+      <br>&bull; <b>Live</b>: Use this in the Stremio Desktop, Android TV, and mobile apps.
+      <br>&bull; <b>Updating an existing addon</b>: Stremio caches the manifest it saw at install time. If you installed an older version previously, <b>Uninstall</b> it in Stremio first, then click <b>Install</b> again.
     </p>
 
     <h2>Using with AIOStreams</h2>

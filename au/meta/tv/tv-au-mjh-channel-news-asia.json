@@ -1,14 +1,1 @@
-{
-  "meta": {
-    "id": "tv-au-mjh-channel-news-asia",
-    "type": "tv",
-    "name": "Channel News Asia (CNA)",
-    "poster": "https://i.mjh.nz/.images/channel-news-asia.png",
-    "posterShape": "square",
-    "logo": "https://i.mjh.nz/.images/channel-news-asia.png",
-    "description": "Channel News Asia (CNA) \u00b7 Free Live Stream",
-    "genres": [
-      "au-fta"
-    ]
-  }
-}
+{"meta":{"id":"tv-au-mjh-channel-news-asia","type":"tv","name":"Channel News Asia (CNA)","poster":"https://i.mjh.nz/.images/channel-news-asia.png","posterShape":"square","logo":"https://i.mjh.nz/.images/channel-news-asia.png","description":"Free live network channel","genres":["Free Network Channels"]}}

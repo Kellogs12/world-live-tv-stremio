@@ -1,14 +1,1 @@
-{
-  "meta": {
-    "id": "tv-au-mjh-livgolfreplays-fast",
-    "type": "tv",
-    "name": "LIV Golf Replays",
-    "poster": "https://i.mjh.nz/.images/auto-livgolfreplays-fast-471f30.png",
-    "posterShape": "square",
-    "logo": "https://i.mjh.nz/.images/auto-livgolfreplays-fast-471f30.png",
-    "description": "LIV Golf Replays \u00b7 Free Live Stream",
-    "genres": [
-      "au-fta"
-    ]
-  }
-}
+{"meta":{"id":"tv-au-mjh-livgolfreplays-fast","type":"tv","name":"LIV Golf Replays","poster":"https://i.mjh.nz/.images/auto-livgolfreplays-fast-471f30.png","posterShape":"square","logo":"https://i.mjh.nz/.images/auto-livgolfreplays-fast-471f30.png","description":"Free live network channel","genres":["Free Network Channels"]}}

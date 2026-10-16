@@ -1,14 +1,1 @@
-{
-  "meta": {
-    "id": "tv-au-mjh-wtn-fast",
-    "type": "tv",
-    "name": "Wicked Tuna",
-    "poster": "https://i.mjh.nz/.images/auto-wtn-fast-0a858d.png",
-    "posterShape": "square",
-    "logo": "https://i.mjh.nz/.images/auto-wtn-fast-0a858d.png",
-    "description": "Wicked Tuna \u00b7 Free Live Stream",
-    "genres": [
-      "au-fta"
-    ]
-  }
-}
+{"meta":{"id":"tv-au-mjh-wtn-fast","type":"tv","name":"Wicked Tuna","poster":"https://i.mjh.nz/.images/auto-wtn-fast-0a858d.png","posterShape":"square","logo":"https://i.mjh.nz/.images/auto-wtn-fast-0a858d.png","description":"Free live network channel","genres":["Free Network Channels"]}}
