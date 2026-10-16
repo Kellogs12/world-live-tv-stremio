@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "id": "tv-nz-whakaata-maori",
+    "type": "tv",
+    "name": "Whakaata M\u0101ori",
+    "poster": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/new-zealand/whakaata-maori-nz.png",
+    "posterShape": "square",
+    "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/new-zealand/whakaata-maori-nz.png",
+    "description": "Whakaata M\u0101ori \u00b7 Free Live Stream",
+    "genres": [
+      "nz-fta"
+    ]
+  }
+}

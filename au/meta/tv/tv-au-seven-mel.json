@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "id": "tv-au-seven-mel",
+    "type": "tv",
+    "name": "Channel 7",
+    "poster": "https://i.mjh.nz/.images/auto-seven-mel-9608a4.png",
+    "posterShape": "square",
+    "logo": "https://i.mjh.nz/.images/auto-seven-mel-9608a4.png",
+    "description": "Channel 7 \u00b7 Free Live Stream",
+    "genres": [
+      "au-fta"
+    ]
+  }
+}

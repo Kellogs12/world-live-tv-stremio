@@ -1,0 +1,28 @@
+{
+  "metas": [
+    {
+      "id": "tv-uk-bbc-news-uk",
+      "type": "tv",
+      "name": "BBC News UK",
+      "poster": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/bbc-news-uk.png",
+      "posterShape": "square",
+      "description": "BBC News UK \u00b7 live stream"
+    },
+    {
+      "id": "tv-uk-sky-news-uk",
+      "type": "tv",
+      "name": "Sky News UK",
+      "poster": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-news-uk.png",
+      "posterShape": "square",
+      "description": "Sky News UK \u00b7 live stream"
+    },
+    {
+      "id": "tv-uk-gb-news",
+      "type": "tv",
+      "name": "GB News",
+      "poster": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/gb-news-uk.png",
+      "posterShape": "square",
+      "description": "GB News \u00b7 live stream"
+    }
+  ]
+}

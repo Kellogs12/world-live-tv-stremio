@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "id": "tv-uk-channel-5",
+    "type": "tv",
+    "name": "Channel 5",
+    "poster": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/channel-5-uk.png",
+    "posterShape": "square",
+    "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/channel-5-uk.png",
+    "description": "Channel 5 \u00b7 Free Live Stream",
+    "genres": [
+      "uk-freeview"
+    ]
+  }
+}

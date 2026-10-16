@@ -1,0 +1,21 @@
+{
+  "streams": [
+    {
+      "url": "https://cpac.akamaized.net/hls/live/2006128/cpac_en/master.m3u8",
+      "name": "Live",
+      "title": "CPAC English"
+    },
+    {
+      "url": "https://cpac.akamaized.net/hls/live/2006128/cpac_en/master.m3u8",
+      "name": "Live (browser)",
+      "title": "CPAC English\nFor Stremio Web",
+      "behaviorHints": {
+        "proxyHeaders": {
+          "response": {
+            "content-type": "application/vnd.apple.mpegurl"
+          }
+        }
+      }
+    }
+  ]
+}

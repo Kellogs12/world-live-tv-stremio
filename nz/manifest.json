@@ -1,0 +1,49 @@
+{
+  "id": "worldlive.nz",
+  "version": "1.0.0",
+  "name": "\ud83c\uddf3\ud83c\uddff New Zealand Live TV",
+  "description": "New Zealand Freeview: TVNZ 1, TVNZ 2, TVNZ Duke, Three, Bravo, Rush, Eden, Whakaata M\u0101ori.",
+  "resources": [
+    "catalog",
+    {
+      "name": "meta",
+      "types": [
+        "tv"
+      ],
+      "idPrefixes": [
+        "tv-nz-"
+      ]
+    },
+    {
+      "name": "stream",
+      "types": [
+        "tv"
+      ],
+      "idPrefixes": [
+        "tv-nz-"
+      ]
+    }
+  ],
+  "types": [
+    "tv"
+  ],
+  "idPrefixes": [
+    "tv-nz-"
+  ],
+  "catalogs": [
+    {
+      "type": "tv",
+      "id": "nz-fta",
+      "name": "New Zealand Freeview"
+    },
+    {
+      "type": "tv",
+      "id": "nz-fast",
+      "name": "FAST Channels"
+    }
+  ],
+  "behaviorHints": {
+    "configurable": false,
+    "configurationRequired": false
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "id": "tv-uk-gb-news",
+    "type": "tv",
+    "name": "GB News",
+    "poster": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/gb-news-uk.png",
+    "posterShape": "square",
+    "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/gb-news-uk.png",
+    "description": "GB News \u00b7 Free Live Stream",
+    "genres": [
+      "uk-news"
+    ]
+  }
+}

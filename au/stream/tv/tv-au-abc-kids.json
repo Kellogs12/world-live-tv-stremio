@@ -1,0 +1,21 @@
+{
+  "streams": [
+    {
+      "url": "https://i.mjh.nz/.r/abc-kids.m3u8",
+      "name": "Live",
+      "title": "ABC Kids"
+    },
+    {
+      "url": "https://i.mjh.nz/.r/abc-kids.m3u8",
+      "name": "Live (browser)",
+      "title": "ABC Kids\nFor Stremio Web",
+      "behaviorHints": {
+        "proxyHeaders": {
+          "response": {
+            "content-type": "application/vnd.apple.mpegurl"
+          }
+        }
+      }
+    }
+  ]
+}

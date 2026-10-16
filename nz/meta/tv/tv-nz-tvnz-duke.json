@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "id": "tv-nz-tvnz-duke",
+    "type": "tv",
+    "name": "TVNZ Duke",
+    "poster": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/new-zealand/tvnz-duke-nz.png",
+    "posterShape": "square",
+    "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/new-zealand/tvnz-duke-nz.png",
+    "description": "TVNZ Duke \u00b7 Free Live Stream",
+    "genres": [
+      "nz-fta"
+    ]
+  }
+}

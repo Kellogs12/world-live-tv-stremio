@@ -1,0 +1,60 @@
+{
+  "metas": [
+    {
+      "id": "tv-us-cbs-news",
+      "type": "tv",
+      "name": "CBS News 24/7",
+      "poster": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/cbs-news-us.png",
+      "posterShape": "square",
+      "description": "CBS News 24/7 \u00b7 live stream"
+    },
+    {
+      "id": "tv-us-abc-news-live",
+      "type": "tv",
+      "name": "ABC News Live",
+      "poster": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/abc-news-live-us.png",
+      "posterShape": "square",
+      "description": "ABC News Live \u00b7 live stream"
+    },
+    {
+      "id": "tv-us-nbc-news-now",
+      "type": "tv",
+      "name": "NBC News NOW",
+      "poster": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nbc-news-now-us.png",
+      "posterShape": "square",
+      "description": "NBC News NOW \u00b7 live stream"
+    },
+    {
+      "id": "tv-us-scripps-news",
+      "type": "tv",
+      "name": "Scripps News",
+      "poster": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/scripps-news-us.png",
+      "posterShape": "square",
+      "description": "Scripps News \u00b7 live stream"
+    },
+    {
+      "id": "tv-us-livenow-fox",
+      "type": "tv",
+      "name": "LiveNOW from FOX",
+      "poster": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/livenow-from-fox-us.png",
+      "posterShape": "square",
+      "description": "LiveNOW from FOX \u00b7 live stream"
+    },
+    {
+      "id": "tv-us-weathernation",
+      "type": "tv",
+      "name": "WeatherNation",
+      "poster": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/weathernation-us.png",
+      "posterShape": "square",
+      "description": "WeatherNation \u00b7 live stream"
+    },
+    {
+      "id": "tv-us-bloomberg-us",
+      "type": "tv",
+      "name": "Bloomberg TV+",
+      "poster": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/bloomberg-tv-us.png",
+      "posterShape": "square",
+      "description": "Bloomberg TV+ \u00b7 live stream"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "id": "tv-uk-bbc-one",
+    "type": "tv",
+    "name": "BBC One",
+    "poster": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/bbc-one-uk.png",
+    "posterShape": "square",
+    "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/bbc-one-uk.png",
+    "description": "BBC One \u00b7 Free Live Stream",
+    "genres": [
+      "uk-freeview"
+    ]
+  }
+}

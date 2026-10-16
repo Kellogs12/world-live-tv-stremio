@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "id": "tv-us-scripps-news",
+    "type": "tv",
+    "name": "Scripps News",
+    "poster": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/scripps-news-us.png",
+    "posterShape": "square",
+    "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/scripps-news-us.png",
+    "description": "Scripps News \u00b7 Free Live Stream",
+    "genres": [
+      "us-news"
+    ]
+  }
+}

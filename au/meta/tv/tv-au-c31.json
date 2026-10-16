@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "id": "tv-au-c31",
+    "type": "tv",
+    "name": "Channel 31",
+    "poster": "https://i.mjh.nz/.images/c31.png",
+    "posterShape": "square",
+    "logo": "https://i.mjh.nz/.images/c31.png",
+    "description": "Channel 31 \u00b7 Free Live Stream",
+    "genres": [
+      "au-fta"
+    ]
+  }
+}

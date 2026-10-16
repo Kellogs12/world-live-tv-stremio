@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "id": "tv-us-abc-news-live",
+    "type": "tv",
+    "name": "ABC News Live",
+    "poster": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/abc-news-live-us.png",
+    "posterShape": "square",
+    "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/abc-news-live-us.png",
+    "description": "ABC News Live \u00b7 Free Live Stream",
+    "genres": [
+      "us-news"
+    ]
+  }
+}

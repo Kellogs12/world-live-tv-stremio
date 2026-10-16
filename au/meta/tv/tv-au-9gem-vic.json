@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "id": "tv-au-9gem-vic",
+    "type": "tv",
+    "name": "9Gem",
+    "poster": "https://imageresizer.static9.net.au/d00389KKc5T4o5isRaDE9Pl9DWk=/768x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F08%2F620929%2F9gem-1.png",
+    "posterShape": "square",
+    "logo": "https://imageresizer.static9.net.au/d00389KKc5T4o5isRaDE9Pl9DWk=/768x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F08%2F620929%2F9gem-1.png",
+    "description": "9Gem \u00b7 Free Live Stream",
+    "genres": [
+      "au-fta"
+    ]
+  }
+}

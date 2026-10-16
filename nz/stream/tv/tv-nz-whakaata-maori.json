@@ -1,0 +1,21 @@
+{
+  "streams": [
+    {
+      "url": "https://i.mjh.nz/.r/maori-tv.m3u8",
+      "name": "Live",
+      "title": "Whakaata M\u0101ori"
+    },
+    {
+      "url": "https://i.mjh.nz/.r/maori-tv.m3u8",
+      "name": "Live (browser)",
+      "title": "Whakaata M\u0101ori\nFor Stremio Web",
+      "behaviorHints": {
+        "proxyHeaders": {
+          "response": {
+            "content-type": "application/vnd.apple.mpegurl"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "id": "tv-global-france24-en",
+    "type": "tv",
+    "name": "France 24 English",
+    "poster": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/france-24-fr.png",
+    "posterShape": "square",
+    "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/france-24-fr.png",
+    "description": "France 24 English \u00b7 Free Live Stream",
+    "genres": [
+      "global-news"
+    ]
+  }
+}

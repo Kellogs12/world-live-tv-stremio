@@ -1,0 +1,180 @@
+{
+  "countries": [
+    {
+      "code": "au",
+      "name": "Australia",
+      "flag": "🇦🇺",
+      "region": "Oceania",
+      "description": "Australian Free-to-Air (ABC, SBS, 7, 9, 10, C31), commercial FAST, Plex and Samsung TV Plus AU.",
+      "vpn_required": true,
+      "m3u_urls": [
+        "https://i.mjh.nz/au/Melbourne/raw-tv.m3u8",
+        "https://i.mjh.nz/SamsungTVPlus/au.m3u8"
+      ],
+      "catalogs": [
+        {"id": "au-fta", "name": "Free-to-Air"},
+        {"id": "au-fast", "name": "Free Commercial Channels"},
+        {"id": "au-samsung", "name": "Samsung TV Plus AU"}
+      ],
+      "fallback_channels": [
+        {"id": "10-vic", "name": "10", "catalog": "au-fta", "logo": "https://10play.com.au/ip/s3/2025/06/25/b18ae76555d114f7bfaf1c3bfa43dd3f-1384577.png", "url": "https://i.mjh.nz/.r/10-vic.m3u8"},
+        {"id": "10peach-vic", "name": "10 Comedy", "catalog": "au-fta", "logo": "https://10play.com.au/ip/s3/2025/06/25/443fa2a5bca1191f12efa002a2a8ef85-1384586.png", "url": "https://i.mjh.nz/.r/10peach-vic.m3u8"},
+        {"id": "10bold-vic", "name": "10 Drama", "catalog": "au-fta", "logo": "https://10play.com.au/ip/s3/2025/06/25/66c9f2639a7bca4a6691764a0db801d7-1384581.png", "url": "https://i.mjh.nz/.r/10bold-vic.m3u8"},
+        {"id": "10shake-vic", "name": "Nickelodeon", "catalog": "au-fta", "logo": "https://10play.com.au/ip/s3/2023/07/31/dc4873abc5ba0fde04b59a78c89e0943-1252731.png", "url": "https://i.mjh.nz/.r/10shake-vic.m3u8"},
+        {"id": "abc-vic", "name": "ABC TV", "catalog": "au-fta", "logo": "https://i.mjh.nz/.images/abc-nsw.png", "url": "https://i.mjh.nz/.r/abc-vic.m3u8"},
+        {"id": "abc-kids", "name": "ABC Kids", "catalog": "au-fta", "logo": "https://i.mjh.nz/.images/abc-kids.png", "url": "https://i.mjh.nz/.r/abc-kids.m3u8"},
+        {"id": "abc-news", "name": "ABC NEWS", "catalog": "au-fta", "logo": "https://i.mjh.nz/.images/abc-news.png", "url": "https://i.mjh.nz/.r/abc-news.m3u8"},
+        {"id": "sbs-sbst", "name": "SBS", "catalog": "au-fta", "logo": "https://image.pr.sbsod.com/b073959a-a63e-5b6a-a05a-157d615a4b8c", "url": "https://i.mjh.nz/.r/sbs-sbst.m3u8"},
+        {"id": "sbs-2syd", "name": "SBS Viceland", "catalog": "au-fta", "logo": "https://image.pr.sbsod.com/e7f27bb4-4672-599e-b9b4-a72cfdd8d3ba", "url": "https://i.mjh.nz/.r/sbs-2syd.m3u8"},
+        {"id": "sbs-4syd", "name": "SBS World Movies", "catalog": "au-fta", "logo": "https://image.pr.sbsod.com/cc42ae9e-0e64-5bc3-8c71-6f23f42610fb", "url": "https://i.mjh.nz/.r/sbs-4syd.m3u8"},
+        {"id": "seven-mel", "name": "Channel 7", "catalog": "au-fta", "logo": "https://i.mjh.nz/.images/auto-seven-mel-9608a4.png", "url": "https://i.mjh.nz/.r/seven-mel.m3u8"},
+        {"id": "7two-mel", "name": "7two", "catalog": "au-fta", "logo": "https://i.mjh.nz/.images/auto-7two-mel-701123.png", "url": "https://i.mjh.nz/.r/7two-mel.m3u8"},
+        {"id": "7mate-mel", "name": "7mate", "catalog": "au-fta", "logo": "https://i.mjh.nz/.images/auto-7mate-mel-360d60.png", "url": "https://i.mjh.nz/.r/7mate-mel.m3u8"},
+        {"id": "channel-9-vic", "name": "Channel 9", "catalog": "au-fta", "logo": "https://imageresizer.static9.net.au/lx1XIWcrYZRtnfJOqvxNn9CshDI=/768x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F09%2F630608%2F9nine-1.png", "url": "https://i.mjh.nz/.r/channel-9-vic.m3u8"},
+        {"id": "9gem-vic", "name": "9Gem", "catalog": "au-fta", "logo": "https://imageresizer.static9.net.au/d00389KKc5T4o5isRaDE9Pl9DWk=/768x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F08%2F620929%2F9gem-1.png", "url": "https://i.mjh.nz/.r/gem-vic.m3u8"},
+        {"id": "c31", "name": "Channel 31", "catalog": "au-fta", "logo": "https://i.mjh.nz/.images/c31.png", "url": "https://i.mjh.nz/.r/c31.m3u8"}
+      ]
+    },
+    {
+      "code": "uk",
+      "name": "United Kingdom",
+      "flag": "🇬🇧",
+      "region": "Europe",
+      "description": "UK Freeview, BBC, ITV, Channel 4, Channel 5, Sky News, and Pluto TV UK.",
+      "vpn_required": true,
+      "m3u_urls": [
+        "https://i.mjh.nz/PlutoTV/gb.m3u8",
+        "https://i.mjh.nz/SamsungTVPlus/gb.m3u8"
+      ],
+      "catalogs": [
+        {"id": "uk-freeview", "name": "Freeview & Public TV"},
+        {"id": "uk-news", "name": "UK News"},
+        {"id": "uk-fast", "name": "Pluto & Samsung UK"}
+      ],
+      "fallback_channels": [
+        {"id": "bbc-one", "name": "BBC One", "catalog": "uk-freeview", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/bbc-one-uk.png", "url": "https://vs-hls-push-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_one_hd/t=3840/v=pv14/b=5070016/main.m3u8"},
+        {"id": "bbc-two", "name": "BBC Two", "catalog": "uk-freeview", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/bbc-two-uk.png", "url": "https://vs-hls-push-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_two_hd/t=3840/v=pv14/b=5070016/main.m3u8"},
+        {"id": "bbc-news-uk", "name": "BBC News UK", "catalog": "uk-news", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/bbc-news-uk.png", "url": "https://vs-hls-push-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_news_channel_hd/t=3840/v=pv14/b=5070016/main.m3u8"},
+        {"id": "itv-1", "name": "ITV1", "catalog": "uk-freeview", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/itv1-uk.png", "url": "https://itv01.akamaized.net/hls/live/2026851/itvsimulcast/itv1/streamLarge.m3u8"},
+        {"id": "channel-4", "name": "Channel 4", "catalog": "uk-freeview", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/channel-4-uk.png", "url": "https://c4-live.akamaized.net/hls/live/2006126/c4/master.m3u8"},
+        {"id": "channel-5", "name": "Channel 5", "catalog": "uk-freeview", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/channel-5-uk.png", "url": "https://c5-live.akamaized.net/hls/live/2006127/c5/master.m3u8"},
+        {"id": "sky-news-uk", "name": "Sky News UK", "catalog": "uk-news", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-news-uk.png", "url": "https://skynews-skynews-1-gb.samsung.wurl.tv/manifest/playlist.m3u8"},
+        {"id": "gb-news", "name": "GB News", "catalog": "uk-news", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/gb-news-uk.png", "url": "https://gbnews-rakuten.amagi.tv/hls/amagi_hls_data_rakutenGB-gbnews-rakuten/CDN/master.m3u8"}
+      ]
+    },
+    {
+      "code": "us",
+      "name": "United States",
+      "flag": "🇺🇸",
+      "region": "Americas",
+      "description": "US Free Live News (CBS, ABC, NBC, Scripps), PBS, Pluto TV US, and Samsung TV Plus US.",
+      "vpn_required": false,
+      "m3u_urls": [
+        "https://i.mjh.nz/PBS/all.m3u8",
+        "https://i.mjh.nz/PlutoTV/us.m3u8",
+        "https://i.mjh.nz/SamsungTVPlus/us.m3u8"
+      ],
+      "catalogs": [
+        {"id": "us-news", "name": "US Live News & Weather"},
+        {"id": "us-pbs", "name": "PBS Stations"},
+        {"id": "us-fast", "name": "FAST Channels"}
+      ],
+      "fallback_channels": [
+        {"id": "cbs-news", "name": "CBS News 24/7", "catalog": "us-news", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/cbs-news-us.png", "url": "https://cbsn-us.cbsnstream.cbsnews.com/out/v1/55a8648e8f13459e97378f804e1329a6/master.m3u8"},
+        {"id": "abc-news-live", "name": "ABC News Live", "catalog": "us-news", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/abc-news-live-us.png", "url": "https://abclivepush-lh.akamaihd.net/i/bk_abcnews_1@446215/master.m3u8"},
+        {"id": "nbc-news-now", "name": "NBC News NOW", "catalog": "us-news", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nbc-news-now-us.png", "url": "https://nbcnews-now.akamaized.net/hls/live/2026852/nbcnews/master.m3u8"},
+        {"id": "scripps-news", "name": "Scripps News", "catalog": "us-news", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/scripps-news-us.png", "url": "https://scrippsnews-samsung.amagi.tv/playlist.m3u8"},
+        {"id": "livenow-fox", "name": "LiveNOW from FOX", "catalog": "us-news", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/livenow-from-fox-us.png", "url": "https://fox-foxnewsnow-samsungus.amagi.tv/playlist.m3u8"},
+        {"id": "weathernation", "name": "WeatherNation", "catalog": "us-news", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/weathernation-us.png", "url": "https://weathernation-samsung.amagi.tv/playlist.m3u8"},
+        {"id": "bloomberg-us", "name": "Bloomberg TV+", "catalog": "us-news", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/bloomberg-tv-us.png", "url": "https://bloomberg.com/media-manifest/streams/us.m3u8"}
+      ]
+    },
+    {
+      "code": "nz",
+      "name": "New Zealand",
+      "flag": "🇳🇿",
+      "region": "Oceania",
+      "description": "New Zealand Freeview: TVNZ 1, TVNZ 2, TVNZ Duke, Three, Bravo, Rush, Eden, Whakaata Māori.",
+      "vpn_required": true,
+      "m3u_urls": [
+        "https://i.mjh.nz/nz/raw-tv.m3u8",
+        "https://i.mjh.nz/SamsungTVPlus/nz.m3u8"
+      ],
+      "catalogs": [
+        {"id": "nz-fta", "name": "New Zealand Freeview"},
+        {"id": "nz-fast", "name": "FAST Channels"}
+      ],
+      "fallback_channels": [
+        {"id": "tvnz-1", "name": "TVNZ 1", "catalog": "nz-fta", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/new-zealand/tvnz-1-nz.png", "url": "https://i.mjh.nz/.r/tvnz-1.m3u8"},
+        {"id": "tvnz-2", "name": "TVNZ 2", "catalog": "nz-fta", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/new-zealand/tvnz-2-nz.png", "url": "https://i.mjh.nz/.r/tvnz-2.m3u8"},
+        {"id": "tvnz-duke", "name": "TVNZ Duke", "catalog": "nz-fta", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/new-zealand/tvnz-duke-nz.png", "url": "https://i.mjh.nz/.r/tvnz-duke.m3u8"},
+        {"id": "three-nz", "name": "Three", "catalog": "nz-fta", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/new-zealand/three-nz.png", "url": "https://i.mjh.nz/.r/three.m3u8"},
+        {"id": "bravo-nz", "name": "Bravo NZ", "catalog": "nz-fta", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/new-zealand/bravo-nz.png", "url": "https://i.mjh.nz/.r/bravo.m3u8"},
+        {"id": "rush-nz", "name": "Rush", "catalog": "nz-fta", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/new-zealand/rush-nz.png", "url": "https://i.mjh.nz/.r/rush.m3u8"},
+        {"id": "whakaata-maori", "name": "Whakaata Māori", "catalog": "nz-fta", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/new-zealand/whakaata-maori-nz.png", "url": "https://i.mjh.nz/.r/maori-tv.m3u8"}
+      ]
+    },
+    {
+      "code": "ca",
+      "name": "Canada",
+      "flag": "🇨🇦",
+      "region": "Americas",
+      "description": "Canadian Free TV: CBC News, CBC Vancouver/Toronto, Global News, Citytv, and Pluto CA.",
+      "vpn_required": true,
+      "m3u_urls": [
+        "https://i.mjh.nz/PlutoTV/ca.m3u8",
+        "https://i.mjh.nz/SamsungTVPlus/ca.m3u8"
+      ],
+      "catalogs": [
+        {"id": "ca-fta", "name": "Canadian National Channels"},
+        {"id": "ca-news", "name": "Canadian News"},
+        {"id": "ca-fast", "name": "Pluto & Samsung CA"}
+      ],
+      "fallback_channels": [
+        {"id": "cbc-news-ca", "name": "CBC News Explore", "catalog": "ca-news", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/canada/cbc-news-network-ca.png", "url": "https://cbcliverev-lh.akamaihd.net/i/CBCNewsExplore_1@384234/master.m3u8"},
+        {"id": "cbc-toronto", "name": "CBC Toronto", "catalog": "ca-fta", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/canada/cbc-ca.png", "url": "https://cbcliverev-lh.akamaihd.net/i/CBCToronto_1@384233/master.m3u8"},
+        {"id": "global-news-ca", "name": "Global News National", "catalog": "ca-news", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/canada/global-news-ca.png", "url": "https://globalnews-lh.akamaihd.net/i/GlobalNewsNational_1@384235/master.m3u8"},
+        {"id": "cpac", "name": "CPAC English", "catalog": "ca-fta", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/canada/cpac-ca.png", "url": "https://cpac.akamaized.net/hls/live/2006128/cpac_en/master.m3u8"}
+      ]
+    },
+    {
+      "code": "ie",
+      "name": "Ireland",
+      "flag": "🇮🇪",
+      "region": "Europe",
+      "description": "Irish Free-to-Air: RTÉ News, RTÉ One, Virgin Media, TG4.",
+      "vpn_required": true,
+      "m3u_urls": [],
+      "catalogs": [
+        {"id": "ie-fta", "name": "Irish Free-to-Air"}
+      ],
+      "fallback_channels": [
+        {"id": "rte-news", "name": "RTÉ News Now", "catalog": "ie-fta", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/ireland/rte-news-ie.png", "url": "https://cdn.rasset.ie/hls-live/_definst_/rte_news/rte_news.m3u8"},
+        {"id": "tg4", "name": "TG4", "catalog": "ie-fta", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/ireland/tg4-ie.png", "url": "https://tg4live.akamaized.net/hls/live/2026853/tg4/master.m3u8"}
+      ]
+    },
+    {
+      "code": "global",
+      "name": "Global News & Sports",
+      "flag": "🌐",
+      "region": "Global",
+      "description": "24/7 World News and Sports: Sky News, BBC News, Al Jazeera, DW, France 24, Bloomberg, Red Bull TV, NASA TV.",
+      "vpn_required": false,
+      "m3u_urls": [],
+      "catalogs": [
+        {"id": "global-news", "name": "World News (English)"},
+        {"id": "global-sports-science", "name": "Sports, Tech & Science"}
+      ],
+      "fallback_channels": [
+        {"id": "sky-news-intl", "name": "Sky News International", "catalog": "global-news", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-news-uk.png", "url": "https://skynews-skynews-1-gb.samsung.wurl.tv/manifest/playlist.m3u8"},
+        {"id": "al-jazeera-en", "name": "Al Jazeera English", "catalog": "global-news", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/qatar/al-jazeera-english-qa.png", "url": "https://live-hls-web-aje.getaj.net/AJE/01.m3u8"},
+        {"id": "dw-english", "name": "DW English", "catalog": "global-news", "logo": "https://www.dw.com/images/icons/favicon-540x540.png", "url": "https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/index.m3u8"},
+        {"id": "france24-en", "name": "France 24 English", "catalog": "global-news", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/france-24-fr.png", "url": "https://stream.france24.com/hls/live/2037508/F24_EN_LO_HLS/master.m3u8"},
+        {"id": "euronews-en", "name": "Euronews English", "catalog": "global-news", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/euronews-fr.png", "url": "https://euronews-euronews-world-1-us.samsung.wurl.tv/manifest/playlist.m3u8"},
+        {"id": "nhk-world", "name": "NHK World-Japan", "catalog": "global-news", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/japan/nhk-world-japan-jp.png", "url": "https://nhkwlive-ojp.akamaized.net/hls/live/2003459/nhkwlive-ojp-en/index.m3u8"},
+        {"id": "redbull-tv", "name": "Red Bull TV", "catalog": "global-sports-science", "logo": "https://i.mjh.nz/.images/redbull-tv.png", "url": "https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master.m3u8"},
+        {"id": "nasa-tv", "name": "NASA TV Public", "catalog": "global-sports-science", "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nasa-tv-us.png", "url": "https://ntv1.akamaized.net/hls/live/2014075/NASA-NTV1-HLS/master.m3u8"}
+      ]
+    }
+  ]
+}

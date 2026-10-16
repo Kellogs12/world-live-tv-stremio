@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "id": "tv-nz-tvnz-2",
+    "type": "tv",
+    "name": "TVNZ 2",
+    "poster": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/new-zealand/tvnz-2-nz.png",
+    "posterShape": "square",
+    "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/new-zealand/tvnz-2-nz.png",
+    "description": "TVNZ 2 \u00b7 Free Live Stream",
+    "genres": [
+      "nz-fta"
+    ]
+  }
+}

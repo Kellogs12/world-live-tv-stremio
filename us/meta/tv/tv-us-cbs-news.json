@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "id": "tv-us-cbs-news",
+    "type": "tv",
+    "name": "CBS News 24/7",
+    "poster": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/cbs-news-us.png",
+    "posterShape": "square",
+    "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/cbs-news-us.png",
+    "description": "CBS News 24/7 \u00b7 Free Live Stream",
+    "genres": [
+      "us-news"
+    ]
+  }
+}

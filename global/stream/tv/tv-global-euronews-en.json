@@ -1,0 +1,21 @@
+{
+  "streams": [
+    {
+      "url": "https://euronews-euronews-world-1-us.samsung.wurl.tv/manifest/playlist.m3u8",
+      "name": "Live",
+      "title": "Euronews English"
+    },
+    {
+      "url": "https://euronews-euronews-world-1-us.samsung.wurl.tv/manifest/playlist.m3u8",
+      "name": "Live (browser)",
+      "title": "Euronews English\nFor Stremio Web",
+      "behaviorHints": {
+        "proxyHeaders": {
+          "response": {
+            "content-type": "application/vnd.apple.mpegurl"
+          }
+        }
+      }
+    }
+  ]
+}

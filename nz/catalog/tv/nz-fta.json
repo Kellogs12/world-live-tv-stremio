@@ -1,0 +1,60 @@
+{
+  "metas": [
+    {
+      "id": "tv-nz-tvnz-1",
+      "type": "tv",
+      "name": "TVNZ 1",
+      "poster": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/new-zealand/tvnz-1-nz.png",
+      "posterShape": "square",
+      "description": "TVNZ 1 \u00b7 live stream"
+    },
+    {
+      "id": "tv-nz-tvnz-2",
+      "type": "tv",
+      "name": "TVNZ 2",
+      "poster": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/new-zealand/tvnz-2-nz.png",
+      "posterShape": "square",
+      "description": "TVNZ 2 \u00b7 live stream"
+    },
+    {
+      "id": "tv-nz-tvnz-duke",
+      "type": "tv",
+      "name": "TVNZ Duke",
+      "poster": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/new-zealand/tvnz-duke-nz.png",
+      "posterShape": "square",
+      "description": "TVNZ Duke \u00b7 live stream"
+    },
+    {
+      "id": "tv-nz-three-nz",
+      "type": "tv",
+      "name": "Three",
+      "poster": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/new-zealand/three-nz.png",
+      "posterShape": "square",
+      "description": "Three \u00b7 live stream"
+    },
+    {
+      "id": "tv-nz-bravo-nz",
+      "type": "tv",
+      "name": "Bravo NZ",
+      "poster": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/new-zealand/bravo-nz.png",
+      "posterShape": "square",
+      "description": "Bravo NZ \u00b7 live stream"
+    },
+    {
+      "id": "tv-nz-rush-nz",
+      "type": "tv",
+      "name": "Rush",
+      "poster": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/new-zealand/rush-nz.png",
+      "posterShape": "square",
+      "description": "Rush \u00b7 live stream"
+    },
+    {
+      "id": "tv-nz-whakaata-maori",
+      "type": "tv",
+      "name": "Whakaata M\u0101ori",
+      "poster": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/new-zealand/whakaata-maori-nz.png",
+      "posterShape": "square",
+      "description": "Whakaata M\u0101ori \u00b7 live stream"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "metas": [
+    {
+      "id": "tv-global-sky-news-intl",
+      "type": "tv",
+      "name": "Sky News International",
+      "poster": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-news-uk.png",
+      "posterShape": "square",
+      "description": "Sky News International \u00b7 live stream"
+    },
+    {
+      "id": "tv-global-al-jazeera-en",
+      "type": "tv",
+      "name": "Al Jazeera English",
+      "poster": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/qatar/al-jazeera-english-qa.png",
+      "posterShape": "square",
+      "description": "Al Jazeera English \u00b7 live stream"
+    },
+    {
+      "id": "tv-global-dw-english",
+      "type": "tv",
+      "name": "DW English",
+      "poster": "https://www.dw.com/images/icons/favicon-540x540.png",
+      "posterShape": "square",
+      "description": "DW English \u00b7 live stream"
+    },
+    {
+      "id": "tv-global-france24-en",
+      "type": "tv",
+      "name": "France 24 English",
+      "poster": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/france-24-fr.png",
+      "posterShape": "square",
+      "description": "France 24 English \u00b7 live stream"
+    },
+    {
+      "id": "tv-global-euronews-en",
+      "type": "tv",
+      "name": "Euronews English",
+      "poster": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/euronews-fr.png",
+      "posterShape": "square",
+      "description": "Euronews English \u00b7 live stream"
+    },
+    {
+      "id": "tv-global-nhk-world",
+      "type": "tv",
+      "name": "NHK World-Japan",
+      "poster": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/japan/nhk-world-japan-jp.png",
+      "posterShape": "square",
+      "description": "NHK World-Japan \u00b7 live stream"
+    }
+  ]
+}

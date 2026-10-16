@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "id": "tv-global-euronews-en",
+    "type": "tv",
+    "name": "Euronews English",
+    "poster": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/euronews-fr.png",
+    "posterShape": "square",
+    "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/france/euronews-fr.png",
+    "description": "Euronews English \u00b7 Free Live Stream",
+    "genres": [
+      "global-news"
+    ]
+  }
+}

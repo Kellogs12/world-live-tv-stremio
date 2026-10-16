@@ -1,0 +1,67 @@
+{
+  "countries": [
+    {
+      "code": "au",
+      "name": "Australia",
+      "flag": "\ud83c\udde6\ud83c\uddfa",
+      "region": "Oceania",
+      "description": "Australian Free-to-Air (ABC, SBS, 7, 9, 10, C31), commercial FAST, Plex and Samsung TV Plus AU.",
+      "channel_count": 16,
+      "vpn_required": true
+    },
+    {
+      "code": "uk",
+      "name": "United Kingdom",
+      "flag": "\ud83c\uddec\ud83c\udde7",
+      "region": "Europe",
+      "description": "UK Freeview, BBC, ITV, Channel 4, Channel 5, Sky News, and Pluto TV UK.",
+      "channel_count": 8,
+      "vpn_required": true
+    },
+    {
+      "code": "us",
+      "name": "United States",
+      "flag": "\ud83c\uddfa\ud83c\uddf8",
+      "region": "Americas",
+      "description": "US Free Live News (CBS, ABC, NBC, Scripps), PBS, Pluto TV US, and Samsung TV Plus US.",
+      "channel_count": 7,
+      "vpn_required": false
+    },
+    {
+      "code": "nz",
+      "name": "New Zealand",
+      "flag": "\ud83c\uddf3\ud83c\uddff",
+      "region": "Oceania",
+      "description": "New Zealand Freeview: TVNZ 1, TVNZ 2, TVNZ Duke, Three, Bravo, Rush, Eden, Whakaata M\u0101ori.",
+      "channel_count": 7,
+      "vpn_required": true
+    },
+    {
+      "code": "ca",
+      "name": "Canada",
+      "flag": "\ud83c\udde8\ud83c\udde6",
+      "region": "Americas",
+      "description": "Canadian Free TV: CBC News, CBC Vancouver/Toronto, Global News, Citytv, and Pluto CA.",
+      "channel_count": 4,
+      "vpn_required": true
+    },
+    {
+      "code": "ie",
+      "name": "Ireland",
+      "flag": "\ud83c\uddee\ud83c\uddea",
+      "region": "Europe",
+      "description": "Irish Free-to-Air: RT\u00c9 News, RT\u00c9 One, Virgin Media, TG4.",
+      "channel_count": 2,
+      "vpn_required": true
+    },
+    {
+      "code": "global",
+      "name": "Global News & Sports",
+      "flag": "\ud83c\udf10",
+      "region": "Global",
+      "description": "24/7 World News and Sports: Sky News, BBC News, Al Jazeera, DW, France 24, Bloomberg, Red Bull TV, NASA TV.",
+      "channel_count": 8,
+      "vpn_required": false
+    }
+  ]
+}

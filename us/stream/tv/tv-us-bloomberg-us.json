@@ -1,0 +1,21 @@
+{
+  "streams": [
+    {
+      "url": "https://bloomberg.com/media-manifest/streams/us.m3u8",
+      "name": "Live",
+      "title": "Bloomberg TV+"
+    },
+    {
+      "url": "https://bloomberg.com/media-manifest/streams/us.m3u8",
+      "name": "Live (browser)",
+      "title": "Bloomberg TV+\nFor Stremio Web",
+      "behaviorHints": {
+        "proxyHeaders": {
+          "response": {
+            "content-type": "application/vnd.apple.mpegurl"
+          }
+        }
+      }
+    }
+  ]
+}

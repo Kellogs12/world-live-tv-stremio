@@ -1,0 +1,54 @@
+{
+  "id": "worldlive.au",
+  "version": "1.0.0",
+  "name": "\ud83c\udde6\ud83c\uddfa Australia Live TV",
+  "description": "Australian Free-to-Air (ABC, SBS, 7, 9, 10, C31), commercial FAST, Plex and Samsung TV Plus AU.",
+  "resources": [
+    "catalog",
+    {
+      "name": "meta",
+      "types": [
+        "tv"
+      ],
+      "idPrefixes": [
+        "tv-au-"
+      ]
+    },
+    {
+      "name": "stream",
+      "types": [
+        "tv"
+      ],
+      "idPrefixes": [
+        "tv-au-"
+      ]
+    }
+  ],
+  "types": [
+    "tv"
+  ],
+  "idPrefixes": [
+    "tv-au-"
+  ],
+  "catalogs": [
+    {
+      "type": "tv",
+      "id": "au-fta",
+      "name": "Free-to-Air"
+    },
+    {
+      "type": "tv",
+      "id": "au-fast",
+      "name": "Free Commercial Channels"
+    },
+    {
+      "type": "tv",
+      "id": "au-samsung",
+      "name": "Samsung TV Plus AU"
+    }
+  ],
+  "behaviorHints": {
+    "configurable": false,
+    "configurationRequired": false
+  }
+}

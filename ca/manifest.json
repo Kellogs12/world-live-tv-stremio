@@ -1,0 +1,54 @@
+{
+  "id": "worldlive.ca",
+  "version": "1.0.0",
+  "name": "\ud83c\udde8\ud83c\udde6 Canada Live TV",
+  "description": "Canadian Free TV: CBC News, CBC Vancouver/Toronto, Global News, Citytv, and Pluto CA.",
+  "resources": [
+    "catalog",
+    {
+      "name": "meta",
+      "types": [
+        "tv"
+      ],
+      "idPrefixes": [
+        "tv-ca-"
+      ]
+    },
+    {
+      "name": "stream",
+      "types": [
+        "tv"
+      ],
+      "idPrefixes": [
+        "tv-ca-"
+      ]
+    }
+  ],
+  "types": [
+    "tv"
+  ],
+  "idPrefixes": [
+    "tv-ca-"
+  ],
+  "catalogs": [
+    {
+      "type": "tv",
+      "id": "ca-fta",
+      "name": "Canadian National Channels"
+    },
+    {
+      "type": "tv",
+      "id": "ca-news",
+      "name": "Canadian News"
+    },
+    {
+      "type": "tv",
+      "id": "ca-fast",
+      "name": "Pluto & Samsung CA"
+    }
+  ],
+  "behaviorHints": {
+    "configurable": false,
+    "configurationRequired": false
+  }
+}

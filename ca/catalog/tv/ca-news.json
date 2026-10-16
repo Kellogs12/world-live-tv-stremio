@@ -1,0 +1,20 @@
+{
+  "metas": [
+    {
+      "id": "tv-ca-cbc-news-ca",
+      "type": "tv",
+      "name": "CBC News Explore",
+      "poster": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/canada/cbc-news-network-ca.png",
+      "posterShape": "square",
+      "description": "CBC News Explore \u00b7 live stream"
+    },
+    {
+      "id": "tv-ca-global-news-ca",
+      "type": "tv",
+      "name": "Global News National",
+      "poster": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/canada/global-news-ca.png",
+      "posterShape": "square",
+      "description": "Global News National \u00b7 live stream"
+    }
+  ]
+}

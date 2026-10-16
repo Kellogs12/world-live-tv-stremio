@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "id": "tv-us-bloomberg-us",
+    "type": "tv",
+    "name": "Bloomberg TV+",
+    "poster": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/bloomberg-tv-us.png",
+    "posterShape": "square",
+    "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/bloomberg-tv-us.png",
+    "description": "Bloomberg TV+ \u00b7 Free Live Stream",
+    "genres": [
+      "us-news"
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "id": "tv-us-nbc-news-now",
+    "type": "tv",
+    "name": "NBC News NOW",
+    "poster": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nbc-news-now-us.png",
+    "posterShape": "square",
+    "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nbc-news-now-us.png",
+    "description": "NBC News NOW \u00b7 Free Live Stream",
+    "genres": [
+      "us-news"
+    ]
+  }
+}

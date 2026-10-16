@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "id": "tv-ie-tg4",
+    "type": "tv",
+    "name": "TG4",
+    "poster": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/ireland/tg4-ie.png",
+    "posterShape": "square",
+    "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/ireland/tg4-ie.png",
+    "description": "TG4 \u00b7 Free Live Stream",
+    "genres": [
+      "ie-fta"
+    ]
+  }
+}

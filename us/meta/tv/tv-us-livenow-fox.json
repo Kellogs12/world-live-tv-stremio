@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "id": "tv-us-livenow-fox",
+    "type": "tv",
+    "name": "LiveNOW from FOX",
+    "poster": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/livenow-from-fox-us.png",
+    "posterShape": "square",
+    "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/livenow-from-fox-us.png",
+    "description": "LiveNOW from FOX \u00b7 Free Live Stream",
+    "genres": [
+      "us-news"
+    ]
+  }
+}

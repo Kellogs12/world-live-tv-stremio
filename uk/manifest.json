@@ -1,0 +1,54 @@
+{
+  "id": "worldlive.uk",
+  "version": "1.0.0",
+  "name": "\ud83c\uddec\ud83c\udde7 United Kingdom Live TV",
+  "description": "UK Freeview, BBC, ITV, Channel 4, Channel 5, Sky News, and Pluto TV UK.",
+  "resources": [
+    "catalog",
+    {
+      "name": "meta",
+      "types": [
+        "tv"
+      ],
+      "idPrefixes": [
+        "tv-uk-"
+      ]
+    },
+    {
+      "name": "stream",
+      "types": [
+        "tv"
+      ],
+      "idPrefixes": [
+        "tv-uk-"
+      ]
+    }
+  ],
+  "types": [
+    "tv"
+  ],
+  "idPrefixes": [
+    "tv-uk-"
+  ],
+  "catalogs": [
+    {
+      "type": "tv",
+      "id": "uk-freeview",
+      "name": "Freeview & Public TV"
+    },
+    {
+      "type": "tv",
+      "id": "uk-news",
+      "name": "UK News"
+    },
+    {
+      "type": "tv",
+      "id": "uk-fast",
+      "name": "Pluto & Samsung UK"
+    }
+  ],
+  "behaviorHints": {
+    "configurable": false,
+    "configurationRequired": false
+  }
+}

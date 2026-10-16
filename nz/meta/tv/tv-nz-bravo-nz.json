@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "id": "tv-nz-bravo-nz",
+    "type": "tv",
+    "name": "Bravo NZ",
+    "poster": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/new-zealand/bravo-nz.png",
+    "posterShape": "square",
+    "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/new-zealand/bravo-nz.png",
+    "description": "Bravo NZ \u00b7 Free Live Stream",
+    "genres": [
+      "nz-fta"
+    ]
+  }
+}

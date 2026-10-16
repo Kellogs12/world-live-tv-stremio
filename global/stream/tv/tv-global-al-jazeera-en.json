@@ -1,0 +1,21 @@
+{
+  "streams": [
+    {
+      "url": "https://live-hls-web-aje.getaj.net/AJE/01.m3u8",
+      "name": "Live",
+      "title": "Al Jazeera English"
+    },
+    {
+      "url": "https://live-hls-web-aje.getaj.net/AJE/01.m3u8",
+      "name": "Live (browser)",
+      "title": "Al Jazeera English\nFor Stremio Web",
+      "behaviorHints": {
+        "proxyHeaders": {
+          "response": {
+            "content-type": "application/vnd.apple.mpegurl"
+          }
+        }
+      }
+    }
+  ]
+}
