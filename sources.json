@@ -5,24 +5,18 @@
       "name": "United States",
       "flag": "🇺🇸",
       "region": "Americas",
-      "description": "US Live News & Weather (CBS, NBC, ABC, Fox Weather, Scripps, Bloomberg, Reuters), Xumo TV US, and Plex Live TV US.",
+      "description": "US Live News & Weather (CBS, NBC, ABC, Fox Weather, Scripps, Bloomberg, Reuters) and Xumo Free Live TV US.",
       "vpn_required": false,
       "m3u_sources": [
         {
           "url": "https://www.apsattv.com/xumo.m3u",
           "catalog": "us-xumo",
           "type": "xumo"
-        },
-        {
-          "url": "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/main/playlists/plex_us.m3u",
-          "catalog": "us-plex",
-          "type": "plex"
         }
       ],
       "catalogs": [
         {"id": "us-news", "name": "US Live News & Weather"},
-        {"id": "us-xumo", "name": "Xumo Free Live TV"},
-        {"id": "us-plex", "name": "Plex Live TV (US)"}
+        {"id": "us-xumo", "name": "Xumo Free Live TV"}
       ],
       "fallback_channels": [
         {"id": "cbs-news", "name": "CBS News 24/7", "catalog": "us-news", "logo": "https://image.xumo.com/v1/channels/channel/99991158/300x300.webp?type=color_onBlack", "url": "https://dai.google.com/linear/hls/event/Sid4xiTQTkCT1SLu6rjUSQ/master.m3u8"},
@@ -189,7 +183,92 @@
         {"id": "bloomberg-global", "name": "Bloomberg TV+", "catalog": "global-sports-weather", "logo": "", "url": "https://www.bloomberg.com/media-manifest/streams/us.m3u8"},
         {"id": "cheddar-global", "name": "Cheddar News", "catalog": "global-sports-weather", "logo": "https://image.xumo.com/v1/channels/channel/99991220/300x300.webp?type=color_onBlack", "url": "https://dbrb49pjoymg4.cloudfront.net/10001/99991220/hls/playlist.m3u8?ads.xumo_channelId=99991220"},
         {"id": "fox-weather-global", "name": "Fox Weather", "catalog": "global-sports-weather", "logo": "https://image.xumo.com/v1/channels/channel/99991694/300x300.webp?type=color_onBlack", "url": "https://dbrb49pjoymg4.cloudfront.net/10001/99991694/hls/playlist.m3u8?ads.xumo_channelId=99991694"},
-        {"id": "redbull-tv", "name": "Red Bull TV", "catalog": "global-sports-weather", "logo": "https://i.mjh.nz/.images/redbull-tv.png", "url": "https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master.m3u8"}
+        {"id": "redbull-tv", "name": "Red Bull TV", "catalog": "global-sports-weather", "logo": "https://i.mjh.nz/.images/redbull-tv.png", "url": "https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master.m3u8"},
+        {"id": "nba-global", "name": "The NBA Channel", "catalog": "global-sports-weather", "logo": "https://image.xumo.com/v1/channels/channel/99951383/300x300.webp?type=color_onBlack", "url": "https://dbrb49pjoymg4.cloudfront.net/10001/99951383/hls/playlist.m3u8?ads.xumo_channelId=99951383"},
+        {"id": "ufc-global", "name": "UFC", "catalog": "global-sports-weather", "logo": "https://image.xumo.com/v1/channels/channel/99951134/300x300.webp?type=color_onBlack", "url": "https://dbrb49pjoymg4.cloudfront.net/10001/99951134/hls/playlist.m3u8?ads.xumo_channelId=99951134"},
+        {"id": "hbo-boxing-global", "name": "HBO Boxing", "catalog": "global-sports-weather", "logo": "https://image.xumo.com/v1/channels/channel/99951469/300x300.webp?type=color_onBlack", "url": "https://dbrb49pjoymg4.cloudfront.net/10001/99951469/hls/playlist.m3u8?ads.xumo_channelId=99951469"},
+        {"id": "fifa-global", "name": "FIFA+", "catalog": "global-sports-weather", "logo": "", "url": "https://i.mjh.nz/.r/sbs-sysdata_s_p_a_fifa_6.m3u8"},
+        {"id": "bein-global", "name": "beIN SPORTS XTRA", "catalog": "global-sports-weather", "logo": "https://image.xumo.com/v1/channels/channel/99991785/300x300.webp?type=color_onBlack", "url": "https://bein-xtra-xumo.amagi.tv/hls/amagi_hls_data_beinAAAAA-bein-xtra-xumo/CDN/master.m3u8"},
+        {"id": "mlb-global", "name": "MLB Channel", "catalog": "global-sports-weather", "logo": "", "url": "https://aegis-cloudfront-1.tubi.video/36ef2f9d-7100-4c4d-b41a-dbf41ab7e461/playlist.m3u8"},
+        {"id": "7afl-global", "name": "7AFL (Aussie Rules)", "catalog": "global-sports-weather", "logo": "https://i.mjh.nz/.images/auto-7afl-fast-e8fdb6.png", "url": "https://i.mjh.nz/.r/7afl-fast.m3u8"}
+      ]
+    },
+    {
+      "code": "sports",
+      "name": "Live Sports 24/7",
+      "flag": "🏆",
+      "region": "Sports",
+      "description": "Priority Live Sports: Formula 1 & Motorsports, Boxing, UFC & MMA, Soccer (FIFA+, beIN), NFL & American Football, NBA Basketball, MLB Baseball, Aussie Rules (7AFL, Channel 7 Melbourne, 7mate), Golf, Tennis, and Cricket.",
+      "vpn_required": false,
+      "m3u_sources": [],
+      "catalogs": [
+        {"id": "sports-afl-motorsport", "name": "AFL, F1 & Motorsports"},
+        {"id": "sports-combat", "name": "UFC, Boxing & Combat Sports"},
+        {"id": "sports-us-major", "name": "NFL, NBA & MLB Major Leagues"},
+        {"id": "sports-soccer-intl", "name": "Soccer, Golf, Tennis & World Sports"}
+      ],
+      "fallback_channels": [
+        {"id": "7afl-fast", "name": "7AFL (Aussie Rules)", "catalog": "sports-afl-motorsport", "logo": "https://i.mjh.nz/.images/auto-7afl-fast-e8fdb6.png", "url": "https://i.mjh.nz/.r/7afl-fast.m3u8"},
+        {"id": "seven-melbourne-afl", "name": "Seven Melbourne (AFL Live)", "catalog": "sports-afl-motorsport", "logo": "https://i.mjh.nz/.images/auto-seven-mel-9608a4.png", "url": "https://i.mjh.nz/.r/seven-mel.m3u8"},
+        {"id": "7mate-melbourne-afl", "name": "7mate Melbourne (AFL Live)", "catalog": "sports-afl-motorsport", "logo": "https://i.mjh.nz/.images/auto-7mate-mel-360d60.png", "url": "https://i.mjh.nz/.r/7mate-mel.m3u8"},
+        {"id": "redbull-tv-racing", "name": "Red Bull TV (Motorsports & F1)", "catalog": "sports-afl-motorsport", "logo": "https://i.mjh.nz/.images/redbull-tv.png", "url": "https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master.m3u8"},
+        {"id": "trace-sport-stars", "name": "Trace Sport Stars", "catalog": "sports-afl-motorsport", "logo": "", "url": "https://lightning-tracesport-samsungau.amagi.tv/playlist.m3u8"},
+        {"id": "racing-com", "name": "Racing.com (Channel 78)", "catalog": "sports-afl-motorsport", "logo": "https://i.mjh.nz/.images/auto-racing-fast-7c08ec.png", "url": "https://i.mjh.nz/.r/racing-fast.m3u8"},
+        {"id": "sky-racing-1", "name": "Sky Racing 1", "catalog": "sports-afl-motorsport", "logo": "", "url": "https://i.mjh.nz/.r/sky-racing-1.m3u8"},
+        {"id": "sky-racing-2", "name": "Sky Racing 2", "catalog": "sports-afl-motorsport", "logo": "", "url": "https://i.mjh.nz/.r/sky-racing-2.m3u8"},
+        {"id": "sky-racing-thoroughbred", "name": "Sky Racing Thoroughbred", "catalog": "sports-afl-motorsport", "logo": "", "url": "https://i.mjh.nz/.r/sky-racing-thoroughbred.m3u8"},
+
+        {"id": "ufc-fast", "name": "UFC", "catalog": "sports-combat", "logo": "https://image.xumo.com/v1/channels/channel/99951134/300x300.webp?type=color_onBlack", "url": "https://dbrb49pjoymg4.cloudfront.net/10001/99951134/hls/playlist.m3u8?ads.xumo_channelId=99951134"},
+        {"id": "hbo-boxing", "name": "HBO Boxing", "catalog": "sports-combat", "logo": "https://image.xumo.com/v1/channels/channel/99951469/300x300.webp?type=color_onBlack", "url": "https://dbrb49pjoymg4.cloudfront.net/10001/99951469/hls/playlist.m3u8?ads.xumo_channelId=99951469"},
+        {"id": "pfl-mma", "name": "PFL MMA", "catalog": "sports-combat", "logo": "https://image.xumo.com/v1/channels/channel/99951203/300x300.webp?type=color_onBlack", "url": "https://dbrb49pjoymg4.cloudfront.net/10001/99951203/hls/playlist.m3u8?ads.xumo_channelId=99951203"},
+        {"id": "glory-kickboxing", "name": "GLORY Kickboxing", "catalog": "sports-combat", "logo": "https://image.xumo.com/v1/channels/channel/99991278/300x300.webp?type=color_onBlack", "url": "https://dbrb49pjoymg4.cloudfront.net/10001/99991278/hls/playlist.m3u8?ads.xumo_channelId=99991278"},
+        {"id": "tvs-boxing", "name": "TVS Boxing", "catalog": "sports-combat", "logo": "", "url": "https://rpn.bozztv.com/gusa/gusa-tvsboxing/index.m3u8"},
+
+        {"id": "the-nba-channel", "name": "The NBA Channel", "catalog": "sports-us-major", "logo": "https://image.xumo.com/v1/channels/channel/99951383/300x300.webp?type=color_onBlack", "url": "https://dbrb49pjoymg4.cloudfront.net/10001/99951383/hls/playlist.m3u8?ads.xumo_channelId=99951383"},
+        {"id": "mlb-channel", "name": "MLB Channel", "catalog": "sports-us-major", "logo": "", "url": "https://aegis-cloudfront-1.tubi.video/36ef2f9d-7100-4c4d-b41a-dbf41ab7e461/playlist.m3u8"},
+        {"id": "fox-sports-nfl", "name": "FOX Sports (NFL Coverage)", "catalog": "sports-us-major", "logo": "https://image.xumo.com/v1/channels/channel/99991196/300x300.webp?type=color_onBlack", "url": "https://live-manifest.production-public.tubi.io/live/6035c7fd-efff-4ec7-93dc-aa0c7a58ba47/playlist.m3u8"},
+        {"id": "nbc-sports-now", "name": "NBC Sports NOW", "catalog": "sports-us-major", "logo": "https://image.xumo.com/v1/channels/channel/99951253/300x300.webp?type=color_onBlack", "url": "https://d4whmvwm0rdvi.cloudfront.net/10007/99951253/hls/master.m3u8?ads.xumo_channelId=99951253"},
+        {"id": "cbs-sports-hq", "name": "CBS Sports HQ", "catalog": "sports-us-major", "logo": "https://image.xumo.com/v1/channels/channel/99991158/300x300.webp?type=color_onBlack", "url": "https://dai.google.com/linear/hls/event/9Lq0ERvoSR-z9AwvFS-xOw/master.m3u8"},
+        {"id": "fubo-sports-network", "name": "Fubo Sports Network", "catalog": "sports-us-major", "logo": "", "url": "https://live-manifest.production-public.tubi.io/live/cfadd98c-b8e5-4150-af1a-aad9487a82ee/playlist.m3u8"},
+        {"id": "wnbl-basketball", "name": "WNBL Basketball", "catalog": "sports-us-major", "logo": "", "url": "https://i.mjh.nz/.r/wnbl-202627-fast.m3u8"},
+
+        {"id": "fifa-plus", "name": "FIFA+", "catalog": "sports-soccer-intl", "logo": "", "url": "https://i.mjh.nz/.r/sbs-sysdata_s_p_a_fifa_6.m3u8"},
+        {"id": "bein-sports-xtra", "name": "beIN SPORTS XTRA", "catalog": "sports-soccer-intl", "logo": "https://image.xumo.com/v1/channels/channel/99991785/300x300.webp?type=color_onBlack", "url": "https://bein-xtra-xumo.amagi.tv/hls/amagi_hls_data_beinAAAAA-bein-xtra-xumo/CDN/master.m3u8"},
+        {"id": "bein-sports-xtra-es", "name": "beIN SPORTS XTRA en Español", "catalog": "sports-soccer-intl", "logo": "https://image.xumo.com/v1/channels/channel/99991785/300x300.webp?type=color_onBlack", "url": "https://dbrb49pjoymg4.cloudfront.net/10001/99991785/hls/playlist.m3u8?ads.xumo_channelId=99991785"},
+        {"id": "pga-tour", "name": "PGA TOUR", "catalog": "sports-soccer-intl", "logo": "https://image.xumo.com/v1/channels/channel/99991281/300x300.webp?type=color_onBlack", "url": "https://d1195tnygmyfvk.cloudfront.net/10000/99991281/hls/playlist.m3u8?ads.xumo_channelId=99991281"},
+        {"id": "tennischannel-2", "name": "TennisChannel 2", "catalog": "sports-soccer-intl", "logo": "https://image.xumo.com/v1/channels/channel/99951389/300x300.webp?type=color_onBlack", "url": "https://dbrb49pjoymg4.cloudfront.net/10001/99951389/hls/playlist.m3u8?ads.xumo_channelId=99951389"},
+        {"id": "cricket-gold", "name": "Cricket Gold", "catalog": "sports-soccer-intl", "logo": "https://i.mjh.nz/.images/auto-cricketgold-fast-c6d9a9.png", "url": "https://i.mjh.nz/.r/cricketgold-fast.m3u8"}
+      ]
+    },
+    {
+      "code": "cartoons",
+      "name": "Cartoons & Kids TV",
+      "flag": "🎨",
+      "region": "Cartoons",
+      "description": "24/7 Famous Cartoons and Kids Channels: Cartoon Network, Disney Channel, Nickelodeon, SpongeBob SquarePants 24/7, NickToons, Nick 90s, NickTeen, Nick Jr, Cartoon Classics, Kartoon Channel, Toon Goggles, ABC Kids, and Adult Animation.",
+      "vpn_required": false,
+      "m3u_sources": [],
+      "catalogs": [
+        {"id": "cartoons-cn-disney", "name": "Cartoon Network & Disney Channel"},
+        {"id": "cartoons-nick", "name": "Nickelodeon & NickToons (24/7)"},
+        {"id": "cartoons-classics", "name": "Classic Cartoons & Kids Networks"}
+      ],
+      "fallback_channels": [
+        {"id": "cartoon-network-hd", "name": "Cartoon Network HD", "catalog": "cartoons-cn-disney", "logo": "https://images.pluto.tv/channels/5ca673e0d0bd6c2689c94ce3/logo.png", "url": "https://drk6xq0vhn.gpcdn.net/live/cn_hd_abr/index.m3u8"},
+        {"id": "cartoon-network-sd", "name": "Cartoon Network SD", "catalog": "cartoons-cn-disney", "logo": "https://images.pluto.tv/channels/5ca673e0d0bd6c2689c94ce3/logo.png", "url": "https://drk6xq0vhn.gpcdn.net/live/cn_sd_abr/index.m3u8"},
+        {"id": "disney-channel", "name": "Disney Channel", "catalog": "cartoons-cn-disney", "logo": "", "url": "https://s6.hopslan.com/disneyX/index.m3u8"},
+        {"id": "spongebob-247", "name": "SpongeBob SquarePants (24/7)", "catalog": "cartoons-nick", "logo": "https://10.com.au/ip/s3/2024/06/04/ecc540be818b29d753e036e046028a.png", "url": "https://i.mjh.nz/.r/10-spongebobsquarepants.m3u8"},
+        {"id": "nickelodeon-live", "name": "Nickelodeon Live", "catalog": "cartoons-nick", "logo": "https://10play.com.au/ip/s3/2023/07/31/dc4873abc5ba0fde04b59a78c8.png", "url": "https://i.mjh.nz/.r/10shake-vic.m3u8"},
+        {"id": "nicktoons", "name": "NickToons", "catalog": "cartoons-nick", "logo": "https://10.com.au/ip/s3/2024/06/04/f2f7c4166d8450351c2ae5d8b28c.png", "url": "https://i.mjh.nz/.r/10-nicktoons.m3u8"},
+        {"id": "nicktoons-90s", "name": "NickToons 90s", "catalog": "cartoons-nick", "logo": "https://10.com.au/ip/s3/2024/06/07/a1aaf63737e7d2076759.png", "url": "https://i.mjh.nz/.r/10-nicktoons-90s.m3u8"},
+        {"id": "nick-jr-club", "name": "Nick Jr Club", "catalog": "cartoons-nick", "logo": "https://10.com.au/ip/s3/2024/06/06/d14509f218578984e3a6f6f34f0ee12c.png", "url": "https://i.mjh.nz/.r/10-nick-jr.m3u8"},
+        {"id": "nickteen", "name": "NickTeen", "catalog": "cartoons-nick", "logo": "https://10.com.au/ip/s3/2024/06/04/ecc540be818b29d753e036e046028a.png", "url": "https://i.mjh.nz/.r/10-nickteen.m3u8"},
+        {"id": "cartoon-classics", "name": "Cartoon Classics", "catalog": "cartoons-classics", "logo": "", "url": "https://daiconnect.com/live/hls/tvup/rk-cartoonclassics/.m3u8?ads_amzn_loc=all"},
+        {"id": "kartoon-channel", "name": "Kartoon Channel!", "catalog": "cartoons-classics", "logo": "", "url": "https://lightning-fnf-samsungaus.amagi.tv/playlist.m3u8"},
+        {"id": "toon-goggles", "name": "Toon Goggles", "catalog": "cartoons-classics", "logo": "https://image.xumo.com/v1/channels/channel/99991268/300x300.webp?type=color_onBlack", "url": "https://dbrb49pjoymg4.cloudfront.net/10001/99991268/hls/tg.m3u8?ads.xumo_channelId=99991268"},
+        {"id": "abc-kids", "name": "ABC Kids", "catalog": "cartoons-classics", "logo": "https://i.mjh.nz/.images/abc-kids.png", "url": "https://c.mjh.nz/abc-kids.m3u8"},
+        {"id": "adult-animation", "name": "Adult Animation", "catalog": "cartoons-classics", "logo": "", "url": "https://i.mjh.nz/.r/10-adultanimation.m3u8"},
+        {"id": "xumo-kids-tv", "name": "Xumo Free Kids TV", "catalog": "cartoons-classics", "logo": "https://image.xumo.com/v1/channels/channel/99991107/300x300.webp?type=color_onBlack", "url": "https://dbrb49pjoymg4.cloudfront.net/10001/99991107/hls/master.m3u8?ads.xumo_channelId=99991107"}
       ]
     }
   ]

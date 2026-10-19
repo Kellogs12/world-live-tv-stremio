@@ -5,8 +5,8 @@
       "name": "United States",
       "flag": "\ud83c\uddfa\ud83c\uddf8",
       "region": "Americas",
-      "description": "US Live News & Weather (CBS, NBC, ABC, Fox Weather, Scripps, Bloomberg, Reuters), Xumo TV US, and Plex Live TV US.",
-      "channel_count": 1101,
+      "description": "US Live News & Weather (CBS, NBC, ABC, Fox Weather, Scripps, Bloomberg, Reuters) and Xumo Free Live TV US.",
+      "channel_count": 409,
       "vpn_required": false
     },
     {
@@ -15,7 +15,7 @@
       "flag": "\ud83c\udde6\ud83c\uddfa",
       "region": "Oceania",
       "description": "Australian Free-to-Air (ABC, SBS, Seven, Nine, 10, C31), network free channels, Plex AU, and Samsung TV Plus AU.",
-      "channel_count": 554,
+      "channel_count": 551,
       "vpn_required": true
     },
     {
@@ -42,7 +42,7 @@
       "flag": "\ud83c\uddf3\ud83c\uddff",
       "region": "Oceania",
       "description": "New Zealand Freeview (TVNZ 1, TVNZ 2, Three, Bravo, Rush, Eden, Whakaata M\u0101ori) and Plex Live TV NZ.",
-      "channel_count": 308,
+      "channel_count": 309,
       "vpn_required": true
     },
     {
@@ -51,6 +51,24 @@
       "flag": "\ud83c\udf10",
       "region": "Global",
       "description": "24/7 World News, Weather, and Sports: CBS News, NBC News, ABC News, BBC News, Sky News, Al Jazeera, DW, France 24, Euronews, Bloomberg, Red Bull TV.",
+      "channel_count": 22,
+      "vpn_required": false
+    },
+    {
+      "code": "sports",
+      "name": "Live Sports 24/7",
+      "flag": "\ud83c\udfc6",
+      "region": "Sports",
+      "description": "Priority Live Sports: Formula 1 & Motorsports, Boxing, UFC & MMA, Soccer (FIFA+, beIN), NFL & American Football, NBA Basketball, MLB Baseball, Aussie Rules (7AFL, Channel 7 Melbourne, 7mate), Golf, Tennis, and Cricket.",
+      "channel_count": 27,
+      "vpn_required": false
+    },
+    {
+      "code": "cartoons",
+      "name": "Cartoons & Kids TV",
+      "flag": "\ud83c\udfa8",
+      "region": "Cartoons",
+      "description": "24/7 Famous Cartoons and Kids Channels: Cartoon Network, Disney Channel, Nickelodeon, SpongeBob SquarePants 24/7, NickToons, Nick 90s, NickTeen, Nick Jr, Cartoon Classics, Kartoon Channel, Toon Goggles, ABC Kids, and Adult Animation.",
       "channel_count": 15,
       "vpn_required": false
     }

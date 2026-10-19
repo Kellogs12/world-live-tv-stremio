@@ -4,15 +4,23 @@ Self-hosted, static multi-country Live TV channel add-ons for [Stremio](https://
 
 ---
 
-## 🌍 Included Countries & Lineups
+## 🌍 Included Add-ons & Lineups
 
-- 🇦🇺 **Australia (`/au/`)**: ABC, SBS, Seven, Nine, 10, C31, Samsung TV Plus AU, Plex AU.
-- 🇬🇧 **United Kingdom (`/uk/`)**: BBC One, BBC Two, BBC News, ITV1, Channel 4, Channel 5, Sky News, GB News, Pluto TV UK.
-- 🇺🇸 **United States (`/us/`)**: CBS News, ABC News Live, NBC News Now, Scripps News, LiveNOW from FOX, WeatherNation, Bloomberg, PBS, Pluto TV US, Samsung US.
-- 🇳🇿 **New Zealand (`/nz/`)**: TVNZ 1, TVNZ 2, TVNZ Duke, Three, Bravo, Rush, Whakaata Māori.
-- 🇨🇦 **Canada (`/ca/`)**: CBC News, CBC Toronto, Global News, CPAC, Pluto CA, Samsung CA.
-- 🇮🇪 **Ireland (`/ie/`)**: RTÉ News Now, TG4, Free-to-Air.
-- 🌐 **Global News & Sports (`/global/`)**: Sky News International, BBC News, Al Jazeera English, DW English, France 24, Euronews, NHK World, Red Bull TV, NASA TV.
+- 🏆 **Live Sports 24/7 (`/sports/`)**: Priority live sports across 4 dedicated catalogs:
+  - **AFL, F1 & Motorsports**: 7AFL (official 7plus AFL FAST stream), Channel 7 Melbourne (live AFL match coverage), Channel 7mate Melbourne (live AFL), Red Bull TV (Formula 1 & motorsports specials), Trace Sport Stars, Racing.com (Channel 78 live racing), Sky Racing 1, 2, Thoroughbred Central.
+  - **UFC, Boxing & Combat Sports**: UFC official FAST channel, HBO Boxing (classic championship fights), PFL MMA (Professional Fighters League), GLORY Kickboxing, TVS Boxing.
+  - **NFL, NBA & MLB Major Leagues**: The NBA Channel, MLB Channel (Major League Baseball 1080p), FOX Sports (live NFL analysis & FS1 studio shows), NBC Sports NOW (ProFootballTalk & NFL coverage), CBS Sports HQ (24/7 live scores and game highlights), Fubo Sports Network, WNBL Basketball.
+  - **Soccer, Golf, Tennis & World Sports**: FIFA+ (official FIFA live matches & tournament coverage), beIN SPORTS XTRA (international soccer, Ligue 1, Copa Libertadores), beIN SPORTS XTRA en Español, PGA TOUR, TennisChannel 2, Cricket Gold.
+- 🎨 **Cartoons & Kids TV (`/cartoons/`)**: 24/7 famous cartoons, animation, and kids networks across 3 catalogs:
+  - **Cartoon Network & Disney Channel**: Cartoon Network HD & SD (Dexter's Lab, Ben 10, Adventure Time, Powerpuff Girls, Courage the Cowardly Dog, Gumball), Disney Channel (Phineas and Ferb, Gravity Falls, DuckTales, Kim Possible).
+  - **Nickelodeon & NickToons (24/7)**: SpongeBob SquarePants 24/7, Nickelodeon Live, NickToons (Avatar, Fairly OddParents, Danny Phantom, Invader Zim), NickToons 90s (Rugrats, Hey Arnold!, Rocko's Modern Life, CatDog), Nick Jr Club (PAW Patrol, Blue's Clues), NickTeen (iCarly, Victorious, Big Time Rush).
+  - **Classic Cartoons & Kids Networks**: Cartoon Classics (Popeye, Betty Boop, Classic Looney Tunes), Kartoon Channel!, Toon Goggles, ABC Kids (Bluey, Play School), Adult Animation, Xumo Free Kids TV.
+- 🇦🇺 **Australia (`/au/`)**: ABC, SBS, Seven, Nine, 10, C31, 7AFL, Samsung TV Plus AU, Plex AU.
+- 🇺🇸 **United States (`/us/`)**: CBS News, ABC News Live, NBC News Now, Scripps News, Fox Weather, Bloomberg, Reuters, and Xumo Free Live TV US.
+- 🇬🇧 **United Kingdom (`/uk/`)**: BBC News, Sky News, GB News, Rakuten TV UK, Plex UK.
+- 🇳🇿 **New Zealand (`/nz/`)**: TVNZ 1, TVNZ 2, TVNZ Duke, Three, Bravo, Rush, Whakaata Māori, Plex NZ.
+- 🇨🇦 **Canada (`/ca/`)**: CBC News, Global News, CPAC, Plex CA.
+- 🌐 **Global News & Sports (`/global/`)**: Sky News International, BBC News, Al Jazeera, DW, France 24, Euronews, The NBA Channel, UFC, HBO Boxing, FIFA+, beIN SPORTS XTRA, MLB Channel, 7AFL.
 
 ---
 

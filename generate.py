@@ -19,7 +19,7 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 SOURCES_FILE = os.path.join(SCRIPT_DIR, "sources.json")
 ICON_FILE = os.path.join(SCRIPT_DIR, "tv-icon.png")
 BASE_URL = "https://kellogs12.github.io/world-live-tv-stremio"
-VERSION = "1.1.0"
+VERSION = "1.2.0"
 
 HLS_HINT = {
     "proxyHeaders": {
@@ -371,11 +371,11 @@ def generate_addon_for_country(country, base_dir):
         )
         print(f"    Catalog '{cname}' ({cid}): {len(items)} channels")
 
-    # 4. Write manifest.json
+    manifest_name = f"{flag} {name}" if ("tv" in name.lower() or "sports" in name.lower()) else f"{flag} {name} Live TV"
     manifest = {
         "id": f"worldlive.{code}",
         "version": VERSION,
-        "name": f"{flag} {name} Live TV",
+        "name": manifest_name,
         "description": desc,
         "logo": icon_url,
         "resources": [
