@@ -15,6 +15,8 @@ import sys
 import urllib.request
 import urllib.error
 
+socket.setdefaulttimeout(5.0)
+
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 SOURCES_FILE = os.path.join(SCRIPT_DIR, "sources.json")
 ICON_FILE = os.path.join(SCRIPT_DIR, "tv-icon.png")

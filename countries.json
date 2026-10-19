@@ -51,7 +51,7 @@
       "flag": "\ud83c\udf10",
       "region": "Global",
       "description": "24/7 World News, Weather, and Sports: CBS News, NBC News, ABC News, BBC News, Sky News, Al Jazeera, DW, France 24, Euronews, Bloomberg, Red Bull TV.",
-      "channel_count": 22,
+      "channel_count": 23,
       "vpn_required": false
     },
     {
@@ -59,8 +59,8 @@
       "name": "Live Sports 24/7",
       "flag": "\ud83c\udfc6",
       "region": "Sports",
-      "description": "Priority Live Sports: Formula 1 & Motorsports, Boxing, UFC & MMA, Soccer (FIFA+, beIN), NFL & American Football, NBA Basketball, MLB Baseball, Aussie Rules (7AFL, Channel 7 Melbourne, 7mate), Golf, Tennis, and Cricket.",
-      "channel_count": 27,
+      "description": "Priority Live Sports: Formula 1 & Motorsports, Boxing, UFC & MMA, Soccer (FIFA+, beIN, CBS Golazo), NFL & American Football, NBA Basketball, MLB Baseball, Aussie Rules (7AFL, Channel 7 Melbourne, 7mate), Golf, Tennis, and Cricket.",
+      "channel_count": 37,
       "vpn_required": false
     },
     {
@@ -68,8 +68,8 @@
       "name": "Cartoons & Kids TV",
       "flag": "\ud83c\udfa8",
       "region": "Cartoons",
-      "description": "24/7 Famous Cartoons and Kids Channels: Cartoon Network, Disney Channel, Nickelodeon, SpongeBob SquarePants 24/7, NickToons, Nick 90s, NickTeen, Nick Jr, Cartoon Classics, Kartoon Channel, Toon Goggles, ABC Kids, and Adult Animation.",
-      "channel_count": 15,
+      "description": "24/7 Famous Cartoons and Kids Channels: Cartoon Network, Disney Channel, Nickelodeon, SpongeBob SquarePants 24/7, NickToons, Nick 90s, NickTeen, Nick Jr, 9Go! Kids TV, Cartoon Classics, Transformers TV, Power Rangers, Kartoon Channel, Toon Goggles, ABC Kids, and Adult Animation.",
+      "channel_count": 18,
       "vpn_required": false
     }
   ]

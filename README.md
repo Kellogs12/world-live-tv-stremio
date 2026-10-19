@@ -6,15 +6,16 @@ Self-hosted, static multi-country Live TV channel add-ons for [Stremio](https://
 
 ## 🌍 Included Add-ons & Lineups
 
-- 🏆 **Live Sports 24/7 (`/sports/`)**: Priority live sports across 4 dedicated catalogs:
-  - **AFL, F1 & Motorsports**: 7AFL (official 7plus AFL FAST stream), Channel 7 Melbourne (live AFL match coverage), Channel 7mate Melbourne (live AFL), Red Bull TV (Formula 1 & motorsports specials), Trace Sport Stars, Racing.com (Channel 78 live racing), Sky Racing 1, 2, Thoroughbred Central.
-  - **UFC, Boxing & Combat Sports**: UFC official FAST channel, HBO Boxing (classic championship fights), PFL MMA (Professional Fighters League), GLORY Kickboxing, TVS Boxing.
+- 🏆 **Live Sports 24/7 (`/sports/`)**: Priority live sports across 5 dedicated catalogs:
+  - **Formula 1 & Motorsports**: ORF 1 (official FTA Formula 1 live broadcaster), TV Formula, SPEEDVISION (24/7 premier motorsport network), NASCAR Channel (official 24/7 stock car racing), Motorvision (international motorsport & rally), RACER Select (MAVTV motorsports), Red Bull TV (motorsports & F1 specials), BBC Top Gear.
+  - **AFL & Australian Sports**: 7AFL (official 7plus AFL FAST stream), Channel 7 Melbourne (live AFL match coverage), Channel 7mate Melbourne (live AFL), LIV Golf Replays, Trace Sport Stars, Racing.com (Channel 78 live racing), Sky Racing 1, 2, Thoroughbred Central.
+  - **UFC, Boxing & Combat Sports**: UFC official FAST channel, HBO Boxing (classic championship fights), PFL MMA (Professional Fighters League), GLORY Kickboxing, TVS Boxing, Swerve Combat.
   - **NFL, NBA & MLB Major Leagues**: The NBA Channel, MLB Channel (Major League Baseball 1080p), FOX Sports (live NFL analysis & FS1 studio shows), NBC Sports NOW (ProFootballTalk & NFL coverage), CBS Sports HQ (24/7 live scores and game highlights), Fubo Sports Network, WNBL Basketball.
-  - **Soccer, Golf, Tennis & World Sports**: FIFA+ (official FIFA live matches & tournament coverage), beIN SPORTS XTRA (international soccer, Ligue 1, Copa Libertadores), beIN SPORTS XTRA en Español, PGA TOUR, TennisChannel 2, Cricket Gold.
+  - **Soccer, Golf & International Sports**: FIFA+ (official FIFA live matches & tournament coverage), CBS Sports Golazo Network (24/7 dedicated live soccer network), beIN SPORTS XTRA (international soccer, Ligue 1, Copa Libertadores), beIN SPORTS XTRA en Español, PGA TOUR, TennisChannel 2, Cricket Gold.
 - 🎨 **Cartoons & Kids TV (`/cartoons/`)**: 24/7 famous cartoons, animation, and kids networks across 3 catalogs:
-  - **Cartoon Network & Disney Channel**: Cartoon Network HD & SD (Dexter's Lab, Ben 10, Adventure Time, Powerpuff Girls, Courage the Cowardly Dog, Gumball), Disney Channel (Phineas and Ferb, Gravity Falls, DuckTales, Kim Possible).
+  - **Cartoon Network & Disney Channel**: Cartoon Network HD & SD (Dexter's Lab, Ben 10, Adventure Time, Powerpuff Girls, Courage the Cowardly Dog, Gumball), Disney Channel (Phineas and Ferb, Gravity Falls, DuckTales, Kim Possible), 9Go! (24/7 kids animation block for Cartoon Network classics and anime).
   - **Nickelodeon & NickToons (24/7)**: SpongeBob SquarePants 24/7, Nickelodeon Live, NickToons (Avatar, Fairly OddParents, Danny Phantom, Invader Zim), NickToons 90s (Rugrats, Hey Arnold!, Rocko's Modern Life, CatDog), Nick Jr Club (PAW Patrol, Blue's Clues), NickTeen (iCarly, Victorious, Big Time Rush).
-  - **Classic Cartoons & Kids Networks**: Cartoon Classics (Popeye, Betty Boop, Classic Looney Tunes), Kartoon Channel!, Toon Goggles, ABC Kids (Bluey, Play School), Adult Animation, Xumo Free Kids TV.
+  - **Classic Cartoons & Action Animation**: Cartoon Classics (Popeye, Betty Boop, Classic Looney Tunes), Transformers TV (24/7 animated series), Power Rangers (24/7 action series), Kartoon Channel!, Toon Goggles, ABC Kids (Bluey, Play School), Adult Animation, Xumo Free Kids TV.
 - 🇦🇺 **Australia (`/au/`)**: ABC, SBS, Seven, Nine, 10, C31, 7AFL, Samsung TV Plus AU, Plex AU.
 - 🇺🇸 **United States (`/us/`)**: CBS News, ABC News Live, NBC News Now, Scripps News, Fox Weather, Bloomberg, Reuters, and Xumo Free Live TV US.
 - 🇬🇧 **United Kingdom (`/uk/`)**: BBC News, Sky News, GB News, Rakuten TV UK, Plex UK.
