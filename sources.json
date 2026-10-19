@@ -46,18 +46,13 @@
       "name": "Australia",
       "flag": "🇦🇺",
       "region": "Oceania",
-      "description": "Australian Free-to-Air (ABC, SBS, Seven, Nine, 10, C31), network free channels, Plex AU, and Samsung TV Plus AU.",
+      "description": "Australian Free-to-Air (ABC, SBS, Seven, Nine, 10, C31), network free channels, and Samsung TV Plus AU.",
       "vpn_required": true,
       "m3u_sources": [
         {
           "url": "https://i.mjh.nz/au/Melbourne/raw-tv.m3u8",
           "catalog": "au-fta",
           "type": "mjh_au"
-        },
-        {
-          "url": "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/main/playlists/plex_au.m3u",
-          "catalog": "au-plex",
-          "type": "plex"
         },
         {
           "url": "https://www.apsattv.com/ssungaus.m3u",
@@ -68,7 +63,6 @@
       "catalogs": [
         {"id": "au-fta", "name": "Melbourne Free-to-Air"},
         {"id": "au-free", "name": "Free Network Channels"},
-        {"id": "au-plex", "name": "Plex Live TV (AU)"},
         {"id": "au-samsung", "name": "Samsung TV Plus (AU)"}
       ],
       "fallback_channels": []
@@ -78,24 +72,18 @@
       "name": "United Kingdom",
       "flag": "🇬🇧",
       "region": "Europe",
-      "description": "UK Live News (BBC News, Sky News, GB News), Freeview, Rakuten TV UK, and Plex Live TV UK.",
+      "description": "UK Live News (BBC News, Sky News, GB News), Freeview, and Rakuten TV UK.",
       "vpn_required": false,
       "m3u_sources": [
         {
           "url": "https://www.apsattv.com/rakuten_uk.m3u",
           "catalog": "uk-rakuten",
           "type": "generic"
-        },
-        {
-          "url": "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/main/playlists/plex_gb.m3u",
-          "catalog": "uk-plex",
-          "type": "plex"
         }
       ],
       "catalogs": [
         {"id": "uk-news", "name": "UK Live News & Public TV"},
-        {"id": "uk-rakuten", "name": "Rakuten TV (UK)"},
-        {"id": "uk-plex", "name": "Plex Live TV (UK)"}
+        {"id": "uk-rakuten", "name": "Rakuten TV (UK)"}
       ],
       "fallback_channels": [
         {"id": "sky-news-uk", "name": "Sky News UK", "catalog": "uk-news", "logo": "https://image.xumo.com/v1/channels/channel/99951223/300x300.webp?type=color_onBlack", "url": "https://dbrb49pjoymg4.cloudfront.net/10001/99951223/hls/master.m3u8?ads.xumo_channelId=99951223"},
@@ -111,18 +99,11 @@
       "name": "Canada",
       "flag": "🇨🇦",
       "region": "Americas",
-      "description": "Canadian Live TV, News, and 450+ free channels from Plex Live TV Canada.",
+      "description": "Canadian Live TV, News, and Featured Live Channels.",
       "vpn_required": false,
-      "m3u_sources": [
-        {
-          "url": "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/main/playlists/plex_ca.m3u",
-          "catalog": "ca-plex",
-          "type": "plex"
-        }
-      ],
+      "m3u_sources": [],
       "catalogs": [
-        {"id": "ca-news", "name": "News & Featured"},
-        {"id": "ca-plex", "name": "Plex Live TV (Canada)"}
+        {"id": "ca-news", "name": "News & Featured"}
       ],
       "fallback_channels": [
         {"id": "reuters-ca", "name": "Reuters 60", "catalog": "ca-news", "logo": "https://image.xumo.com/v1/channels/channel/99951197/300x300.webp?type=color_onBlack", "url": "https://dbrb49pjoymg4.cloudfront.net/10001/99951197/hls/playlist.m3u8?ads.xumo_channelId=99951197"},
@@ -136,23 +117,17 @@
       "name": "New Zealand",
       "flag": "🇳🇿",
       "region": "Oceania",
-      "description": "New Zealand Freeview (TVNZ 1, TVNZ 2, Three, Bravo, Rush, Eden, Whakaata Māori) and Plex Live TV NZ.",
+      "description": "New Zealand Freeview (TVNZ 1, TVNZ 2, Three, Bravo, Rush, Eden, Whakaata Māori).",
       "vpn_required": true,
       "m3u_sources": [
         {
           "url": "https://i.mjh.nz/nz/raw-tv.m3u8",
           "catalog": "nz-fta",
           "type": "mjh_nz"
-        },
-        {
-          "url": "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/main/playlists/plex_nz.m3u",
-          "catalog": "nz-plex",
-          "type": "plex"
         }
       ],
       "catalogs": [
-        {"id": "nz-fta", "name": "New Zealand Freeview"},
-        {"id": "nz-plex", "name": "Plex Live TV (NZ)"}
+        {"id": "nz-fta", "name": "New Zealand Freeview"}
       ],
       "fallback_channels": []
     },

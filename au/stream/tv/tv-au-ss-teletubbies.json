@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://d1mxjtebmoshcc.cloudfront.net/master.m3u8","name":"Live","title":"TeleTubbies"},{"url":"https://d1mxjtebmoshcc.cloudfront.net/master.m3u8","name":"Live (browser)","title":"TeleTubbies\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

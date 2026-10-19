@@ -16,11 +16,11 @@ Self-hosted, static multi-country Live TV channel add-ons for [Stremio](https://
   - **Cartoon Network & Disney Channel**: Cartoon Network HD & SD (Dexter's Lab, Ben 10, Adventure Time, Powerpuff Girls, Courage the Cowardly Dog, Gumball), Disney Channel (Phineas and Ferb, Gravity Falls, DuckTales, Kim Possible), 9Go! (24/7 kids animation block for Cartoon Network classics and anime).
   - **Nickelodeon & NickToons (24/7)**: SpongeBob SquarePants 24/7, Nickelodeon Live, NickToons (Avatar, Fairly OddParents, Danny Phantom, Invader Zim), NickToons 90s (Rugrats, Hey Arnold!, Rocko's Modern Life, CatDog), Nick Jr Club (PAW Patrol, Blue's Clues), NickTeen (iCarly, Victorious, Big Time Rush).
   - **Classic Cartoons & Action Animation**: Cartoon Classics (Popeye, Betty Boop, Classic Looney Tunes), Transformers TV (24/7 animated series), Power Rangers (24/7 action series), Kartoon Channel!, Toon Goggles, ABC Kids (Bluey, Play School), Adult Animation, Xumo Free Kids TV.
-- 🇦🇺 **Australia (`/au/`)**: ABC, SBS, Seven, Nine, 10, C31, 7AFL, Samsung TV Plus AU, Plex AU.
+- 🇦🇺 **Australia (`/au/`)**: ABC, SBS, Seven, Nine, 10, C31, 7AFL, and Samsung TV Plus AU.
 - 🇺🇸 **United States (`/us/`)**: CBS News, ABC News Live, NBC News Now, Scripps News, Fox Weather, Bloomberg, Reuters, and Xumo Free Live TV US.
-- 🇬🇧 **United Kingdom (`/uk/`)**: BBC News, Sky News, GB News, Rakuten TV UK, Plex UK.
-- 🇳🇿 **New Zealand (`/nz/`)**: TVNZ 1, TVNZ 2, TVNZ Duke, Three, Bravo, Rush, Whakaata Māori, Plex NZ.
-- 🇨🇦 **Canada (`/ca/`)**: CBC News, Global News, CPAC, Plex CA.
+- 🇬🇧 **United Kingdom (`/uk/`)**: BBC News, Sky News, GB News, and Rakuten TV UK.
+- 🇳🇿 **New Zealand (`/nz/`)**: TVNZ 1, TVNZ 2, TVNZ Duke, Three, Bravo, Rush, and Whakaata Māori.
+- 🇨🇦 **Canada (`/ca/`)**: Reuters 60, BBC News, CBS News 24/7, and Sky News.
 - 🌐 **Global News & Sports (`/global/`)**: Sky News International, BBC News, Al Jazeera, DW, France 24, Euronews, The NBA Channel, UFC, HBO Boxing, FIFA+, beIN SPORTS XTRA, MLB Channel, 7AFL.
 
 ---

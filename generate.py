@@ -276,17 +276,6 @@ def generate_addon_for_country(country, base_dir):
                     ch_desc=desc_str
                 )
 
-        elif src_type == "plex":
-            for c in sorted(raw_list, key=lambda x: x["name"].casefold()):
-                add_channel(
-                    cat_id=cat_id,
-                    raw_id="plex-" + (c.get("channel-id") or c.get("tvg-id") or c["name"]),
-                    ch_name=c["name"],
-                    ch_url=c["url"],
-                    ch_logo=c.get("tvg-logo", ""),
-                    ch_desc="Free live channel from Plex"
-                )
-
         elif src_type == "samsung":
             for c in sorted(raw_list, key=lambda x: clean_name(x["name"]).casefold()):
                 host = re.sub(r'^https?://([^/:]+).*', r'\1', c["url"])

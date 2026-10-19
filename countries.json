@@ -14,8 +14,8 @@
       "name": "Australia",
       "flag": "\ud83c\udde6\ud83c\uddfa",
       "region": "Oceania",
-      "description": "Australian Free-to-Air (ABC, SBS, Seven, Nine, 10, C31), network free channels, Plex AU, and Samsung TV Plus AU.",
-      "channel_count": 551,
+      "description": "Australian Free-to-Air (ABC, SBS, Seven, Nine, 10, C31), network free channels, and Samsung TV Plus AU.",
+      "channel_count": 277,
       "vpn_required": true
     },
     {
@@ -23,8 +23,8 @@
       "name": "United Kingdom",
       "flag": "\ud83c\uddec\ud83c\udde7",
       "region": "Europe",
-      "description": "UK Live News (BBC News, Sky News, GB News), Freeview, Rakuten TV UK, and Plex Live TV UK.",
-      "channel_count": 564,
+      "description": "UK Live News (BBC News, Sky News, GB News), Freeview, and Rakuten TV UK.",
+      "channel_count": 201,
       "vpn_required": false
     },
     {
@@ -32,8 +32,8 @@
       "name": "Canada",
       "flag": "\ud83c\udde8\ud83c\udde6",
       "region": "Americas",
-      "description": "Canadian Live TV, News, and 450+ free channels from Plex Live TV Canada.",
-      "channel_count": 466,
+      "description": "Canadian Live TV, News, and Featured Live Channels.",
+      "channel_count": 4,
       "vpn_required": false
     },
     {
@@ -41,8 +41,8 @@
       "name": "New Zealand",
       "flag": "\ud83c\uddf3\ud83c\uddff",
       "region": "Oceania",
-      "description": "New Zealand Freeview (TVNZ 1, TVNZ 2, Three, Bravo, Rush, Eden, Whakaata M\u0101ori) and Plex Live TV NZ.",
-      "channel_count": 308,
+      "description": "New Zealand Freeview (TVNZ 1, TVNZ 2, Three, Bravo, Rush, Eden, Whakaata M\u0101ori).",
+      "channel_count": 38,
       "vpn_required": true
     },
     {

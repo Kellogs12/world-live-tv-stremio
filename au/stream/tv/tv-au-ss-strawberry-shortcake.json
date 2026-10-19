@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://d3kuzudxjuzgkx.cloudfront.net/master.m3u8","name":"Live","title":"Strawberry Shortcake"},{"url":"https://d3kuzudxjuzgkx.cloudfront.net/master.m3u8","name":"Live (browser)","title":"Strawberry Shortcake\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}
