@@ -362,7 +362,7 @@ def generate_addon_for_country(country, base_dir):
         )
         print(f"    Catalog '{cname}' ({cid}): {len(items)} channels")
 
-    manifest_name = f"{flag} {name}" if ("tv" in name.lower() or "sports" in name.lower()) else f"{flag} {name} Live TV"
+    manifest_name = f"{flag} {name}" if ("tv" in name.lower() or "sports" in name.lower() or "live" in name.lower()) else f"{flag} {name} Live TV"
     manifest = {
         "id": f"worldlive.{code}",
         "version": VERSION,
@@ -409,7 +409,7 @@ def main():
     for entry in os.listdir(SCRIPT_DIR):
         full_p = os.path.join(SCRIPT_DIR, entry)
         if os.path.isdir(full_p) and os.path.exists(os.path.join(full_p, "manifest.json")):
-            if entry not in active_codes and entry != "cartoon-vault":
+            if entry not in active_codes and entry not in ("cartoon-vault", "power-rangers"):
                 print(f"Removing retired country directory: {entry}")
                 shutil.rmtree(full_p)
 
@@ -429,6 +429,15 @@ def main():
         summaries.append(vault_summary)
     except Exception as e:
         print(f"  [Warning] Could not build cartoon vault: {e}")
+
+    # Build Power Rangers Universe on-demand catalog addon
+    try:
+        from build_power_rangers import build_power_rangers
+        print("\nBuilding Power Rangers Universe on-demand catalog...")
+        pr_summary = build_power_rangers(SCRIPT_DIR)
+        summaries.append(pr_summary)
+    except Exception as e:
+        print(f"  [Warning] Could not build power rangers: {e}")
 
     summary_path = os.path.join(SCRIPT_DIR, "countries.json")
     with open(summary_path, "w", encoding="utf-8") as f:

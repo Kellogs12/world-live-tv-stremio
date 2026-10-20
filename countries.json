@@ -73,6 +73,15 @@
       "vpn_required": false
     },
     {
+      "code": "novelas",
+      "name": "Telenovelas Live 24/7",
+      "flag": "\ud83c\udfad",
+      "region": "Novelas",
+      "description": "24/7 Telenovelas, Latin dramas, Telemundo, Univision hits, and international series.",
+      "channel_count": 18,
+      "vpn_required": false
+    },
+    {
       "code": "cartoon-vault",
       "name": "Cartoon & Animation Vault",
       "flag": "\ud83c\udfa8",
@@ -81,6 +90,18 @@
       "channel_count": 243,
       "item_count": 243,
       "item_label": "Iconic Titles",
+      "catalog_type": "On-Demand Catalog",
+      "vpn_required": false
+    },
+    {
+      "code": "power-rangers",
+      "name": "Power Rangers Universe",
+      "flag": "\u26a1",
+      "region": "Power Rangers",
+      "description": "Complete on-demand universe of Power Rangers: Chronological Series (all 30 seasons), Eras (Saban, Disney, Neo-Saban, Hasbro), and Movies & Specials.",
+      "channel_count": 29,
+      "item_count": 29,
+      "item_label": "Series & Movies",
       "catalog_type": "On-Demand Catalog",
       "vpn_required": false
     }
