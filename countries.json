@@ -15,7 +15,7 @@
       "flag": "\ud83c\udde6\ud83c\uddfa",
       "region": "Oceania",
       "description": "Australian Free-to-Air (ABC, SBS, Seven, Nine, 10, C31), network free channels, and Samsung TV Plus AU.",
-      "channel_count": 216,
+      "channel_count": 282,
       "vpn_required": true
     },
     {
@@ -78,8 +78,8 @@
       "flag": "\ud83c\udfa8",
       "region": "Cartoons",
       "description": "Comprehensive on-demand catalog of iconic animated series and movies: Cartoon Network, Disney, Nickelodeon, Classic Cartoons, and Action Animation.",
-      "channel_count": 170,
-      "item_count": 170,
+      "channel_count": 243,
+      "item_count": 243,
       "item_label": "Iconic Titles",
       "catalog_type": "On-Demand Catalog",
       "vpn_required": false

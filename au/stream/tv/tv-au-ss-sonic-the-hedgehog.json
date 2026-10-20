@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://d36joy6bh8xxe2.cloudfront.net/master.m3u8","name":"Live","title":"Sonic the Hedgehog"},{"url":"https://d36joy6bh8xxe2.cloudfront.net/master.m3u8","name":"Live (browser)","title":"Sonic the Hedgehog\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}
