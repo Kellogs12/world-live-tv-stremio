@@ -57,9 +57,9 @@ class TestNovelas(unittest.TestCase):
 
     def test_catalog_files_and_channels(self):
         catalogs = [
-            ("novelas-clasicas", "Telenovelas Clásicas", 7),
-            ("novelas-telemundo-univision", "Telemundo & Univision Hits", 5),
-            ("novelas-internacionales", "Novelas Internacionales", 6)
+            ("novelas-clasicas", "Telenovelas Clásicas", 4),
+            ("novelas-telemundo-univision", "Telemundo & Univision Hits", 3),
+            ("novelas-internacionales", "Novelas Internacionales", 2)
         ]
 
         total_channels = 0
@@ -84,15 +84,15 @@ class TestNovelas(unittest.TestCase):
                 self.assertEqual(m["posterShape"], "square")
                 all_channel_ids.add(cid)
 
-        self.assertEqual(total_channels, 18)
-        self.assertEqual(len(all_channel_ids), 18, "Duplicate channels found across catalogs")
+        self.assertEqual(total_channels, 9)
+        self.assertEqual(len(all_channel_ids), 9, "Duplicate channels found across catalogs")
 
     def test_meta_and_dual_streams(self):
         stream_files = [f for f in os.listdir(self.stream_dir) if f.endswith(".json")]
         meta_files = [f for f in os.listdir(self.meta_dir) if f.endswith(".json")]
 
-        self.assertEqual(len(stream_files), 18)
-        self.assertEqual(len(meta_files), 18)
+        self.assertEqual(len(stream_files), 9)
+        self.assertEqual(len(meta_files), 9)
 
         for sf in stream_files:
             stream_path = os.path.join(self.stream_dir, sf)
@@ -132,7 +132,7 @@ class TestNovelas(unittest.TestCase):
         self.assertEqual(len(novelas_entries), 1, "novelas must be listed in countries.json")
         entry = novelas_entries[0]
         self.assertEqual(entry.get("name"), "Telenovelas Live 24/7")
-        self.assertEqual(entry.get("channel_count"), 18)
+        self.assertEqual(entry.get("channel_count"), 9)
         self.assertFalse(entry.get("vpn_required"))
 
 

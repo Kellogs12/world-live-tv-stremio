@@ -139,6 +139,11 @@ SHOW_DEFINITIONS = {
 }
 
 
+POSTER_OVERRIDES = {
+    "tt12360292": "https://m.media-amazon.com/images/M/MV5BOTRiNjU2YzItN2QzMi00NmQ5LWFkYjUtNmI3YjkxM2I3MzE3XkEyXkFqcGc@._V1_.jpg"
+}
+
+
 def write_json(path, data):
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
@@ -236,7 +241,7 @@ def build_power_rangers(base_dir, refresh=False):
                         "id": imdb_id,
                         "type": cat_type,
                         "name": raw_meta.get('name') or default_title,
-                        "poster": raw_meta.get('poster') or f"https://images.metahub.space/poster/medium/{imdb_id}/img",
+                        "poster": POSTER_OVERRIDES.get(imdb_id) or raw_meta.get('poster') or f"https://images.metahub.space/poster/medium/{imdb_id}/img",
                         "posterShape": "poster",
                         "genres": genres or ["Action", "Sci-Fi", "Adventure"],
                         "imdbRating": str(raw_meta.get('imdbRating', '')),
@@ -257,7 +262,7 @@ def build_power_rangers(base_dir, refresh=False):
                         "id": imdb_id,
                         "type": cat_type,
                         "name": default_title,
-                        "poster": f"https://images.metahub.space/poster/medium/{imdb_id}/img",
+                        "poster": POSTER_OVERRIDES.get(imdb_id) or f"https://images.metahub.space/poster/medium/{imdb_id}/img",
                         "posterShape": "poster",
                         "genres": ["Action", "Sci-Fi", "Adventure"],
                         "imdbRating": "",
@@ -265,6 +270,13 @@ def build_power_rangers(base_dir, refresh=False):
                         "description": f"{default_title} on demand."
                     }
                     cache[imdb_id] = meta
+                    updated_cache = True
+
+            # Apply poster override if present
+            if imdb_id in POSTER_OVERRIDES:
+                meta["poster"] = POSTER_OVERRIDES[imdb_id]
+                if cache.get(imdb_id) and cache[imdb_id].get("poster") != POSTER_OVERRIDES[imdb_id]:
+                    cache[imdb_id]["poster"] = POSTER_OVERRIDES[imdb_id]
                     updated_cache = True
 
             # Ensure genre reflects Power Rangers and era

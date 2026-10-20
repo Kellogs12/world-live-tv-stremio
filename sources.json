@@ -987,88 +987,53 @@
       ],
       "fallback_channels": [
         {
-          "id": "telemundo-telenovelas-clasicas",
-          "name": "Telemundo Telenovelas Clásicas",
-          "catalog": "novelas-clasicas",
-          "logo": "https://images.pluto.tv/channels/5cf96cc422df39f1a338d165/colorLogoPNG.png",
-          "url": "https://jmp2.uk/plu-5cf96cc422df39f1a338d165.m3u8"
-        },
-        {
-          "id": "pluto-telenovelas-clasicas",
-          "name": "Pluto TV Telenovelas Clásicas",
-          "catalog": "novelas-clasicas",
-          "logo": "https://images.pluto.tv/channels/662a69daa0a74e00087a1c72/colorLogoPNG.png",
-          "url": "https://jmp2.uk/plu-662a69daa0a74e00087a1c72.m3u8"
-        },
-        {
-          "id": "pluto-novelas",
-          "name": "Pluto TV Novelas",
-          "catalog": "novelas-clasicas",
-          "logo": "https://images.pluto.tv/channels/5cf96c0222df39f1a338d163/colorLogoPNG.png",
-          "url": "https://jmp2.uk/plu-5cf96c0222df39f1a338d163.m3u8"
-        },
-        {
           "id": "televisa-telenovelas",
           "name": "Televisa Telenovelas",
           "catalog": "novelas-clasicas",
           "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Televisa_logo.svg/512px-Televisa_logo.svg.png",
-          "url": "https://televisa-televisa-1-it.samsung.wurl.tv/playlist.m3u8"
+          "url": "https://televisa-telenovelas-3-eu.rakuten.wurl.tv/playlist.m3u8"
+        },
+        {
+          "id": "todo-novelas-es",
+          "name": "Todo Novelas ES",
+          "catalog": "novelas-clasicas",
+          "logo": "https://i.imgur.com/9wxdWNQ.png",
+          "url": "https://dtsszjrztq9ti.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-yshah5p4v45g1/ToDoNovelas_ES.m3u8"
         },
         {
           "id": "rcn-novelas",
           "name": "RCN Novelas",
           "catalog": "novelas-clasicas",
           "logo": "https://i.imgur.com/9wxdWNQ.png",
+          "url": "https://stream1.bitred.cl/rcn-novelas/index.m3u8"
+        },
+        {
+          "id": "rcn-novelas-backup",
+          "name": "RCN Novelas (Backup)",
+          "catalog": "novelas-clasicas",
+          "logo": "https://i.imgur.com/9wxdWNQ.png",
           "url": "https://cdnlive.klicgo.net/rcnnovelas/live/playlist.m3u8"
-        },
-        {
-          "id": "pluto-novelas-mexico",
-          "name": "Pluto TV Novelas de México",
-          "catalog": "novelas-clasicas",
-          "logo": "https://images.pluto.tv/channels/6474a7958e3c0a0008b97cae/colorLogoPNG.png",
-          "url": "https://jmp2.uk/plu-6474a7958e3c0a0008b97cae.m3u8"
-        },
-        {
-          "id": "pluto-novelas-venezuela",
-          "name": "Pluto TV Novelas de Venezuela",
-          "catalog": "novelas-clasicas",
-          "logo": "https://images.pluto.tv/channels/6474a86917f5e100089a0c1c/colorLogoPNG.png",
-          "url": "https://jmp2.uk/plu-6474a86917f5e100089a0c1c.m3u8"
-        },
-        {
-          "id": "telemundo-east-hd",
-          "name": "Telemundo East HD",
-          "catalog": "novelas-telemundo-univision",
-          "logo": "https://imgx.fubo.tv/station_logos/telemundo_c.png",
-          "url": "https://streamer1.nexgen.bz/TELEMUNDO/index.m3u8"
         },
         {
           "id": "telemundo-al-dia",
           "name": "Telemundo Al Día",
           "catalog": "novelas-telemundo-univision",
           "logo": "https://imgx.fubo.tv/station_logos/telemundo_c.png",
-          "url": "https://d1kq7q3vteqjb.cloudfront.net/master.m3u8"
+          "url": "https://d1rqgw5gocwo9i.cloudfront.net/manifest/3fec3e5cac39a52b2132f9c66c83dae043dc17d4/prod_default_xumo-nbcu-stitched/10a44c37-f976-4d2b-ab23-8637a7a094ca/3.m3u8"
         },
         {
-          "id": "azteca-internacional",
-          "name": "Azteca Internacional",
+          "id": "telemundo-puerto-rico",
+          "name": "Telemundo Puerto Rico",
           "catalog": "novelas-telemundo-univision",
-          "logo": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Azteca_Internacional_logo_2023.png",
-          "url": "https://azt-mun.otteravision.com/azt/mun/mun.m3u8"
+          "logo": "https://imgx.fubo.tv/station_logos/telemundo_c.png",
+          "url": "https://nbculocallive.akamaized.net/hls/live/2037499/puertorico/stream1/master.m3u8"
         },
         {
-          "id": "rcn-mas",
-          "name": "RCN Más",
+          "id": "caracol-television",
+          "name": "Caracol Televisión",
           "catalog": "novelas-telemundo-univision",
-          "logo": "https://i.imgur.com/9wxdWNQ.png",
-          "url": "https://rcntv-rcnmas-1-us.plex.wurl.tv/playlist.m3u8"
-        },
-        {
-          "id": "pluto-novelas-latam",
-          "name": "Pluto TV Novelas LatAm",
-          "catalog": "novelas-telemundo-univision",
-          "logo": "https://images.pluto.tv/channels/5dcde0cc2efd2700090b7ff4/colorLogoPNG.png",
-          "url": "https://jmp2.uk/plu-5dcde0cc2efd2700090b7ff4.m3u8"
+          "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Caracol_Television_logo.svg/512px-Caracol_Television_logo.svg.png",
+          "url": "https://barinaslive1.boldmss.com/CARACOL/CARACOL.isml/CARACOL.m3u8"
         },
         {
           "id": "novelas-turcas",
@@ -1078,39 +1043,11 @@
           "url": "https://d3p1t3yzbr6q5d.cloudfront.net/Novelas_Turcas.m3u8"
         },
         {
-          "id": "pluto-novelas-otros-continentes",
-          "name": "Pluto TV Novelas de Otros Continentes",
-          "catalog": "novelas-internacionales",
-          "logo": "https://images.pluto.tv/channels/686eed4c677f2f98b4a1ccd4/colorLogoPNG.png",
-          "url": "https://jmp2.uk/plu-686eed4c677f2f98b4a1ccd4.m3u8"
-        },
-        {
-          "id": "pluto-novelas-br",
-          "name": "Pluto TV Novelas BR",
+          "id": "frequence-novelas",
+          "name": "Fréquence Novelas",
           "catalog": "novelas-internacionales",
           "logo": "https://images.pluto.tv/channels/5f512365abe1f50007d3ff56/colorLogoPNG.png",
-          "url": "https://jmp2.uk/plu-5f512365abe1f50007d3ff56.m3u8"
-        },
-        {
-          "id": "pluto-k-drama",
-          "name": "Pluto TV K-Drama",
-          "catalog": "novelas-internacionales",
-          "logo": "https://images.pluto.tv/channels/6475bfec536e0c0008858e9f/colorLogoPNG.png",
-          "url": "https://jmp2.uk/plu-6475bfec536e0c0008858e9f.m3u8"
-        },
-        {
-          "id": "pluto-dramas-coreanos",
-          "name": "Pluto TV Dramas Coreanos",
-          "catalog": "novelas-internacionales",
-          "logo": "https://images.pluto.tv/channels/6185a9a88b2ce30007de5128/colorLogoPNG.png",
-          "url": "https://jmp2.uk/plu-6185a9a88b2ce30007de5128.m3u8"
-        },
-        {
-          "id": "pluto-dramas-coreanos-teen",
-          "name": "Pluto TV Dramas Coreanos Teen",
-          "catalog": "novelas-internacionales",
-          "logo": "https://images.pluto.tv/channels/6661d5424b10960008599fa3/colorLogoPNG.png",
-          "url": "https://jmp2.uk/plu-6661d5424b10960008599fa3.m3u8"
+          "url": "https://d20oth1416y9a1.cloudfront.net/playlist/amg00711-zylofast-frequencenovelas-rakutenus/playlist.m3u8"
         }
       ]
     }

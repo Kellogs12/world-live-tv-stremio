@@ -145,6 +145,16 @@ class TestPowerRangers(unittest.TestCase):
         self.assertIn("tt3717490", movie_ids)  # 2017 Power Rangers Movie
         self.assertIn("tt23219684", movie_ids) # 2023 Once & Always
 
+    def test_dino_fury_poster_override(self):
+        chrono_file = os.path.join(PR_DIR, "catalog", "series", "pr-chronological.json")
+        with open(chrono_file, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        dino_fury = next(m for m in data.get("metas", []) if m["id"] == "tt12360292")
+        self.assertEqual(
+            dino_fury["poster"],
+            "https://m.media-amazon.com/images/M/MV5BOTRiNjU2YzItN2QzMi00NmQ5LWFkYjUtNmI3YjkxM2I3MzE3XkEyXkFqcGc@._V1_.jpg"
+        )
+
     def test_countries_json_entry(self):
         with open(self.countries_path, "r", encoding="utf-8") as f:
             data = json.load(f)
