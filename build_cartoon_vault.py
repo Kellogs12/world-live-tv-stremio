@@ -29,7 +29,7 @@ VAULT_VERSION = "1.0.0"
 VAULT_NAME = "🎨 Cartoon & Animation Vault"
 VAULT_DESC = (
     "Comprehensive on-demand catalog of iconic animated series and movies: "
-    "Cartoon Network, Disney, Nickelodeon, Classic Cartoons, and Superhero Action Animation."
+    "Cartoon Network, Disney, Nickelodeon, Classic Cartoons, and Action Animation."
 )
 
 CATALOG_DEFINITIONS = [
@@ -128,8 +128,8 @@ SHOW_DEFINITIONS = {
         ("tt0112197", "Timon & Pumbaa"),
         ("tt0105935", "Aladdin"),
         ("tt0103477", "The Little Mermaid"),
-        ("tt0134260", "Pepper Ann"),
-        ("tt0118337", "Hercules"),
+        ("tt0128890", "Pepper Ann"),
+        ("tt0138967", "Hercules"),
         ("tt0260602", "Buzz Lightyear of Star Command")
     ],
     "nick-shows": [
@@ -145,63 +145,64 @@ SHOW_DEFINITIONS = {
         ("tt0320808", "The Adventures of Jimmy Neutron"),
         ("tt1877889", "Teenage Mutant Ninja Turtles (2012)"),
         ("tt4859164", "The Loud House"),
-        ("tt0158417", "CatDog"),
-        ("tt0165576", "The Wild Thornberrys"),
-        ("tt0212686", "Rocket Power"),
+        ("tt0154061", "CatDog"),
+        ("tt0167743", "The Wild Thornberrys"),
+        ("tt0244926", "Rocket Power"),
         ("tt0131664", "The Angry Beavers"),
-        ("tt0108709", "Aaahh!!! Real Monsters"),
+        ("tt0108684", "Aaahh!!! Real Monsters"),
         ("tt0318233", "My Life as a Teenage Robot"),
         ("tt0235916", "ChalkZone"),
-        ("tt0268069", "As Told by Ginger"),
+        ("tt0235911", "As Told by Ginger"),
         ("tt0387714", "All Grown Up!"),
         ("tt0101178", "The Ren & Stimpy Show"),
         ("tt0892700", "The Penguins of Madagascar"),
         ("tt1545214", "Kung Fu Panda: Legends of Awesomeness"),
         ("tt0101084", "Doug"),
-        ("tt0235928", "KaBlam!"),
-        ("tt0118274", "Blue's Clues")
+        ("tt0122353", "KaBlam!"),
+        ("tt0163929", "Blue's Clues")
     ],
     "classics-shows": [
-        ("tt0058855", "The Tom and Jerry Show (1965)"),
-        ("tt0072573", "The New Tom & Jerry Show (1975)"),
-        ("tt0131174", "Tom & Jerry Kids Show"),
+        ("tt3559124", "The Tom and Jerry Show"),
+        ("tt0130417", "The New Tom & Jerry Show"),
+        ("tt0198254", "Tom & Jerry Kids Show"),
         ("tt0053502", "The Flintstones"),
         ("tt0055683", "The Jetsons"),
         ("tt0063950", "Scooby-Doo, Where Are You!"),
-        ("tt0306394", "What's New, Scooby-Doo?"),
+        ("tt0306274", "What's New, Scooby-Doo?"),
         ("tt1660055", "Scooby-Doo! Mystery Incorporated"),
         ("tt0105941", "Animaniacs"),
         ("tt0112123", "Pinky and the Brain"),
         ("tt0098929", "Tiny Toon Adventures"),
-        ("tt0112004", "Freakazoid!"),
+        ("tt0111970", "Freakazoid!"),
         ("tt0085033", "Inspector Gadget"),
         ("tt0081933", "The Smurfs"),
         ("tt0054572", "Top Cat"),
-        ("tt0054577", "The Yogi Bear Show"),
-        ("tt0071000", "Hong Kong Phooey"),
+        ("tt0255768", "The Yogi Bear Show"),
+        ("tt0070996", "Hong Kong Phooey"),
         ("tt0094469", "Garfield and Friends"),
-        ("tt0047754", "The Bugs Bunny Show"),
-        ("tt0060018", "The Road Runner Show"),
-        ("tt0053531", "Popeye the Sailor")
+        ("tt0053488", "The Bugs Bunny Show"),
+        ("tt0060019", "The Road Runner Show"),
+        ("tt0145628", "Popeye the Sailor"),
+        ("tt1726839", "The Looney Tunes Show")
     ],
     "action-shows": [
         ("tt0103359", "Batman: The Animated Series"),
         ("tt0115378", "Superman: The Animated Series"),
         ("tt0147746", "Batman Beyond"),
         ("tt0275137", "Justice League"),
-        ("tt0411008", "Justice League Unlimited"),
+        ("tt6025022", "Justice League Unlimited"),
         ("tt1641384", "Young Justice"),
         ("tt0112175", "Spider-Man: The Animated Series (1994)"),
         ("tt0976192", "The Spectacular Spider-Man"),
         ("tt0103584", "X-Men: The Animated Series (1992)"),
         ("tt16026746", "X-Men '97"),
         ("tt0131613", "Teenage Mutant Ninja Turtles (1987)"),
-        ("tt0372074", "Teenage Mutant Ninja Turtles (2003)"),
+        ("tt0318913", "Teenage Mutant Ninja Turtles (2003)"),
         ("tt0086817", "The Transformers (1984)"),
-        ("tt0115115", "Beast Wars: Transformers"),
+        ("tt0115108", "Beast Wars: Transformers"),
         ("tt0168366", "Pokémon"),
         ("tt0121220", "Dragon Ball Z"),
-        ("tt0090422", "Dragon Ball"),
+        ("tt0088509", "Dragon Ball"),
         ("tt4644488", "Dragon Ball Super"),
         ("tt0772145", "Wolverine and the X-Men"),
         ("tt1626038", "The Avengers: Earth's Mightiest Heroes"),
@@ -306,6 +307,10 @@ def build_vault(base_dir=SCRIPT_DIR, refresh=False):
         except Exception as e:
             print(f"  [Notice] Could not load cache: {e}")
 
+    valid_ids = {imdb_id for items in SHOW_DEFINITIONS.values() for imdb_id, _ in items}
+    if cache:
+        cache = {k: v for k, v in cache.items() if k in valid_ids}
+
     total_titles = 0
     updated_cache = False
 
@@ -320,8 +325,9 @@ def build_vault(base_dir=SCRIPT_DIR, refresh=False):
             cached_meta = cache.get(imdb_id)
             meta = None
 
-            # If cache has incomplete info (e.g. empty description or default title), re-fetch
-            needs_fetch = refresh or not cached_meta or not cached_meta.get("description")
+            # If cache has incomplete info (e.g. empty description or fallback dummy description), re-fetch
+            desc = cached_meta.get("description", "") if cached_meta else ""
+            needs_fetch = refresh or not cached_meta or not desc or desc.endswith("on demand.")
 
             if not needs_fetch:
                 meta = cached_meta
@@ -381,8 +387,11 @@ def build_vault(base_dir=SCRIPT_DIR, refresh=False):
         route2_path = os.path.join(vault_dir, "catalog", cat_type, cat_id, "skip=0.json")
         write_json(route2_path, catalog_response)
 
-    if updated_cache:
-        write_json(cache_file, cache)
+        # Route 3: catalog/{type}/{id}/skip=100.json (empty page to stop infinite pagination cleanly)
+        route3_path = os.path.join(vault_dir, "catalog", cat_type, cat_id, "skip=100.json")
+        write_json(route3_path, {"metas": []})
+
+    write_json(cache_file, cache)
 
     # Generate Manifest
     manifest = {

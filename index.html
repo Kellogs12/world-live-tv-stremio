@@ -305,7 +305,7 @@
           '</div>' +
           '<p class="desc">' + c.description + '</p>' +
           '<div class="btns">' +
-            (location.protocol === 'https:' ? 
+            ((location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1') ? 
               '<a class="btn" href="' + stremio + '">Install in Stremio</a>' +
               '<a class="btn alt" target="_blank" rel="noopener" href="' + web + '">Install via Stremio Web</a>' : '') +
             '<button class="btn alt copy-btn" type="button">Copy Link</button>' +
