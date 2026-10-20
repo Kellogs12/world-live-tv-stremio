@@ -409,7 +409,7 @@ def main():
     for entry in os.listdir(SCRIPT_DIR):
         full_p = os.path.join(SCRIPT_DIR, entry)
         if os.path.isdir(full_p) and os.path.exists(os.path.join(full_p, "manifest.json")):
-            if entry not in active_codes:
+            if entry not in active_codes and entry != "cartoon-vault":
                 print(f"Removing retired country directory: {entry}")
                 shutil.rmtree(full_p)
 
@@ -420,6 +420,15 @@ def main():
     for c in countries:
         res = generate_addon_for_country(c, SCRIPT_DIR)
         summaries.append(res)
+
+    # Build Cartoon & Animation Vault on-demand catalog addon
+    try:
+        from build_cartoon_vault import build_vault
+        print("\nBuilding Cartoon & Animation Vault on-demand catalog...")
+        vault_summary = build_vault(SCRIPT_DIR)
+        summaries.append(vault_summary)
+    except Exception as e:
+        print(f"  [Warning] Could not build cartoon vault: {e}")
 
     summary_path = os.path.join(SCRIPT_DIR, "countries.json")
     with open(summary_path, "w", encoding="utf-8") as f:

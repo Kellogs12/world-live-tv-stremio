@@ -71,6 +71,18 @@
       "description": "24/7 Famous Cartoons and Kids Channels: Cartoon Network, Disney Channel, Nickelodeon, SpongeBob SquarePants 24/7, NickToons, Nick 90s, NickTeen, Nick Jr, 9Go! Kids TV, Cartoon Classics, Transformers TV, Power Rangers, Kartoon Channel, Toon Goggles, ABC Kids, and Adult Animation.",
       "channel_count": 18,
       "vpn_required": false
+    },
+    {
+      "code": "cartoon-vault",
+      "name": "Cartoon & Animation Vault",
+      "flag": "\ud83c\udfa8",
+      "region": "Cartoons",
+      "description": "Comprehensive on-demand catalog of iconic animated series and movies: Cartoon Network, Disney, Nickelodeon, Classic Cartoons, and Superhero Action Animation.",
+      "channel_count": 169,
+      "item_count": 169,
+      "item_label": "Iconic Titles",
+      "catalog_type": "On-Demand Catalog",
+      "vpn_required": false
     }
   ]
 }

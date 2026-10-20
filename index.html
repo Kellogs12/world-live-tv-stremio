@@ -209,8 +209,8 @@
 <body>
 <main>
   <header>
-    <h1><span>🌍</span> World Live TV &amp; Sports for Stremio</h1>
-    <p class="lead">Self-hosted, static live TV, sports, and cartoon add-ons for Stremio. Free-to-Air, major sports (F1, AFL, UFC, Boxing, NFL, NBA, MLB, Soccer), cartoons (Cartoon Network, Disney, Nickelodeon), and official FAST network streams.</p>
+    <h1><span>🌍</span> World Live TV, Sports &amp; Cartoons for Stremio</h1>
+    <p class="lead">Self-hosted, static live TV, sports, and cartoon catalog add-ons for Stremio. Free-to-Air, major sports (F1, AFL, UFC, Boxing, NFL, NBA, MLB, Soccer), 24/7 kids live channels, and a massive on-demand Cartoon Vault catalog (Cartoon Network, Disney, Nickelodeon, Classic Cartoons, and Action Animation).</p>
   </header>
 
   <div class="controls">
@@ -231,6 +231,8 @@
   <section class="howto">
     <h2>VPN &amp; Stream Playback</h2>
     <p class="note">
+      <b>Cartoon &amp; Animation Vault</b> is a static on-demand catalog referencing canonical IMDb metadata via Cinemeta. It works worldwide without a VPN; clicking any series or movie loads all seasons/episodes and streams seamlessly via your installed stream addons (Torrentio, RealDebrid, etc.).
+      <br><br>
       <b>Free-to-Air channels</b> (like BBC, ITV in the UK; ABC, Seven, Nine, 10 in Australia; TVNZ in New Zealand; RTÉ in Ireland) require you to be physically located in that country or have a <b>VPN connected to that country</b>.
       <br><br>
       <b>FAST &amp; News channels</b> (Pluto TV, Samsung TV Plus, CBS News, Sky News, Al Jazeera, DW, Red Bull TV) generally work openly worldwide.
@@ -285,7 +287,11 @@
 
       var vpnBadge = c.vpn_required 
         ? '<span class="badge vpn">VPN needed outside ' + c.name + '</span>'
-        : '<span class="badge">Worldwide / Open</span>';
+        : (c.catalog_type ? '<span class="badge" style="background:#203828; color:#7ef5b8;">On-Demand Catalog</span>' : '<span class="badge">Worldwide / Open</span>');
+
+      var countBadge = c.catalog_type
+        ? '<span class="badge">' + (c.item_count || c.channel_count) + ' ' + (c.item_label || 'Titles') + '</span>'
+        : '<span class="badge">' + c.channel_count + ' Channels</span>';
 
       card.innerHTML = 
         '<div class="flag-box">' + c.flag + '</div>' +
@@ -293,7 +299,7 @@
           '<div class="card-header">' +
             '<h2>' + c.name + '</h2>' +
             '<div style="display:flex; gap: 6px; align-items:center;">' +
-              '<span class="badge">' + c.channel_count + ' Channels</span>' +
+              countBadge +
               vpnBadge +
             '</div>' +
           '</div>' +
