@@ -15,7 +15,7 @@
       "flag": "\ud83c\udde6\ud83c\uddfa",
       "region": "Oceania",
       "description": "Australian Free-to-Air (ABC, SBS, Seven, Nine, 10, C31), network free channels, and Samsung TV Plus AU.",
-      "channel_count": 265,
+      "channel_count": 269,
       "vpn_required": true
     },
     {
@@ -42,7 +42,7 @@
       "flag": "\ud83c\uddf3\ud83c\uddff",
       "region": "Oceania",
       "description": "New Zealand Freeview (TVNZ 1, TVNZ 2, Three, Bravo, Rush, Eden, Whakaata M\u0101ori).",
-      "channel_count": 38,
+      "channel_count": 40,
       "vpn_required": true
     },
     {

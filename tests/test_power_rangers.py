@@ -28,7 +28,14 @@ class TestPowerRangers(unittest.TestCase):
 
         self.assertEqual(manifest.get("id"), "worldlive.powerrangers")
         self.assertEqual(manifest.get("name"), "⚡ Power Rangers Universe")
-        self.assertIn("catalog", manifest.get("resources", []))
+        self.assertTrue(any(
+            r == "catalog" or (isinstance(r, dict) and r.get("name") == "catalog")
+            for r in manifest.get("resources", [])
+        ))
+        self.assertTrue(any(
+            r == "meta" or (isinstance(r, dict) and r.get("name") == "meta")
+            for r in manifest.get("resources", [])
+        ))
         self.assertIn("series", manifest.get("types", []))
         self.assertIn("movie", manifest.get("types", []))
         self.assertIn("tt", manifest.get("idPrefixes", []))
@@ -164,6 +171,39 @@ class TestPowerRangers(unittest.TestCase):
         self.assertEqual(entry.get("name"), "Power Rangers Universe")
         self.assertEqual(entry.get("channel_count"), 29)
         self.assertEqual(entry.get("catalog_type"), "On-Demand Catalog")
+
+    def test_meta_routes_and_episodes(self):
+        meta_dir = os.path.join(PR_DIR, "meta")
+        self.assertTrue(os.path.isdir(meta_dir), "meta directory must exist")
+
+        # Test series meta files
+        series_meta_dir = os.path.join(meta_dir, "series")
+        self.assertTrue(os.path.isdir(series_meta_dir))
+        series_files = os.listdir(series_meta_dir)
+        self.assertEqual(len(series_files), 22, "Expected 22 series meta files")
+
+        # Check MMPR
+        with open(os.path.join(series_meta_dir, "tt0106064.json"), "r", encoding="utf-8") as f:
+            mmpr = json.load(f)["meta"]
+        self.assertEqual(mmpr["id"], "tt0106064")
+        self.assertEqual(len(mmpr.get("videos", [])), 155, "MMPR should have 155 episodes")
+
+        # Check Jungle Fury
+        with open(os.path.join(series_meta_dir, "tt1121628.json"), "r", encoding="utf-8") as f:
+            jf = json.load(f)["meta"]
+        self.assertEqual(jf["id"], "tt1121628")
+        self.assertEqual(len(jf.get("videos", [])), 32, "Jungle Fury should have 32 episodes")
+
+        # Check Operation Overdrive
+        with open(os.path.join(series_meta_dir, "tt0784920.json"), "r", encoding="utf-8") as f:
+            oo = json.load(f)["meta"]
+        self.assertEqual(len(oo.get("videos", [])), 32, "Operation Overdrive should have 32 episodes")
+
+        # Test movie meta files
+        movie_meta_dir = os.path.join(meta_dir, "movie")
+        self.assertTrue(os.path.isdir(movie_meta_dir))
+        movie_files = os.listdir(movie_meta_dir)
+        self.assertEqual(len(movie_files), 7, "Expected 7 movie meta files")
 
 
 if __name__ == "__main__":

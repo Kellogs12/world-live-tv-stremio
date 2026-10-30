@@ -139,6 +139,33 @@ SHOW_DEFINITIONS = {
 }
 
 
+# Map individual series IMDb ID to the master Mighty Morphin Power Rangers season range
+SERIES_SEASONS = {
+    "tt0106064": (1, 3, "Mighty Morphin Power Rangers"),
+    "tt0115319": (4, 4, "Power Rangers Zeo"),
+    "tt0118436": (5, 5, "Power Rangers Turbo"),
+    "tt0120575": (6, 6, "Power Rangers in Space"),
+    "tt0175059": (7, 7, "Power Rangers Lost Galaxy"),
+    "tt0212686": (8, 8, "Power Rangers Lightspeed Rescue"),
+    "tt0256278": (9, 9, "Power Rangers Time Force"),
+    "tt0287871": (10, 10, "Power Rangers Wild Force"),
+    "tt0312189": (11, 11, "Power Rangers Ninja Storm"),
+    "tt0373587": (12, 12, "Power Rangers DinoThunder"),
+    "tt0414762": (13, 13, "Power Rangers S.P.D."),
+    "tt0451469": (14, 14, "Power Rangers Mystic Force"),
+    "tt0784920": (15, 15, "Power Rangers Operation Overdrive"),
+    "tt1121628": (16, 16, "Power Rangers Jungle Fury"),
+    "tt1304612": (17, 17, "Power Rangers RPM"),
+    "tt1704503": (18, 19, "Power Rangers Samurai"),
+    "tt2236126": (20, 21, "Power Rangers Megaforce"),
+    "tt3521854": (22, 23, "Power Rangers Dino Charge"),
+    "tt5335606": (24, 25, "Power Rangers Ninja Steel"),
+    "tt8022978": (26, 27, "Power Rangers Beast Morphers"),
+    "tt12360292": (28, 29, "Power Rangers Dino Fury"),
+    "tt29474102": (30, 30, "Power Rangers Cosmic Fury")
+}
+
+
 POSTER_OVERRIDES = {
     "tt12360292": "https://m.media-amazon.com/images/M/MV5BOTRiNjU2YzItN2QzMi00NmQ5LWFkYjUtNmI3YjkxM2I3MzE3XkEyXkFqcGc@._V1_.jpg"
 }
@@ -303,6 +330,95 @@ def build_power_rangers(base_dir, refresh=False):
 
     write_json(cache_file, cache)
 
+    # -------------------------------------------------------------
+    # Generate full meta resources: meta/{type}/{id}.json
+    # Stremio uses meta to display the series/movie details, seasons,
+    # and episode list. By generating meta for all series with complete
+    # episode videos, we ensure every season and episode is fully viewable
+    # and scraped for torrents without relying on incomplete external databases.
+    # -------------------------------------------------------------
+    print("\nBuilding full meta resources with complete episode lists for Power Rangers...")
+    meta_base_dir = os.path.join(pr_dir, "meta")
+    os.makedirs(os.path.join(meta_base_dir, "series"), exist_ok=True)
+    os.makedirs(os.path.join(meta_base_dir, "movie"), exist_ok=True)
+
+    # Fetch master MMPR meta which contains all 1,000+ canonical episodes across all 30 seasons
+    master_raw = fetch_cinemeta_meta("series", "tt0106064", "Mighty Morphin Power Rangers")
+    master_videos = master_raw.get("videos", []) if master_raw else []
+
+    all_series_items = list(dict.fromkeys(
+        iid for cat_id, items in SHOW_DEFINITIONS.items() if cat_id != "pr-movies" for iid, _ in items
+    ))
+    all_movie_items = [iid for iid, _ in SHOW_DEFINITIONS.get("pr-movies", [])]
+
+    # Generate meta for series
+    for imdb_id in all_series_items:
+        base_meta = dict(cache.get(imdb_id, {}))
+        meta_obj = {
+            "id": imdb_id,
+            "type": "series",
+            "name": base_meta.get("name", "Power Rangers"),
+            "poster": base_meta.get("poster"),
+            "posterShape": "poster",
+            "genres": base_meta.get("genres", ["Action", "Sci-Fi", "Adventure"]),
+            "imdbRating": base_meta.get("imdbRating", ""),
+            "releaseInfo": base_meta.get("releaseInfo", ""),
+            "description": base_meta.get("description", "")
+        }
+        if base_meta.get("background"):
+            meta_obj["background"] = base_meta.get("background")
+        if base_meta.get("logo"):
+            meta_obj["logo"] = base_meta.get("logo")
+
+        # Map videos for this series from the master TVDB dataset
+        if imdb_id in SERIES_SEASONS and master_videos:
+            s_start, s_end, _ = SERIES_SEASONS[imdb_id]
+            series_videos = []
+            for v in master_videos:
+                s_num = v.get("season", -1)
+                if s_start <= s_num <= s_end:
+                    # Keep canonical stream id (tt0106064:season:episode) so all torrent indexers match
+                    # Normalize displayed season relative to the series (e.g. Season 1, 2)
+                    rel_season = (s_num - s_start) + 1
+                    v_item = dict(v)
+                    v_item["season"] = rel_season
+                    series_videos.append(v_item)
+            meta_obj["videos"] = series_videos
+        else:
+            # Fallback to direct Cinemeta videos
+            direct_raw = fetch_cinemeta_meta("series", imdb_id)
+            meta_obj["videos"] = direct_raw.get("videos", []) if direct_raw else []
+
+        meta_file_path = os.path.join(meta_base_dir, "series", f"{imdb_id}.json")
+        write_json(meta_file_path, {"meta": meta_obj})
+
+    # Generate meta for movies
+    for imdb_id in all_movie_items:
+        base_meta = dict(cache.get(imdb_id, {}))
+        direct_raw = fetch_cinemeta_meta("movie", imdb_id)
+        meta_obj = {
+            "id": imdb_id,
+            "type": "movie",
+            "name": base_meta.get("name", "Power Rangers Movie"),
+            "poster": base_meta.get("poster"),
+            "posterShape": "poster",
+            "genres": base_meta.get("genres", ["Action", "Sci-Fi", "Adventure"]),
+            "imdbRating": base_meta.get("imdbRating", ""),
+            "releaseInfo": base_meta.get("releaseInfo", ""),
+            "description": base_meta.get("description", "")
+        }
+        if base_meta.get("background"):
+            meta_obj["background"] = base_meta.get("background")
+        if base_meta.get("logo"):
+            meta_obj["logo"] = base_meta.get("logo")
+        if direct_raw and direct_raw.get("videos"):
+            meta_obj["videos"] = direct_raw.get("videos")
+
+        meta_file_path = os.path.join(meta_base_dir, "movie", f"{imdb_id}.json")
+        write_json(meta_file_path, {"meta": meta_obj})
+
+    print(f"Generated complete meta files for {len(all_series_items)} series and {len(all_movie_items)} movies.")
+
     # Generate Manifest
     manifest = {
         "id": PR_ID,
@@ -310,7 +426,14 @@ def build_power_rangers(base_dir, refresh=False):
         "name": PR_NAME,
         "description": PR_DESC,
         "logo": f"{BASE_URL}/{PR_DIR_NAME}/assets/icon.png",
-        "resources": ["catalog"],
+        "resources": [
+            "catalog",
+            {
+                "name": "meta",
+                "types": ["series", "movie"],
+                "idPrefixes": ["tt"]
+            }
+        ],
         "types": ["series", "movie"],
         "idPrefixes": ["tt"],
         "catalogs": CATALOG_DEFINITIONS,
