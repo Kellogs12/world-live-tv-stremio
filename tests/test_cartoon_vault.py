@@ -112,8 +112,8 @@ class TestCartoonVault(unittest.TestCase):
             ("series", "cn-shows"): ["tt0454349", "tt1114855", "tt1871731", "tt2130507", "tt1402156"],
             ("series", "disney-shows"): ["tt0272388", "tt1725902", "tt1307224", "tt1387904"],
             ("series", "nick-shows"): ["tt1492090", "tt0421482", "tt0439349", "tt0235917"],
-            ("series", "classics-shows"): ["tt0780438", "tt1470837", "tt0280277", "tt0213363", "tt0983983", "tt0224455"],
-            ("series", "action-shows"): ["tt0249327", "tt1196094", "tt0210418", "tt1674928", "tt0409591", "tt1659175"],
+            ("series", "classics-shows"): ["tt0780438", "tt1470837", "tt0280277", "tt0213363", "tt0983983", "tt0224455", "tt0233033"],
+            ("series", "action-shows"): ["tt0247902", "tt1196094", "tt0210418", "tt1674928", "tt0409591", "tt1659175", "tt0103369"],
             ("movie", "cartoon-movies"): ["tt0253658", "tt0290057", "tt0357139", "tt0190641", "tt0259974", "tt0317705"]
         }
         for (cat_type, cat_id), req_ids in expected_by_cat.items():
@@ -123,6 +123,29 @@ class TestCartoonVault(unittest.TestCase):
             present_ids = {m["id"] for m in data.get("metas", [])}
             for rid in req_ids:
                 self.assertIn(rid, present_ids, f"Expected 1999 Gen Z ID {rid} in {cat_id}")
+
+    def test_classic_cartoons_verified_replacements(self):
+        classics_route = os.path.join(VAULT_DIR, "catalog", "series", "classics-shows.json")
+        with open(classics_route, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        present_ids = {m["id"] for m in data.get("metas", [])}
+
+        broken_ids = ["tt21153032", "tt0053488", "tt0060019", "tt0184175", "tt0364793"]
+        for bid in broken_ids:
+            self.assertNotIn(bid, present_ids, f"Broken IMDb ID {bid} must not be in classics-shows")
+
+        verified_replacements = ["tt0068112", "tt8543208", "tt0084972", "tt0051283", "tt0233033"]
+        for vid in verified_replacements:
+            self.assertIn(vid, present_ids, f"Verified classic cartoon ID {vid} must be in classics-shows")
+
+        action_route = os.path.join(VAULT_DIR, "catalog", "series", "action-shows.json")
+        with open(action_route, "r", encoding="utf-8") as f:
+            action_data = json.load(f)
+        action_ids = {m["id"] for m in action_data.get("metas", [])}
+        for bid in ["tt0249327", "tt0114327"]:
+            self.assertNotIn(bid, action_ids, f"Unmapped dub IMDb ID {bid} must not be in action-shows")
+        for vid in ["tt0247902", "tt0103369"]:
+            self.assertIn(vid, action_ids, f"Canonical mapped IMDb ID {vid} must be in action-shows")
 
     def test_no_duplicate_titles_across_catalogs(self):
         import sys
