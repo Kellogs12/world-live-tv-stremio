@@ -1,109 +1,109 @@
 {
-  "countries": [
-    {
-      "code": "us",
-      "name": "United States",
-      "flag": "\ud83c\uddfa\ud83c\uddf8",
-      "region": "Americas",
-      "description": "US Live News & Weather (CBS, NBC, ABC, Fox Weather, Scripps, Bloomberg, Reuters) and Xumo Free Live TV US.",
-      "channel_count": 409,
-      "vpn_required": false
-    },
-    {
-      "code": "au",
-      "name": "Australia",
-      "flag": "\ud83c\udde6\ud83c\uddfa",
-      "region": "Oceania",
-      "description": "Australian Free-to-Air (ABC, SBS, Seven, Nine, 10, C31), network free channels, and Samsung TV Plus AU.",
-      "channel_count": 269,
-      "vpn_required": true
-    },
-    {
-      "code": "uk",
-      "name": "United Kingdom",
-      "flag": "\ud83c\uddec\ud83c\udde7",
-      "region": "Europe",
-      "description": "UK Live News (BBC News, Sky News, GB News), Freeview, and Rakuten TV UK.",
-      "channel_count": 200,
-      "vpn_required": false
-    },
-    {
-      "code": "ca",
-      "name": "Canada",
-      "flag": "\ud83c\udde8\ud83c\udde6",
-      "region": "Americas",
-      "description": "Canadian Live TV, News, and Featured Live Channels.",
-      "channel_count": 4,
-      "vpn_required": false
-    },
-    {
-      "code": "nz",
-      "name": "New Zealand",
-      "flag": "\ud83c\uddf3\ud83c\uddff",
-      "region": "Oceania",
-      "description": "New Zealand Freeview (TVNZ 1, TVNZ 2, Three, Bravo, Rush, Eden, Whakaata M\u0101ori).",
-      "channel_count": 40,
-      "vpn_required": true
-    },
-    {
-      "code": "global",
-      "name": "Global News & Sports",
-      "flag": "\ud83c\udf10",
-      "region": "Global",
-      "description": "24/7 World News, Weather, and Sports: CBS News, NBC News, ABC News, BBC News, Sky News, Al Jazeera, DW, France 24, Euronews, Bloomberg, Red Bull TV.",
-      "channel_count": 23,
-      "vpn_required": false
-    },
-    {
-      "code": "sports",
-      "name": "Live Sports 24/7",
-      "flag": "\ud83c\udfc6",
-      "region": "Sports",
-      "description": "Priority Live Sports: Formula 1 & Motorsports, Boxing, UFC & MMA, Soccer (FIFA+, beIN, CBS Golazo), NFL & American Football, NBA Basketball, MLB Baseball, Aussie Rules (7AFL, Channel 7 Melbourne, 7mate), Golf, Tennis, and Cricket.",
-      "channel_count": 37,
-      "vpn_required": false
-    },
-    {
-      "code": "cartoons",
-      "name": "Cartoons & Kids TV",
-      "flag": "\ud83c\udfa8",
-      "region": "Cartoons",
-      "description": "24/7 Famous Cartoons and Kids Channels: Cartoon Network, Disney Channel, Nickelodeon, SpongeBob SquarePants 24/7, NickToons, Nick 90s, NickTeen, Nick Jr, 9Go! Kids TV, Cartoon Classics, Transformers TV, Power Rangers, Kartoon Channel, Toon Goggles, ABC Kids, and Adult Animation.",
-      "channel_count": 18,
-      "vpn_required": false
-    },
-    {
-      "code": "novelas",
-      "name": "Telenovelas Live 24/7",
-      "flag": "\ud83c\udfad",
-      "region": "Novelas",
-      "description": "24/7 Telenovelas, Latin dramas, Telemundo, Univision hits, and international series.",
-      "channel_count": 9,
-      "vpn_required": false
-    },
-    {
-      "code": "cartoon-vault",
-      "name": "Cartoon & Animation Vault",
-      "flag": "\ud83c\udfa8",
-      "region": "Cartoons",
-      "description": "Comprehensive on-demand catalog of iconic animated series and movies: Cartoon Network, Disney, Nickelodeon, Classic Cartoons, and Action Animation.",
-      "channel_count": 243,
-      "item_count": 243,
-      "item_label": "Iconic Titles",
-      "catalog_type": "On-Demand Catalog",
-      "vpn_required": false
-    },
-    {
-      "code": "power-rangers",
-      "name": "Power Rangers Universe",
-      "flag": "\u26a1",
-      "region": "Power Rangers",
-      "description": "Complete on-demand universe of Power Rangers: Chronological Series (all 30 seasons), Eras (Saban, Disney, Neo-Saban, Hasbro), and Movies & Specials.",
-      "channel_count": 29,
-      "item_count": 29,
-      "item_label": "Series & Movies",
-      "catalog_type": "On-Demand Catalog",
-      "vpn_required": false
-    }
-  ]
+    "countries":  [
+                      {
+                          "code":  "us",
+                          "name":  "United States",
+                          "flag":  "🇺🇸",
+                          "region":  "Americas",
+                          "description":  "US Live News \u0026 Weather (CBS, NBC, ABC, Fox Weather, Scripps, Bloomberg, Reuters) and Xumo Free Live TV US.",
+                          "channel_count":  409,
+                          "vpn_required":  false
+                      },
+                      {
+                          "code":  "au",
+                          "name":  "Australia",
+                          "flag":  "🇦🇺",
+                          "region":  "Oceania",
+                          "description":  "Australian Free-to-Air (ABC, SBS, Seven, Nine, 10, C31), network free channels, and Samsung TV Plus AU.",
+                          "channel_count":  269,
+                          "vpn_required":  true
+                      },
+                      {
+                          "code":  "uk",
+                          "name":  "United Kingdom",
+                          "flag":  "🇬🇧",
+                          "region":  "Europe",
+                          "description":  "UK Live News (BBC News, Sky News, GB News), Freeview, and Rakuten TV UK.",
+                          "channel_count":  200,
+                          "vpn_required":  false
+                      },
+                      {
+                          "code":  "ca",
+                          "name":  "Canada",
+                          "flag":  "🇨🇦",
+                          "region":  "Americas",
+                          "description":  "Canadian Live TV, News, and Featured Live Channels.",
+                          "channel_count":  4,
+                          "vpn_required":  false
+                      },
+                      {
+                          "code":  "nz",
+                          "name":  "New Zealand",
+                          "flag":  "🇳🇿",
+                          "region":  "Oceania",
+                          "description":  "New Zealand Freeview (TVNZ 1, TVNZ 2, Three, Bravo, Rush, Eden, Whakaata Māori).",
+                          "channel_count":  40,
+                          "vpn_required":  true
+                      },
+                      {
+                          "code":  "global",
+                          "name":  "Global News \u0026 Sports",
+                          "flag":  "🌐",
+                          "region":  "Global",
+                          "description":  "24/7 World News, Weather, and Sports: CBS News, NBC News, ABC News, BBC News, Sky News, Al Jazeera, DW, France 24, Euronews, Bloomberg, Red Bull TV.",
+                          "channel_count":  23,
+                          "vpn_required":  false
+                      },
+                      {
+                          "code":  "sports",
+                          "name":  "Live Sports 24/7",
+                          "flag":  "🏆",
+                          "region":  "Sports",
+                          "description":  "Priority Live Sports: Formula 1 \u0026 Motorsports, Boxing, UFC \u0026 MMA, Soccer (FIFA+, beIN, CBS Golazo), NFL \u0026 American Football, NBA Basketball, MLB Baseball, Aussie Rules (7AFL, Channel 7 Melbourne, 7mate), Golf, Tennis, and Cricket.",
+                          "channel_count":  37,
+                          "vpn_required":  false
+                      },
+                      {
+                          "code":  "cartoons",
+                          "name":  "Cartoons \u0026 Kids TV",
+                          "flag":  "🎨",
+                          "region":  "Cartoons",
+                          "description":  "24/7 Famous Cartoons and Kids Channels: Cartoon Network, Disney Channel, Nickelodeon, SpongeBob SquarePants 24/7, NickToons, Nick 90s, NickTeen, Nick Jr, 9Go! Kids TV, Cartoon Classics, Transformers TV, Power Rangers, Kartoon Channel, Toon Goggles, ABC Kids, and Adult Animation.",
+                          "channel_count":  18,
+                          "vpn_required":  false
+                      },
+                      {
+                          "code":  "novelas",
+                          "name":  "Telenovelas Live 24/7",
+                          "flag":  "🎭",
+                          "region":  "Novelas",
+                          "description":  "24/7 Telenovelas, Latin dramas, Telemundo, Univision hits, and international series.",
+                          "channel_count":  9,
+                          "vpn_required":  false
+                      },
+                      {
+                          "code":  "cartoon-vault",
+                          "name":  "Cartoon \u0026 Animation Vault",
+                          "flag":  "🎨",
+                          "region":  "Cartoons",
+                          "description":  "Comprehensive on-demand catalog of iconic animated series and movies: Cartoon Network, Disney, Nickelodeon, Classic Cartoons, and Action Animation.",
+                          "channel_count":  460,
+                          "item_count":  460,
+                          "item_label":  "Iconic Titles",
+                          "catalog_type":  "On-Demand Catalog",
+                          "vpn_required":  false
+                      },
+                      {
+                          "code":  "power-rangers",
+                          "name":  "Power Rangers Universe",
+                          "flag":  "⚡",
+                          "region":  "Power Rangers",
+                          "description":  "Complete on-demand universe of Power Rangers: Chronological Series (all 30 seasons), Eras (Saban, Disney, Neo-Saban, Hasbro), and Movies \u0026 Specials.",
+                          "channel_count":  29,
+                          "item_count":  29,
+                          "item_label":  "Series \u0026 Movies",
+                          "catalog_type":  "On-Demand Catalog",
+                          "vpn_required":  false
+                      }
+                  ]
 }

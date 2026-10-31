@@ -89,7 +89,7 @@ class TestCartoonVault(unittest.TestCase):
 
             total_items += len(metas1)
 
-        self.assertEqual(total_items, 243, f"Expected 243 total items, got {total_items}")
+        self.assertEqual(total_items, 460, f"Expected 460 total items, got {total_items}")
 
     def test_robotboy_presence_and_metadata(self):
         cn_route = os.path.join(VAULT_DIR, "catalog", "series", "cn-shows.json")
@@ -107,6 +107,23 @@ class TestCartoonVault(unittest.TestCase):
         self.assertIn("Professor Moshimo", rb["description"])
         self.assertTrue(rb["poster"].startswith("http"))
 
+    def test_genz_1999_era_shows_presence(self):
+        expected_by_cat = {
+            ("series", "cn-shows"): ["tt0454349", "tt1114855", "tt1871731", "tt2130507", "tt1402156"],
+            ("series", "disney-shows"): ["tt0272388", "tt1725902", "tt1307224", "tt1387904"],
+            ("series", "nick-shows"): ["tt1492090", "tt0421482", "tt0439349", "tt0235917"],
+            ("series", "classics-shows"): ["tt0780438", "tt1470837", "tt0280277", "tt0213363", "tt0983983", "tt0224455"],
+            ("series", "action-shows"): ["tt0249327", "tt1196094", "tt0210418", "tt1674928", "tt0409591", "tt1659175"],
+            ("movie", "cartoon-movies"): ["tt0253658", "tt0290057", "tt0357139", "tt0190641", "tt0259974", "tt0317705"]
+        }
+        for (cat_type, cat_id), req_ids in expected_by_cat.items():
+            route = os.path.join(VAULT_DIR, "catalog", cat_type, f"{cat_id}.json")
+            with open(route, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            present_ids = {m["id"] for m in data.get("metas", [])}
+            for rid in req_ids:
+                self.assertIn(rid, present_ids, f"Expected 1999 Gen Z ID {rid} in {cat_id}")
+
     def test_no_duplicate_titles_across_catalogs(self):
         import sys
         sys.path.insert(0, PROJECT_DIR)
@@ -119,7 +136,7 @@ class TestCartoonVault(unittest.TestCase):
             all_ids.extend(ids)
 
         self.assertEqual(len(all_ids), len(set(all_ids)), "Duplicate IDs found across different catalogs")
-        self.assertEqual(len(all_ids), 243)
+        self.assertEqual(len(all_ids), 460)
 
     def test_countries_json_and_readme(self):
         with open(self.countries_path, "r", encoding="utf-8") as f:
@@ -128,14 +145,14 @@ class TestCartoonVault(unittest.TestCase):
         vault_entries = [c for c in countries_data.get("countries", []) if c.get("code") == "cartoon-vault"]
         self.assertEqual(len(vault_entries), 1, "cartoon-vault must be listed in countries.json")
         entry = vault_entries[0]
-        self.assertEqual(entry.get("channel_count"), 243)
-        self.assertEqual(entry.get("item_count"), 243)
+        self.assertEqual(entry.get("channel_count"), 460)
+        self.assertEqual(entry.get("item_count"), 460)
 
         with open(self.readme_path, "r", encoding="utf-8") as f:
             readme_text = f.read()
 
         self.assertIn("Robotboy", readme_text)
-        self.assertIn("243 iconic and cult-classic animated series and specials", readme_text)
+        self.assertIn("460 iconic and cult-classic animated series and specials", readme_text)
 
 
 if __name__ == "__main__":
