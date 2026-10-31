@@ -343,7 +343,7 @@ def build_power_rangers(base_dir, refresh=False):
     os.makedirs(os.path.join(meta_base_dir, "movie"), exist_ok=True)
 
     # Fetch master MMPR meta which contains all 1,000+ canonical episodes across all 30 seasons
-    master_raw = fetch_cinemeta_meta("series", "tt0106064", "Mighty Morphin Power Rangers")
+    master_raw = fetch_cinemeta_meta("series", "tt0106064", "Mighty Morphin Power Rangers") if refresh else None
     master_videos = master_raw.get("videos", []) if master_raw else []
 
     all_series_items = list(dict.fromkeys(
@@ -353,6 +353,15 @@ def build_power_rangers(base_dir, refresh=False):
 
     # Generate meta for series
     for imdb_id in all_series_items:
+        meta_file_path = os.path.join(meta_base_dir, "series", f"{imdb_id}.json")
+        existing_videos = []
+        if os.path.exists(meta_file_path):
+            try:
+                with open(meta_file_path, "r", encoding="utf-8") as ef:
+                    existing_videos = json.load(ef).get("meta", {}).get("videos", [])
+            except Exception:
+                existing_videos = []
+
         base_meta = dict(cache.get(imdb_id, {}))
         meta_obj = {
             "id": imdb_id,
@@ -384,18 +393,28 @@ def build_power_rangers(base_dir, refresh=False):
                     v_item["season"] = rel_season
                     series_videos.append(v_item)
             meta_obj["videos"] = series_videos
+        elif not refresh and existing_videos:
+            meta_obj["videos"] = existing_videos
         else:
-            # Fallback to direct Cinemeta videos
-            direct_raw = fetch_cinemeta_meta("series", imdb_id)
-            meta_obj["videos"] = direct_raw.get("videos", []) if direct_raw else []
+            # Fallback to direct Cinemeta videos or existing cached videos
+            direct_raw = fetch_cinemeta_meta("series", imdb_id) if refresh or not existing_videos else None
+            meta_obj["videos"] = direct_raw.get("videos", []) if direct_raw else existing_videos
 
-        meta_file_path = os.path.join(meta_base_dir, "series", f"{imdb_id}.json")
         write_json(meta_file_path, {"meta": meta_obj})
 
     # Generate meta for movies
     for imdb_id in all_movie_items:
+        meta_file_path = os.path.join(meta_base_dir, "movie", f"{imdb_id}.json")
+        existing_videos = []
+        if os.path.exists(meta_file_path):
+            try:
+                with open(meta_file_path, "r", encoding="utf-8") as ef:
+                    existing_videos = json.load(ef).get("meta", {}).get("videos", [])
+            except Exception:
+                existing_videos = []
+
         base_meta = dict(cache.get(imdb_id, {}))
-        direct_raw = fetch_cinemeta_meta("movie", imdb_id)
+        direct_raw = fetch_cinemeta_meta("movie", imdb_id) if refresh else None
         meta_obj = {
             "id": imdb_id,
             "type": "movie",
@@ -413,8 +432,9 @@ def build_power_rangers(base_dir, refresh=False):
             meta_obj["logo"] = base_meta.get("logo")
         if direct_raw and direct_raw.get("videos"):
             meta_obj["videos"] = direct_raw.get("videos")
+        elif existing_videos:
+            meta_obj["videos"] = existing_videos
 
-        meta_file_path = os.path.join(meta_base_dir, "movie", f"{imdb_id}.json")
         write_json(meta_file_path, {"meta": meta_obj})
 
     print(f"Generated complete meta files for {len(all_series_items)} series and {len(all_movie_items)} movies.")
@@ -431,7 +451,7 @@ def build_power_rangers(base_dir, refresh=False):
             {
                 "name": "meta",
                 "types": ["series", "movie"],
-                "idPrefixes": ["tt"]
+                "idPrefixes": all_series_items + all_movie_items
             }
         ],
         "types": ["series", "movie"],

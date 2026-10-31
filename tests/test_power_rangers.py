@@ -32,10 +32,13 @@ class TestPowerRangers(unittest.TestCase):
             r == "catalog" or (isinstance(r, dict) and r.get("name") == "catalog")
             for r in manifest.get("resources", [])
         ))
-        self.assertTrue(any(
-            r == "meta" or (isinstance(r, dict) and r.get("name") == "meta")
-            for r in manifest.get("resources", [])
-        ))
+        meta_res = next(
+            (r for r in manifest.get("resources", []) if isinstance(r, dict) and r.get("name") == "meta"),
+            None
+        )
+        self.assertIsNotNone(meta_res, "meta resource dict must exist")
+        self.assertNotIn("tt", meta_res.get("idPrefixes", []), "meta resource idPrefixes must not use catch-all 'tt'")
+        self.assertEqual(len(meta_res.get("idPrefixes", [])), 29, "meta resource idPrefixes must list the 29 PR IMDb IDs")
         self.assertIn("series", manifest.get("types", []))
         self.assertIn("movie", manifest.get("types", []))
         self.assertIn("tt", manifest.get("idPrefixes", []))

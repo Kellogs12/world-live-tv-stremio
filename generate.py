@@ -2,7 +2,8 @@
 """
 Multi-Country Live TV Stremio Addon Generator
 Modeled on the proven AU Live TV architecture (marvel-dc-stremio/livetv.py).
-Reads sources.json, fetches & cleans M3U feeds, removes stale files, and builds static Stremio Addons.
+Reads sources.json, fetches & cleans M3U feeds and Spelunkr TV (spelunkr.tv/toonertia)
+manifests, removes stale files, and builds static Stremio Addons.
 """
 
 import json
@@ -12,16 +13,22 @@ import shutil
 import socket
 import ssl
 import sys
+import urllib.parse
 import urllib.request
 import urllib.error
+
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 socket.setdefaulttimeout(5.0)
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+if SCRIPT_DIR not in sys.path:
+    sys.path.insert(0, SCRIPT_DIR)
 SOURCES_FILE = os.path.join(SCRIPT_DIR, "sources.json")
 ICON_FILE = os.path.join(SCRIPT_DIR, "tv-icon.png")
 BASE_URL = "https://kellogs12.github.io/world-live-tv-stremio"
-VERSION = "1.2.0"
+VERSION = "1.3.0"
 
 HLS_HINT = {
     "proxyHeaders": {
@@ -94,6 +101,104 @@ def fetch_m3u(url, timeout=20):
         return []
 
 
+def fetch_json_url(url, timeout=8):
+    """Fetch JSON from a URL with SSL fallback."""
+    ctx = ssl.create_default_context()
+    req = urllib.request.Request(
+        url,
+        headers={'User-Agent': 'Mozilla/5.0 (world-live-tv-stremio builder)'}
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=timeout, context=ctx) as resp:
+            return json.loads(resp.read().decode('utf-8'))
+    except urllib.error.URLError:
+        ctx = ssl._create_unverified_context()
+        with urllib.request.urlopen(req, timeout=timeout, context=ctx) as resp:
+            return json.loads(resp.read().decode('utf-8'))
+
+
+def build_ia_mp4_url(ia_id, filename):
+    """Construct direct Internet Archive MP4 URL matching Spelunkr TV's player logic."""
+    encoded_file = urllib.parse.quote(str(filename), safe="/-_.!~*'()")
+    return f"https://archive.org/download/{ia_id}/{encoded_file}"
+
+
+def format_duration(seconds):
+    """Format duration in seconds as human-readable string (e.g. '2h 06m' or '45m')."""
+    if not seconds or not isinstance(seconds, (int, float)) or seconds <= 0:
+        return ""
+    total_mins = int(round(seconds / 60.0))
+    hrs, mins = divmod(total_mins, 60)
+    if hrs > 0:
+        return f"{hrs}h {mins:02d}m"
+    return f"{mins}m"
+
+
+def load_spelunkr_data(spelunkr_cfg, base_dir, refresh=False):
+    """Load Spelunkr TV lineup and channel manifests (from live API or local spelunkr_cache.json)."""
+    cache_rel = spelunkr_cfg.get("cache_file", "spelunkr_cache.json")
+    cache_path = os.path.join(base_dir, cache_rel)
+    cached_data = None
+
+    if os.path.exists(cache_path):
+        try:
+            with open(cache_path, "r", encoding="utf-8") as f:
+                cached_data = json.load(f)
+        except Exception as e:
+            print(f"  [Notice] Could not read {cache_path}: {e}")
+
+    if cached_data and not refresh:
+        return cached_data
+
+    api_url = spelunkr_cfg.get("api_url", "https://data.spelunkr.tv/lineup.json")
+    target_channels = spelunkr_cfg.get("channels", ["toonertia"])
+    try:
+        lineup = fetch_json_url(api_url)
+        channels_by_id = {c["id"]: c for c in lineup.get("channels", [])}
+        out = {
+            "source": spelunkr_cfg.get("url", "https://spelunkr.tv/toonertia"),
+            "api": api_url,
+            "channels": {}
+        }
+        for cid in target_channels:
+            ch_meta = channels_by_id.get(cid)
+            if not ch_meta:
+                continue
+            versions = ch_meta.get("versions", [])
+            if not versions:
+                continue
+            manifest_rel = versions[-1].get("manifest", "")
+            if not manifest_rel:
+                continue
+            manifest_url = f"https://data.spelunkr.tv/{manifest_rel.lstrip('/')}"
+            manifest = fetch_json_url(manifest_url)
+            items = [
+                it for it in manifest.get("items", [])
+                if it.get("id") and (it.get("mp4") or it.get("file"))
+            ]
+            out["channels"][cid] = {
+                "id": cid,
+                "dial": ch_meta.get("dial"),
+                "name": ch_meta.get("name", cid.upper()),
+                "emoji": ch_meta.get("emoji", "📺"),
+                "description": ch_meta.get("description", ""),
+                "family": ch_meta.get("family", "cartoons"),
+                "color": ch_meta.get("color", "#00ccff"),
+                "logo": f"https://spelunkr.tv/og/{cid}.png",
+                "web_url": f"https://spelunkr.tv/{cid}",
+                "manifest_path": manifest_rel,
+                "items": items
+            }
+        if out["channels"]:
+            with open(cache_path, "w", encoding="utf-8") as f:
+                json.dump(out, f, indent=2, ensure_ascii=False)
+            return out
+    except Exception as e:
+        print(f"  [Notice] Using cached Spelunkr TV manifests ({e})")
+
+    return cached_data or {"channels": {}}
+
+
 def host_resolves(host, cache={}):
     """Check if hostname resolves in DNS (cached)."""
     if host in cache:
@@ -109,7 +214,7 @@ def host_resolves(host, cache={}):
 def write_json(path, data):
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
-        json.dump(data, f, separators=(',', ':'))
+        json.dump(data, f, separators=(',', ':'), ensure_ascii=False)
         f.write('\n')
 
 
@@ -127,6 +232,38 @@ def generate_addon_for_country(country, base_dir):
     stream_dir = os.path.join(country_dir, "stream", "tv")
     assets_dir = os.path.join(country_dir, "assets")
 
+    print(f"\nProcessing {flag} {name} ({code})...")
+
+    # Pre-fetch M3U sources before removing existing generated files so offline runs don't wipe M3U-backed countries
+    prefetched_m3u = []
+    m3u_sources = country.get("m3u_sources", [])
+    for src in m3u_sources:
+        raw_list = fetch_m3u(src["url"])
+        print(f"  Fetched {len(raw_list)} https channels from {src['url']}")
+        prefetched_m3u.append((src, raw_list))
+
+    if m3u_sources and all(len(rl) == 0 for _, rl in prefetched_m3u) and os.path.exists(os.path.join(country_dir, "manifest.json")):
+        existing_total = 0
+        if os.path.exists(catalog_dir):
+            for fname in os.listdir(catalog_dir):
+                if fname.endswith(".json"):
+                    try:
+                        with open(os.path.join(catalog_dir, fname), "r", encoding="utf-8") as cf:
+                            existing_total += len(json.load(cf).get("metas", []))
+                    except Exception:
+                        pass
+        if existing_total > 0:
+            print(f"  [Offline Notice] Preserving existing {existing_total} channels for {name} ({code})")
+            return {
+                "code": code,
+                "name": name,
+                "flag": flag,
+                "region": country.get("region", "Global"),
+                "description": desc,
+                "channel_count": existing_total,
+                "vpn_required": country.get("vpn_required", False)
+            }
+
     # Remove stale generated directories before rebuilding
     for stale in [os.path.join(country_dir, "catalog"),
                   os.path.join(country_dir, "meta"),
@@ -139,8 +276,6 @@ def generate_addon_for_country(country, base_dir):
 
     if os.path.exists(ICON_FILE):
         shutil.copy(ICON_FILE, os.path.join(assets_dir, "icon.png"))
-
-    print(f"\nProcessing {flag} {name} ({code})...")
 
     seen_ids = set()
     seen_names_per_cat = {}
@@ -157,8 +292,8 @@ def generate_addon_for_country(country, base_dir):
     catalog_names = {c["id"]: c["name"] for c in country.get("catalogs", [])}
     channels_by_cat = {c["id"]: [] for c in country.get("catalogs", [])}
 
-    def add_channel(cat_id, raw_id, ch_name, ch_url, ch_logo="", ch_desc=""):
-        if not ch_url or not ch_url.startswith("https://"):
+    def add_channel(cat_id, raw_id, ch_name, ch_url, ch_logo="", ch_desc="", custom_streams=None):
+        if not custom_streams and (not ch_url or not ch_url.startswith("https://")):
             return
         if re.search(r'\btest stream\b', ch_name, re.I):
             return
@@ -173,15 +308,210 @@ def generate_addon_for_country(country, base_dir):
         uid = make_id(raw_id or ch_name)
         logo = ch_logo if (ch_logo and ch_logo.startswith("https://")) else icon_url
         desc_text = ch_desc or f"{ch_name} · Free live stream"
-        channels_by_cat[cat_id].append({
+        entry = {
             "id": uid,
             "name": ch_name,
             "url": ch_url,
             "logo": logo,
             "description": desc_text
-        })
+        }
+        if custom_streams:
+            entry["custom_streams"] = custom_streams
+        channels_by_cat[cat_id].append(entry)
 
-    # 1. Add curated / fallback channels first
+    # 0. Process Spelunkr TV source (e.g., spelunkr.tv/toonertia) if configured
+    spelunkr_cfg = country.get("spelunkr_source")
+    if spelunkr_cfg:
+        refresh_sp = "--refresh-spelunkr" in sys.argv
+        sp_data = load_spelunkr_data(spelunkr_cfg, base_dir, refresh=refresh_sp)
+        sp_channels = sp_data.get("channels", {})
+        primary_cid = spelunkr_cfg.get("primary_channel", "toonertia")
+        toonertia_cat = "cartoons-toonertia" if "cartoons-toonertia" in channels_by_cat else default_cat_id
+        spelunkr_cat = "cartoons-spelunkr" if "cartoons-spelunkr" in channels_by_cat else default_cat_id
+
+        # A. Build Primary Channel (Toonertia 24/7 + all 41 Toonami VHS broadcast blocks)
+        if primary_cid in sp_channels:
+            tch = sp_channels[primary_cid]
+            t_items = tch.get("items", [])
+            t_logo = tch.get("logo") or "https://spelunkr.tv/og/toonertia.png"
+            t_web = tch.get("web_url") or "https://spelunkr.tv/toonertia"
+            t_dial = tch.get("dial", 53)
+
+            # Build multi-stream list for the main TOONERTIA 24/7 channel
+            main_streams = []
+            for idx, item in enumerate(t_items, 1):
+                mp4_file = item.get("mp4") or item.get("file")
+                if not item.get("id") or not mp4_file:
+                    continue
+                mp4_url = build_ia_mp4_url(item["id"], mp4_file)
+                yr = f" ({item['year']})" if item.get("year") else ""
+                dur = format_duration(item.get("outS") or item.get("duration"))
+                dur_str = f" · {dur}" if dur else ""
+                main_streams.append({
+                    "url": mp4_url,
+                    "name": f"Toonertia #{idx}",
+                    "title": f"{item.get('title', f'Block #{idx}')}{yr}{dur_str}"
+                })
+            main_streams.append({
+                "externalUrl": t_web,
+                "name": "Spelunkr TV Web",
+                "title": "Launch Synchronized 24/7 Toonertia Player (spelunkr.tv/toonertia)"
+            })
+
+            add_channel(
+                cat_id=toonertia_cat,
+                raw_id="toonertia-24-7-live",
+                ch_name=f"🚀 TOONERTIA 24/7 (Ch. {t_dial} · spelunkr.tv/toonertia)",
+                ch_url=main_streams[0]["url"] if main_streams else t_web,
+                ch_logo=t_logo,
+                ch_desc=(
+                    f"{tch.get('description', '')} "
+                    f"Source: spelunkr.tv/toonertia ({len(t_items)} full Toonami VHS broadcast blocks, 1997–2007)."
+                ).strip(),
+                custom_streams=main_streams
+            )
+
+            # Add each individual Toonertia VHS Broadcast Block as a dedicated channel card
+            for idx, item in enumerate(t_items, 1):
+                mp4_file = item.get("mp4") or item.get("file")
+                if not item.get("id") or not mp4_file:
+                    continue
+                mp4_url = build_ia_mp4_url(item["id"], mp4_file)
+                raw_title = item.get("title", f"Toonami Block #{idx}")
+                yr = item.get("year") or ""
+                dur = format_duration(item.get("outS") or item.get("duration"))
+                meta_parts = [p for p in (f"Year: {yr}" if yr else "", f"Runtime: {dur}" if dur else "") if p]
+                meta_suffix = f" ({' · '.join(meta_parts)})" if meta_parts else ""
+
+                block_streams = [
+                    {
+                        "url": mp4_url,
+                        "name": "Toonertia VHS",
+                        "title": f"{raw_title}{meta_suffix}\nDirect VHS Broadcast Stream (spelunkr.tv/toonertia)"
+                    },
+                    {
+                        "externalUrl": t_web,
+                        "name": "Spelunkr TV Web",
+                        "title": "Open Synchronized 24/7 Toonertia Feed (spelunkr.tv/toonertia)"
+                    }
+                ]
+                add_channel(
+                    cat_id=toonertia_cat,
+                    raw_id=f"toonertia-block-{idx}-{item['id']}",
+                    ch_name=f"Toonertia #{idx}: {raw_title}",
+                    ch_url=mp4_url,
+                    ch_logo=t_logo,
+                    ch_desc=f"Toonertia VHS Broadcast Block #{idx}: {raw_title}{meta_suffix} · Powered by spelunkr.tv/toonertia",
+                    custom_streams=block_streams
+                )
+
+        # B. Build All 10 Spelunkr TV Cartoon, Anime & Kids 24/7 Channels in cartoons-spelunkr
+        CHANNEL_SUBTITLES = {
+            "toonertia": "Toonami VHS Broadcasts 24/7",
+            "latchkey-tv": "After-School CN, Nick & Toon Disney VHS",
+            "saturday-morning": "80s/90s/00s Saturday Morning Cartoons VHS",
+            "late-nite-swimclub": "Adult Swim Late-Night VHS Broadcasts",
+            "meddling-kids": "Scooby-Doo & Hanna-Barbera Vault 24/7",
+            "rocket-punch": "70s–90s Mecha Anime 24/7",
+            "ovatv": "Classic Anime OVAs & Saturday Anime",
+            "rubber-hose": "Golden Age Classic Cartoons 24/7",
+            "kersplat": "90s Nick & Kids Game Shows 24/7",
+            "library-card": "Arthur, Magic School Bus & PBS Kids Classics"
+        }
+
+        for cid in spelunkr_cfg.get("channels", []):
+            ch_obj = sp_channels.get(cid)
+            if not ch_obj:
+                continue
+            c_items = ch_obj.get("items", [])
+            if not c_items:
+                continue
+            c_logo = ch_obj.get("logo") or f"https://spelunkr.tv/og/{cid}.png"
+            c_web = ch_obj.get("web_url") or f"https://spelunkr.tv/{cid}"
+            c_dial = ch_obj.get("dial")
+            c_emoji = ch_obj.get("emoji", "📺")
+            c_name = ch_obj.get("name", cid.upper())
+            subtitle = CHANNEL_SUBTITLES.get(cid, "Spelunkr TV 24/7")
+            dial_str = f"Ch. {c_dial}" if c_dial is not None else "24/7"
+
+            ch_streams = []
+            # Include up to 50 direct MP4 streams per channel so stream JSON stays fast while giving huge variety
+            for idx, item in enumerate(c_items[:50], 1):
+                mp4_file = item.get("mp4") or item.get("file")
+                if not item.get("id") or not mp4_file:
+                    continue
+                mp4_url = build_ia_mp4_url(item["id"], mp4_file)
+                yr = f" ({item['year']})" if item.get("year") else ""
+                dur = format_duration(item.get("outS") or item.get("duration"))
+                dur_str = f" · {dur}" if dur else ""
+                ch_streams.append({
+                    "url": mp4_url,
+                    "name": f"{c_name} #{idx}",
+                    "title": f"{item.get('title', f'Broadcast #{idx}')}{yr}{dur_str}"
+                })
+            ch_streams.append({
+                "externalUrl": c_web,
+                "name": "Spelunkr TV Web",
+                "title": f"Watch {c_name} 24/7 Synchronized Feed on spelunkr.tv/{cid}"
+            })
+
+            add_channel(
+                cat_id=spelunkr_cat,
+                raw_id=f"spelunkr-{cid}",
+                ch_name=f"{c_emoji} {c_name} ({dial_str}) — {subtitle}",
+                ch_url=ch_streams[0]["url"] if ch_streams else c_web,
+                ch_logo=c_logo,
+                ch_desc=f"{ch_obj.get('description', '')} ({len(c_items)} broadcasts on spelunkr.tv/{cid})".strip(),
+                custom_streams=ch_streams
+            )
+
+        # C. Add Featured VHS Broadcast Blocks (Cartoon Network, Kids' WB Pokémon, Nick, Fox Kids, etc.)
+        for fb_block in spelunkr_cfg.get("featured_blocks", []):
+            b_cid = fb_block.get("channel")
+            b_idx = fb_block.get("index", 0)
+            b_prefix = fb_block.get("prefix", "Spelunkr VHS")
+            ch_obj = sp_channels.get(b_cid)
+            if not ch_obj:
+                continue
+            c_items = ch_obj.get("items", [])
+            if b_idx < 0 or b_idx >= len(c_items):
+                continue
+            item = c_items[b_idx]
+            mp4_file = item.get("mp4") or item.get("file")
+            if not item.get("id") or not mp4_file:
+                continue
+            mp4_url = build_ia_mp4_url(item["id"], mp4_file)
+            c_logo = ch_obj.get("logo") or f"https://spelunkr.tv/og/{b_cid}.png"
+            c_web = ch_obj.get("web_url") or f"https://spelunkr.tv/{b_cid}"
+            raw_title = item.get("title", "VHS Broadcast Block")
+            yr = item.get("year") or ""
+            dur = format_duration(item.get("outS") or item.get("duration"))
+            meta_parts = [p for p in (f"Year: {yr}" if yr else "", f"Runtime: {dur}" if dur else "") if p]
+            meta_suffix = f" ({' · '.join(meta_parts)})" if meta_parts else ""
+
+            b_streams = [
+                {
+                    "url": mp4_url,
+                    "name": b_prefix,
+                    "title": f"{raw_title}{meta_suffix}\nDirect VHS Broadcast Stream (spelunkr.tv/{b_cid})"
+                },
+                {
+                    "externalUrl": c_web,
+                    "name": "Spelunkr TV Web",
+                    "title": f"Open {ch_obj.get('name', b_cid)} 24/7 Feed (spelunkr.tv/{b_cid})"
+                }
+            ]
+            add_channel(
+                cat_id=spelunkr_cat,
+                raw_id=f"spelunkr-{b_cid}-{b_idx}-{item['id']}",
+                ch_name=f"{b_prefix}: {raw_title}",
+                ch_url=mp4_url,
+                ch_logo=c_logo,
+                ch_desc=f"{b_prefix} Broadcast Recording: {raw_title}{meta_suffix} · Powered by spelunkr.tv/{b_cid}",
+                custom_streams=b_streams
+            )
+
+    # 1. Add curated / fallback channels
     for fb in country.get("fallback_channels", []):
         add_channel(
             cat_id=fb.get("catalog", default_cat_id),
@@ -192,14 +522,10 @@ def generate_addon_for_country(country, base_dir):
             ch_desc=f"{fb['name']} · Live TV"
         )
 
-    # 2. Fetch and process M3U sources
-    for src in country.get("m3u_sources", []):
-        m3u_url = src["url"]
+    # 2. Process prefetched M3U sources
+    for src, raw_list in prefetched_m3u:
         cat_id = src.get("catalog", default_cat_id)
         src_type = src.get("type", "generic")
-
-        raw_list = fetch_m3u(m3u_url)
-        print(f"  Fetched {len(raw_list)} https channels from {m3u_url}")
 
         if src_type == "mjh_au":
             fta_items = []
@@ -335,21 +661,26 @@ def generate_addon_for_country(country, base_dir):
             metas.append(meta)
 
             write_json(os.path.join(meta_dir, f"{ch['id']}.json"), {"meta": meta})
-            write_json(os.path.join(stream_dir, f"{ch['id']}.json"), {
-                "streams": [
-                    {
-                        "url": ch["url"],
-                        "name": "Live",
-                        "title": ch["name"]
-                    },
-                    {
-                        "url": ch["url"],
-                        "name": "Live (browser)",
-                        "title": f"{ch['name']}\nFor Stremio Web without the streaming server",
-                        "behaviorHints": HLS_HINT
-                    }
-                ]
-            })
+            if ch.get("custom_streams"):
+                write_json(os.path.join(stream_dir, f"{ch['id']}.json"), {
+                    "streams": ch["custom_streams"]
+                })
+            else:
+                write_json(os.path.join(stream_dir, f"{ch['id']}.json"), {
+                    "streams": [
+                        {
+                            "url": ch["url"],
+                            "name": "Live",
+                            "title": ch["name"]
+                        },
+                        {
+                            "url": ch["url"],
+                            "name": "Live (browser)",
+                            "title": f"{ch['name']}\nFor Stremio Web without the streaming server",
+                            "behaviorHints": HLS_HINT
+                        }
+                    ]
+                })
 
         write_json(
             os.path.join(catalog_dir, f"{cid}.json"),
@@ -441,7 +772,7 @@ def main():
 
     summary_path = os.path.join(SCRIPT_DIR, "countries.json")
     with open(summary_path, "w", encoding="utf-8") as f:
-        json.dump({"countries": summaries}, f, indent=2)
+        json.dump({"countries": summaries}, f, indent=2, ensure_ascii=False)
 
     print("\n✅ Successfully generated all country addons!")
     for s in summaries:

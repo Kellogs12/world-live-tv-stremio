@@ -15,7 +15,7 @@
       "flag": "🇦🇺",
       "region": "Oceania",
       "description": "Australian Free-to-Air (ABC, SBS, Seven, Nine, 10, C31), network free channels, and Samsung TV Plus AU.",
-      "channel_count": 269,
+      "channel_count": 266,
       "vpn_required": true
     },
     {
@@ -68,8 +68,8 @@
       "name": "Cartoons & Kids TV",
       "flag": "🎨",
       "region": "Cartoons",
-      "description": "24/7 Famous Cartoons and Kids Channels: Cartoon Network, Disney Channel, Nickelodeon, SpongeBob SquarePants 24/7, NickToons, Nick 90s, NickTeen, Nick Jr, 9Go! Kids TV, Cartoon Classics, Transformers TV, Power Rangers, Kartoon Channel, Toon Goggles, ABC Kids, and Adult Animation.",
-      "channel_count": 18,
+      "description": "Powered by spelunkr.tv/toonertia & Spelunkr TV: 24/7 Toonertia Toonami VHS broadcasts (DBZ, Sailor Moon, Gundam Wing, Outlaw Star, Tenchi Muyo, ReBoot, Batman, TOM bumpers & retro commercials), Latchkey-TV (Cartoon Network, Nickelodeon, Toon Disney VHS), Saturday Morning Cartoons (Kids' WB Pokémon & Yu-Gi-Oh!, Fox Kids, Disney Afternoon), Late Nite Swimclub (Adult Swim), Meddling Kids (Scooby-Doo & Hanna-Barbera), Rocket Punch, OVATV, Rubber Hose, Kersplat, Library Card, plus Live Cartoon Networks.",
+      "channel_count": 100,
       "vpn_required": false
     },
     {
@@ -86,9 +86,9 @@
       "name": "Cartoon & Animation Vault",
       "flag": "🎨",
       "region": "Cartoons",
-      "description": "Comprehensive on-demand catalog of iconic animated series and movies: Cartoon Network, Disney, Nickelodeon, Classic Cartoons, and Action Animation.",
-      "channel_count": 460,
-      "item_count": 460,
+      "description": "Comprehensive on-demand catalog of 661 iconic animated series, movie franchises, and sequels: Cartoon Network, Disney, Nickelodeon, Classic Vault Cartoons (ThunderCats, He-Man, Voltron), and Action Animation (Pokémon, Dragon Ball, Yu-Gi-Oh!, DC & Marvel).",
+      "channel_count": 661,
+      "item_count": 661,
       "item_label": "Iconic Titles",
       "catalog_type": "On-Demand Catalog",
       "vpn_required": false

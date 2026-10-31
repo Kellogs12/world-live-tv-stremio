@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
-Unit and integration test suite for Cartoon & Animation Vault Stremio Addon.
-Verifies catalogs, schemas, Cinemeta cache, Robotboy inclusion, and no regressions.
+Unit and integration test suite for Cartoon & Animation Vault and Cartoons Live TV (Toonertia / Spelunkr TV).
+Verifies catalogs, schemas, Cinemeta cache, Pokémon series & movies, ThunderCats (1985, 2011, Roar),
+movie sequels, Robotboy inclusion, Spelunkr TV / Toonertia live streams, and no regressions.
 """
 
 import json
@@ -11,6 +12,7 @@ import unittest
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_DIR = os.path.dirname(SCRIPT_DIR)
 VAULT_DIR = os.path.join(PROJECT_DIR, "cartoon-vault")
+CARTOONS_LIVE_DIR = os.path.join(PROJECT_DIR, "cartoons")
 
 
 class TestCartoonVault(unittest.TestCase):
@@ -86,10 +88,97 @@ class TestCartoonVault(unittest.TestCase):
                 self.assertEqual(m.get("posterShape"), "poster")
                 self.assertTrue(isinstance(m.get("genres"), list) and len(m["genres"]) > 0)
                 self.assertTrue(bool(m.get("description")), f"Missing description: {m.get('name')}")
+                self.assertFalse(
+                    m["description"].endswith("on demand."),
+                    f"Fallback dummy description found on {m['id']} ({m['name']})"
+                )
 
             total_items += len(metas1)
 
-        self.assertEqual(total_items, 460, f"Expected 460 total items, got {total_items}")
+        self.assertEqual(total_items, 661, f"Expected 661 total items, got {total_items}")
+
+    def test_pokemon_series_and_movies_completeness(self):
+        # 1. Verify Pokémon original series + Origins, Generations, Evolutions are right at the top of action-shows
+        action_route = os.path.join(VAULT_DIR, "catalog", "series", "action-shows.json")
+        with open(action_route, "r", encoding="utf-8") as f:
+            action_metas = json.load(f).get("metas", [])
+
+        top_action_ids = [m["id"] for m in action_metas[:4]]
+        self.assertEqual(
+            top_action_ids,
+            ["tt0168366", "tt3218680", "tt6071336", "tt15356258"],
+            "Pokémon (tt0168366) and spin-offs must be at the very top of action-shows"
+        )
+        self.assertIn("Pokemon", action_metas[0]["name"])
+        self.assertIn("Pokémon", action_metas[0]["name"])
+
+        # 2. Verify Pokémon Chronicles, Journeys, Horizons, Twilight Wings, Concierge are near the top of cn-shows
+        cn_route = os.path.join(VAULT_DIR, "catalog", "series", "cn-shows.json")
+        with open(cn_route, "r", encoding="utf-8") as f:
+            cn_metas = json.load(f).get("metas", [])
+        top_cn_ids = {m["id"] for m in cn_metas[:12]}
+        for pid in ["tt0460627", "tt11559400", "tt26925501", "tt11696014", "tt26916286"]:
+            self.assertIn(pid, top_cn_ids, f"Pokémon series {pid} must be near the top of cn-shows")
+
+        # 3. Verify all 24 Pokémon animated movies are in cartoon-movies
+        movies_route = os.path.join(VAULT_DIR, "catalog", "movie", "cartoon-movies.json")
+        with open(movies_route, "r", encoding="utf-8") as f:
+            movie_ids = {m["id"] for m in json.load(f).get("metas", [])}
+        expected_pokemon_movies = [
+            "tt0190641", "tt0210234", "tt0235679", "tt0287635", "tt0347791",
+            "tt0420076", "tt0411545", "tt0875609", "tt0937616", "tt1122505",
+            "tt1261453", "tt1422673", "tt1701198", "tt1964547", "tt1739212",
+            "tt2549540", "tt3257582", "tt3918368", "tt4503906", "tt5889204",
+            "tt6595896", "tt8723224", "tt8856470", "tt11847692"
+        ]
+        for pmid in expected_pokemon_movies:
+            self.assertIn(pmid, movie_ids, f"Pokémon movie {pmid} missing from cartoon-movies")
+
+    def test_thundercats_completeness(self):
+        # 1. Verify original 1985 ThunderCats (tt0088631) is #1 in classics-shows
+        classics_route = os.path.join(VAULT_DIR, "catalog", "series", "classics-shows.json")
+        with open(classics_route, "r", encoding="utf-8") as f:
+            classics_metas = json.load(f).get("metas", [])
+        self.assertEqual(classics_metas[0]["id"], "tt0088631", "ThunderCats (1985) must be first in classics-shows")
+        self.assertEqual(classics_metas[0]["name"], "ThunderCats (1985)")
+
+        # 2. Verify ThunderCats (2011) and ThunderCats Roar are near the top of cn-shows
+        cn_route = os.path.join(VAULT_DIR, "catalog", "series", "cn-shows.json")
+        with open(cn_route, "r", encoding="utf-8") as f:
+            cn_metas = json.load(f).get("metas", [])
+        top_15_cn = {m["id"]: m for m in cn_metas[:15]}
+        self.assertIn("tt1666278", top_15_cn, "ThunderCats (2011) must be in top 15 of cn-shows")
+        self.assertIn("tt8435344", top_15_cn, "ThunderCats Roar must be in top 15 of cn-shows")
+        self.assertEqual(top_15_cn["tt1666278"]["name"], "ThunderCats (2011)")
+
+    def test_movie_sequels_completeness(self):
+        movies_route = os.path.join(VAULT_DIR, "catalog", "movie", "cartoon-movies.json")
+        with open(movies_route, "r", encoding="utf-8") as f:
+            movie_ids = {m["id"] for m in json.load(f).get("metas", [])}
+
+        required_sequels = [
+            # Pixar sequels
+            "tt1979376", "tt3606756", "tt1453405", "tt2277860", "tt1216475", "tt5016504", "tt2096673", "tt22022452",
+            # DreamWorks sequels
+            "tt0413267", "tt0892791", "tt0448694", "tt3915174", "tt2267968", "tt21692408",
+            "tt1646971", "tt2386490", "tt0479952", "tt1277953", "tt1911658", "tt0481499", "tt2850386",
+            # Ice Age 1-5, Despicable Me 1-4, Minions 1-2, Hotel Transylvania 1-4, Cloudy 1-2, Rio 1-2, Open Season 1-3
+            "tt0268380", "tt0438097", "tt1080016", "tt1667889", "tt3416828",
+            "tt1323594", "tt1690953", "tt3470600", "tt7510222", "tt2293640", "tt5113044",
+            "tt0837562", "tt2510894", "tt5216936", "tt9848626",
+            "tt0844471", "tt1985966", "tt1436562", "tt2357291", "tt0400717", "tt1107365", "tt1646926",
+            # Disney sequels
+            "tt0120131", "tt0356721", "tt0107952", "tt0115518", "tt0405537", "tt0348301",
+            "tt0365737", "tt0437503", "tt0313680", "tt5848272", "tt2294629", "tt4520988",
+            "tt0328880", "tt0783598", "tt0097757", "tt0245642", "tt0061852", "tt0283426",
+            "tt0046183", "tt0280030", "tt0055254", "tt0324941", "tt0100477", "tt0034492", "tt0447854",
+            # Ben 10, Yu-Gi-Oh!, DBZ/Super, Jimmy Timmy, Fairly OddParents
+            "tt1037011", "tt1327701", "tt12771340", "tt1587157", "tt5461386",
+            "tt2263944", "tt3819668", "tt7961060", "tt14614892",
+            "tt0414177", "tt0473050", "tt0499605", "tt0369814", "tt0419739", "tt10474606"
+        ]
+        for sid in required_sequels:
+            self.assertIn(sid, movie_ids, f"Expected movie sequel {sid} in cartoon-movies")
 
     def test_robotboy_presence_and_metadata(self):
         cn_route = os.path.join(VAULT_DIR, "catalog", "series", "cn-shows.json")
@@ -159,7 +248,45 @@ class TestCartoonVault(unittest.TestCase):
             all_ids.extend(ids)
 
         self.assertEqual(len(all_ids), len(set(all_ids)), "Duplicate IDs found across different catalogs")
-        self.assertEqual(len(all_ids), 460)
+        self.assertEqual(len(all_ids), 661)
+
+    def test_spelunkr_toonertia_live_tv_addon(self):
+        manifest_path = os.path.join(CARTOONS_LIVE_DIR, "manifest.json")
+        self.assertTrue(os.path.exists(manifest_path), "cartoons/manifest.json must exist")
+        with open(manifest_path, "r", encoding="utf-8") as f:
+            manifest = json.load(f)
+
+        self.assertEqual(manifest.get("id"), "worldlive.cartoons")
+        self.assertIn("spelunkr.tv/toonertia", manifest.get("description", ""))
+        cat_ids = [c["id"] for c in manifest.get("catalogs", [])]
+        self.assertEqual(cat_ids, ["cartoons-toonertia", "cartoons-spelunkr", "cartoons-live-networks"])
+
+        # Check Toonertia catalog (1 main channel + 41 individual blocks = 42 channels)
+        toonertia_cat_path = os.path.join(CARTOONS_LIVE_DIR, "catalog", "tv", "cartoons-toonertia.json")
+        with open(toonertia_cat_path, "r", encoding="utf-8") as f:
+            t_metas = json.load(f).get("metas", [])
+        self.assertEqual(len(t_metas), 42, "cartoons-toonertia should have 42 channels")
+        self.assertEqual(t_metas[0]["id"], "tv-cartoons-toonertia-24-7-live")
+        self.assertIn("TOONERTIA 24/7", t_metas[0]["name"])
+
+        # Check main Toonertia stream file
+        t_stream_path = os.path.join(CARTOONS_LIVE_DIR, "stream", "tv", "tv-cartoons-toonertia-24-7-live.json")
+        self.assertTrue(os.path.exists(t_stream_path))
+        with open(t_stream_path, "r", encoding="utf-8") as f:
+            t_streams = json.load(f).get("streams", [])
+        self.assertEqual(len(t_streams), 42, "Main Toonertia channel should have 41 IA MP4 streams + 1 externalUrl")
+        self.assertTrue(t_streams[0]["url"].startswith("https://archive.org/download/"))
+        self.assertEqual(t_streams[-1].get("externalUrl"), "https://spelunkr.tv/toonertia")
+
+        # Check Spelunkr catalog (10 full channels + 30 featured VHS blocks = 40 channels)
+        sp_cat_path = os.path.join(CARTOONS_LIVE_DIR, "catalog", "tv", "cartoons-spelunkr.json")
+        with open(sp_cat_path, "r", encoding="utf-8") as f:
+            sp_metas = json.load(f).get("metas", [])
+        self.assertEqual(len(sp_metas), 40, "cartoons-spelunkr should have 40 channels")
+        sp_ids = {m["id"] for m in sp_metas}
+        for cid in ["toonertia", "latchkey-tv", "saturday-morning", "late-nite-swimclub", "meddling-kids",
+                    "rocket-punch", "ovatv", "rubber-hose", "kersplat", "library-card"]:
+            self.assertIn(f"tv-cartoons-spelunkr-{cid}", sp_ids)
 
     def test_countries_json_and_readme(self):
         with open(self.countries_path, "r", encoding="utf-8") as f:
@@ -168,14 +295,19 @@ class TestCartoonVault(unittest.TestCase):
         vault_entries = [c for c in countries_data.get("countries", []) if c.get("code") == "cartoon-vault"]
         self.assertEqual(len(vault_entries), 1, "cartoon-vault must be listed in countries.json")
         entry = vault_entries[0]
-        self.assertEqual(entry.get("channel_count"), 460)
-        self.assertEqual(entry.get("item_count"), 460)
+        self.assertEqual(entry.get("channel_count"), 661)
+        self.assertEqual(entry.get("item_count"), 661)
+
+        cartoons_entries = [c for c in countries_data.get("countries", []) if c.get("code") == "cartoons"]
+        self.assertEqual(len(cartoons_entries), 1, "cartoons must be listed in countries.json")
+        self.assertEqual(cartoons_entries[0].get("channel_count"), 100)
 
         with open(self.readme_path, "r", encoding="utf-8") as f:
             readme_text = f.read()
 
         self.assertIn("Robotboy", readme_text)
-        self.assertIn("460 iconic and cult-classic animated series and specials", readme_text)
+        self.assertIn("661 iconic and cult-classic animated series and specials", readme_text)
+        self.assertIn("spelunkr.tv/toonertia", readme_text)
 
 
 if __name__ == "__main__":
