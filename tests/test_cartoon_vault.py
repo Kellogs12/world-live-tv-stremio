@@ -259,7 +259,22 @@ class TestCartoonVault(unittest.TestCase):
         self.assertEqual(manifest.get("id"), "worldlive.cartoons")
         self.assertIn("spelunkr.tv/toonertia", manifest.get("description", ""))
         cat_ids = [c["id"] for c in manifest.get("catalogs", [])]
-        self.assertEqual(cat_ids, ["cartoons-toonertia", "cartoons-spelunkr", "cartoons-live-networks"])
+        self.assertEqual(cat_ids, [
+            "cartoons-toonertia",
+            "cartoons-spelunkr",
+            "cartoons-live-networks",
+            "cartoons-cn-disney",
+            "cartoons-nick",
+            "cartoons-classics"
+        ])
+
+        # Check Backward-compatible AIOStreams catalogs exist and have valid metas
+        for legacy_cat, min_expected in [("cartoons-cn-disney", 4), ("cartoons-nick", 6), ("cartoons-classics", 8)]:
+            legacy_path = os.path.join(CARTOONS_LIVE_DIR, "catalog", "tv", f"{legacy_cat}.json")
+            self.assertTrue(os.path.exists(legacy_path), f"{legacy_cat}.json must exist for AIOStreams compatibility")
+            with open(legacy_path, "r", encoding="utf-8") as f:
+                l_metas = json.load(f).get("metas", [])
+            self.assertGreaterEqual(len(l_metas), min_expected, f"{legacy_cat} should have at least {min_expected} channels")
 
         # Check Toonertia catalog (1 main channel + 41 individual blocks = 42 channels)
         toonertia_cat_path = os.path.join(CARTOONS_LIVE_DIR, "catalog", "tv", "cartoons-toonertia.json")

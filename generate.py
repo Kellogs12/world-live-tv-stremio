@@ -277,15 +277,20 @@ def generate_addon_for_country(country, base_dir):
     if os.path.exists(ICON_FILE):
         shutil.copy(ICON_FILE, os.path.join(assets_dir, "icon.png"))
 
+    raw_to_id = {}
     seen_ids = set()
     seen_names_per_cat = {}
 
     def make_id(raw):
+        clean_raw = str(raw).strip().lower()
+        if clean_raw in raw_to_id:
+            return raw_to_id[clean_raw]
         cid = id_prefix + slug(raw)
         n, base = 2, cid
         while cid in seen_ids:
             cid, n = f"{base}-{n}", n + 1
         seen_ids.add(cid)
+        raw_to_id[clean_raw] = cid
         return cid
 
     default_cat_id = country["catalogs"][0]["id"] if country.get("catalogs") else f"{code}-live"
@@ -370,6 +375,19 @@ def generate_addon_for_country(country, base_dir):
                 ).strip(),
                 custom_streams=main_streams
             )
+            if "cartoons-cn-disney" in channels_by_cat:
+                add_channel(
+                    cat_id="cartoons-cn-disney",
+                    raw_id="toonertia-24-7-live",
+                    ch_name=f"🚀 TOONERTIA 24/7 (Ch. {t_dial} · spelunkr.tv/toonertia)",
+                    ch_url=main_streams[0]["url"] if main_streams else t_web,
+                    ch_logo=t_logo,
+                    ch_desc=(
+                        f"{tch.get('description', '')} "
+                        f"Source: spelunkr.tv/toonertia ({len(t_items)} full Toonami VHS broadcast blocks, 1997–2007)."
+                    ).strip(),
+                    custom_streams=main_streams
+                )
 
             # Add each individual Toonertia VHS Broadcast Block as a dedicated channel card
             for idx, item in enumerate(t_items, 1):
@@ -464,6 +482,13 @@ def generate_addon_for_country(country, base_dir):
                 ch_desc=f"{ch_obj.get('description', '')} ({len(c_items)} broadcasts on spelunkr.tv/{cid})".strip(),
                 custom_streams=ch_streams
             )
+            # Cross-list matching channels to legacy AIOStreams catalogs
+            if cid == "latchkey-tv" and "cartoons-cn-disney" in channels_by_cat:
+                add_channel("cartoons-cn-disney", f"spelunkr-{cid}", f"{c_emoji} {c_name} ({dial_str}) — {subtitle}", ch_streams[0]["url"] if ch_streams else c_web, c_logo, f"{ch_obj.get('description', '')} (spelunkr.tv/{cid})", custom_streams=ch_streams)
+            elif cid == "kersplat" and "cartoons-nick" in channels_by_cat:
+                add_channel("cartoons-nick", f"spelunkr-{cid}", f"{c_emoji} {c_name} ({dial_str}) — {subtitle}", ch_streams[0]["url"] if ch_streams else c_web, c_logo, f"{ch_obj.get('description', '')} (spelunkr.tv/{cid})", custom_streams=ch_streams)
+            elif cid in ("rubber-hose", "meddling-kids", "saturday-morning") and "cartoons-classics" in channels_by_cat:
+                add_channel("cartoons-classics", f"spelunkr-{cid}", f"{c_emoji} {c_name} ({dial_str}) — {subtitle}", ch_streams[0]["url"] if ch_streams else c_web, c_logo, f"{ch_obj.get('description', '')} (spelunkr.tv/{cid})", custom_streams=ch_streams)
 
         # C. Add Featured VHS Broadcast Blocks (Cartoon Network, Kids' WB Pokémon, Nick, Fox Kids, etc.)
         for fb_block in spelunkr_cfg.get("featured_blocks", []):
@@ -513,14 +538,51 @@ def generate_addon_for_country(country, base_dir):
 
     # 1. Add curated / fallback channels
     for fb in country.get("fallback_channels", []):
-        add_channel(
-            cat_id=fb.get("catalog", default_cat_id),
-            raw_id=fb.get("id") or fb["name"],
-            ch_name=fb["name"],
-            ch_url=fb["url"],
-            ch_logo=fb.get("logo", ""),
-            ch_desc=f"{fb['name']} · Live TV"
-        )
+        cat_targets = fb.get("catalogs") or [fb.get("catalog", default_cat_id)]
+        c_streams = fb.get("custom_streams")
+        if fb.get("id") == "cartoon-classics" and not c_streams:
+            c_streams = [
+                {
+                    "url": "https://archive.org/download/popeye_patriotic_popeye/popeye_patriotic_popeye_512kb.mp4",
+                    "name": "Popeye (1957)",
+                    "title": "Patriotic Popeye (1957) · Classic Golden Age Animation"
+                },
+                {
+                    "url": "https://archive.org/download/woody_woodpecker_pantry_panic/woody_woodpecker_pantry_panic_512kb.mp4",
+                    "name": "Woody Woodpecker",
+                    "title": "Woody Woodpecker: Pantry Panic (1941) · Walter Lantz"
+                },
+                {
+                    "url": "https://archive.org/download/bb_snow_white/bb_snow_white_512kb.mp4",
+                    "name": "Betty Boop",
+                    "title": "Betty Boop: Snow White (1933) · Fleischer Studios"
+                },
+                {
+                    "url": "https://archive.org/download/FLIP_FROG-FIDDLESTICKS/FLIP_FROG-FIDDLESTICKS_256k_512kb.mp4",
+                    "name": "Flip the Frog",
+                    "title": "Flip the Frog: Fiddlesticks (1930) · Ub Iwerks"
+                },
+                {
+                    "url": "https://archive.org/download/superman_1941/superman_1941_512kb.mp4",
+                    "name": "Superman (1941)",
+                    "title": "Superman: The Mad Scientist (1941) · Fleischer Studios"
+                },
+                {
+                    "externalUrl": "https://spelunkr.tv/rubber-hose",
+                    "name": "Spelunkr TV Web",
+                    "title": "Open Synchronized 24/7 Rubber Hose Stream (spelunkr.tv/rubber-hose)"
+                }
+            ]
+        for c_target in cat_targets:
+            add_channel(
+                cat_id=c_target,
+                raw_id=fb.get("id") or fb["name"],
+                ch_name=fb["name"],
+                ch_url=fb["url"],
+                ch_logo=fb.get("logo", ""),
+                ch_desc=f"{fb['name']} · Live TV",
+                custom_streams=c_streams
+            )
 
     # 2. Process prefetched M3U sources
     for src, raw_list in prefetched_m3u:
@@ -634,7 +696,6 @@ def generate_addon_for_country(country, base_dir):
 
     # 3. Write meta, stream, and catalog JSON files
     active_catalogs = []
-    total_channels = 0
 
     for cat_def in country.get("catalogs", []):
         cid = cat_def["id"]
@@ -644,7 +705,6 @@ def generate_addon_for_country(country, base_dir):
             continue
 
         active_catalogs.append({"type": "tv", "id": cid, "name": cname})
-        total_channels += len(items)
         metas = []
 
         for ch in items:
@@ -693,6 +753,7 @@ def generate_addon_for_country(country, base_dir):
         )
         print(f"    Catalog '{cname}' ({cid}): {len(items)} channels")
 
+    total_channels = len(seen_ids)
     manifest_name = f"{flag} {name}" if ("tv" in name.lower() or "sports" in name.lower() or "live" in name.lower()) else f"{flag} {name} Live TV"
     manifest = {
         "id": f"worldlive.{code}",
