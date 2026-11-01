@@ -899,27 +899,27 @@
       "fallback_channels": [
         {
           "id": "cartoon-network-hd",
-          "name": "Cartoon Network HD",
+          "name": "Cartoon Network HD (English)",
           "catalog": "cartoons-live-networks",
           "catalogs": ["cartoons-live-networks", "cartoons-cn-disney"],
           "logo": "https://images.pluto.tv/channels/5ca673e0d0bd6c2689c94ce3/logo.png",
-          "url": "https://drk6xq0vhn.gpcdn.net/live/cn_hd_abr/index.m3u8"
+          "url": "https://cdn4.skygo.mn/live/disk1/Cartoon_Network/HLSv3-FTA/Cartoon_Network.m3u8"
         },
         {
           "id": "cartoon-network-sd",
-          "name": "Cartoon Network SD",
+          "name": "Cartoon Network SD (English)",
           "catalog": "cartoons-live-networks",
           "catalogs": ["cartoons-live-networks", "cartoons-cn-disney"],
           "logo": "https://images.pluto.tv/channels/5ca673e0d0bd6c2689c94ce3/logo.png",
-          "url": "https://drk6xq0vhn.gpcdn.net/live/cn_sd_abr/index.m3u8"
+          "url": "https://cdn4.skygo.mn/live/disk1/Cartoon_Network/HLSv3-FTA/Cartoon_Network-avc1_2000000=13-mp4a_256000_eng=6.m3u8"
         },
         {
           "id": "disney-channel",
-          "name": "Disney Channel",
+          "name": "Disney Channel & Toon Disney (English)",
           "catalog": "cartoons-live-networks",
           "catalogs": ["cartoons-live-networks", "cartoons-cn-disney"],
-          "logo": "",
-          "url": "https://s6.hopslan.com/disneyX/index.m3u8"
+          "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Disney_Channel_logo_%282014-present%29.svg/512px-Disney_Channel_logo_%282014-present%29.svg.png",
+          "url": "https://archive.org/download/ocwoc-020c-chip-n-dale-rescue-rangers-x-3-bonkers-toon-disney-2003/OCWOC%20020c%20-%20Chip%20%27n%20Dale%20Rescue%20Rangers%20%28x3%29%2C%20Bonkers%20%28Toon%20Disney%2C%202003%29.ia.mp4"
         },
         {
           "id": "9go-cartoons",
@@ -939,11 +939,11 @@
         },
         {
           "id": "nickelodeon-live",
-          "name": "Nickelodeon Live",
+          "name": "Nickelodeon Live (English)",
           "catalog": "cartoons-live-networks",
           "catalogs": ["cartoons-live-networks", "cartoons-nick"],
           "logo": "https://10play.com.au/ip/s3/2023/07/31/dc4873abc5ba0fde04b59a78c8.png",
-          "url": "https://i.mjh.nz/.r/10shake-vic.m3u8"
+          "url": "https://jmp2.uk/plu-5ca673e0d0bd6c2689c94ce3.m3u8"
         },
         {
           "id": "nicktoons",
@@ -1015,7 +1015,7 @@
           "catalog": "cartoons-live-networks",
           "catalogs": ["cartoons-live-networks", "cartoons-classics"],
           "logo": "https://image.xumo.com/v1/channels/channel/99991268/300x300.webp?type=color_onBlack",
-          "url": "https://dbrb49pjoymg4.cloudfront.net/10001/99991268/hls/tg.m3u8?ads.xumo_channelId=99991268"
+          "url": "https://amg01329-otterainc-toongoggles-samsungau-ad-4c.amagi.tv/playlist/amg01329-otterainc-toongoggles-samsungau/playlist.m3u8"
         },
         {
           "id": "abc-kids",
@@ -1035,11 +1035,11 @@
         },
         {
           "id": "xumo-kids-tv",
-          "name": "Xumo Free Kids TV",
+          "name": "PBS Kids 24/7 (Live English)",
           "catalog": "cartoons-live-networks",
           "catalogs": ["cartoons-live-networks", "cartoons-classics"],
-          "logo": "https://image.xumo.com/v1/channels/channel/99991107/300x300.webp?type=color_onBlack",
-          "url": "https://dbrb49pjoymg4.cloudfront.net/10001/99991107/hls/master.m3u8?ads.xumo_channelId=99991107"
+          "logo": "https://i.mjh.nz/.images/pbs-kids.png",
+          "url": "https://livestream.pbskids.org/out/v1/14507d931bbe48a69287e4850e53443c/est.m3u8"
         }
       ]
     },

@@ -573,6 +573,65 @@ def generate_addon_for_country(country, base_dir):
                     "title": "Open Synchronized 24/7 Rubber Hose Stream (spelunkr.tv/rubber-hose)"
                 }
             ]
+        elif fb.get("id") == "cartoon-network-hd" and not c_streams:
+            c_streams = [
+                {
+                    "url": fb["url"],
+                    "name": "CN HD (English)",
+                    "title": "Cartoon Network HD (720p Live English Broadcast)"
+                },
+                {
+                    "url": "http://api.toonamiaftermath.com:3000/est/playlist.m3u8",
+                    "name": "Toonami Aftermath EST",
+                    "title": "Toonami Aftermath 24/7 (Classic Cartoon Network & Toonami in English)"
+                },
+                {
+                    "externalUrl": "https://spelunkr.tv/toonertia",
+                    "name": "Spelunkr TV Web",
+                    "title": "Open Synchronized 24/7 Toonami VHS Feed (spelunkr.tv/toonertia)"
+                }
+            ]
+        elif fb.get("id") == "cartoon-network-sd" and not c_streams:
+            c_streams = [
+                {
+                    "url": fb["url"],
+                    "name": "CN SD (English)",
+                    "title": "Cartoon Network SD (480p Live English Broadcast)"
+                },
+                {
+                    "url": "http://api.toonamiaftermath.com:3000/pst/playlist.m3u8",
+                    "name": "Toonami Aftermath PST",
+                    "title": "Toonami Aftermath Pacific 24/7 (Classic Cartoon Network in English)"
+                },
+                {
+                    "url": "https://archive.org/download/full-1st-ever-toonami-block-3-17-96/Full%201st%20Ever%20Toonami%20Block%203-17-96.ia.mp4",
+                    "name": "Toonami Launch Block",
+                    "title": "Toonami 1997 First Broadcast Block (Moltar Bumpers & Commercials)"
+                }
+            ]
+        elif fb.get("id") == "disney-channel" and not c_streams:
+            c_streams = [
+                {
+                    "url": "https://archive.org/download/ocwoc-020c-chip-n-dale-rescue-rangers-x-3-bonkers-toon-disney-2003/OCWOC%20020c%20-%20Chip%20%27n%20Dale%20Rescue%20Rangers%20%28x3%29%2C%20Bonkers%20%28Toon%20Disney%2C%202003%29.ia.mp4",
+                    "name": "Toon Disney VHS",
+                    "title": "Toon Disney 2000s Broadcast Block · Chip 'n Dale & Bonkers (English)"
+                },
+                {
+                    "url": "https://archive.org/download/talespin-darkwing-duck-disney-afternoon-1991/Talespin%20%26%20Darkwing%20Duck%20%28Disney%20Afternoon%201991%29.ia.mp4",
+                    "name": "Disney Afternoon VHS",
+                    "title": "Disney Afternoon (1991) · TaleSpin & Darkwing Duck (English)"
+                },
+                {
+                    "url": "https://archive.org/download/kcal-9-1995/KCAL9-1995-60fps.mp4",
+                    "name": "Disney Classics VHS",
+                    "title": "Disney Broadcast (1995) · Bonkers, Aladdin & Gargoyles (English)"
+                },
+                {
+                    "externalUrl": "https://spelunkr.tv/latchkey-tv",
+                    "name": "Spelunkr TV Web",
+                    "title": "Open Synchronized 24/7 Toon Disney & CN Feed (spelunkr.tv/latchkey-tv)"
+                }
+            ]
         for c_target in cat_targets:
             add_channel(
                 cat_id=c_target,
