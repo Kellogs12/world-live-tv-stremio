@@ -898,6 +898,42 @@
       ],
       "fallback_channels": [
         {
+          "id": "toonami-aftermath-est",
+          "name": "Toonami Aftermath EST (Classic Cartoon Network)",
+          "catalog": "cartoons-toonertia",
+          "catalogs": ["cartoons-toonertia", "cartoons-live-networks"],
+          "logo": "https://spelunkr.tv/og/toonertia.png",
+          "description": "Classic Cartoon Network & Toonami 24/7 broadcast (Eastern Time). Complete with 90s/00s TOM bumpers, promos, DBZ, Sailor Moon, Gundam Wing & Outlaw Star.",
+          "url": "http://api.toonamiaftermath.com:3000/est/playlist.m3u8"
+        },
+        {
+          "id": "toonami-aftermath-pst",
+          "name": "Toonami Aftermath PST (Classic Cartoon Network)",
+          "catalog": "cartoons-toonertia",
+          "catalogs": ["cartoons-toonertia", "cartoons-live-networks"],
+          "logo": "https://spelunkr.tv/og/toonertia.png",
+          "description": "Classic Cartoon Network & Toonami 24/7 broadcast (Pacific Time). Complete with 90s/00s TOM bumpers, promos, anime marathons, and retro commercial breaks.",
+          "url": "http://api.toonamiaftermath.com:3000/pst/playlist.m3u8"
+        },
+        {
+          "id": "toonami-aftermath-movies",
+          "name": "Toonami Aftermath Movies 24/7",
+          "catalog": "cartoons-toonertia",
+          "catalogs": ["cartoons-toonertia", "cartoons-live-networks"],
+          "logo": "https://spelunkr.tv/og/toonertia.png",
+          "description": "24/7 Feature-Length Anime & Animated Movies. Curated retro cinematic block from the golden era of Toonami & Adult Swim.",
+          "url": "http://api.toonamiaftermath.com:3000/movies/playlist.m3u8"
+        },
+        {
+          "id": "retrocrush-live",
+          "name": "RetroCrush (Classic Anime 24/7)",
+          "catalog": "cartoons-live-networks",
+          "catalogs": ["cartoons-live-networks", "cartoons-classics"],
+          "logo": "https://images.pluto.tv/channels/611e6a9b4bb5790007a6f0f8/logo.png",
+          "description": "Official 24/7 golden-age anime network: City Hunter, Great Teacher Onizuka, Street Fighter II, Space Adventure Cobra, and vintage classics.",
+          "url": "https://linear-899.frequency.stream/dist/cineverse/899/hls/master/playlist.m3u8"
+        },
+        {
           "id": "cartoon-network-hd",
           "name": "Cartoon Network HD (English)",
           "catalog": "cartoons-live-networks",
@@ -1128,6 +1164,287 @@
           "catalog": "novelas-internacionales",
           "logo": "https://images.pluto.tv/channels/5f512365abe1f50007d3ff56/colorLogoPNG.png",
           "url": "https://d20oth1416y9a1.cloudfront.net/playlist/amg00711-zylofast-frequencenovelas-rakutenus/playlist.m3u8"
+        }
+      ]
+    },
+    {
+      "code": "marathons",
+      "name": "24/7 Marathons & Archive TV",
+      "flag": "📼",
+      "region": "Marathons",
+      "description": "24/7 Virtual Cable, Marathon Feeds & Rerun Archives inspired by Spelunkr TV: Toonami Aftermath, MST3K, The Twilight Zone, Classic Doctor Who, SNL Vault, Baywatch, Forensic Files, NASA ISS Live, Bob Ross, and 24/7 MTV.",
+      "vpn_required": false,
+      "m3u_sources": [],
+      "catalogs": [
+        {
+          "id": "marathons-toonami-anime",
+          "name": "Toonami & Retro Anime 24/7"
+        },
+        {
+          "id": "marathons-cult-scifi",
+          "name": "Cult Sci-Fi, B-Movies & Mystery"
+        },
+        {
+          "id": "marathons-classic-tv",
+          "name": "Classic Sitcoms & Golden Age TV"
+        },
+        {
+          "id": "marathons-crime-mystery",
+          "name": "True Crime & Detective Marathons"
+        },
+        {
+          "id": "marathons-space-ambience",
+          "name": "Space, Nature & Ambient Relaxation"
+        },
+        {
+          "id": "marathons-westerns",
+          "name": "Westerns & Frontier Classics"
+        },
+        {
+          "id": "marathons-music-tv",
+          "name": "24/7 Music Video Television"
+        }
+      ],
+      "fallback_channels": [
+        {
+          "id": "toonami-aftermath-est",
+          "name": "Toonami Aftermath EST",
+          "catalog": "marathons-toonami-anime",
+          "logo": "https://spelunkr.tv/og/toonertia.png",
+          "description": "Classic Cartoon Network & Toonami 24/7 broadcast (Eastern Time). Complete with 90s/00s TOM bumpers, promos, DBZ, Sailor Moon, Gundam Wing & Outlaw Star.",
+          "url": "http://api.toonamiaftermath.com:3000/est/playlist.m3u8"
+        },
+        {
+          "id": "toonami-aftermath-pst",
+          "name": "Toonami Aftermath PST",
+          "catalog": "marathons-toonami-anime",
+          "logo": "https://spelunkr.tv/og/toonertia.png",
+          "description": "Classic Cartoon Network & Toonami 24/7 broadcast (Pacific Time). Complete with 90s/00s TOM bumpers, promos, anime marathons, and retro commercial breaks.",
+          "url": "http://api.toonamiaftermath.com:3000/pst/playlist.m3u8"
+        },
+        {
+          "id": "toonami-aftermath-movies",
+          "name": "Toonami Aftermath Movies 24/7",
+          "catalog": "marathons-toonami-anime",
+          "logo": "https://spelunkr.tv/og/toonertia.png",
+          "description": "24/7 Feature-Length Anime & Animated Movies. Curated retro cinematic block from the golden era of Toonami & Adult Swim.",
+          "url": "http://api.toonamiaftermath.com:3000/movies/playlist.m3u8"
+        },
+        {
+          "id": "retrocrush-247",
+          "name": "RetroCrush 24/7",
+          "catalog": "marathons-toonami-anime",
+          "logo": "https://images.pluto.tv/channels/611e6a9b4bb5790007a6f0f8/logo.png",
+          "description": "Official 24/7 golden-age anime network: City Hunter, Great Teacher Onizuka, Street Fighter II, Space Adventure Cobra, and vintage classics.",
+          "url": "https://linear-899.frequency.stream/dist/cineverse/899/hls/master/playlist.m3u8"
+        },
+        {
+          "id": "star-trek-animation-247",
+          "name": "Star Trek: Animation 24/7",
+          "catalog": "marathons-toonami-anime",
+          "logo": "https://images.pluto.tv/channels/69492467ae33e24d916e56cf/logo.png",
+          "description": "24/7 Continuous broadcast of Star Trek: The Animated Series & Lower Decks marathons in English.",
+          "url": "https://jmp2.uk/plu-69492467ae33e24d916e56cf.m3u8"
+        },
+        {
+          "id": "pluto-retro-toons",
+          "name": "Pluto TV Retro Toons",
+          "catalog": "marathons-toonami-anime",
+          "logo": "https://images.pluto.tv/channels/611e6a9b4bb5790007a6f0f8/logo.png",
+          "description": "24/7 Classic Saturday morning cartoons, 80s/90s animated rerun marathons, and retro pop culture toons.",
+          "url": "https://jmp2.uk/plu-611e6a9b4bb5790007a6f0f8.m3u8"
+        },
+        {
+          "id": "mst3k-247",
+          "name": "Mystery Science Theater 3000 (MST3K 24/7)",
+          "catalog": "marathons-cult-scifi",
+          "logo": "https://image.xumo.com/v1/channels/channel/99991616/300x300.webp?type=color_onBlack",
+          "description": "Joel, Mike, Crow T. Robot, and Tom Servo riffing on classic B-movies 24/7 in the Satellite of Love.",
+          "url": "https://mst3k-vizio.amagi.tv/playlist.m3u8"
+        },
+        {
+          "id": "the-twilight-zone-247",
+          "name": "The Twilight Zone 24/7",
+          "catalog": "marathons-cult-scifi",
+          "logo": "https://images.pluto.tv/channels/67352ed93a61d4000881f9fa/logo.png",
+          "description": "Rod Serling's timeless anthology of the bizarre, supernatural, and science fiction streaming around the clock.",
+          "url": "https://jmp2.uk/plu-67352ed93a61d4000881f9fa.m3u8"
+        },
+        {
+          "id": "classic-doctor-who-247",
+          "name": "Classic Doctor Who 24/7",
+          "catalog": "marathons-cult-scifi",
+          "logo": "https://images.pluto.tv/channels/5ca673e0d0bd6c2689c94ce3/logo.png",
+          "description": "Continuous non-stop adventures across space and time with the First through Seventh Doctors, Daleks, and Cybermen.",
+          "url": "https://jmp2.uk/plu-5ca673e0d0bd6c2689c94ce3.m3u8"
+        },
+        {
+          "id": "shout-movies-cult-scifi",
+          "name": "Shout! Cult & Sci-Fi Movies",
+          "catalog": "marathons-cult-scifi",
+          "logo": "https://image.xumo.com/v1/channels/channel/99951411/300x300.webp?type=color_onBlack",
+          "description": "Shout! Factory's 24/7 vault of cult cinema, grindhouse, vintage sci-fi gems, and monster classics.",
+          "url": "https://dtqutq7lmcchv.cloudfront.net/10001/99951411/hls/playlist.m3u8?ads.xumo_channelId=99951411"
+        },
+        {
+          "id": "pluto-retro-action-movies",
+          "name": "Pluto TV Retro Action Movies",
+          "catalog": "marathons-cult-scifi",
+          "logo": "https://images.pluto.tv/channels/69a9ae4d3bd16a4ed04240d7/logo.png",
+          "description": "80s & 90s action movie marathons: martial arts explosions, car chases, and non-stop retro adrenaline.",
+          "url": "https://jmp2.uk/plu-69a9ae4d3bd16a4ed04240d7.m3u8"
+        },
+        {
+          "id": "snl-vault-247",
+          "name": "Saturday Night Live Vault (SNL 24/7)",
+          "catalog": "marathons-classic-tv",
+          "logo": "https://image.xumo.com/v1/channels/channel/99951236/300x300.webp?type=color_onBlack",
+          "description": "24/7 Saturday Night Live vault marathons: 50 years of iconic sketches, legendary musical guests, and Weekend Update.",
+          "url": "https://d4whmvwm0rdvi.cloudfront.net/10007/99951236/hls/master.m3u8?ads.xumo_channelId=99951236"
+        },
+        {
+          "id": "carol-burnett-247",
+          "name": "The Carol Burnett Show 24/7",
+          "catalog": "marathons-classic-tv",
+          "logo": "https://images.pluto.tv/channels/5de802659167b10009e7deba/logo.png",
+          "description": "The iconic variety comedy show that defined American television comedy, running in non-stop 24/7 marathons.",
+          "url": "https://carolburnett-vizio.amagi.tv/playlist.m3u8"
+        },
+        {
+          "id": "baywatch-247",
+          "name": "Baywatch 24/7",
+          "catalog": "marathons-classic-tv",
+          "logo": "https://image.xumo.com/v1/channels/channel/99951133/300x300.webp?type=color_onBlack",
+          "description": "Mitch Buchannon and the world's most famous lifeguards keeping the beach safe 24/7 in sunny California.",
+          "url": "https://dbrb49pjoymg4.cloudfront.net/10001/99951133/hls/playlist.m3u8?ads.xumo_channelId=99951133"
+        },
+        {
+          "id": "nbc-comedy-vault",
+          "name": "NBC Comedy Vault",
+          "catalog": "marathons-classic-tv",
+          "logo": "https://image.xumo.com/v1/channels/channel/99951244/300x300.webp?type=color_onBlack",
+          "description": "Non-stop reruns of primetime NBC sitcom legends and beloved sitcom classics.",
+          "url": "https://d4whmvwm0rdvi.cloudfront.net/10007/99951244/hls/master.m3u8?ads.xumo_channelId=99951244"
+        },
+        {
+          "id": "pluto-series-retro",
+          "name": "Pluto TV Series Retro",
+          "catalog": "marathons-classic-tv",
+          "logo": "https://images.pluto.tv/channels/5de802659167b10009e7deba/logo.png",
+          "description": "Beloved vintage television series, variety shows, and classic American primetime comedy.",
+          "url": "https://jmp2.uk/plu-5de802659167b10009e7deba.m3u8"
+        },
+        {
+          "id": "tvs-hollywood-history",
+          "name": "TVS Hollywood History",
+          "catalog": "marathons-classic-tv",
+          "logo": "https://image.xumo.com/v1/channels/channel/99951255/300x300.webp?type=color_onBlack",
+          "description": "Golden Age Hollywood films, historical retrospectives, rare vintage serials, and classic cinema.",
+          "url": "https://rpn.bozztv.com/gusa/gusa-tvshollywoohistory/index.m3u8"
+        },
+        {
+          "id": "forensic-files-247",
+          "name": "Forensic Files 24/7",
+          "catalog": "marathons-crime-mystery",
+          "logo": "https://image.xumo.com/v1/channels/channel/99951152/300x300.webp?type=color_onBlack",
+          "description": "Peter Thomas narrates revolutionary true-crime forensic science cases in continuous 24/7 marathon order.",
+          "url": "https://dbrb49pjoymg4.cloudfront.net/10001/99951152/hls/playlist.m3u8?ads.xumo_channelId=99951152"
+        },
+        {
+          "id": "murder-she-wrote-247",
+          "name": "Murder, She Wrote 24/7",
+          "catalog": "marathons-crime-mystery",
+          "logo": "https://image.xumo.com/v1/channels/channel/99951239/300x300.webp?type=color_onBlack",
+          "description": "Angela Lansbury as mystery novelist Jessica Fletcher solving Cabot Cove's most baffling murders 24/7.",
+          "url": "https://d4whmvwm0rdvi.cloudfront.net/10007/99951239/hls/master.m3u8?ads.xumo_channelId=99951239"
+        },
+        {
+          "id": "unsolved-mysteries-247",
+          "name": "Unsolved Mysteries 24/7",
+          "catalog": "marathons-crime-mystery",
+          "logo": "https://images.pluto.tv/channels/630f1e6073bd1800082107f0/logo.png",
+          "description": "Robert Stack investigating baffling disappearances, paranormal phenomena, and unsolved crimes 24/7.",
+          "url": "https://jmp2.uk/plu-5ca673e0d0bd6c2689c94ce3.m3u8"
+        },
+        {
+          "id": "ghost-hunters-247",
+          "name": "Ghost Hunters 24/7",
+          "catalog": "marathons-crime-mystery",
+          "logo": "https://image.xumo.com/v1/channels/channel/99951277/300x300.webp?type=color_onBlack",
+          "description": "The TAPS team investigating the world's most notorious haunted locations with night-vision cameras and audio sensors.",
+          "url": "https://dbrb49pjoymg4.cloudfront.net/10001/99951277/hls/master.m3u8?ads.xumo_channelId=99951277"
+        },
+        {
+          "id": "pluto-retro-crime-drama",
+          "name": "Pluto TV Retro Crime Drama",
+          "catalog": "marathons-crime-mystery",
+          "logo": "https://images.pluto.tv/channels/630f1e6073bd1800082107f0/logo.png",
+          "description": "Vintage detective procedurals, hardboiled gumshoes, and classic 70s/80s police investigations.",
+          "url": "https://jmp2.uk/plu-630f1e6073bd1800082107f0.m3u8"
+        },
+        {
+          "id": "nasa-tv-iss-live",
+          "name": "NASA TV: Live Earth Views from ISS",
+          "catalog": "marathons-space-ambience",
+          "logo": "https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg",
+          "description": "Live HD external camera views of Earth from the International Space Station, orbiting 250 miles above at 17,500 mph.",
+          "url": "https://ntv1.akamaized.net/hls/live/2014075/NASA-NTV1-HLS/master.m3u8"
+        },
+        {
+          "id": "bob-ross-channel-247",
+          "name": "The Bob Ross Channel 24/7",
+          "catalog": "marathons-space-ambience",
+          "logo": "https://images.pluto.tv/channels/5f36d726234ce10007784f2a/logo.png",
+          "description": "The Joy of Painting around the clock: happy little trees, soothing clouds, and peaceful wet-on-wet oil painting.",
+          "url": "https://jmp2.uk/plu-5f36d726234ce10007784f2a.m3u8"
+        },
+        {
+          "id": "universal-westerns",
+          "name": "Universal Westerns",
+          "catalog": "marathons-westerns",
+          "logo": "https://image.xumo.com/v1/channels/channel/99951255/300x300.webp?type=color_onBlack",
+          "description": "Classic cowboy shootouts, frontier dramas, and Hollywood western legends running 24/7.",
+          "url": "https://d4whmvwm0rdvi.cloudfront.net/10007/99951255/hls/master.m3u8?ads.xumo_channelId=99951255"
+        },
+        {
+          "id": "the-lone-ranger-247",
+          "name": "The Lone Ranger 24/7",
+          "catalog": "marathons-westerns",
+          "logo": "https://image.xumo.com/v1/channels/channel/99951258/300x300.webp?type=color_onBlack",
+          "description": "'Hi-Yo, Silver! Away!' Clayton Moore and Jay Silverheels bringing justice to the Wild West in non-stop marathons.",
+          "url": "https://d4whmvwm0rdvi.cloudfront.net/10007/99951258/hls/master.m3u8?ads.xumo_channelId=99951258"
+        },
+        {
+          "id": "mtv-biggest-pop-247",
+          "name": "MTV Biggest Pop 24/7",
+          "catalog": "marathons-music-tv",
+          "logo": "https://images.pluto.tv/channels/5d14fd1a252d35decbc4080c/logo.png",
+          "description": "Non-stop commercial-free pop music videos and global chart-toppers around the clock.",
+          "url": "https://jmp2.uk/plu-5d14fd1a252d35decbc4080c.m3u8"
+        },
+        {
+          "id": "yo-mtv-247",
+          "name": "Yo! MTV 24/7",
+          "catalog": "marathons-music-tv",
+          "logo": "https://images.pluto.tv/channels/6047fbdbbb776a0007e7f2ff/logo.png",
+          "description": "The golden era of hip-hop and R&B music videos, classic freestyle ciphers, and pioneer artists 24/7.",
+          "url": "https://jmp2.uk/plu-6047fbdbbb776a0007e7f2ff.m3u8"
+        },
+        {
+          "id": "mtv-live-247",
+          "name": "MTV Live 24/7",
+          "catalog": "marathons-music-tv",
+          "logo": "https://images.pluto.tv/channels/6047fabfce6e8e00070bcc9f/logo.png",
+          "description": "Legendary live concert performances, acoustic sets, festivals, and historic MTV stage moments.",
+          "url": "https://jmp2.uk/plu-6047fabfce6e8e00070bcc9f.m3u8"
+        },
+        {
+          "id": "mtv-spankin-new-247",
+          "name": "MTV Spankin' New 24/7",
+          "catalog": "marathons-music-tv",
+          "logo": "https://images.pluto.tv/channels/65410176770cf1000866bf31/logo.png",
+          "description": "Brand new music video premieres, trending releases, and tomorrow's superstars streaming 24/7.",
+          "url": "https://jmp2.uk/plu-65410176770cf1000866bf31.m3u8"
         }
       ]
     }

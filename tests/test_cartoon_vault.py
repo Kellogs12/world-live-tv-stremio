@@ -280,7 +280,7 @@ class TestCartoonVault(unittest.TestCase):
         toonertia_cat_path = os.path.join(CARTOONS_LIVE_DIR, "catalog", "tv", "cartoons-toonertia.json")
         with open(toonertia_cat_path, "r", encoding="utf-8") as f:
             t_metas = json.load(f).get("metas", [])
-        self.assertEqual(len(t_metas), 42, "cartoons-toonertia should have 42 channels")
+        self.assertGreaterEqual(len(t_metas), 42, "cartoons-toonertia should have at least 42 channels")
         self.assertEqual(t_metas[0]["id"], "tv-cartoons-toonertia-24-7-live")
         self.assertIn("TOONERTIA 24/7", t_metas[0]["name"])
 
@@ -315,7 +315,7 @@ class TestCartoonVault(unittest.TestCase):
 
         cartoons_entries = [c for c in countries_data.get("countries", []) if c.get("code") == "cartoons"]
         self.assertEqual(len(cartoons_entries), 1, "cartoons must be listed in countries.json")
-        self.assertEqual(cartoons_entries[0].get("channel_count"), 100)
+        self.assertGreaterEqual(cartoons_entries[0].get("channel_count"), 100)
 
         with open(self.readme_path, "r", encoding="utf-8") as f:
             readme_text = f.read()

@@ -15,7 +15,7 @@
       "flag": "🇦🇺",
       "region": "Oceania",
       "description": "Australian Free-to-Air (ABC, SBS, Seven, Nine, 10, C31), network free channels, and Samsung TV Plus AU.",
-      "channel_count": 266,
+      "channel_count": 265,
       "vpn_required": true
     },
     {
@@ -24,7 +24,7 @@
       "flag": "🇬🇧",
       "region": "Europe",
       "description": "UK Live News (BBC News, Sky News, GB News), Freeview, and Rakuten TV UK.",
-      "channel_count": 200,
+      "channel_count": 199,
       "vpn_required": false
     },
     {
@@ -42,7 +42,7 @@
       "flag": "🇳🇿",
       "region": "Oceania",
       "description": "New Zealand Freeview (TVNZ 1, TVNZ 2, Three, Bravo, Rush, Eden, Whakaata Māori).",
-      "channel_count": 40,
+      "channel_count": 38,
       "vpn_required": true
     },
     {
@@ -69,7 +69,7 @@
       "flag": "🎨",
       "region": "Cartoons",
       "description": "Powered by spelunkr.tv/toonertia & Spelunkr TV: 24/7 Toonertia Toonami VHS broadcasts (DBZ, Sailor Moon, Gundam Wing, Outlaw Star, Tenchi Muyo, ReBoot, Batman, TOM bumpers & retro commercials), Latchkey-TV (Cartoon Network, Nickelodeon, Toon Disney VHS), Saturday Morning Cartoons (Kids' WB Pokémon & Yu-Gi-Oh!, Fox Kids, Disney Afternoon), Late Nite Swimclub (Adult Swim), Meddling Kids (Scooby-Doo & Hanna-Barbera), Rocket Punch, OVATV, Rubber Hose, Kersplat, Library Card, plus Live Cartoon Networks.",
-      "channel_count": 100,
+      "channel_count": 104,
       "vpn_required": false
     },
     {
@@ -79,6 +79,15 @@
       "region": "Novelas",
       "description": "24/7 Telenovelas, Latin dramas, Telemundo, Univision hits, and international series.",
       "channel_count": 9,
+      "vpn_required": false
+    },
+    {
+      "code": "marathons",
+      "name": "24/7 Marathons & Archive TV",
+      "flag": "📼",
+      "region": "Marathons",
+      "description": "24/7 Virtual Cable, Marathon Feeds & Rerun Archives inspired by Spelunkr TV: Toonami Aftermath, MST3K, The Twilight Zone, Classic Doctor Who, SNL Vault, Baywatch, Forensic Files, NASA ISS Live, Bob Ross, and 24/7 MTV.",
+      "channel_count": 30,
       "vpn_required": false
     },
     {

@@ -298,7 +298,7 @@ def generate_addon_for_country(country, base_dir):
     channels_by_cat = {c["id"]: [] for c in country.get("catalogs", [])}
 
     def add_channel(cat_id, raw_id, ch_name, ch_url, ch_logo="", ch_desc="", custom_streams=None):
-        if not custom_streams and (not ch_url or not ch_url.startswith("https://")):
+        if not custom_streams and (not ch_url or not (ch_url.startswith("https://") or ch_url.startswith("http://"))):
             return
         if re.search(r'\btest stream\b', ch_name, re.I):
             return
@@ -311,7 +311,7 @@ def generate_addon_for_country(country, base_dir):
         seen_names.add(norm_name)
 
         uid = make_id(raw_id or ch_name)
-        logo = ch_logo if (ch_logo and ch_logo.startswith("https://")) else icon_url
+        logo = ch_logo if (ch_logo and (ch_logo.startswith("https://") or ch_logo.startswith("http://"))) else icon_url
         desc_text = ch_desc or f"{ch_name} · Free live stream"
         entry = {
             "id": uid,
@@ -639,7 +639,7 @@ def generate_addon_for_country(country, base_dir):
                 ch_name=fb["name"],
                 ch_url=fb["url"],
                 ch_logo=fb.get("logo", ""),
-                ch_desc=f"{fb['name']} · Live TV",
+                ch_desc=fb.get("description") or f"{fb['name']} · Live TV",
                 custom_streams=c_streams
             )
 
