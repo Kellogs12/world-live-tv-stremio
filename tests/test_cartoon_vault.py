@@ -117,7 +117,7 @@ class TestCartoonVault(unittest.TestCase):
         with open(cn_route, "r", encoding="utf-8") as f:
             cn_metas = json.load(f).get("metas", [])
         top_cn_ids = {m["id"] for m in cn_metas[:12]}
-        for pid in ["tt0460627", "tt11559400", "tt26925501", "tt11696014", "tt26916286"]:
+        for pid in ["tt1294022", "tt29079338", "tt26692417", "tt11547516", "tt26916286"]:
             self.assertIn(pid, top_cn_ids, f"Pokémon series {pid} must be near the top of cn-shows")
 
         # 3. Verify all 24 Pokémon animated movies are in cartoon-movies
@@ -126,10 +126,10 @@ class TestCartoonVault(unittest.TestCase):
             movie_ids = {m["id"] for m in json.load(f).get("metas", [])}
         expected_pokemon_movies = [
             "tt0190641", "tt0210234", "tt0235679", "tt0287635", "tt0347791",
-            "tt0420076", "tt0411545", "tt0875609", "tt0937616", "tt1122505",
-            "tt1261453", "tt1422673", "tt1701198", "tt1964547", "tt1739212",
+            "tt0420076", "tt0435286", "tt0875609", "tt1000095", "tt1226251",
+            "tt1160525", "tt1468843", "tt1690470", "tt1961324", "tt1739212",
             "tt2549540", "tt3257582", "tt3918368", "tt4503906", "tt5889204",
-            "tt6595896", "tt8723224", "tt8856470", "tt11847692"
+            "tt6595896", "tt8108230", "tt8856470", "tt11819890"
         ]
         for pmid in expected_pokemon_movies:
             self.assertIn(pmid, movie_ids, f"Pokémon movie {pmid} missing from cartoon-movies")
@@ -158,24 +158,24 @@ class TestCartoonVault(unittest.TestCase):
 
         required_sequels = [
             # Pixar sequels
-            "tt1979376", "tt3606756", "tt1453405", "tt2277860", "tt1216475", "tt5016504", "tt2096673", "tt22022452",
+            "tt1979376", "tt3606756", "tt1453405", "tt2277860", "tt1216475", "tt3606752", "tt2096673", "tt22022452",
             # DreamWorks sequels
             "tt0413267", "tt0892791", "tt0448694", "tt3915174", "tt2267968", "tt21692408",
             "tt1646971", "tt2386490", "tt0479952", "tt1277953", "tt1911658", "tt0481499", "tt2850386",
             # Ice Age 1-5, Despicable Me 1-4, Minions 1-2, Hotel Transylvania 1-4, Cloudy 1-2, Rio 1-2, Open Season 1-3
             "tt0268380", "tt0438097", "tt1080016", "tt1667889", "tt3416828",
-            "tt1323594", "tt1690953", "tt3470600", "tt7510222", "tt2293640", "tt5113044",
-            "tt0837562", "tt2510894", "tt5216936", "tt9848626",
+            "tt1323594", "tt1690953", "tt3469046", "tt7510222", "tt2293640", "tt5113044",
+            "tt0837562", "tt2510894", "tt5220122", "tt9848626",
             "tt0844471", "tt1985966", "tt1436562", "tt2357291", "tt0400717", "tt1107365", "tt1646926",
             # Disney sequels
-            "tt0120131", "tt0356721", "tt0107952", "tt0115518", "tt0405537", "tt0348301",
-            "tt0365737", "tt0437503", "tt0313680", "tt5848272", "tt2294629", "tt4520988",
-            "tt0328880", "tt0783598", "tt0097757", "tt0245642", "tt0061852", "tt0283426",
+            "tt0120131", "tt0318403", "tt0107952", "tt0115491", "tt0401398", "tt0344864",
+            "tt0279967", "tt0437503", "tt0313680", "tt5848272", "tt2294629", "tt4520988",
+            "tt0328880", "tt0465925", "tt0097757", "tt0240684", "tt0061852", "tt0283426",
             "tt0046183", "tt0280030", "tt0055254", "tt0324941", "tt0100477", "tt0034492", "tt0447854",
             # Ben 10, Yu-Gi-Oh!, DBZ/Super, Jimmy Timmy, Fairly OddParents
-            "tt1037011", "tt1327701", "tt12771340", "tt1587157", "tt5461386",
+            "tt1037011", "tt1327701", "tt13186528", "tt1587157", "tt4273562",
             "tt2263944", "tt3819668", "tt7961060", "tt14614892",
-            "tt0414177", "tt0473050", "tt0499605", "tt0369814", "tt0419739", "tt10474606"
+            "tt0414177", "tt0473050", "tt0499605", "tt39055318", "tt0419739", "tt10474606"
         ]
         for sid in required_sequels:
             self.assertIn(sid, movie_ids, f"Expected movie sequel {sid} in cartoon-movies")
