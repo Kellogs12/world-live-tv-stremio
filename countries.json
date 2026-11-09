@@ -15,7 +15,7 @@
       "flag": "🇦🇺",
       "region": "Oceania",
       "description": "Australian Free-to-Air (ABC, SBS, Seven, Nine, 10, C31), network free channels, and Samsung TV Plus AU.",
-      "channel_count": 265,
+      "channel_count": 267,
       "vpn_required": true
     },
     {
@@ -24,7 +24,7 @@
       "flag": "🇬🇧",
       "region": "Europe",
       "description": "UK Live News (BBC News, Sky News, GB News), Freeview, and Rakuten TV UK.",
-      "channel_count": 199,
+      "channel_count": 195,
       "vpn_required": false
     },
     {
