@@ -6,7 +6,7 @@
       "flag": "🇺🇸",
       "region": "Americas",
       "description": "US Live News & Weather (CBS, NBC, ABC, Fox Weather, Scripps, Bloomberg, Reuters) and Xumo Free Live TV US.",
-      "channel_count": 1284,
+      "channel_count": 1286,
       "vpn_required": false
     },
     {
@@ -15,7 +15,7 @@
       "flag": "🇦🇺",
       "region": "Oceania",
       "description": "Australian Free-to-Air (ABC, SBS, Seven, Nine, 10, C31), network free channels, and Samsung TV Plus AU.",
-      "channel_count": 296,
+      "channel_count": 295,
       "vpn_required": true
     },
     {
@@ -24,7 +24,7 @@
       "flag": "🇬🇧",
       "region": "Europe",
       "description": "UK Live News (BBC News, Sky News, GB News), Freeview, and Rakuten TV UK.",
-      "channel_count": 343,
+      "channel_count": 353,
       "vpn_required": false
     },
     {
@@ -42,7 +42,7 @@
       "flag": "🇳🇿",
       "region": "Oceania",
       "description": "New Zealand Freeview (TVNZ 1, TVNZ 2, Three, Bravo, Rush, Eden, Whakaata Māori).",
-      "channel_count": 53,
+      "channel_count": 52,
       "vpn_required": true
     },
     {
@@ -51,7 +51,7 @@
       "flag": "🌐",
       "region": "Global",
       "description": "24/7 World News, Weather, and Sports: CBS News, NBC News, ABC News, BBC News, Sky News, Al Jazeera, DW, France 24, Euronews, Bloomberg, Red Bull TV.",
-      "channel_count": 693,
+      "channel_count": 685,
       "vpn_required": false
     },
     {
@@ -60,7 +60,7 @@
       "flag": "🏆",
       "region": "Sports",
       "description": "Priority Live Sports: Formula 1 & Motorsports, Boxing, UFC & MMA, Soccer (FIFA+, beIN, CBS Golazo), NFL & American Football, NBA Basketball, MLB Baseball, Aussie Rules (7AFL, Channel 7 Melbourne, 7mate), Golf, Tennis, and Cricket.",
-      "channel_count": 211,
+      "channel_count": 216,
       "vpn_required": false
     },
     {
@@ -78,7 +78,7 @@
       "flag": "🎭",
       "region": "Novelas",
       "description": "24/7 Telenovelas, Latin dramas, Telemundo, Univision hits, and international series.",
-      "channel_count": 25,
+      "channel_count": 24,
       "vpn_required": false
     },
     {
@@ -96,7 +96,7 @@
       "flag": "🗺️",
       "region": "Global",
       "description": "Unified Discover catalog sortable across 169 countries/regions without cluttering your Stremio Home Board.",
-      "channel_count": 7967,
+      "channel_count": 7974,
       "vpn_required": false
     },
     {
