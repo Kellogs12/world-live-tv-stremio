@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://online.tvimpact.live/hls/dancetv.m3u8","name":"iptv-org","title":"Impact TV Dance"},{"url":"https://online.tvimpact.live/hls/dancetv.m3u8","name":"iptv-org (browser)","title":"Impact TV Dance\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

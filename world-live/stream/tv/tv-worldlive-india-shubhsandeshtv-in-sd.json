@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://cdn.pishow.tv/ott/live/457/master.m3u8","name":"iptv-org","title":"Shubhsandesh TV"},{"url":"https://cdn.pishow.tv/ott/live/457/master.m3u8","name":"iptv-org (browser)","title":"Shubhsandesh TV\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

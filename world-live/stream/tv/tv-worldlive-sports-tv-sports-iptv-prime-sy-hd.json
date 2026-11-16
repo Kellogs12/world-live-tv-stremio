@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://cdn.bestream.io/prime/prime.m3u8","name":"iptv-org","title":"Prime (Syria)"},{"url":"https://cdn.bestream.io/prime/prime.m3u8","name":"iptv-org (browser)","title":"Prime (Syria)\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

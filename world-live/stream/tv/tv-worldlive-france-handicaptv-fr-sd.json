@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://srv.webtvmanager.fr:3697/stream/play.m3u8","name":"iptv-org","title":"HANDICAP TV"},{"url":"https://srv.webtvmanager.fr:3697/stream/play.m3u8","name":"iptv-org (browser)","title":"HANDICAP TV\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

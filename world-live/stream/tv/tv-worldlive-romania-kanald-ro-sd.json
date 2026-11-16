@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://stream1.kanald.ro/iphone/knd-live.m3u8","name":"iptv-org","title":"Kanal D (Romania)"},{"url":"https://stream1.kanald.ro/iphone/knd-live.m3u8","name":"iptv-org (browser)","title":"Kanal D (Romania)\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

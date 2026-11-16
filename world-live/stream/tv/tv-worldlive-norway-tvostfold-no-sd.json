@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://streamnorge.com:8088/hls/tvo.m3u8","name":"iptv-org","title":"TV Ostfold"},{"url":"https://streamnorge.com:8088/hls/tvo.m3u8","name":"iptv-org (browser)","title":"TV Ostfold\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

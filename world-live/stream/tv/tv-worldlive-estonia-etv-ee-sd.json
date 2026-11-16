@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://sb.err.ee/live/etv.m3u8","name":"iptv-org","title":"ETV (Estonia)"},{"url":"https://sb.err.ee/live/etv.m3u8","name":"iptv-org (browser)","title":"ETV (Estonia)\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

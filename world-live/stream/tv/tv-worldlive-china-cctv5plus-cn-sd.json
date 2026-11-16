@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://php.jdshipin.com/TVOD/iptv.php?id=cctv5p","name":"iptv-org","title":"CCTV-5+"},{"url":"https://php.jdshipin.com/TVOD/iptv.php?id=cctv5p","name":"iptv-org (browser)","title":"CCTV-5+\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

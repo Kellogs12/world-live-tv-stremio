@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://nl.livekadeh.com/hls2/alwilayah_tv.m3u8","name":"iptv-org","title":"Al Wilayah"},{"url":"https://nl.livekadeh.com/hls2/alwilayah_tv.m3u8","name":"iptv-org (browser)","title":"Al Wilayah\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

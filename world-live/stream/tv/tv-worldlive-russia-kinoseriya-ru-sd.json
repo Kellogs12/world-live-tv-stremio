@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://fs.uplink.kz/kinoseria/mono.m3u8?token=onlinetv","name":"iptv-org","title":"Kinoseriya"},{"url":"https://fs.uplink.kz/kinoseria/mono.m3u8?token=onlinetv","name":"iptv-org (browser)","title":"Kinoseriya\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

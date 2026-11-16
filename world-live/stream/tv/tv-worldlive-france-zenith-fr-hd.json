@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://live.azenagroup.com/zenith/index.ll.m3u8","name":"iptv-org","title":"zenith"},{"url":"https://live.azenagroup.com/zenith/index.ll.m3u8","name":"iptv-org (browser)","title":"zenith\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

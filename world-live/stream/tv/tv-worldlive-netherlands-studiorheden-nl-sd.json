@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://stream.studiorhedenlive.nl/hlstv/stream.m3u8","name":"iptv-org","title":"Studio Rheden"},{"url":"https://stream.studiorhedenlive.nl/hlstv/stream.m3u8","name":"iptv-org (browser)","title":"Studio Rheden\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

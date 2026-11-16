@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://pnt.janusmedia.tv/hls/pnt.m3u8","name":"iptv-org","title":"Puranoticia TV"},{"url":"https://pnt.janusmedia.tv/hls/pnt.m3u8","name":"iptv-org (browser)","title":"Puranoticia TV\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

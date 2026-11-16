@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://irhls.persiana.live/hls/stream.m3u8","name":"iptv-org","title":"Persiana Iranian"},{"url":"https://irhls.persiana.live/hls/stream.m3u8","name":"iptv-org (browser)","title":"Persiana Iranian\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://vivo.solumedia.com:19360/vivetv/vivetv.m3u8","name":"iptv-org","title":"VIVE TV"},{"url":"https://vivo.solumedia.com:19360/vivetv/vivetv.m3u8","name":"iptv-org (browser)","title":"VIVE TV\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

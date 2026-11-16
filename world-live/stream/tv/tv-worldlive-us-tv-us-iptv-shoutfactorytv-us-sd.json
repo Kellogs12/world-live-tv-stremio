@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://d1s1wrpgemt9re.cloudfront.net/Shout_TV.m3u8","name":"iptv-org","title":"Shout! Factory TV"},{"url":"https://d1s1wrpgemt9re.cloudfront.net/Shout_TV.m3u8","name":"iptv-org (browser)","title":"Shout! Factory TV\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

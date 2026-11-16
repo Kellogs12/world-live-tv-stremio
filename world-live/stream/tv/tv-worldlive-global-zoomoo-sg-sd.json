@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://zoomoo-samsungau.amagi.tv/playlist.m3u8","name":"iptv-org","title":"ZooMoo"},{"url":"https://zoomoo-samsungau.amagi.tv/playlist.m3u8","name":"iptv-org (browser)","title":"ZooMoo\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

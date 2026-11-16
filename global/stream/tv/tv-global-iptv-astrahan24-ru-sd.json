@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://streaming.astrakhan.ru/astrakhan24/playlist.m3u8","name":"iptv-org","title":"Astrahan 24"},{"url":"https://streaming.astrakhan.ru/astrakhan24/playlist.m3u8","name":"iptv-org (browser)","title":"Astrahan 24\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

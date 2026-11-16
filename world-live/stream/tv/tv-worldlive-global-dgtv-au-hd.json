@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://mdn.dg.church/673ac57a073a4-1/index.m3u8","name":"iptv-org","title":"DG:TV"},{"url":"https://mdn.dg.church/673ac57a073a4-1/index.m3u8","name":"iptv-org (browser)","title":"DG:TV\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

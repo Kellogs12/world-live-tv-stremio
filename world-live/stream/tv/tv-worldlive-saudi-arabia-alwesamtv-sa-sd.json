@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://stream.addresses-sat.com/Alwesam/index.m3u8","name":"iptv-org","title":"Alwesam TV"},{"url":"https://stream.addresses-sat.com/Alwesam/index.m3u8","name":"iptv-org (browser)","title":"Alwesam TV\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

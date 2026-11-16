@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://tv2.fastcast4u.com:3943/stream/play.m3u8","name":"iptv-org","title":"WWON-TV Channel 48"},{"url":"https://tv2.fastcast4u.com:3943/stream/play.m3u8","name":"iptv-org (browser)","title":"WWON-TV Channel 48\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

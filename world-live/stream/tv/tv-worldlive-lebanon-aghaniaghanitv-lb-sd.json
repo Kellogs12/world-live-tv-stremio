@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://cdn.streamlane.tv/hls/aghanitv/index.m3u8","name":"iptv-org","title":"Aghani Aghani TV"},{"url":"https://cdn.streamlane.tv/hls/aghanitv/index.m3u8","name":"iptv-org (browser)","title":"Aghani Aghani TV\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

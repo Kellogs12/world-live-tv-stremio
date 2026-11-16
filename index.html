@@ -220,6 +220,7 @@
       <button class="filter-btn" data-filter="Power Rangers">⚡ Power Rangers</button>
       <button class="filter-btn" data-filter="Cartoons">🎨 Kids &amp; Cartoons</button>
       <button class="filter-btn" data-filter="Novelas">🎭 Novelas</button>
+      <button class="filter-btn" data-filter="Marathons">📼 Marathons</button>
       <button class="filter-btn" data-filter="Oceania">🇦🇺 Oceania</button>
       <button class="filter-btn" data-filter="Americas">🇺🇸 Americas</button>
       <button class="filter-btn" data-filter="Europe">🇬🇧 Europe</button>
@@ -287,33 +288,46 @@
       card.dataset.region = c.region;
       card.dataset.name = c.name.toLowerCase();
 
-      var vpnBadge = c.vpn_required 
-        ? '<span class="badge vpn">VPN needed outside ' + c.name + '</span>'
-        : (c.catalog_type ? '<span class="badge" style="background:#203828; color:#7ef5b8;">On-Demand Catalog</span>' : '<span class="badge">Worldwide / Open</span>');
+      var vpnText = c.vpn_required
+        ? 'VPN needed outside ' + c.name
+        : (c.catalog_type ? 'On-Demand Catalog' : 'Worldwide / Open');
+      var countText = c.catalog_type
+        ? (c.item_count || c.channel_count) + ' ' + (c.item_label || 'Titles')
+        : c.channel_count + ' Channels';
 
-      var countBadge = c.catalog_type
-        ? '<span class="badge">' + (c.item_count || c.channel_count) + ' ' + (c.item_label || 'Titles') + '</span>'
-        : '<span class="badge">' + c.channel_count + ' Channels</span>';
-
-      card.innerHTML = 
-        '<div class="flag-box">' + c.flag + '</div>' +
+      card.innerHTML =
+        '<div class="flag-box"></div>' +
         '<div class="card-content">' +
           '<div class="card-header">' +
-            '<h2>' + c.name + '</h2>' +
+            '<h2></h2>' +
             '<div style="display:flex; gap: 6px; align-items:center;">' +
-              countBadge +
-              vpnBadge +
+              '<span class="badge count-badge"></span>' +
+              '<span class="badge vpn-badge"></span>' +
             '</div>' +
           '</div>' +
-          '<p class="desc">' + c.description + '</p>' +
+          '<p class="desc"></p>' +
           '<div class="btns">' +
-            ((location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1') ? 
-              '<a class="btn" href="' + stremio + '">Install in Stremio</a>' +
-              '<a class="btn alt" target="_blank" rel="noopener" href="' + web + '">Install via Stremio Web</a>' : '') +
+            ((location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1') ?
+              '<a class="btn install-stremio">Install in Stremio</a>' +
+              '<a class="btn alt install-web" target="_blank" rel="noopener">Install via Stremio Web</a>' : '') +
             '<button class="btn alt copy-btn" type="button">Copy Link</button>' +
           '</div>' +
-          '<code class="url-display">' + url + '</code>' +
+          '<code class="url-display"></code>' +
         '</div>';
+
+      card.querySelector('.flag-box').textContent = c.flag;
+      card.querySelector('h2').textContent = c.name;
+      card.querySelector('.count-badge').textContent = countText;
+      var vpnEl = card.querySelector('.vpn-badge');
+      vpnEl.textContent = vpnText;
+      if (c.vpn_required) vpnEl.classList.add('vpn');
+      else if (c.catalog_type) { vpnEl.style.background = '#203828'; vpnEl.style.color = '#7ef5b8'; }
+      card.querySelector('.desc').textContent = c.description;
+      card.querySelector('.url-display').textContent = url;
+      var stremioLink = card.querySelector('.install-stremio');
+      if (stremioLink) stremioLink.href = stremio;
+      var webLink = card.querySelector('.install-web');
+      if (webLink) webLink.href = web;
 
       card.querySelector('.copy-btn').onclick = function(e) {
         navigator.clipboard.writeText(url).then(function() {

@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://eu1.servers10.com:8081/8032/index.m3u8","name":"iptv-org","title":"TV Campane 1"},{"url":"https://eu1.servers10.com:8081/8032/index.m3u8","name":"iptv-org (browser)","title":"TV Campane 1\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

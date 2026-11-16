@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://cloud.tvomix.com/KPOPMIX/index.m3u8","name":"iptv-org","title":"Kpop Mix"},{"url":"https://cloud.tvomix.com/KPOPMIX/index.m3u8","name":"iptv-org (browser)","title":"Kpop Mix\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

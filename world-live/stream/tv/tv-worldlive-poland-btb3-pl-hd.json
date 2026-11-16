@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://emisja3.btb.j00r.us/iptv/session/3/live.m3u8","name":"iptv-org","title":"BTB 3"},{"url":"https://emisja3.btb.j00r.us/iptv/session/3/live.m3u8","name":"iptv-org (browser)","title":"BTB 3\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://ncdn.telewebion.ir/mostanad/live/playlist.m3u8","name":"iptv-org","title":"IRIB Mostanad"},{"url":"https://ncdn.telewebion.ir/mostanad/live/playlist.m3u8","name":"iptv-org (browser)","title":"IRIB Mostanad\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

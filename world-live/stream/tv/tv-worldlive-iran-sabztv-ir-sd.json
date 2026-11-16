@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://ncdn.telewebion.ir/sabz/live/playlist.m3u8","name":"iptv-org","title":"Sabz TV"},{"url":"https://ncdn.telewebion.ir/sabz/live/playlist.m3u8","name":"iptv-org (browser)","title":"Sabz TV\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

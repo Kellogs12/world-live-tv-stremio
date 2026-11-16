@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://redirector.dps.live/hls/pucontv/playlist.m3u8","name":"iptv-org","title":"Pucon TV"},{"url":"https://redirector.dps.live/hls/pucontv/playlist.m3u8","name":"iptv-org (browser)","title":"Pucon TV\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

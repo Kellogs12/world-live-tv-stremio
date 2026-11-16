@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://rpn.bozztv.com/dvrfl03/iipctv/index.m3u8","name":"iptv-org","title":"IIPC TV"},{"url":"https://rpn.bozztv.com/dvrfl03/iipctv/index.m3u8","name":"iptv-org (browser)","title":"IIPC TV\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

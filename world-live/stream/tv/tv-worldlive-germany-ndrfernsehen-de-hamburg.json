@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://mcdn.ndr.de/ndr/hls/ndr_fs/ndr_hh/master.m3u8","name":"iptv-org","title":"NDR Fernsehen"},{"url":"https://mcdn.ndr.de/ndr/hls/ndr_fs/ndr_hh/master.m3u8","name":"iptv-org (browser)","title":"NDR Fernsehen\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

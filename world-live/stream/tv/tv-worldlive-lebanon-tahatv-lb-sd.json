@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://stream.starmenajo.com/hls/app/live/ts:fhd.m3u8","name":"iptv-org","title":"Taha TV"},{"url":"https://stream.starmenajo.com/hls/app/live/ts:fhd.m3u8","name":"iptv-org (browser)","title":"Taha TV\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

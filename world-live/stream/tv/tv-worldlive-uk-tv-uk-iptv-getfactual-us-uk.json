@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://d1nhni5l2n8hjt.cloudfront.net/gf.m3u8","name":"iptv-org","title":"Get.factual"},{"url":"https://d1nhni5l2n8hjt.cloudfront.net/gf.m3u8","name":"iptv-org (browser)","title":"Get.factual\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

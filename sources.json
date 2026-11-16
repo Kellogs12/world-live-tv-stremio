@@ -12,6 +12,11 @@
           "url": "https://www.apsattv.com/xumo.m3u",
           "catalog": "us-xumo",
           "type": "xumo"
+        },
+        {
+          "url": "https://iptv-org.github.io/iptv/countries/us.m3u",
+          "catalog": "us-iptv",
+          "type": "iptv_org"
         }
       ],
       "catalogs": [
@@ -22,6 +27,10 @@
         {
           "id": "us-xumo",
           "name": "Xumo Free Live TV"
+        },
+        {
+          "id": "us-iptv",
+          "name": "US Live TV (iptv-org)"
         }
       ],
       "fallback_channels": [
@@ -184,6 +193,11 @@
           "url": "https://www.apsattv.com/ssungaus.m3u",
           "catalog": "au-samsung",
           "type": "samsung"
+        },
+        {
+          "url": "https://iptv-org.github.io/iptv/countries/au.m3u",
+          "catalog": "au-iptv",
+          "type": "iptv_org"
         }
       ],
       "catalogs": [
@@ -198,6 +212,10 @@
         {
           "id": "au-samsung",
           "name": "Samsung TV Plus (AU)"
+        },
+        {
+          "id": "au-iptv",
+          "name": "Australian Live TV (iptv-org)"
         }
       ],
       "fallback_channels": []
@@ -214,6 +232,11 @@
           "url": "https://www.apsattv.com/rakuten_uk.m3u",
           "catalog": "uk-rakuten",
           "type": "generic"
+        },
+        {
+          "url": "https://iptv-org.github.io/iptv/countries/uk.m3u",
+          "catalog": "uk-iptv",
+          "type": "iptv_org"
         }
       ],
       "catalogs": [
@@ -224,6 +247,10 @@
         {
           "id": "uk-rakuten",
           "name": "Rakuten TV (UK)"
+        },
+        {
+          "id": "uk-iptv",
+          "name": "UK Live TV (iptv-org)"
         }
       ],
       "fallback_channels": [
@@ -278,11 +305,21 @@
       "region": "Americas",
       "description": "Canadian Live TV, News, and Featured Live Channels.",
       "vpn_required": false,
-      "m3u_sources": [],
+      "m3u_sources": [
+        {
+          "url": "https://iptv-org.github.io/iptv/countries/ca.m3u",
+          "catalog": "ca-iptv",
+          "type": "iptv_org"
+        }
+      ],
       "catalogs": [
         {
           "id": "ca-news",
           "name": "News & Featured"
+        },
+        {
+          "id": "ca-iptv",
+          "name": "Canada Live TV (iptv-org)"
         }
       ],
       "fallback_channels": [
@@ -328,12 +365,21 @@
           "url": "https://i.mjh.nz/nz/raw-tv.m3u8",
           "catalog": "nz-fta",
           "type": "mjh_nz"
+        },
+        {
+          "url": "https://iptv-org.github.io/iptv/countries/nz.m3u",
+          "catalog": "nz-iptv",
+          "type": "iptv_org"
         }
       ],
       "catalogs": [
         {
           "id": "nz-fta",
           "name": "New Zealand Freeview"
+        },
+        {
+          "id": "nz-iptv",
+          "name": "NZ Live TV (iptv-org)"
         }
       ],
       "fallback_channels": []
@@ -345,7 +391,13 @@
       "region": "Global",
       "description": "24/7 World News, Weather, and Sports: CBS News, NBC News, ABC News, BBC News, Sky News, Al Jazeera, DW, France 24, Euronews, Bloomberg, Red Bull TV.",
       "vpn_required": false,
-      "m3u_sources": [],
+      "m3u_sources": [
+        {
+          "url": "https://iptv-org.github.io/iptv/categories/news.m3u",
+          "catalog": "global-news",
+          "type": "iptv_org"
+        }
+      ],
       "catalogs": [
         {
           "id": "global-news",
@@ -527,7 +579,13 @@
       "region": "Sports",
       "description": "Priority Live Sports: Formula 1 & Motorsports, Boxing, UFC & MMA, Soccer (FIFA+, beIN, CBS Golazo), NFL & American Football, NBA Basketball, MLB Baseball, Aussie Rules (7AFL, Channel 7 Melbourne, 7mate), Golf, Tennis, and Cricket.",
       "vpn_required": false,
-      "m3u_sources": [],
+      "m3u_sources": [
+        {
+          "url": "https://iptv-org.github.io/iptv/categories/sports.m3u",
+          "catalog": "sports-iptv",
+          "type": "iptv_org"
+        }
+      ],
       "catalogs": [
         {
           "id": "sports-motorsport-f1",
@@ -548,6 +606,10 @@
         {
           "id": "sports-soccer-intl",
           "name": "Soccer, Golf & International Sports"
+        },
+        {
+          "id": "sports-iptv",
+          "name": "Live Sports Channels (iptv-org)"
         }
       ],
       "fallback_channels": [
@@ -837,36 +899,156 @@
           "library-card"
         ],
         "featured_blocks": [
-          {"channel": "saturday-morning", "index": 75, "prefix": "Kids' WB VHS"},
-          {"channel": "saturday-morning", "index": 76, "prefix": "Kids' WB VHS"},
-          {"channel": "latchkey-tv", "index": 84, "prefix": "Cartoon Network VHS"},
-          {"channel": "latchkey-tv", "index": 85, "prefix": "Cartoon Network VHS"},
-          {"channel": "latchkey-tv", "index": 90, "prefix": "Cartoon Network VHS"},
-          {"channel": "latchkey-tv", "index": 95, "prefix": "Cartoon Network VHS"},
-          {"channel": "saturday-morning", "index": 88, "prefix": "Kids' WB VHS"},
-          {"channel": "saturday-morning", "index": 91, "prefix": "Kids' WB VHS"},
-          {"channel": "latchkey-tv", "index": 27, "prefix": "Cartoon Network VHS"},
-          {"channel": "latchkey-tv", "index": 32, "prefix": "Cartoon Network VHS"},
-          {"channel": "latchkey-tv", "index": 37, "prefix": "Cartoon Network VHS"},
-          {"channel": "latchkey-tv", "index": 67, "prefix": "Cartoon Network VHS"},
-          {"channel": "latchkey-tv", "index": 72, "prefix": "Cartoon Network VHS"},
-          {"channel": "latchkey-tv", "index": 75, "prefix": "Cartoon Network VHS"},
-          {"channel": "latchkey-tv", "index": 86, "prefix": "Boomerang & CN VHS"},
-          {"channel": "latchkey-tv", "index": 9, "prefix": "Nickelodeon VHS"},
-          {"channel": "latchkey-tv", "index": 40, "prefix": "Nickelodeon VHS"},
-          {"channel": "latchkey-tv", "index": 46, "prefix": "Nickelodeon VHS"},
-          {"channel": "latchkey-tv", "index": 66, "prefix": "Nickelodeon VHS"},
-          {"channel": "latchkey-tv", "index": 80, "prefix": "Nicktoons VHS"},
-          {"channel": "latchkey-tv", "index": 3, "prefix": "Disney Afternoon VHS"},
-          {"channel": "latchkey-tv", "index": 20, "prefix": "Disney Afternoon VHS"},
-          {"channel": "latchkey-tv", "index": 41, "prefix": "Toon Disney VHS"},
-          {"channel": "saturday-morning", "index": 7, "prefix": "Saturday Morning VHS"},
-          {"channel": "saturday-morning", "index": 47, "prefix": "Fox Kids VHS"},
-          {"channel": "saturday-morning", "index": 53, "prefix": "Fox Kids VHS"},
-          {"channel": "saturday-morning", "index": 102, "prefix": "Saturday Morning VHS"},
-          {"channel": "late-nite-swimclub", "index": 0, "prefix": "Adult Swim VHS"},
-          {"channel": "late-nite-swimclub", "index": 10, "prefix": "Adult Swim VHS"},
-          {"channel": "late-nite-swimclub", "index": 19, "prefix": "Adult Swim VHS"}
+          {
+            "channel": "saturday-morning",
+            "index": 75,
+            "prefix": "Kids' WB VHS"
+          },
+          {
+            "channel": "saturday-morning",
+            "index": 76,
+            "prefix": "Kids' WB VHS"
+          },
+          {
+            "channel": "latchkey-tv",
+            "index": 84,
+            "prefix": "Cartoon Network VHS"
+          },
+          {
+            "channel": "latchkey-tv",
+            "index": 85,
+            "prefix": "Cartoon Network VHS"
+          },
+          {
+            "channel": "latchkey-tv",
+            "index": 90,
+            "prefix": "Cartoon Network VHS"
+          },
+          {
+            "channel": "latchkey-tv",
+            "index": 95,
+            "prefix": "Cartoon Network VHS"
+          },
+          {
+            "channel": "saturday-morning",
+            "index": 88,
+            "prefix": "Kids' WB VHS"
+          },
+          {
+            "channel": "saturday-morning",
+            "index": 91,
+            "prefix": "Kids' WB VHS"
+          },
+          {
+            "channel": "latchkey-tv",
+            "index": 27,
+            "prefix": "Cartoon Network VHS"
+          },
+          {
+            "channel": "latchkey-tv",
+            "index": 32,
+            "prefix": "Cartoon Network VHS"
+          },
+          {
+            "channel": "latchkey-tv",
+            "index": 37,
+            "prefix": "Cartoon Network VHS"
+          },
+          {
+            "channel": "latchkey-tv",
+            "index": 67,
+            "prefix": "Cartoon Network VHS"
+          },
+          {
+            "channel": "latchkey-tv",
+            "index": 72,
+            "prefix": "Cartoon Network VHS"
+          },
+          {
+            "channel": "latchkey-tv",
+            "index": 75,
+            "prefix": "Cartoon Network VHS"
+          },
+          {
+            "channel": "latchkey-tv",
+            "index": 86,
+            "prefix": "Boomerang & CN VHS"
+          },
+          {
+            "channel": "latchkey-tv",
+            "index": 9,
+            "prefix": "Nickelodeon VHS"
+          },
+          {
+            "channel": "latchkey-tv",
+            "index": 40,
+            "prefix": "Nickelodeon VHS"
+          },
+          {
+            "channel": "latchkey-tv",
+            "index": 46,
+            "prefix": "Nickelodeon VHS"
+          },
+          {
+            "channel": "latchkey-tv",
+            "index": 66,
+            "prefix": "Nickelodeon VHS"
+          },
+          {
+            "channel": "latchkey-tv",
+            "index": 80,
+            "prefix": "Nicktoons VHS"
+          },
+          {
+            "channel": "latchkey-tv",
+            "index": 3,
+            "prefix": "Disney Afternoon VHS"
+          },
+          {
+            "channel": "latchkey-tv",
+            "index": 20,
+            "prefix": "Disney Afternoon VHS"
+          },
+          {
+            "channel": "latchkey-tv",
+            "index": 41,
+            "prefix": "Toon Disney VHS"
+          },
+          {
+            "channel": "saturday-morning",
+            "index": 7,
+            "prefix": "Saturday Morning VHS"
+          },
+          {
+            "channel": "saturday-morning",
+            "index": 47,
+            "prefix": "Fox Kids VHS"
+          },
+          {
+            "channel": "saturday-morning",
+            "index": 53,
+            "prefix": "Fox Kids VHS"
+          },
+          {
+            "channel": "saturday-morning",
+            "index": 102,
+            "prefix": "Saturday Morning VHS"
+          },
+          {
+            "channel": "late-nite-swimclub",
+            "index": 0,
+            "prefix": "Adult Swim VHS"
+          },
+          {
+            "channel": "late-nite-swimclub",
+            "index": 10,
+            "prefix": "Adult Swim VHS"
+          },
+          {
+            "channel": "late-nite-swimclub",
+            "index": 19,
+            "prefix": "Adult Swim VHS"
+          }
         ]
       },
       "m3u_sources": [],
@@ -901,7 +1083,10 @@
           "id": "toonami-aftermath-est",
           "name": "Toonami Aftermath EST (Classic Cartoon Network)",
           "catalog": "cartoons-toonertia",
-          "catalogs": ["cartoons-toonertia", "cartoons-live-networks"],
+          "catalogs": [
+            "cartoons-toonertia",
+            "cartoons-live-networks"
+          ],
           "logo": "https://spelunkr.tv/og/toonertia.png",
           "description": "Classic Cartoon Network & Toonami 24/7 broadcast (Eastern Time). Complete with 90s/00s TOM bumpers, promos, DBZ, Sailor Moon, Gundam Wing & Outlaw Star.",
           "url": "http://api.toonamiaftermath.com:3000/est/playlist.m3u8"
@@ -910,7 +1095,10 @@
           "id": "toonami-aftermath-pst",
           "name": "Toonami Aftermath PST (Classic Cartoon Network)",
           "catalog": "cartoons-toonertia",
-          "catalogs": ["cartoons-toonertia", "cartoons-live-networks"],
+          "catalogs": [
+            "cartoons-toonertia",
+            "cartoons-live-networks"
+          ],
           "logo": "https://spelunkr.tv/og/toonertia.png",
           "description": "Classic Cartoon Network & Toonami 24/7 broadcast (Pacific Time). Complete with 90s/00s TOM bumpers, promos, anime marathons, and retro commercial breaks.",
           "url": "http://api.toonamiaftermath.com:3000/pst/playlist.m3u8"
@@ -919,7 +1107,10 @@
           "id": "toonami-aftermath-movies",
           "name": "Toonami Aftermath Movies 24/7",
           "catalog": "cartoons-toonertia",
-          "catalogs": ["cartoons-toonertia", "cartoons-live-networks"],
+          "catalogs": [
+            "cartoons-toonertia",
+            "cartoons-live-networks"
+          ],
           "logo": "https://spelunkr.tv/og/toonertia.png",
           "description": "24/7 Feature-Length Anime & Animated Movies. Curated retro cinematic block from the golden era of Toonami & Adult Swim.",
           "url": "http://api.toonamiaftermath.com:3000/movies/playlist.m3u8"
@@ -928,7 +1119,10 @@
           "id": "retrocrush-live",
           "name": "RetroCrush (Classic Anime 24/7)",
           "catalog": "cartoons-live-networks",
-          "catalogs": ["cartoons-live-networks", "cartoons-classics"],
+          "catalogs": [
+            "cartoons-live-networks",
+            "cartoons-classics"
+          ],
           "logo": "https://images.pluto.tv/channels/611e6a9b4bb5790007a6f0f8/logo.png",
           "description": "Official 24/7 golden-age anime network: City Hunter, Great Teacher Onizuka, Street Fighter II, Space Adventure Cobra, and vintage classics.",
           "url": "https://linear-899.frequency.stream/dist/cineverse/899/hls/master/playlist.m3u8"
@@ -937,7 +1131,10 @@
           "id": "cartoon-network-hd",
           "name": "Cartoon Network HD (English)",
           "catalog": "cartoons-live-networks",
-          "catalogs": ["cartoons-live-networks", "cartoons-cn-disney"],
+          "catalogs": [
+            "cartoons-live-networks",
+            "cartoons-cn-disney"
+          ],
           "logo": "https://images.pluto.tv/channels/5ca673e0d0bd6c2689c94ce3/logo.png",
           "url": "https://cdn4.skygo.mn/live/disk1/Cartoon_Network/HLSv3-FTA/Cartoon_Network.m3u8"
         },
@@ -945,7 +1142,10 @@
           "id": "cartoon-network-sd",
           "name": "Cartoon Network SD (English)",
           "catalog": "cartoons-live-networks",
-          "catalogs": ["cartoons-live-networks", "cartoons-cn-disney"],
+          "catalogs": [
+            "cartoons-live-networks",
+            "cartoons-cn-disney"
+          ],
           "logo": "https://images.pluto.tv/channels/5ca673e0d0bd6c2689c94ce3/logo.png",
           "url": "https://cdn4.skygo.mn/live/disk1/Cartoon_Network/HLSv3-FTA/Cartoon_Network-avc1_2000000=13-mp4a_256000_eng=6.m3u8"
         },
@@ -953,7 +1153,10 @@
           "id": "disney-channel",
           "name": "Disney Channel & Toon Disney (English)",
           "catalog": "cartoons-live-networks",
-          "catalogs": ["cartoons-live-networks", "cartoons-cn-disney"],
+          "catalogs": [
+            "cartoons-live-networks",
+            "cartoons-cn-disney"
+          ],
           "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Disney_Channel_logo_%282014-present%29.svg/512px-Disney_Channel_logo_%282014-present%29.svg.png",
           "url": "https://archive.org/download/ocwoc-020c-chip-n-dale-rescue-rangers-x-3-bonkers-toon-disney-2003/OCWOC%20020c%20-%20Chip%20%27n%20Dale%20Rescue%20Rangers%20%28x3%29%2C%20Bonkers%20%28Toon%20Disney%2C%202003%29.ia.mp4"
         },
@@ -961,7 +1164,10 @@
           "id": "9go-cartoons",
           "name": "9Go! (Kids & Cartoons TV)",
           "catalog": "cartoons-live-networks",
-          "catalogs": ["cartoons-live-networks", "cartoons-cn-disney"],
+          "catalogs": [
+            "cartoons-live-networks",
+            "cartoons-cn-disney"
+          ],
           "logo": "https://imageresizer.static9.net.au/fcTwzkAJT4q81emfp2kYkgoxlDA=/768x0/https%3A%2F%2Fvms-tv-images-prod.s3-ap-southeast-2.amazonaws.com%2F2024%2F03%2F574470%2F9go.png",
           "url": "https://i.mjh.nz/.r/go-vic.m3u8"
         },
@@ -969,7 +1175,10 @@
           "id": "spongebob-247",
           "name": "SpongeBob SquarePants (24/7)",
           "catalog": "cartoons-live-networks",
-          "catalogs": ["cartoons-live-networks", "cartoons-nick"],
+          "catalogs": [
+            "cartoons-live-networks",
+            "cartoons-nick"
+          ],
           "logo": "https://10.com.au/ip/s3/2024/06/04/ecc540be818b29d753e036e046028a.png",
           "url": "https://i.mjh.nz/.r/10-spongebobsquarepants.m3u8"
         },
@@ -977,7 +1186,10 @@
           "id": "nickelodeon-live",
           "name": "Nickelodeon Live (English)",
           "catalog": "cartoons-live-networks",
-          "catalogs": ["cartoons-live-networks", "cartoons-nick"],
+          "catalogs": [
+            "cartoons-live-networks",
+            "cartoons-nick"
+          ],
           "logo": "https://10play.com.au/ip/s3/2023/07/31/dc4873abc5ba0fde04b59a78c8.png",
           "url": "https://jmp2.uk/plu-5ca673e0d0bd6c2689c94ce3.m3u8"
         },
@@ -985,7 +1197,10 @@
           "id": "nicktoons",
           "name": "NickToons",
           "catalog": "cartoons-live-networks",
-          "catalogs": ["cartoons-live-networks", "cartoons-nick"],
+          "catalogs": [
+            "cartoons-live-networks",
+            "cartoons-nick"
+          ],
           "logo": "https://10.com.au/ip/s3/2024/06/04/f2f7c4166d8450351c2ae5d8b28c.png",
           "url": "https://i.mjh.nz/.r/10-nicktoons.m3u8"
         },
@@ -993,7 +1208,10 @@
           "id": "nicktoons-90s",
           "name": "NickToons 90s",
           "catalog": "cartoons-live-networks",
-          "catalogs": ["cartoons-live-networks", "cartoons-nick"],
+          "catalogs": [
+            "cartoons-live-networks",
+            "cartoons-nick"
+          ],
           "logo": "https://10.com.au/ip/s3/2024/06/07/a1aaf63737e7d2076759.png",
           "url": "https://i.mjh.nz/.r/10-nicktoons-90s.m3u8"
         },
@@ -1001,7 +1219,10 @@
           "id": "nick-jr-club",
           "name": "Nick Jr Club",
           "catalog": "cartoons-live-networks",
-          "catalogs": ["cartoons-live-networks", "cartoons-nick"],
+          "catalogs": [
+            "cartoons-live-networks",
+            "cartoons-nick"
+          ],
           "logo": "https://10.com.au/ip/s3/2024/06/06/d14509f218578984e3a6f6f34f0ee12c.png",
           "url": "https://i.mjh.nz/.r/10-nick-jr.m3u8"
         },
@@ -1009,7 +1230,10 @@
           "id": "nickteen",
           "name": "NickTeen",
           "catalog": "cartoons-live-networks",
-          "catalogs": ["cartoons-live-networks", "cartoons-nick"],
+          "catalogs": [
+            "cartoons-live-networks",
+            "cartoons-nick"
+          ],
           "logo": "https://10.com.au/ip/s3/2024/06/04/ecc540be818b29d753e036e046028a.png",
           "url": "https://i.mjh.nz/.r/10-nickteen.m3u8"
         },
@@ -1017,7 +1241,10 @@
           "id": "cartoon-classics",
           "name": "Cartoon Classics (Rubber Hose 24/7)",
           "catalog": "cartoons-live-networks",
-          "catalogs": ["cartoons-live-networks", "cartoons-classics"],
+          "catalogs": [
+            "cartoons-live-networks",
+            "cartoons-classics"
+          ],
           "logo": "https://spelunkr.tv/og/rubber-hose.png",
           "url": "https://archive.org/download/popeye_patriotic_popeye/popeye_patriotic_popeye_512kb.mp4"
         },
@@ -1025,7 +1252,10 @@
           "id": "transformers-tv",
           "name": "Transformers TV",
           "catalog": "cartoons-live-networks",
-          "catalogs": ["cartoons-live-networks", "cartoons-classics"],
+          "catalogs": [
+            "cartoons-live-networks",
+            "cartoons-classics"
+          ],
           "logo": "https://image.xumo.com/v1/channels/channel/99951443/300x300.webp?type=color_onBlack",
           "url": "https://dbrb49pjoymg4.cloudfront.net/10001/99951443/hls/8-9-6767.m3u8?ads.xumo_channelId=99951443"
         },
@@ -1033,7 +1263,10 @@
           "id": "power-rangers",
           "name": "Power Rangers",
           "catalog": "cartoons-live-networks",
-          "catalogs": ["cartoons-live-networks", "cartoons-classics"],
+          "catalogs": [
+            "cartoons-live-networks",
+            "cartoons-classics"
+          ],
           "logo": "https://image.xumo.com/v1/channels/channel/99951441/300x300.webp?type=color_onBlack",
           "url": "https://dbrb49pjoymg4.cloudfront.net/10001/99951441/hls/8-9-6768.m3u8?ads.xumo_channelId=99951441"
         },
@@ -1041,7 +1274,10 @@
           "id": "kartoon-channel",
           "name": "Kartoon Channel!",
           "catalog": "cartoons-live-networks",
-          "catalogs": ["cartoons-live-networks", "cartoons-classics"],
+          "catalogs": [
+            "cartoons-live-networks",
+            "cartoons-classics"
+          ],
           "logo": "",
           "url": "https://lightning-fnf-samsungaus.amagi.tv/playlist.m3u8"
         },
@@ -1049,7 +1285,10 @@
           "id": "toon-goggles",
           "name": "Toon Goggles",
           "catalog": "cartoons-live-networks",
-          "catalogs": ["cartoons-live-networks", "cartoons-classics"],
+          "catalogs": [
+            "cartoons-live-networks",
+            "cartoons-classics"
+          ],
           "logo": "https://image.xumo.com/v1/channels/channel/99991268/300x300.webp?type=color_onBlack",
           "url": "https://amg01329-otterainc-toongoggles-samsungau-ad-4c.amagi.tv/playlist/amg01329-otterainc-toongoggles-samsungau/playlist.m3u8"
         },
@@ -1057,7 +1296,10 @@
           "id": "abc-kids",
           "name": "ABC Kids",
           "catalog": "cartoons-live-networks",
-          "catalogs": ["cartoons-live-networks", "cartoons-classics"],
+          "catalogs": [
+            "cartoons-live-networks",
+            "cartoons-classics"
+          ],
           "logo": "https://i.mjh.nz/.images/abc-kids.png",
           "url": "https://c.mjh.nz/abc-kids.m3u8"
         },
@@ -1065,7 +1307,10 @@
           "id": "adult-animation",
           "name": "Adult Animation",
           "catalog": "cartoons-live-networks",
-          "catalogs": ["cartoons-live-networks", "cartoons-classics"],
+          "catalogs": [
+            "cartoons-live-networks",
+            "cartoons-classics"
+          ],
           "logo": "",
           "url": "https://i.mjh.nz/.r/10-adultanimation.m3u8"
         },
@@ -1073,7 +1318,10 @@
           "id": "xumo-kids-tv",
           "name": "PBS Kids 24/7 (Live English)",
           "catalog": "cartoons-live-networks",
-          "catalogs": ["cartoons-live-networks", "cartoons-classics"],
+          "catalogs": [
+            "cartoons-live-networks",
+            "cartoons-classics"
+          ],
           "logo": "https://i.mjh.nz/.images/pbs-kids.png",
           "url": "https://livestream.pbskids.org/out/v1/14507d931bbe48a69287e4850e53443c/est.m3u8"
         }
@@ -1086,7 +1334,20 @@
       "region": "Novelas",
       "description": "24/7 Telenovelas, Latin dramas, Telemundo, Univision hits, and international series.",
       "vpn_required": false,
-      "m3u_sources": [],
+      "m3u_sources": [
+        {
+          "url": "https://iptv-org.github.io/iptv/languages/spa.m3u",
+          "catalog": "novelas-telemundo-univision",
+          "type": "iptv_org",
+          "name_filter": "(?i)(telemundo|univision)"
+        },
+        {
+          "url": "https://iptv-org.github.io/iptv/languages/spa.m3u",
+          "catalog": "novelas-internacionales",
+          "type": "iptv_org",
+          "name_filter": "(?i)(novela|telenovela|telemundo|univision|las estrellas|tlnovelas|pasiones|coraz[oó]n|romance|drama)"
+        }
+      ],
       "catalogs": [
         {
           "id": "novelas-clasicas",

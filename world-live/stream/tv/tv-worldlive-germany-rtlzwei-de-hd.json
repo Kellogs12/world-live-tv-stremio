@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://s6.hopslan.com/rtl2q/index.m3u8","name":"iptv-org","title":"RTL Zwei HD"},{"url":"https://s6.hopslan.com/rtl2q/index.m3u8","name":"iptv-org (browser)","title":"RTL Zwei HD\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

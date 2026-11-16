@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://cnl-cl.otteravision.com/cnl/cl_h265/cl_h265.m3u8","name":"iptv-org","title":"L!ke"},{"url":"https://cnl-cl.otteravision.com/cnl/cl_h265/cl_h265.m3u8","name":"iptv-org (browser)","title":"L!ke\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

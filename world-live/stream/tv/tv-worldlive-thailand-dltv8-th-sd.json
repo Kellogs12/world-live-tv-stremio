@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://cdn-live.dltv.ac.th/dltv08.m3u8","name":"iptv-org","title":"DLTV 8"},{"url":"https://cdn-live.dltv.ac.th/dltv08.m3u8","name":"iptv-org (browser)","title":"DLTV 8\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://dbmtv.vedge.infomaniak.com/livecast/dbmtv/playlist.m3u8","name":"iptv-org","title":"DBM TV"},{"url":"https://dbmtv.vedge.infomaniak.com/livecast/dbmtv/playlist.m3u8","name":"iptv-org (browser)","title":"DBM TV\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://zweiapp.b-cdn.net/1080p/index.m3u8","name":"iptv-org","title":"Zwei Music Television"},{"url":"https://zweiapp.b-cdn.net/1080p/index.m3u8","name":"iptv-org (browser)","title":"Zwei Music Television\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

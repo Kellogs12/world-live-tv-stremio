@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://fontvlive.mediacdn.ru/stream/fontv/playlist.m3u8","name":"iptv-org","title":"FON TV"},{"url":"https://fontvlive.mediacdn.ru/stream/fontv/playlist.m3u8","name":"iptv-org (browser)","title":"FON TV\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

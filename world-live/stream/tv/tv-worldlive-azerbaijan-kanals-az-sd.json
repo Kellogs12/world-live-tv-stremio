@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://lives.atv.az:5443/KANAL-S/streams/kanals.m3u8","name":"iptv-org","title":"Kanal S"},{"url":"https://lives.atv.az:5443/KANAL-S/streams/kanals.m3u8","name":"iptv-org (browser)","title":"Kanal S\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

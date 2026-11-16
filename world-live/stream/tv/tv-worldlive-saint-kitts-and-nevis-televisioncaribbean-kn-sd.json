@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://live.kingdom-tv.com:3545/stream/play.m3u8","name":"iptv-org","title":"Television Caribbean"},{"url":"https://live.kingdom-tv.com:3545/stream/play.m3u8","name":"iptv-org (browser)","title":"Television Caribbean\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

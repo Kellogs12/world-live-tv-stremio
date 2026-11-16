@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://streaming.najah.edu:8443/hls/AlNajah.m3u8","name":"iptv-org","title":"Al Najah News"},{"url":"https://streaming.najah.edu:8443/hls/AlNajah.m3u8","name":"iptv-org (browser)","title":"Al Najah News\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

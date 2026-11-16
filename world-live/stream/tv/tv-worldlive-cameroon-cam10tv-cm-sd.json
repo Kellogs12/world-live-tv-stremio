@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://stream.it-innov.com/cam10tv/index.m3u8","name":"iptv-org","title":"CAM 10 TV"},{"url":"https://stream.it-innov.com/cam10tv/index.m3u8","name":"iptv-org (browser)","title":"CAM 10 TV\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

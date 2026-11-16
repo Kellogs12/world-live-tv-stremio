@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://cdn-dvr.ntv.ru/Shef/index.m3u8","name":"iptv-org","title":"Shef"},{"url":"https://cdn-dvr.ntv.ru/Shef/index.m3u8","name":"iptv-org (browser)","title":"Shef\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

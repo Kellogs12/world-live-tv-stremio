@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://stream1.stou.ac.th/live/stou_720p/playlist.m3u8","name":"iptv-org","title":"STOU Channel"},{"url":"https://stream1.stou.ac.th/live/stou_720p/playlist.m3u8","name":"iptv-org (browser)","title":"STOU Channel\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

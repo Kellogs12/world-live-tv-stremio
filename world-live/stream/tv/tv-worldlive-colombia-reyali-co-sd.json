@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://eu1.servers10.com:8081/8090/index.m3u8","name":"iptv-org","title":"Reyali (614p)"},{"url":"https://eu1.servers10.com:8081/8090/index.m3u8","name":"iptv-org (browser)","title":"Reyali (614p)\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

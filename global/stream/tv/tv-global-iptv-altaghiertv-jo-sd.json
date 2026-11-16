@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://jmc-live.ercdn.net/altaghier/altaghier.m3u8","name":"iptv-org","title":"Altaghier TV"},{"url":"https://jmc-live.ercdn.net/altaghier/altaghier.m3u8","name":"iptv-org (browser)","title":"Altaghier TV\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

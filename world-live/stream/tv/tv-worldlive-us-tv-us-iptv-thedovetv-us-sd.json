@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://thedovetv.bozztv.com/thedovetv/thedovetv/index.m3u8","name":"iptv-org","title":"theDove TV"},{"url":"https://thedovetv.bozztv.com/thedovetv/thedovetv/index.m3u8","name":"iptv-org (browser)","title":"theDove TV\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://tv-e-okul01.medya.trt.com.tr/master.m3u8","name":"iptv-org","title":"TRT EBA"},{"url":"https://tv-e-okul01.medya.trt.com.tr/master.m3u8","name":"iptv-org (browser)","title":"TRT EBA\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

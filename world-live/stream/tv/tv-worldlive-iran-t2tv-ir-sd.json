@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://t2hls.wns.live/hls/stream.m3u8","name":"iptv-org","title":"T2 TV"},{"url":"https://t2hls.wns.live/hls/stream.m3u8","name":"iptv-org (browser)","title":"T2 TV\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

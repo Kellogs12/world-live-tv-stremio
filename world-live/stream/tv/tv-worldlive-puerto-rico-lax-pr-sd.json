@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://stream.eleden.com/livelax/ngrp:livelax_all/playlist.m3u8","name":"iptv-org","title":"La-X"},{"url":"https://stream.eleden.com/livelax/ngrp:livelax_all/playlist.m3u8","name":"iptv-org (browser)","title":"La-X\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

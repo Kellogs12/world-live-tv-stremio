@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://mediaserver1.castpin.com/hls/taltv/index.m3u8","name":"iptv-org","title":"Tal TV"},{"url":"https://mediaserver1.castpin.com/hls/taltv/index.m3u8","name":"iptv-org (browser)","title":"Tal TV\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://hls1.wtnet.de/noa4/apple/wifi6500.m3u8","name":"iptv-org","title":"noa4 Norderstedt"},{"url":"https://hls1.wtnet.de/noa4/apple/wifi6500.m3u8","name":"iptv-org (browser)","title":"noa4 Norderstedt\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

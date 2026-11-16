@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://rvtv-on-freecast.b-cdn.net/RVTV-on-Freecast/index.m3u8","name":"iptv-org","title":"RVTV"},{"url":"https://rvtv-on-freecast.b-cdn.net/RVTV-on-Freecast/index.m3u8","name":"iptv-org (browser)","title":"RVTV\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

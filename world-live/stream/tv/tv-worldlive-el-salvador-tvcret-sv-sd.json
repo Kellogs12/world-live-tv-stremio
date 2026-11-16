@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://radiocret.net:8082/hls/tvcret.m3u8","name":"iptv-org","title":"TV CRET"},{"url":"https://radiocret.net:8082/hls/tvcret.m3u8","name":"iptv-org (browser)","title":"TV CRET\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

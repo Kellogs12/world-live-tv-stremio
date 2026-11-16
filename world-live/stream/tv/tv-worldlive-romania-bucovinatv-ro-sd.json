@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://www.bucovinatv.ro/proxy/video/playlist.m3u8","name":"iptv-org","title":"Bucovina TV (576i)"},{"url":"https://www.bucovinatv.ro/proxy/video/playlist.m3u8","name":"iptv-org (browser)","title":"Bucovina TV (576i)\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

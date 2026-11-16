@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://us.streaminghd.cl/suramtv/index.m3u8","name":"iptv-org","title":"Suram TV"},{"url":"https://us.streaminghd.cl/suramtv/index.m3u8","name":"iptv-org (browser)","title":"Suram TV\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

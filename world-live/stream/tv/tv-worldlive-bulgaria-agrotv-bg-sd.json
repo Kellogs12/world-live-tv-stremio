@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://restr2.bgtv.bg/agro/hls/agro.m3u8","name":"iptv-org","title":"Agro TV (Bulgaria)"},{"url":"https://restr2.bgtv.bg/agro/hls/agro.m3u8","name":"iptv-org (browser)","title":"Agro TV (Bulgaria)\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

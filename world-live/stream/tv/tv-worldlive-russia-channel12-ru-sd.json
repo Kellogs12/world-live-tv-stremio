@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://12channel.bonus-tv.ru/cdn/12channel/playlist.m3u8","name":"iptv-org","title":"Channel 12"},{"url":"https://12channel.bonus-tv.ru/cdn/12channel/playlist.m3u8","name":"iptv-org (browser)","title":"Channel 12\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

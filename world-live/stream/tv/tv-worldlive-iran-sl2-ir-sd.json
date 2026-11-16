@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://sltwohls.wns.live/hls/stream.m3u8","name":"iptv-org","title":"SL 2"},{"url":"https://sltwohls.wns.live/hls/stream.m3u8","name":"iptv-org (browser)","title":"SL 2\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

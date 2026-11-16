@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://cdn4.yayin.com.tr/kntv/tracks-v1a1/mono.m3u8","name":"iptv-org","title":"KN Music TV"},{"url":"https://cdn4.yayin.com.tr/kntv/tracks-v1a1/mono.m3u8","name":"iptv-org (browser)","title":"KN Music TV\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

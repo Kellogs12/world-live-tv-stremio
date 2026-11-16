@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://s1.tv-nano.com/Magnat_HD_5119705/video.m3u8","name":"iptv-org","title":"Magnat"},{"url":"https://s1.tv-nano.com/Magnat_HD_5119705/video.m3u8","name":"iptv-org (browser)","title":"Magnat\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

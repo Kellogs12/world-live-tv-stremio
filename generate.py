@@ -6,6 +6,7 @@ Reads sources.json, fetches & cleans M3U feeds and Spelunkr TV (spelunkr.tv/toon
 manifests, removes stale files, and builds static Stremio Addons.
 """
 
+import concurrent.futures
 import json
 import os
 import re
@@ -19,8 +20,6 @@ import urllib.error
 
 if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
-
-socket.setdefaulttimeout(5.0)
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 if SCRIPT_DIR not in sys.path:
@@ -48,12 +47,25 @@ def slug(text):
 
 def clean_name(name):
     """Clean channel display names from M3U playlists."""
+    name = re.sub(r'\s*\[[^\]]*(Geo-blocked|Not 24/7)[^\]]*\]', '', name, flags=re.I)
+    name = re.sub(r'\s*\((1080p|720p|576p|540p|480p|360p|240p)\)', '', name, flags=re.I)
     name = re.sub(r'\s+(via\s+\S+\s+)?(temp\s+)?find\b.*$', '', name, flags=re.I)
     name = re.sub(r'\s+via\s+\w+\s+source$', '', name, flags=re.I)
     name = re.sub(r'\s+alt$', '', name, flags=re.I)
     name = re.sub(r'\s+(alt\s+)?geo$', '', name, flags=re.I)
     name = re.sub(r'\s*\((australia|au|us|uk|ca|nz|substitute)\)', '', name, flags=re.I)
     return ' '.join(name.split())
+
+
+def is_excluded_iptv_entry(entry):
+    """Return True if an iptv-org entry is geo-blocked, non-24/7, radio, or explicit NSFW/adult."""
+    raw_name = entry.get("name", "")
+    grp = entry.get("group-title", "")
+    if re.search(r'\[[^\]]*(Geo-blocked|Not 24/7)[^\]]*\]|\bradio\b', raw_name, re.I):
+        return True
+    if re.search(r'\b(xxx|porn|erotica|nsfw|hentai|18\+)\b|\badult\b(?!\s*(swim|animation|edu|learning))', f"{raw_name} {grp}", re.I):
+        return True
+    return False
 
 
 def clean_xumo_url(url):
@@ -64,7 +76,7 @@ def clean_xumo_url(url):
 
 
 def parse_m3u(text):
-    """Return [{'name', 'url', <tvg attributes>}] from an extended M3U playlist."""
+    """Return [{'name', 'url', <tvg attributes>, optional 'http-user-agent'/'http-referrer'}] from an extended M3U playlist."""
     out, info = [], None
     for line in text.splitlines():
         line = line.strip()
@@ -72,6 +84,13 @@ def parse_m3u(text):
             head, _, name = line[8:].partition(',')
             info = dict(re.findall(r'([\w-]+)="([^"]*)"', head))
             info['name'] = ' '.join(name.split())
+        elif line.startswith('#EXTVLCOPT:') and info is not None:
+            opt = line[11:].strip()
+            if '=' in opt:
+                k, _, v = opt.partition('=')
+                k = k.strip().lower()
+                if k in ('http-user-agent', 'http-referrer') and v.strip():
+                    info[k] = v.strip()
         elif line and not line.startswith('#') and info is not None:
             if line.startswith('https://'):
                 info['url'] = line
@@ -81,40 +100,27 @@ def parse_m3u(text):
 
 
 def fetch_m3u(url, timeout=20):
-    """Download and parse an M3U8 playlist."""
+    """Download and parse an M3U8 playlist with strict TLS verification."""
     try:
         ctx = ssl.create_default_context()
         req = urllib.request.Request(
             url,
             headers={'User-Agent': 'Mozilla/5.0 (world-live-tv-stremio builder)'}
         )
-        try:
-            with urllib.request.urlopen(req, timeout=timeout, context=ctx) as resp:
-                content = resp.read().decode('utf-8', errors='replace')
-        except urllib.error.URLError:
-            ctx = ssl._create_unverified_context()
-            with urllib.request.urlopen(req, timeout=timeout, context=ctx) as resp:
-                content = resp.read().decode('utf-8', errors='replace')
+        with urllib.request.urlopen(req, timeout=timeout, context=ctx) as resp:
+            content = resp.read().decode('utf-8', errors='replace')
         return parse_m3u(content)
     except Exception as e:
         print(f"  [Notice] Could not fetch M3U {url}: {e}")
         return []
 
 
-def fetch_json_url(url, timeout=8):
-    """Fetch JSON from a URL with SSL fallback."""
+def fetch_json_url(url, timeout=8, user_agent='Mozilla/5.0 (world-live-tv-stremio builder)'):
+    """Fetch JSON from a URL with strict TLS verification."""
     ctx = ssl.create_default_context()
-    req = urllib.request.Request(
-        url,
-        headers={'User-Agent': 'Mozilla/5.0 (world-live-tv-stremio builder)'}
-    )
-    try:
-        with urllib.request.urlopen(req, timeout=timeout, context=ctx) as resp:
-            return json.loads(resp.read().decode('utf-8'))
-    except urllib.error.URLError:
-        ctx = ssl._create_unverified_context()
-        with urllib.request.urlopen(req, timeout=timeout, context=ctx) as resp:
-            return json.loads(resp.read().decode('utf-8'))
+    req = urllib.request.Request(url, headers={'User-Agent': user_agent})
+    with urllib.request.urlopen(req, timeout=timeout, context=ctx) as resp:
+        return json.loads(resp.read().decode('utf-8'))
 
 
 def build_ia_mp4_url(ia_id, filename):
@@ -211,6 +217,128 @@ def host_resolves(host, cache={}):
     return cache[host]
 
 
+def extract_req_headers(entry):
+    """Build Stremio proxyHeaders.request dict from M3U #EXTVLCOPT fields."""
+    headers = {}
+    if entry.get("http-user-agent"):
+        headers["User-Agent"] = entry["http-user-agent"]
+    if entry.get("http-referrer"):
+        headers["Referer"] = entry["http-referrer"]
+    return headers
+
+
+_STREAM_PROBE_CACHE = {}
+_LOGO_PROBE_CACHE = {}
+
+
+def probe_stream_url(url, req_headers=None, timeout=4.0):
+    """Return True if stream URL responds with HTTP 200 and a valid HLS/DASH manifest."""
+    headers = {"User-Agent": "Mozilla/5.0 (world-live-tv-stremio probe)"}
+    if req_headers:
+        headers.update(req_headers)
+    req = urllib.request.Request(url, headers=headers)
+    try:
+        ctx = ssl.create_default_context()
+        with urllib.request.urlopen(req, timeout=timeout, context=ctx) as resp:
+            if getattr(resp, "status", 200) >= 400:
+                return False
+            chunk = resp.read(512).decode("utf-8", errors="ignore")
+            return "#EXTM3U" in chunk or "<MPD" in chunk
+    except Exception:
+        return False
+
+
+def filter_live_streams(items, max_workers=80):
+    """Concurrently probe M3U entries (cached & deduplicated) and keep reachable HLS/DASH streams."""
+    if not items:
+        return []
+    keys = []
+    uncached = {}
+    for item in items:
+        hdrs = extract_req_headers(item)
+        key = (item["url"], tuple(sorted(hdrs.items())))
+        keys.append(key)
+        if key not in _STREAM_PROBE_CACHE and key not in uncached:
+            uncached[key] = hdrs
+    if uncached:
+        with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as pool:
+            fut_to_key = {
+                pool.submit(probe_stream_url, k[0], hdrs): k
+                for k, hdrs in uncached.items()
+            }
+            for fut in concurrent.futures.as_completed(fut_to_key):
+                k = fut_to_key[fut]
+                try:
+                    _STREAM_PROBE_CACHE[k] = fut.result()
+                except Exception:
+                    _STREAM_PROBE_CACHE[k] = False
+    return [item for item, k in zip(items, keys) if _STREAM_PROBE_CACHE.get(k, False)]
+
+
+def probe_logo_url(url, timeout=3.0):
+    """Return True if an HTTPS logo URL responds cleanly as an image."""
+    if not url or not url.startswith("https://"):
+        return False
+    ctx = ssl.create_default_context()
+    headers = {"User-Agent": "Mozilla/5.0 (world-live-tv-stremio logo check)"}
+    for method in ("HEAD", "GET"):
+        req = urllib.request.Request(url, headers=headers, method=method)
+        try:
+            with urllib.request.urlopen(req, timeout=timeout, context=ctx) as resp:
+                status = getattr(resp, "status", 200)
+                if status >= 400:
+                    return False
+                ctype = (resp.headers.get("Content-Type") or "").lower() if resp.headers else ""
+                if ctype.startswith("image/") or (not ctype and re.search(r'\.(png|jpe?g|webp|svg|gif)(\?|$)', url, re.I)):
+                    return True
+                return False
+        except urllib.error.HTTPError as e:
+            if method == "HEAD" and e.code == 405:
+                continue
+            return False
+        except Exception:
+            return False
+    return False
+
+
+def validate_logos(urls, max_workers=80):
+    """Concurrently validate unique HTTPS logo URLs into _LOGO_PROBE_CACHE."""
+    pending = {u for u in urls if u and u.startswith("https://") and u not in _LOGO_PROBE_CACHE}
+    if not pending:
+        return
+    with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as pool:
+        fut_to_url = {pool.submit(probe_logo_url, u): u for u in pending}
+        for fut in concurrent.futures.as_completed(fut_to_url):
+            u = fut_to_url[fut]
+            try:
+                _LOGO_PROBE_CACHE[u] = fut.result()
+            except Exception:
+                _LOGO_PROBE_CACHE[u] = False
+
+
+def build_stream_entries(ch_name, sources):
+    """Build Stremio stream objects (native + browser HLS) for [(url, label, req_headers)]."""
+    streams = []
+    for idx, (url, label, req_headers) in enumerate(sources):
+        lbl = label if idx == 0 else f"{label} #{idx + 1}"
+        native = {"url": url, "name": lbl, "title": ch_name}
+        if req_headers:
+            native["behaviorHints"] = {"proxyHeaders": {"request": req_headers}}
+        streams.append(native)
+
+        if not url.lower().split("?")[0].endswith(".mpd"):
+            hints = {"response": HLS_HINT["proxyHeaders"]["response"]}
+            if req_headers:
+                hints["request"] = req_headers
+            streams.append({
+                "url": url,
+                "name": f"{lbl} (browser)",
+                "title": f"{ch_name}\nFor Stremio Web without the streaming server",
+                "behaviorHints": {"proxyHeaders": hints},
+            })
+    return streams
+
+
 def write_json(path, data):
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
@@ -236,13 +364,17 @@ def generate_addon_for_country(country, base_dir):
 
     # Pre-fetch M3U sources before removing existing generated files so offline runs don't wipe M3U-backed countries
     prefetched_m3u = []
+    m3u_cache = {}
     m3u_sources = country.get("m3u_sources", [])
     for src in m3u_sources:
-        raw_list = fetch_m3u(src["url"])
-        print(f"  Fetched {len(raw_list)} https channels from {src['url']}")
-        prefetched_m3u.append((src, raw_list))
+        u = src["url"]
+        if u not in m3u_cache:
+            m3u_cache[u] = fetch_m3u(u)
+            print(f"  Fetched {len(m3u_cache[u])} https channels from {u}")
+        prefetched_m3u.append((src, m3u_cache[u]))
 
-    if m3u_sources and all(len(rl) == 0 for _, rl in prefetched_m3u) and os.path.exists(os.path.join(country_dir, "manifest.json")):
+    # Preserve existing files on offline runs or when any source in a multi-source setup fails
+    if m3u_sources and any(len(rl) == 0 for _, rl in prefetched_m3u) and os.path.exists(os.path.join(country_dir, "manifest.json")):
         existing_total = 0
         if os.path.exists(catalog_dir):
             for fname in os.listdir(catalog_dir):
@@ -279,7 +411,7 @@ def generate_addon_for_country(country, base_dir):
 
     raw_to_id = {}
     seen_ids = set()
-    seen_names_per_cat = {}
+    norm_to_entry = {}
 
     def make_id(raw):
         clean_raw = str(raw).strip().lower()
@@ -297,31 +429,38 @@ def generate_addon_for_country(country, base_dir):
     catalog_names = {c["id"]: c["name"] for c in country.get("catalogs", [])}
     channels_by_cat = {c["id"]: [] for c in country.get("catalogs", [])}
 
-    def add_channel(cat_id, raw_id, ch_name, ch_url, ch_logo="", ch_desc="", custom_streams=None):
+    def add_channel(cat_id, raw_id, ch_name, ch_url, ch_logo="", ch_desc="", custom_streams=None, source_label="Live", req_headers=None):
         if not custom_streams and (not ch_url or not (ch_url.startswith("https://") or ch_url.startswith("http://"))):
             return
         if re.search(r'\btest stream\b', ch_name, re.I):
             return
         if cat_id not in channels_by_cat:
             cat_id = default_cat_id
-        seen_names = seen_names_per_cat.setdefault(cat_id, set())
         norm_name = ch_name.casefold().strip()
-        if norm_name in seen_names:
+        # Preserve legacy cartoon catalogs (cartoons-cn-disney, cartoons-nick, cartoons-classics) alongside featured ones
+        norm_key = (cat_id, norm_name) if code == "cartoons" else norm_name
+        if norm_key in norm_to_entry:
+            existing = norm_to_entry[norm_key]
+            if not existing.get("custom_streams") and ch_url:
+                urls = {u for u, _, _ in existing["sources"]}
+                if ch_url not in urls and len(existing["sources"]) < 5:
+                    existing["sources"].append((ch_url, source_label, req_headers or {}))
             return
-        seen_names.add(norm_name)
 
         uid = make_id(raw_id or ch_name)
-        logo = ch_logo if (ch_logo and (ch_logo.startswith("https://") or ch_logo.startswith("http://"))) else icon_url
+        logo = ch_logo if (ch_logo and ch_logo.startswith("https://")) else icon_url
         desc_text = ch_desc or f"{ch_name} · Free live stream"
         entry = {
             "id": uid,
             "name": ch_name,
             "url": ch_url,
             "logo": logo,
-            "description": desc_text
+            "description": desc_text,
+            "sources": [(ch_url, source_label, req_headers or {})] if ch_url else [],
         }
         if custom_streams:
             entry["custom_streams"] = custom_streams
+        norm_to_entry[norm_key] = entry
         channels_by_cat[cat_id].append(entry)
 
     # 0. Process Spelunkr TV source (e.g., spelunkr.tv/toonertia) if configured
@@ -537,7 +676,26 @@ def generate_addon_for_country(country, base_dir):
             )
 
     # 1. Add curated / fallback channels
-    for fb in country.get("fallback_channels", []):
+    fallbacks = country.get("fallback_channels", [])
+    probe_live = ("--skip-probe" not in sys.argv) and (not country.get("vpn_required") or "--probe-all" in sys.argv)
+    if probe_live and code not in ("cartoons", "marathons") and fallbacks:
+        fb_candidates = [
+            fb for fb in fallbacks
+            if not fb.get("custom_streams")
+            and fb.get("url", "").startswith("https://")
+            and "archive.org" not in fb.get("url", "")
+            and not fb.get("url", "").lower().split("?")[0].endswith(".mp4")
+        ]
+        if fb_candidates:
+            reachable_fb = filter_live_streams(fb_candidates)
+            print(f"    Probed fallback: {len(reachable_fb)}/{len(fb_candidates)} reachable streams")
+            if reachable_fb:
+                dead_urls = {fb["url"] for fb in fb_candidates} - {fb["url"] for fb in reachable_fb}
+                fallbacks = [fb for fb in fallbacks if fb.get("url") not in dead_urls]
+            else:
+                print("    [Notice] Fallback probe returned 0 reachable; keeping configured fallbacks")
+
+    for fb in fallbacks:
         cat_targets = fb.get("catalogs") or [fb.get("catalog", default_cat_id)]
         c_streams = fb.get("custom_streams")
         if fb.get("id") == "cartoon-classics" and not c_streams:
@@ -709,9 +867,17 @@ def generate_addon_for_country(country, base_dir):
                 )
 
         elif src_type == "xumo":
-            for c in sorted(raw_list, key=lambda x: clean_name(x["name"]).casefold()):
+            xumo_list = [dict(c, url=clean_xumo_url(c["url"])) for c in raw_list]
+            if probe_live and xumo_list:
+                probed = filter_live_streams(xumo_list)
+                print(f"    Probed xumo: {len(probed)}/{len(xumo_list)} reachable streams")
+                if probed:
+                    xumo_list = probed
+                else:
+                    print("    [Notice] Xumo probe returned 0 reachable; keeping fetched list")
+            for c in sorted(xumo_list, key=lambda x: clean_name(x["name"]).casefold()):
                 cname = clean_name(c["name"])
-                curl = clean_xumo_url(c["url"])
+                curl = c["url"]
                 grp = c.get("group-title", "").replace("XUMO🇺🇸:", "").strip()
                 desc_str = f"Free live channel ({grp})" if grp else "Free live channel from Xumo"
                 add_channel(
@@ -738,8 +904,47 @@ def generate_addon_for_country(country, base_dir):
                     ch_desc="Free live channel from Samsung TV Plus"
                 )
 
+        elif src_type == "iptv_org":
+            name_filter = src.get("name_filter")
+            candidates = []
+            for c in raw_list:
+                raw_name = c.get("name", "")
+                if is_excluded_iptv_entry(c):
+                    continue
+                if name_filter and not (
+                    re.search(name_filter, raw_name) or re.search(name_filter, c.get("group-title", ""))
+                ):
+                    continue
+                candidates.append(c)
+            if "--skip-probe" not in sys.argv:
+                before = len(candidates)
+                candidates = filter_live_streams(candidates)
+                print(f"    Probed iptv-org: {len(candidates)}/{before} reachable streams")
+            for c in sorted(candidates, key=lambda x: clean_name(x["name"]).casefold()):
+                cname = clean_name(c["name"])
+                grp = c.get("group-title", "").replace(";", ", ").strip()
+                desc_str = f"Live TV ({grp}) · iptv-org" if grp else f"Live TV ({catalog_names.get(cat_id, name)}) · iptv-org"
+                add_channel(
+                    cat_id=cat_id,
+                    raw_id="iptv-" + (c.get("tvg-id") or cname),
+                    ch_name=cname,
+                    ch_url=c["url"],
+                    ch_logo=c.get("tvg-logo", ""),
+                    ch_desc=desc_str,
+                    source_label="iptv-org",
+                    req_headers=extract_req_headers(c)
+                )
+
         else:
-            for c in sorted(raw_list, key=lambda x: clean_name(x["name"]).casefold()):
+            generic_list = list(raw_list)
+            if probe_live and generic_list:
+                probed = filter_live_streams(generic_list)
+                print(f"    Probed {src_type}: {len(probed)}/{len(generic_list)} reachable streams")
+                if probed:
+                    generic_list = probed
+                else:
+                    print(f"    [Notice] {src_type} probe returned 0 reachable; keeping fetched list")
+            for c in sorted(generic_list, key=lambda x: clean_name(x["name"]).casefold()):
                 host = re.sub(r'^https?://([^/:]+).*', r'\1', c["url"])
                 if not host_resolves(host):
                     continue
@@ -754,6 +959,17 @@ def generate_addon_for_country(country, base_dir):
                 )
 
     # 3. Write meta, stream, and catalog JSON files
+    if "--skip-probe" not in sys.argv:
+        logo_urls = [
+            ch["logo"] for items in channels_by_cat.values() for ch in items
+            if ch["logo"] and ch["logo"] != icon_url
+        ]
+        validate_logos(logo_urls)
+        for items in channels_by_cat.values():
+            for ch in items:
+                if ch["logo"] != icon_url and not _LOGO_PROBE_CACHE.get(ch["logo"], False):
+                    ch["logo"] = icon_url
+
     active_catalogs = []
 
     for cat_def in country.get("catalogs", []):
@@ -786,19 +1002,7 @@ def generate_addon_for_country(country, base_dir):
                 })
             else:
                 write_json(os.path.join(stream_dir, f"{ch['id']}.json"), {
-                    "streams": [
-                        {
-                            "url": ch["url"],
-                            "name": "Live",
-                            "title": ch["name"]
-                        },
-                        {
-                            "url": ch["url"],
-                            "name": "Live (browser)",
-                            "title": f"{ch['name']}\nFor Stremio Web without the streaming server",
-                            "behaviorHints": HLS_HINT
-                        }
-                    ]
+                    "streams": build_stream_entries(ch["name"], ch["sources"])
                 })
 
         write_json(
@@ -830,7 +1034,8 @@ def generate_addon_for_country(country, base_dir):
         "catalogs": active_catalogs,
         "behaviorHints": {
             "configurable": False,
-            "configurationRequired": False
+            "configurationRequired": False,
+            "adult": False
         }
     }
     write_json(os.path.join(country_dir, "manifest.json"), manifest)
@@ -847,6 +1052,239 @@ def generate_addon_for_country(country, base_dir):
     }
 
 
+IPTV_ORG_COUNTRY_M3U = "https://iptv-org.github.io/iptv/index.country.m3u"
+
+WORLD_LIVE_REGIONS = [
+    ("au", "Australia"),
+    ("nz", "New Zealand"),
+    ("us", "United States"),
+    ("uk", "United Kingdom"),
+    ("ca", "Canada"),
+    ("global", "Global"),
+    ("sports", "Sports"),
+    ("novelas", "Novelas"),
+]
+
+
+def build_world_live_addon(base_dir, regions=WORLD_LIVE_REGIONS, global_m3u_url=None):
+    """Aggregate curated live regions + all reachable iptv-org countries into Discover-only world-live/."""
+    wl_dir = os.path.join(base_dir, "world-live")
+    cat_id = "world-live-channels"
+    cat_dir = os.path.join(wl_dir, "catalog", "tv", cat_id)
+    meta_dir = os.path.join(wl_dir, "meta", "tv")
+    stream_dir = os.path.join(wl_dir, "stream", "tv")
+    assets_dir = os.path.join(wl_dir, "assets")
+    icon_url = f"{BASE_URL}/world-live/assets/icon.png"
+
+    for stale in (os.path.join(wl_dir, "catalog"), meta_dir, stream_dir):
+        if os.path.exists(stale):
+            shutil.rmtree(stale)
+    for d in (cat_dir, meta_dir, stream_dir, assets_dir):
+        os.makedirs(d, exist_ok=True)
+    if os.path.exists(ICON_FILE):
+        shutil.copy(ICON_FILE, os.path.join(assets_dir, "icon.png"))
+
+    country_entries = {}
+    norm_lookup = {}
+    used_ids = set()
+
+    def unique_wl_id(raw_key):
+        cid = f"tv-worldlive-{slug(raw_key)}"
+        n, base = 2, cid
+        while cid in used_ids:
+            cid, n = f"{base}-{n}", n + 1
+        used_ids.add(cid)
+        return cid
+
+    # 1. Load already-built curated regions from disk
+    for code, label in regions:
+        c_cat_dir = os.path.join(base_dir, code, "catalog", "tv")
+        c_meta_dir = os.path.join(base_dir, code, "meta", "tv")
+        c_stream_dir = os.path.join(base_dir, code, "stream", "tv")
+        if not os.path.isdir(c_cat_dir):
+            continue
+
+        seen_orig = set()
+        bucket = country_entries.setdefault(label, [])
+        nmap = norm_lookup.setdefault(label, {})
+        for fname in sorted(os.listdir(c_cat_dir)):
+            if not fname.endswith(".json"):
+                continue
+            with open(os.path.join(c_cat_dir, fname), "r", encoding="utf-8") as cf:
+                metas = json.load(cf).get("metas", [])
+            for m in metas:
+                orig_id = m.get("id")
+                if not orig_id or orig_id in seen_orig:
+                    continue
+                seen_orig.add(orig_id)
+                new_id = unique_wl_id(f"{code}-{orig_id}")
+                poster = m.get("poster", "")
+                if not poster.startswith("https://"):
+                    poster = icon_url
+
+                desc_text = m.get("description", f"{label} Live TV")
+                meta_src = os.path.join(c_meta_dir, f"{orig_id}.json")
+                if os.path.exists(meta_src):
+                    with open(meta_src, "r", encoding="utf-8") as mf:
+                        desc_text = json.load(mf).get("meta", {}).get("description", desc_text)
+
+                streams_list = []
+                stream_src = os.path.join(c_stream_dir, f"{orig_id}.json")
+                if os.path.exists(stream_src):
+                    with open(stream_src, "r", encoding="utf-8") as sf:
+                        streams_list = json.load(sf).get("streams", [])
+
+                ch_name = m.get("name", orig_id)
+                rec = {
+                    "id": new_id,
+                    "name": ch_name,
+                    "poster": poster,
+                    "description": desc_text,
+                    "streams": streams_list,
+                }
+                bucket.append(rec)
+                nmap.setdefault(ch_name.casefold().strip(), rec)
+
+    # 2. Ingest ALL countries from iptv-org index.country.m3u
+    if global_m3u_url:
+        raw_global = fetch_m3u(global_m3u_url, timeout=30)
+        print(f"\nFetched {len(raw_global)} https channels from {global_m3u_url}")
+        candidates = []
+        filtered_out = 0
+        for c in raw_global:
+            grp = c.get("group-title", "").split(";")[0].strip()
+            if not grp or grp.casefold() == "unknown" or is_excluded_iptv_entry(c):
+                filtered_out += 1
+                continue
+            c["_country_label"] = "Global" if grp.casefold() == "international" else grp
+            candidates.append(c)
+
+        if "--skip-probe" not in sys.argv:
+            reachable = filter_live_streams(candidates, max_workers=80)
+            print(f"  Global iptv-org: {len(candidates)} clean ({filtered_out} geo/NSFW/radio/unknown excluded) -> {len(reachable)} reachable streams")
+        else:
+            reachable = candidates
+
+        for c in sorted(reachable, key=lambda x: clean_name(x["name"]).casefold()):
+            label = c["_country_label"]
+            cname = clean_name(c["name"])
+            bucket = country_entries.setdefault(label, [])
+            nmap = norm_lookup.setdefault(label, {})
+            nkey = cname.casefold().strip()
+            req_hdrs = extract_req_headers(c)
+            extra = build_stream_entries(cname, [(c["url"], "iptv-org", req_hdrs)])
+
+            if nkey in nmap:
+                existing_urls = {s.get("url") for s in nmap[nkey]["streams"] if s.get("url")}
+                if c["url"] not in existing_urls and len(nmap[nkey]["streams"]) < 10:
+                    nmap[nkey]["streams"].extend(extra)
+                continue
+
+            new_id = unique_wl_id(f"{label}-{c.get('tvg-id') or cname}")
+            logo = c.get("tvg-logo", "")
+            if not logo.startswith("https://"):
+                logo = icon_url
+            rec = {
+                "id": new_id,
+                "name": cname,
+                "poster": logo,
+                "description": f"Live TV ({label}) · iptv-org",
+                "streams": extra,
+            }
+            bucket.append(rec)
+            nmap[nkey] = rec
+
+    # 3. Validate HTTPS logos across world-live before writing static JSONs
+    if "--skip-probe" not in sys.argv:
+        logo_candidates = [
+            rec["poster"]
+            for items in country_entries.values()
+            for rec in items
+            if rec["poster"] and rec["poster"] != icon_url
+        ]
+        unique_logos = {u for u in logo_candidates if u.startswith("https://")}
+        validate_logos(unique_logos, max_workers=80)
+        ok_logos = sum(1 for u in unique_logos if _LOGO_PROBE_CACHE.get(u, False))
+        print(f"  Logo validation: {ok_logos}/{len(unique_logos)} reachable HTTPS logos (dead logos fallback to icon)")
+        for items in country_entries.values():
+            for rec in items:
+                if rec["poster"] != icon_url and not _LOGO_PROBE_CACHE.get(rec["poster"], False):
+                    rec["poster"] = icon_url
+
+    # 4. Order genres: pinned regions first, then all remaining countries alphabetically
+    pinned_labels = [label for _, label in regions]
+    other_labels = sorted((l for l in country_entries if l not in pinned_labels), key=str.casefold)
+    ordered_labels = [l for l in pinned_labels + other_labels if country_entries.get(l)]
+
+    genre_options = []
+    total_channels = 0
+    for label in ordered_labels:
+        items = country_entries[label]
+        genre_options.append(label)
+        total_channels += len(items)
+        metas_out = []
+        for rec in items:
+            meta_obj = {
+                "id": rec["id"],
+                "type": "tv",
+                "name": rec["name"],
+                "poster": rec["poster"],
+                "posterShape": "square",
+                "logo": rec["poster"],
+                "description": rec["description"],
+                "genres": [label],
+            }
+            metas_out.append({k: meta_obj[k] for k in ("id", "type", "name", "poster", "posterShape", "description")})
+            write_json(os.path.join(meta_dir, f"{rec['id']}.json"), {"meta": meta_obj})
+            write_json(os.path.join(stream_dir, f"{rec['id']}.json"), {"streams": rec["streams"]})
+        write_json(os.path.join(cat_dir, f"genre={label}.json"), {"metas": metas_out})
+
+    manifest = {
+        "id": "worldlive.world",
+        "version": VERSION,
+        "name": "🌍 World Live TV (by Country)",
+        "description": "All live channels organized by country in Discover (keeps your Stremio main page clean).",
+        "logo": icon_url,
+        "resources": [
+            "catalog",
+            {"name": "meta", "types": ["tv"], "idPrefixes": ["tv-worldlive-"]},
+            {"name": "stream", "types": ["tv"], "idPrefixes": ["tv-worldlive-"]},
+        ],
+        "types": ["tv"],
+        "idPrefixes": ["tv-worldlive-"],
+        "catalogs": [
+            {
+                "type": "tv",
+                "id": cat_id,
+                "name": "Live TV by Country",
+                "extra": [
+                    {
+                        "name": "genre",
+                        "options": genre_options,
+                        "isRequired": True,
+                    }
+                ],
+            }
+        ],
+        "behaviorHints": {
+            "configurable": False,
+            "configurationRequired": False,
+            "adult": False,
+        },
+    }
+    write_json(os.path.join(wl_dir, "manifest.json"), manifest)
+    print(f"\nBuilt World Live TV (Discover by Country): {total_channels} channels across {len(genre_options)} countries/regions")
+    return {
+        "code": "world-live",
+        "name": "World Live TV (By Country)",
+        "flag": "🗺️",
+        "region": "Global",
+        "description": f"Unified Discover catalog sortable across {len(genre_options)} countries/regions without cluttering your Stremio Home Board.",
+        "channel_count": total_channels,
+        "vpn_required": False,
+    }
+
+
 def main():
     if not os.path.exists(SOURCES_FILE):
         print(f"Error: {SOURCES_FILE} not found!")
@@ -860,7 +1298,7 @@ def main():
     for entry in os.listdir(SCRIPT_DIR):
         full_p = os.path.join(SCRIPT_DIR, entry)
         if os.path.isdir(full_p) and os.path.exists(os.path.join(full_p, "manifest.json")):
-            if entry not in active_codes and entry not in ("cartoon-vault", "power-rangers"):
+            if entry not in active_codes and entry not in ("cartoon-vault", "power-rangers", "world-live"):
                 print(f"Removing retired country directory: {entry}")
                 shutil.rmtree(full_p)
 
@@ -871,6 +1309,8 @@ def main():
     for c in countries:
         res = generate_addon_for_country(c, SCRIPT_DIR)
         summaries.append(res)
+
+    summaries.append(build_world_live_addon(SCRIPT_DIR, global_m3u_url=IPTV_ORG_COUNTRY_M3U))
 
     # Build Cartoon & Animation Vault on-demand catalog addon
     try:

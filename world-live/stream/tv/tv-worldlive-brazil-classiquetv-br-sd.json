@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://stmv1.srvif.com/classique/classique/playlist.m3u8","name":"iptv-org","title":"Classique TV"},{"url":"https://stmv1.srvif.com/classique/classique/playlist.m3u8","name":"iptv-org (browser)","title":"Classique TV\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

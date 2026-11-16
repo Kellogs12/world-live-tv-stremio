@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://tls-cl.cdnz.cl/umag1/ngrp:live_all/playlist.m3u8","name":"iptv-org","title":"UMAGTV"},{"url":"https://tls-cl.cdnz.cl/umag1/ngrp:live_all/playlist.m3u8","name":"iptv-org (browser)","title":"UMAGTV\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

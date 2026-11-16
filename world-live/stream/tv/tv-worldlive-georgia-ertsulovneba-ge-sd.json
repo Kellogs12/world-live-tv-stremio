@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://stream.sstv.ge/live/sstv/playlist.m3u8","name":"iptv-org","title":"Ertsulovneba"},{"url":"https://stream.sstv.ge/live/sstv/playlist.m3u8","name":"iptv-org (browser)","title":"Ertsulovneba\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://media.noroc.tv/noroc/bitrate_1080p.m3u8","name":"iptv-org","title":"Noroc TV"},{"url":"https://media.noroc.tv/noroc/bitrate_1080p.m3u8","name":"iptv-org (browser)","title":"Noroc TV\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

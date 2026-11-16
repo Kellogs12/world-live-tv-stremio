@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://live1.ottlive.co.in/aagaaztimes/index.m3u8","name":"iptv-org","title":"Aagaaz Times"},{"url":"https://live1.ottlive.co.in/aagaaztimes/index.m3u8","name":"iptv-org (browser)","title":"Aagaaz Times\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

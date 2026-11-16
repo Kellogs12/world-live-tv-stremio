@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://stream.ottlive.co.in/primenews/index.m3u8","name":"iptv-org","title":"Prime News"},{"url":"https://stream.ottlive.co.in/primenews/index.m3u8","name":"iptv-org (browser)","title":"Prime News\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

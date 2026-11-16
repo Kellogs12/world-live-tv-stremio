@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://stream8.cinerama.uz/1421/tracks-v1a1/mono.m3u8","name":"iptv-org","title":"Drive (576i)"},{"url":"https://stream8.cinerama.uz/1421/tracks-v1a1/mono.m3u8","name":"iptv-org (browser)","title":"Drive (576i)\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

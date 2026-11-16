@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://srspsn2.live/live/livestream.m3u8","name":"iptv-org","title":"PSN Canal 45.2 (288p)"},{"url":"https://srspsn2.live/live/livestream.m3u8","name":"iptv-org (browser)","title":"PSN Canal 45.2 (288p)\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

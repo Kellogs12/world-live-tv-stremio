@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://mumbai-edge.smartplaytv.in/10TV/index.m3u8","name":"iptv-org","title":"10 TV"},{"url":"https://mumbai-edge.smartplaytv.in/10TV/index.m3u8","name":"iptv-org (browser)","title":"10 TV\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://cdn.pishow.tv/ott/live/1245/master.m3u8","name":"iptv-org","title":"Polimer News"},{"url":"https://cdn.pishow.tv/ott/live/1245/master.m3u8","name":"iptv-org (browser)","title":"Polimer News\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

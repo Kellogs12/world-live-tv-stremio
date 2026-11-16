@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://video.primexsports.com/suchnews/live/playlist.m3u8","name":"iptv-org","title":"Such TV"},{"url":"https://video.primexsports.com/suchnews/live/playlist.m3u8","name":"iptv-org (browser)","title":"Such TV\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

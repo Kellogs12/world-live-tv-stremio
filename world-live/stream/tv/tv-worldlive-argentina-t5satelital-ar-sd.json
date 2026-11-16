@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://stream.t5satelital.blog/hls/t5satelitalweb.m3u8","name":"iptv-org","title":"T5 Satelital"},{"url":"https://stream.t5satelital.blog/hls/t5satelitalweb.m3u8","name":"iptv-org (browser)","title":"T5 Satelital\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

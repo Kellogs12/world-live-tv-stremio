@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://tv.cdn.xsg.ge/gpb-2tv/index.m3u8","name":"iptv-org","title":"2 TV"},{"url":"https://tv.cdn.xsg.ge/gpb-2tv/index.m3u8","name":"iptv-org (browser)","title":"2 TV\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://dash4.antik.sk/live/test_nitricka/playlist.m3u8","name":"iptv-org","title":"TV Nitricka"},{"url":"https://dash4.antik.sk/live/test_nitricka/playlist.m3u8","name":"iptv-org (browser)","title":"TV Nitricka\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

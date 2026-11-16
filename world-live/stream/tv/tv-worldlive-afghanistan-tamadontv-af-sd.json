@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://hls.tamadon.live/hls/stream.m3u8","name":"iptv-org","title":"Tamadon TV"},{"url":"https://hls.tamadon.live/hls/stream.m3u8","name":"iptv-org (browser)","title":"Tamadon TV\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

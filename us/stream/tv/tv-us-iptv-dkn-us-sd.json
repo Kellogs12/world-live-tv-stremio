@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://video.oct.dc.gov/out/u/DKN.m3u8","name":"iptv-org","title":"DKN"},{"url":"https://video.oct.dc.gov/out/u/DKN.m3u8","name":"iptv-org (browser)","title":"DKN\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

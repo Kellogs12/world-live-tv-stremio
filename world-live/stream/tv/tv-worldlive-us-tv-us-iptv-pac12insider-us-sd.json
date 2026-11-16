@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://pac12-firetv.amagi.tv/playlist.m3u8","name":"iptv-org","title":"Pac-12 Insider"},{"url":"https://pac12-firetv.amagi.tv/playlist.m3u8","name":"iptv-org (browser)","title":"Pac-12 Insider\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://stream.twoja.tv/ttv_hls/live.m3u8","name":"iptv-org","title":"Twoja.TV"},{"url":"https://stream.twoja.tv/ttv_hls/live.m3u8","name":"iptv-org (browser)","title":"Twoja.TV\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

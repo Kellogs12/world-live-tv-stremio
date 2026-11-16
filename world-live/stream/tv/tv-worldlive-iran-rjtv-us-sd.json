@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://rjtvhls.wns.live/hls/stream.m3u8","name":"iptv-org","title":"RJTV"},{"url":"https://rjtvhls.wns.live/hls/stream.m3u8","name":"iptv-org (browser)","title":"RJTV\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

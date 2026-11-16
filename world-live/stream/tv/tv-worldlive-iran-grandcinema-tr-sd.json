@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://gcinemahls.wns.live/hls/stream.m3u8","name":"iptv-org","title":"Grand Cinema"},{"url":"https://gcinemahls.wns.live/hls/stream.m3u8","name":"iptv-org (browser)","title":"Grand Cinema\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

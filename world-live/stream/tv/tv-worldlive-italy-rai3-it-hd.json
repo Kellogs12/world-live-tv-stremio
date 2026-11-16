@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://d3k8wzt41aflvx.cloudfront.net/RAI3/Live.m3u8","name":"iptv-org","title":"Rai 3"},{"url":"https://d3k8wzt41aflvx.cloudfront.net/RAI3/Live.m3u8","name":"iptv-org (browser)","title":"Rai 3\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

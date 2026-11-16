@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://st.deltaboliviainstitucion.org:3778/hybrid/play.m3u8","name":"iptv-org","title":"Delta TV"},{"url":"https://st.deltaboliviainstitucion.org:3778/hybrid/play.m3u8","name":"iptv-org (browser)","title":"Delta TV\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

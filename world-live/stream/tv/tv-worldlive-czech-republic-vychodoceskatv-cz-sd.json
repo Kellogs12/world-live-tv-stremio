@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://stream.polar.cz/vctv/vctvlive-1/playlist.m3u8","name":"iptv-org","title":"Vychodoceska TV"},{"url":"https://stream.polar.cz/vctv/vctvlive-1/playlist.m3u8","name":"iptv-org (browser)","title":"Vychodoceska TV\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

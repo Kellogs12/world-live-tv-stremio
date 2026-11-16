@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://live.lietuvosryto.tv/live/hls/eteris.m3u8","name":"iptv-org","title":"Lietuvos Rytas TV"},{"url":"https://live.lietuvosryto.tv/live/hls/eteris.m3u8","name":"iptv-org (browser)","title":"Lietuvos Rytas TV\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

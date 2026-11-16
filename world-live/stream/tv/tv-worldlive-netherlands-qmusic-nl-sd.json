@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://stream.qmusic.nl/qmusic/videohls.m3u8","name":"iptv-org","title":"Qmusic"},{"url":"https://stream.qmusic.nl/qmusic/videohls.m3u8","name":"iptv-org (browser)","title":"Qmusic\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

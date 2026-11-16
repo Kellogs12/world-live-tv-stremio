@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://tv3.bitstreaming.net:3680/live/zuracatvlive.m3u8","name":"iptv-org","title":"Zuraca TV"},{"url":"https://tv3.bitstreaming.net:3680/live/zuracatvlive.m3u8","name":"iptv-org (browser)","title":"Zuraca TV\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

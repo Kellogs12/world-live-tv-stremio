@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://hls.nejat.live/hls/stream.m3u8","name":"iptv-org","title":"TBN Nejat TV"},{"url":"https://hls.nejat.live/hls/stream.m3u8","name":"iptv-org (browser)","title":"TBN Nejat TV\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

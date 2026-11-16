@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://live-dangal2.akamaized.net/liveabr/playlist.m3u8","name":"iptv-org","title":"Dangal 2"},{"url":"https://live-dangal2.akamaized.net/liveabr/playlist.m3u8","name":"iptv-org (browser)","title":"Dangal 2\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

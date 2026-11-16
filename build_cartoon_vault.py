@@ -12,17 +12,13 @@ Generates static catalog routes:
 import json
 import os
 import shutil
-import socket
-import ssl
 import sys
 import time
-import urllib.request
-import urllib.error
+
+from generate import fetch_json_url, write_json
 
 if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
-
-socket.setdefaulttimeout(8.0)
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 BASE_URL = "https://kellogs12.github.io/world-live-tv-stremio"
@@ -963,37 +959,17 @@ FALLBACK_METADATA = {
 }
 
 
-def write_json(path, data):
-    os.makedirs(os.path.dirname(path), exist_ok=True)
-    with open(path, "w", encoding="utf-8") as f:
-        json.dump(data, f, separators=(',', ':'), ensure_ascii=False)
-        f.write('\n')
-
-
 def fetch_cinemeta_meta(stremio_type, imdb_id, default_title=""):
     url = f"https://v3-cinemeta.strem.io/meta/{stremio_type}/{imdb_id}.json"
-    ctx = ssl.create_default_context()
-    req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 (CartoonVaultBuilder)'})
     for attempt in range(2):
         try:
-            with urllib.request.urlopen(req, timeout=4.0, context=ctx) as resp:
-                data = json.loads(resp.read().decode('utf-8'))
-                meta = data.get('meta')
-                if meta and meta.get('name'):
-                    return meta
-        except urllib.error.URLError:
-            try:
-                unverified_ctx = ssl._create_unverified_context()
-                with urllib.request.urlopen(req, timeout=4.0, context=unverified_ctx) as resp:
-                    data = json.loads(resp.read().decode('utf-8'))
-                    meta = data.get('meta')
-                    if meta and meta.get('name'):
-                        return meta
-            except Exception:
-                break
+            data = fetch_json_url(url, timeout=4.0, user_agent='Mozilla/5.0 (CartoonVaultBuilder)')
+            meta = data.get('meta')
+            if meta and meta.get('name'):
+                return meta
         except Exception:
-            break
-        time.sleep(0.1)
+            if attempt == 0:
+                time.sleep(0.1)
     return None
 
 

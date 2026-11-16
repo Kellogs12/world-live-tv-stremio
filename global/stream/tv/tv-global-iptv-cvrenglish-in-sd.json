@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://cdn.pishow.tv/ott/live/425/master.m3u8","name":"iptv-org","title":"CVR English"},{"url":"https://cdn.pishow.tv/ott/live/425/master.m3u8","name":"iptv-org (browser)","title":"CVR English\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

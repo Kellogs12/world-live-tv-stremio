@@ -19,6 +19,7 @@ permissions:
 jobs:
   update-channels:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -32,9 +33,11 @@ jobs:
         run: |
           python generate.py
 
+      - name: Run Unit Tests
+        run: |
+          python -m unittest discover -s tests
+
       - name: Commit and push updates
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
@@ -44,5 +47,4 @@ jobs:
           else
             git commit -m "Auto-update live channels and stream URLs [skip ci]"
             git push
-            gh api -X POST "repos/${GITHUB_REPOSITORY}/pages/builds" || true
           fi

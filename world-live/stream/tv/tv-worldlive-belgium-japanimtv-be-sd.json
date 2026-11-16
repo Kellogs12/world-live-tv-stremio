@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://foxkidstv.be:3369/stream/play.m3u8","name":"iptv-org","title":"JapanimTV"},{"url":"https://foxkidstv.be:3369/stream/play.m3u8","name":"iptv-org (browser)","title":"JapanimTV\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

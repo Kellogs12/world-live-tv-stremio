@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://live.presstv.co.uk/hls/ifilm2.m3u8","name":"iptv-org","title":"iFilm 2"},{"url":"https://live.presstv.co.uk/hls/ifilm2.m3u8","name":"iptv-org (browser)","title":"iFilm 2\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

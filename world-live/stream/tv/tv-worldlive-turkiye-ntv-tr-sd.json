@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://dogus.daioncdn.net/ntv/ntv.m3u8?app=ntv_web","name":"iptv-org","title":"NTV (Turkiye)"},{"url":"https://dogus.daioncdn.net/ntv/ntv.m3u8?app=ntv_web","name":"iptv-org (browser)","title":"NTV (Turkiye)\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

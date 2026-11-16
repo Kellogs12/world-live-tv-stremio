@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://stream.shams.tv/hls/stream.m3u8","name":"iptv-org","title":"Shams TV (Iraq)"},{"url":"https://stream.shams.tv/hls/stream.m3u8","name":"iptv-org (browser)","title":"Shams TV (Iraq)\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

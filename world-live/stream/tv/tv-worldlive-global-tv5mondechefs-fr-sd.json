@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://tvf-tv5ch.otteravision.com/tvf/tv5ch/tv5ch.m3u8","name":"iptv-org","title":"TV5MONDE Chefs"},{"url":"https://tvf-tv5ch.otteravision.com/tvf/tv5ch/tv5ch.m3u8","name":"iptv-org (browser)","title":"TV5MONDE Chefs\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

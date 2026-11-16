@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://everest.pa-hosting.de:3591/live/joseflive.m3u8","name":"iptv-org","title":"KIT-TV"},{"url":"https://everest.pa-hosting.de:3591/live/joseflive.m3u8","name":"iptv-org (browser)","title":"KIT-TV\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

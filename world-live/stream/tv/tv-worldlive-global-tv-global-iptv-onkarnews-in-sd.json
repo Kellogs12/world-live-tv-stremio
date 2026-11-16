@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://stream.ottlive.co.in/onkarnews/index.m3u8","name":"iptv-org","title":"Onkar News"},{"url":"https://stream.ottlive.co.in/onkarnews/index.m3u8","name":"iptv-org (browser)","title":"Onkar News\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

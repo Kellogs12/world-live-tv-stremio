@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://dash2.antik.sk/live/test_ocko_black/playlist.m3u8","name":"iptv-org","title":"Ocko Black"},{"url":"https://dash2.antik.sk/live/test_ocko_black/playlist.m3u8","name":"iptv-org (browser)","title":"Ocko Black\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

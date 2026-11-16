@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://scihls.persiana.live/hls/stream.m3u8","name":"iptv-org","title":"Persiana Docs"},{"url":"https://scihls.persiana.live/hls/stream.m3u8","name":"iptv-org (browser)","title":"Persiana Docs\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

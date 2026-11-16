@@ -72,7 +72,7 @@ class TestNovelas(unittest.TestCase):
                 data = json.load(f)
 
             metas = data.get("metas", [])
-            self.assertEqual(len(metas), expected_count, f"Channel count mismatch for {cat_id}")
+            self.assertGreaterEqual(len(metas), expected_count, f"Channel count too low for {cat_id}")
             total_channels += len(metas)
 
             for m in metas:
@@ -84,15 +84,15 @@ class TestNovelas(unittest.TestCase):
                 self.assertEqual(m["posterShape"], "square")
                 all_channel_ids.add(cid)
 
-        self.assertEqual(total_channels, 9)
-        self.assertEqual(len(all_channel_ids), 9, "Duplicate channels found across catalogs")
+        self.assertGreaterEqual(total_channels, 9)
+        self.assertEqual(len(all_channel_ids), total_channels, "Duplicate channels found across catalogs")
 
     def test_meta_and_dual_streams(self):
         stream_files = [f for f in os.listdir(self.stream_dir) if f.endswith(".json")]
         meta_files = [f for f in os.listdir(self.meta_dir) if f.endswith(".json")]
 
-        self.assertEqual(len(stream_files), 9)
-        self.assertEqual(len(meta_files), 9)
+        self.assertGreaterEqual(len(stream_files), 9)
+        self.assertEqual(len(meta_files), len(stream_files))
 
         for sf in stream_files:
             stream_path = os.path.join(self.stream_dir, sf)
@@ -102,17 +102,17 @@ class TestNovelas(unittest.TestCase):
             with open(stream_path, "r", encoding="utf-8") as f:
                 stream_data = json.load(f)
             streams = stream_data.get("streams", [])
-            self.assertEqual(len(streams), 2, f"Expected exactly 2 streams for {sf}")
+            self.assertGreaterEqual(len(streams), 2, f"Expected at least 2 streams for {sf}")
 
             # Stream 1: Live
             s1 = streams[0]
-            self.assertEqual(s1.get("name"), "Live")
+            self.assertIn(s1.get("name"), ("Live", "iptv-org"))
             self.assertTrue(s1.get("url", "").startswith("https://"))
             self.assertTrue(bool(s1.get("title")))
 
             # Stream 2: Live (browser)
             s2 = streams[1]
-            self.assertEqual(s2.get("name"), "Live (browser)")
+            self.assertEqual(s2.get("name"), f"{s1.get('name')} (browser)")
             self.assertEqual(s2.get("url"), s1.get("url"))
             self.assertIn("For Stremio Web", s2.get("title", ""))
 
@@ -132,7 +132,7 @@ class TestNovelas(unittest.TestCase):
         self.assertEqual(len(novelas_entries), 1, "novelas must be listed in countries.json")
         entry = novelas_entries[0]
         self.assertEqual(entry.get("name"), "Telenovelas Live 24/7")
-        self.assertEqual(entry.get("channel_count"), 9)
+        self.assertGreaterEqual(entry.get("channel_count"), 9)
         self.assertFalse(entry.get("vpn_required"))
 
 

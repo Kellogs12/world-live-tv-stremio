@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://stream.ottlive.co.in/fatehtv/index.m3u8","name":"iptv-org","title":"Fateh TV"},{"url":"https://stream.ottlive.co.in/fatehtv/index.m3u8","name":"iptv-org (browser)","title":"Fateh TV\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

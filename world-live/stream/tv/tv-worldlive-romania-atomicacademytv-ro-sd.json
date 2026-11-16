@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://atomic.streamnet.ro/academia.m3u8","name":"iptv-org","title":"Atomic Academy TV"},{"url":"https://atomic.streamnet.ro/academia.m3u8","name":"iptv-org (browser)","title":"Atomic Academy TV\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

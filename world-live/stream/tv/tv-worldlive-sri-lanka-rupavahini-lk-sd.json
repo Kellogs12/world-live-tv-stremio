@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://rpn.bozztv.com/slrclive/slrc/slrclive/index.m3u8","name":"iptv-org","title":"Rupavahini"},{"url":"https://rpn.bozztv.com/slrclive/slrc/slrclive/index.m3u8","name":"iptv-org (browser)","title":"Rupavahini\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

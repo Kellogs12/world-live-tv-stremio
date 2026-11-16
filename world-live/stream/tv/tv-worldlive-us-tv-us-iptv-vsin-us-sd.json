@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://vsin-sgrewind.streamguys1.com/scte/live-2k/playlist.m3u8","name":"iptv-org","title":"VSiN"},{"url":"https://vsin-sgrewind.streamguys1.com/scte/live-2k/playlist.m3u8","name":"iptv-org (browser)","title":"VSiN\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

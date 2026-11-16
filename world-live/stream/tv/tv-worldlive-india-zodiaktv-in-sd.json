@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://ranacable.duckdns.org/ZodiakTv/index.m3u8","name":"iptv-org","title":"Zodiak TV"},{"url":"https://ranacable.duckdns.org/ZodiakTv/index.m3u8","name":"iptv-org (browser)","title":"Zodiak TV\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

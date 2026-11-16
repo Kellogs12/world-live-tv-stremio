@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://live.eac-news.com/LiveApp/streams/eacnews.m3u8","name":"iptv-org","title":"EAC News TV"},{"url":"https://live.eac-news.com/LiveApp/streams/eacnews.m3u8","name":"iptv-org (browser)","title":"EAC News TV\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

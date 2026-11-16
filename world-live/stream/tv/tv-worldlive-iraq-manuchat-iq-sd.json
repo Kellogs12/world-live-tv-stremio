@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://vmi747311.contaboserver.net/hls/livetv.m3u8","name":"iptv-org","title":"Manu Chat"},{"url":"https://vmi747311.contaboserver.net/hls/livetv.m3u8","name":"iptv-org (browser)","title":"Manu Chat\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

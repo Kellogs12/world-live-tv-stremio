@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://5fe2654d6127d.streamlock.net/trc/videotrc/playlist.m3u8","name":"iptv-org","title":"TRC TV"},{"url":"https://5fe2654d6127d.streamlock.net/trc/videotrc/playlist.m3u8","name":"iptv-org (browser)","title":"TRC TV\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

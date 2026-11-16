@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://stream.arcast.com.ar/ecotv/ngrp:ecotv_all/playlist.m3u8","name":"iptv-org","title":"Eco TV"},{"url":"https://stream.arcast.com.ar/ecotv/ngrp:ecotv_all/playlist.m3u8","name":"iptv-org (browser)","title":"Eco TV\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

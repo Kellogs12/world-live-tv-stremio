@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://video3.lhdserver.es/empordatv2/live.m3u8","name":"iptv-org","title":"Emporda TV"},{"url":"https://video3.lhdserver.es/empordatv2/live.m3u8","name":"iptv-org (browser)","title":"Emporda TV\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://bonappetit-samsung.amagi.tv/playlist.m3u8","name":"iptv-org","title":"bon appetit"},{"url":"https://bonappetit-samsung.amagi.tv/playlist.m3u8","name":"iptv-org (browser)","title":"bon appetit\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

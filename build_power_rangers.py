@@ -19,14 +19,10 @@ Generates static catalog routes:
 import json
 import os
 import shutil
-import socket
-import ssl
 import sys
 import time
-import urllib.request
-import urllib.error
 
-socket.setdefaulttimeout(8.0)
+from generate import fetch_json_url, write_json
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 BASE_URL = "https://kellogs12.github.io/world-live-tv-stremio"
@@ -171,28 +167,16 @@ POSTER_OVERRIDES = {
 }
 
 
-def write_json(path, data):
-    os.makedirs(os.path.dirname(path), exist_ok=True)
-    with open(path, "w", encoding="utf-8") as f:
-        json.dump(data, f, separators=(',', ':'), ensure_ascii=False)
-        f.write('\n')
-
-
 def fetch_cinemeta_meta(cat_type, imdb_id, title=""):
     """Fetch rich metadata for an IMDb ID from Cinemeta v3 API."""
     url = f"https://v3-cinemeta.strem.io/meta/{cat_type}/{imdb_id}.json"
     for attempt in range(3):
         try:
-            req = urllib.request.Request(
-                url,
-                headers={"User-Agent": "Mozilla/5.0 (PowerRangersUniverse/1.0)"}
-            )
-            with urllib.request.urlopen(req, timeout=10.0) as resp:
-                data = json.load(resp)
-                meta = data.get("meta")
-                if meta:
-                    return meta
-        except Exception as e:
+            data = fetch_json_url(url, timeout=10.0, user_agent="Mozilla/5.0 (PowerRangersUniverse/1.0)")
+            meta = data.get("meta")
+            if meta:
+                return meta
+        except Exception:
             time.sleep(1.0 * (attempt + 1))
     return None
 

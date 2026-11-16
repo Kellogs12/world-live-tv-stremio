@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://cdn.pishow.tv/ott/live/1474/master.m3u8","name":"iptv-org","title":"Manoranjan Prime"},{"url":"https://cdn.pishow.tv/ott/live/1474/master.m3u8","name":"iptv-org (browser)","title":"Manoranjan Prime\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://a-cdn.klowdtv.com/live2/petstv_720p/playlist.m3u8","name":"iptv-org","title":"Pets.TV"},{"url":"https://a-cdn.klowdtv.com/live2/petstv_720p/playlist.m3u8","name":"iptv-org (browser)","title":"Pets.TV\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

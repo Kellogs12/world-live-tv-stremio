@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://cd198.anystream.uk:9092/iqapp/d33ntv/playlist.m3u8","name":"iptv-org","title":"Deen TV"},{"url":"https://cd198.anystream.uk:9092/iqapp/d33ntv/playlist.m3u8","name":"iptv-org (browser)","title":"Deen TV\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://redirector.dps.live/hls/itv/playlist.m3u8","name":"iptv-org","title":"ITV Patagonia"},{"url":"https://redirector.dps.live/hls/itv/playlist.m3u8","name":"iptv-org (browser)","title":"ITV Patagonia\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

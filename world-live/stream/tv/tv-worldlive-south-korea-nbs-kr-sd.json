@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://media.joycorp.co.kr:4443/live/ngrp:live_all/playlist.m3u8","name":"iptv-org","title":"NBS"},{"url":"https://media.joycorp.co.kr:4443/live/ngrp:live_all/playlist.m3u8","name":"iptv-org (browser)","title":"NBS\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

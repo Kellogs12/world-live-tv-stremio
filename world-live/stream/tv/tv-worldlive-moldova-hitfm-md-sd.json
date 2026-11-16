@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://hitfm.nfthost.net/hls/hitfm/live_all/playlist.m3u8","name":"iptv-org","title":"Hit FM"},{"url":"https://hitfm.nfthost.net/hls/hitfm/live_all/playlist.m3u8","name":"iptv-org (browser)","title":"Hit FM\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

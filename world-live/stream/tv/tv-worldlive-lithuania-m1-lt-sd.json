@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://m-1.data.lt/m-1/smil:m-1.smil/playlist.m3u8","name":"iptv-org","title":"M-1"},{"url":"https://m-1.data.lt/m-1/smil:m-1.smil/playlist.m3u8","name":"iptv-org (browser)","title":"M-1\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

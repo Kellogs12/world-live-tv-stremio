@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://s1.tvdatta.com:3978/live/diasporatvlive.m3u8","name":"iptv-org","title":"Diaspora TV"},{"url":"https://s1.tvdatta.com:3978/live/diasporatvlive.m3u8","name":"iptv-org (browser)","title":"Diaspora TV\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

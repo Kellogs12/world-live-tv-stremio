@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://tv.arkeo.cl:1936/unetev/unetev/playlist.m3u8","name":"iptv-org","title":"Islita TV"},{"url":"https://tv.arkeo.cl:1936/unetev/unetev/playlist.m3u8","name":"iptv-org (browser)","title":"Islita TV\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://dash2.antik.sk/live/1plus1_marathon/playlist.m3u8","name":"iptv-org","title":"1+1 Marafon"},{"url":"https://dash2.antik.sk/live/1plus1_marathon/playlist.m3u8","name":"iptv-org (browser)","title":"1+1 Marafon\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://ontv4u-orka.b-cdn.net/ONTV4U-ORKA/index.m3u8","name":"iptv-org","title":"OnTV4U"},{"url":"https://ontv4u-orka.b-cdn.net/ONTV4U-ORKA/index.m3u8","name":"iptv-org (browser)","title":"OnTV4U\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

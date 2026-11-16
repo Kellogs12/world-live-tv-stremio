@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://live-fi.tvkaista.net/liv/live.m3u8?hd=true","name":"iptv-org","title":"Liv"},{"url":"https://live-fi.tvkaista.net/liv/live.m3u8?hd=true","name":"iptv-org (browser)","title":"Liv\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://dash2.antik.sk/live/test_tvp_polonia/playlist.m3u8","name":"iptv-org","title":"TVP Polonia"},{"url":"https://dash2.antik.sk/live/test_tvp_polonia/playlist.m3u8","name":"iptv-org (browser)","title":"TVP Polonia\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

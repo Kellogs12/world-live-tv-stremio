@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://hls.oxir.live/hls/stream.m3u8","name":"iptv-org","title":"OXIR TV"},{"url":"https://hls.oxir.live/hls/stream.m3u8","name":"iptv-org (browser)","title":"OXIR TV\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

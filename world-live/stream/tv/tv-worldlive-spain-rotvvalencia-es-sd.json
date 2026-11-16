@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://rotv.romediavalencia.com:3839/live/rotvlive.m3u8","name":"iptv-org","title":"ROTV Valencia"},{"url":"https://rotv.romediavalencia.com:3839/live/rotvlive.m3u8","name":"iptv-org (browser)","title":"ROTV Valencia\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

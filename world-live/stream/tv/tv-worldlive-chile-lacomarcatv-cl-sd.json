@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://v2.tustreaming.cl/lcomarcatv/index.m3u8","name":"iptv-org","title":"La Comarca TV"},{"url":"https://v2.tustreaming.cl/lcomarcatv/index.m3u8","name":"iptv-org (browser)","title":"La Comarca TV\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

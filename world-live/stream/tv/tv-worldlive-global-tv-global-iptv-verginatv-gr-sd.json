@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://verginanews.gr:8443/hls_live/stream1.m3u8","name":"iptv-org","title":"Vergina TV"},{"url":"https://verginanews.gr:8443/hls_live/stream1.m3u8","name":"iptv-org (browser)","title":"Vergina TV\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

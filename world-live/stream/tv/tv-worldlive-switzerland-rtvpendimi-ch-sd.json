@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://www.rtvpendimi.com:19360/tvpendimi/tvpendimi.m3u8","name":"iptv-org","title":"RTV Pendimi"},{"url":"https://www.rtvpendimi.com:19360/tvpendimi/tvpendimi.m3u8","name":"iptv-org (browser)","title":"RTV Pendimi\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

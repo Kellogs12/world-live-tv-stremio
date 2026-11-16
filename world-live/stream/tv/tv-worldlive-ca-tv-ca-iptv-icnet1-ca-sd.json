@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://icnet1hls.wns.live/hls/stream.m3u8","name":"iptv-org","title":"ICnet 1"},{"url":"https://icnet1hls.wns.live/hls/stream.m3u8","name":"iptv-org (browser)","title":"ICnet 1\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://amtv.tulixcdn.com/amtv2/am2abr/index.m3u8","name":"iptv-org","title":"Armenia 1 Sattelite"},{"url":"https://amtv.tulixcdn.com/amtv2/am2abr/index.m3u8","name":"iptv-org (browser)","title":"Armenia 1 Sattelite\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

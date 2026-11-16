@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://cdn.pishow.tv/ott/live/35/master.m3u8","name":"iptv-org","title":"DD Bihar"},{"url":"https://cdn.pishow.tv/ott/live/35/master.m3u8","name":"iptv-org (browser)","title":"DD Bihar\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

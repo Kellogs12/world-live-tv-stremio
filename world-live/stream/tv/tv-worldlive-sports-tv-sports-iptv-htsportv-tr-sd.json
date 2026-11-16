@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://ciner.daioncdn.net/ht-spor/ht-spor.m3u8?app=web","name":"iptv-org","title":"HTSpor TV"},{"url":"https://ciner.daioncdn.net/ht-spor/ht-spor.m3u8?app=web","name":"iptv-org (browser)","title":"HTSpor TV\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

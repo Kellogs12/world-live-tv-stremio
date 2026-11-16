@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://stream-live.lrt.lt/klasika/master.m3u8","name":"iptv-org","title":"LRT Klasika"},{"url":"https://stream-live.lrt.lt/klasika/master.m3u8","name":"iptv-org (browser)","title":"LRT Klasika\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

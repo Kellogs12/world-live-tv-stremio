@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://live.feed.thepalmbeaches.tv/index.m3u8","name":"iptv-org","title":"Palm Beaches TV"},{"url":"https://live.feed.thepalmbeaches.tv/index.m3u8","name":"iptv-org (browser)","title":"Palm Beaches TV\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

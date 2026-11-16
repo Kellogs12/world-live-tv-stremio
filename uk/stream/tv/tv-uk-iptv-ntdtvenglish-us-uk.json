@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://ntd02.akamaized.net/NTD-UK/index.m3u8","name":"iptv-org","title":"NTD TV English UK"},{"url":"https://ntd02.akamaized.net/NTD-UK/index.m3u8","name":"iptv-org (browser)","title":"NTD TV English UK\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

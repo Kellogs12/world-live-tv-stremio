@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://streaming004.gestec-video.com/hls/7TVCORDOBA.m3u8","name":"iptv-org","title":"7TV Cordoba"},{"url":"https://streaming004.gestec-video.com/hls/7TVCORDOBA.m3u8","name":"iptv-org (browser)","title":"7TV Cordoba\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

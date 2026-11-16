@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://stream.sen-gt.com/A2itv/myStream/playlist.m3u8","name":"iptv-org","title":"A2i TV"},{"url":"https://stream.sen-gt.com/A2itv/myStream/playlist.m3u8","name":"iptv-org (browser)","title":"A2i TV\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

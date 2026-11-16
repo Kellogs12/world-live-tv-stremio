@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://hls02ns.antenaplay.ro/hls/prima-news-hd/index.m3u8","name":"iptv-org","title":"Prima News"},{"url":"https://hls02ns.antenaplay.ro/hls/prima-news-hd/index.m3u8","name":"iptv-org (browser)","title":"Prima News\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

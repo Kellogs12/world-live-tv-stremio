@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://rtmp.elektrika.cz/live/myStream.sdp/playlist.m3u8","name":"iptv-org","title":"Elektrika TV"},{"url":"https://rtmp.elektrika.cz/live/myStream.sdp/playlist.m3u8","name":"iptv-org (browser)","title":"Elektrika TV\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://ktismaservers.in:3412/live/joytvlive.m3u8","name":"iptv-org","title":"Joy TV"},{"url":"https://ktismaservers.in:3412/live/joytvlive.m3u8","name":"iptv-org (browser)","title":"Joy TV\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}

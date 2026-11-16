@@ -1,0 +1,1 @@
+{"streams":[{"url":"https://vdo.plathong.net/Halaltv/Halaltv/playlist.m3u8","name":"iptv-org","title":"Halal TV"},{"url":"https://vdo.plathong.net/Halaltv/Halaltv/playlist.m3u8","name":"iptv-org (browser)","title":"Halal TV\nFor Stremio Web without the streaming server","behaviorHints":{"proxyHeaders":{"response":{"content-type":"application/vnd.apple.mpegurl"}}}}]}
